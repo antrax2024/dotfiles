@@ -4,7 +4,7 @@
 paru -S dunst fuzzel kitty swaylock waybar-hyprland-git hyprland-git wofi papirus-icon-theme thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman polkit-kde-agent qt5-wayland qt6-wayland xdg-desktop-portal-hyprland nwg-look
 
 
-sudo pacman -S mpd wget rsync blueman
+sudo pacman -S mpd wget rsync blueman sshfs
 sudo systemctl enable --now mpd
 
 
