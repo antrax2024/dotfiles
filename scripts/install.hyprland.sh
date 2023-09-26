@@ -22,7 +22,7 @@ echo 'Include = /etc/pacman.d/chaotic-mirrorlist '
 echo '############################################'
 
 
-paru -S insync ttf-hack-nerd siji-ng hyprpaper hyprshot ttf-firacode-nerd ttf-font-awesome swayidle wlogout
+paru -S insync ttf-hack-nerd siji-ng hyprpaper hyprshot ttf-firacode-nerd ttf-font-awesome swayidle wlogout visual-studio-code-bin
 
 
 
