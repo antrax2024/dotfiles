@@ -1,0 +1,7 @@
+font=hack
+font-size=10
+color=000000
+inside-color=282828
+image=/home/gargula/dotfiles/wallpapers/lockscreen.jpg
+ignore-empty-password
+daemonize
