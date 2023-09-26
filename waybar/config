@@ -20,21 +20,34 @@
 		"custom/right-arrow-dark"
 	],
 	"modules-right": [
+
 		"custom/left-arrow-dark",
-		"pulseaudio",
+		"temperature",
 		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"memory",
-		"custom/left-arrow-light",
+
 		"custom/left-arrow-dark",
 		"cpu",
 		"custom/left-arrow-light",
+
 		"custom/left-arrow-dark",
-		"battery",
+		"memory",
 		"custom/left-arrow-light",
+
+
 		"custom/left-arrow-dark",
 		"disk",
 		"custom/left-arrow-light",
+
+
+		"custom/left-arrow-dark",
+		"network",
+		"custom/left-arrow-light",
+
+
+		"custom/left-arrow-dark",
+		"pulseaudio",
+		"custom/left-arrow-light",
+
 		"custom/left-arrow-dark",
 		"tray"
 	],
@@ -91,33 +104,33 @@
 	},
 	"memory": {
 		"interval": 5,
-		"format": "Mem {}%"
+		"format": "  {}%"
 	},
 	"cpu": {
 		"interval": 5,
-		"format": "CPU {usage:2}%"
-	},
-	"battery": {
-		"states": {
-			"good": 95,
-			"warning": 30,
-			"critical": 15
-		},
-		"format": "{icon} {capacity}%",
-		"format-icons": [
-			"",
-			"",
-			"",
-			"",
-			""
-		]
+		"format": " {usage:2}%"
 	},
 	"disk": {
 		"interval": 5,
-		"format": "Disk {percentage_used:2}%",
+		"format": "󰋊 {percentage_used:2}%",
 		"path": "/"
 	},
 	"tray": {
 		"icon-size": 20
-	}
+	},
+
+	"network": {
+		"interval": 5,
+		"format-ethernet": " 󰌗 {ipaddr} ",
+		"format-disconnected": "No connection",
+		"tooltip": false
+
+	},
+
+ 	"temperature": {
+		"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+		"format": "  {temperatureC}°C "
+	},
+
+
 }

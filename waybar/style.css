@@ -1,6 +1,6 @@
 * {
 	font-size: 20px;
-	font-family: monospace;
+	font-family: "Fira Code Nerd Medium";
 }
 
 window#waybar {
@@ -63,6 +63,16 @@ window#waybar {
 #disk {
 	color: #b58900;
 }
+
+#network {
+	color: lightgreen;
+}
+
+#temperature,#network {
+	color: lightyellow;
+	background: #1a1a1a;
+}
+
 
 #clock,
 #pulseaudio,
