@@ -146,7 +146,7 @@ alias la='exa -lah'
 alias cat='lolcat'
 
 
-export PATH="$PATH:$HOME/.local/bin:$HOME/Google-Drive/Linux/bin:$HOME/.local/share/gem/ruby/3.0.0/bin"
+export PATH="$PATH:$HOME/.local/bin:$HOME/dotfiles/bin:$HOME/.local/share/gem/ruby/3.0.0/bin"
 
 export GEM_HOME="$HOME/gems"
 export TERM='xterm-256color'
