@@ -104,7 +104,7 @@
 	},
 	"memory": {
 		"interval": 5,
-		"format": "  {}%"
+		"format": "  {used:0.1f}G / {total:0.1f}G"
 	},
 	"cpu": {
 		"interval": 5,
@@ -112,7 +112,7 @@
 	},
 	"disk": {
 		"interval": 5,
-		"format": "󰋊 {percentage_used:2}%",
+		"format": "󰋊 {used} / {total}",
 		"path": "/"
 	},
 	"tray": {
