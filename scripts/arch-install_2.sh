@@ -23,11 +23,11 @@ passwd
 pacman -S grub efibootmgr networkmanager network-manager-applet dialog mtools dosfstools reflector snapper bluez bluez-utils xdg-utils xdg-user-dirs alsa-utils pulseaudio pulseaudio-bluetooth inetutils base-devel linux-headers os-prober bash-completion terminus-font nmap less
 
 vim /etc/mkinitcpio.conf
+vim /etc/default/grub
 
 mkinitcpio -p linux
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
-vim /etc/default/grub
 systemctl enable NetworkManager
 systemctl enable bluetooth
 systemctl enable sshd.service

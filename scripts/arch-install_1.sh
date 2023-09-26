@@ -27,7 +27,7 @@ mkdir -p /mnt/{boot,var,.snapshots}
 mkdir -p /mnt/var/log
 mount -o noatime,compress=lzo,space_cache=v2,subvol=@var_log \
 	/dev/"$DISK_DEVICE"p2 /mnt/var/log
-mount -o noatime,compress=lzo,space_cache=v2,subvol=@root_snapshots \
+mount -o noatime,compress=lzo,space_cache=v2,subvol=@snapshots \
 	/dev/"$DISK_DEVICE"p2 /mnt/.snapshots
 
 mount /dev/"$DISK_DEVICE"p1 /mnt/boot
