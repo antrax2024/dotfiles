@@ -6,6 +6,7 @@
 window#waybar {
 	background: #292b2e;
 	color: #fdf6e3;
+	opacity: 0.8;
 }
 
 #custom-right-arrow-dark,
@@ -69,7 +70,7 @@ window#waybar {
 }
 
 #temperature,#network {
-	color: lightyellow;
+	color: lightgreen;
 	background: #1a1a1a;
 }
 
