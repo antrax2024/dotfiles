@@ -31,10 +31,10 @@ OSH_THEME="agnoster"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -101,6 +101,7 @@ aliases=(
 plugins=(
   git
   bashmarks
+  progress
 )
 
 # Which plugins would you like to conditionally load? (plugins can be found in ~/.oh-my-bash/plugins/*)
@@ -149,6 +150,6 @@ alias cat='lolcat'
 export PATH="$PATH:$HOME/.local/bin:$HOME/dotfiles/bin:$HOME/.local/share/gem/ruby/3.0.0/bin"
 
 export GEM_HOME="$HOME/gems"
-export TERM='xterm-256color'
+#export TERM='xterm-256color'
 
 fastfetch --logo $HOME/dotfiles/logos/gargula.png --logo-width 25
