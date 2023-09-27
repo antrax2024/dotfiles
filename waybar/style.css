@@ -19,6 +19,16 @@ window#waybar {
 	background: #1a1a1a;
 }
 
+
+
+
+#clock.1,#clock.2,#clock.3 {
+	color: #00ffd4;
+}
+
+
+
+
 #workspaces,
 #clock.1,
 #clock.2,
@@ -34,7 +44,7 @@ window#waybar {
 
 #workspaces button {
 	padding: 0 2px;
-	color: #fdf6e3;
+	color: #98f5ff;
 }
 #workspaces button.focused {
 	color: #268bd2;
@@ -82,4 +92,5 @@ window#waybar {
 #battery,
 #disk {
 	padding: 0 10px;
+	padding-left: 20px;
 }

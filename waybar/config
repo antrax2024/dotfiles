@@ -79,11 +79,12 @@
 		"tooltip": false
 	},
 	"clock#2": {
-		"format": "{:%H:%M}",
+		"interval": 1,
+		"format": "{:%H:%M:%S}",
 		"tooltip": false
 	},
 	"clock#3": {
-		"format": "{:%m-%d}",
+		"format": "{:%d-%m-%Y}",
 		"tooltip": false
 	},
 
