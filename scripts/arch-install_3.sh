@@ -52,7 +52,7 @@ dunst
 fuzzel
 kitty
 swaylock
-waybar-hyprland-git
+waybar-git
 hyprland-git
 papirus-icon-theme
 thunar
