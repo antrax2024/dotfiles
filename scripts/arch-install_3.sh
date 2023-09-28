@@ -47,6 +47,7 @@ rsync
 sshfs
 exa
 bat
+notepadqq
 	)
 
 AUR_PKGS=(
