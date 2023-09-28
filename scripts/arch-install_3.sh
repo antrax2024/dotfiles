@@ -37,6 +37,8 @@ rm -rfv paru/
 printStatus "Upgrading"
 paru
 
+printStatus "Edit /etc/pacman.conf"
+sudo vim /etc/pacman.conf
 
 PACMAN_PKGS=(
 mpd
