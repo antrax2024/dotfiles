@@ -143,7 +143,7 @@ fi
 
 alias l='exa -lh'
 alias la='exa -lah'
-alias cat='lolcat'
+alias cat='bat'
 
 
 export PATH="$PATH:$HOME/.local/bin:$HOME/dotfiles/bin:$HOME/.local/share/gem/ruby/3.0.0/bin"

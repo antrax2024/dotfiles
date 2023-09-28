@@ -20,7 +20,7 @@ echo -e "127.0.0.1\t$HOSTNAME.localdomain\t$HOSTNAME" >> /etc/hosts
 
 echo "Root password..."
 passwd
-pacman -S grub efibootmgr networkmanager network-manager-applet dialog mtools dosfstools reflector snapper bluez bluez-utils xdg-utils xdg-user-dirs alsa-utils pulseaudio pulseaudio-bluetooth inetutils base-devel linux-headers os-prober bash-completion terminus-font nmap less
+pacman -S grub efibootmgr networkmanager network-manager-applet dialog mtools dosfstools reflector snapper bluez bluez-utils xdg-utils xdg-user-dirs alsa-utils pulseaudio pulseaudio-bluetooth inetutils base-devel linux-headers os-prober bash-completion terminus-font nmap less blueman
 
 vim /etc/mkinitcpio.conf
 vim /etc/default/grub
