@@ -48,6 +48,8 @@ sshfs
 exa
 bat
 notepadqq
+evince
+gthumb
 	)
 
 AUR_PKGS=(
