@@ -1,7 +1,12 @@
-font=hack
-font-size=10
-color=000000
-inside-color=282828
+ignore-empty-password
+font="Fira Code Nerd Medium"
+font-size=40
+color=ffffff
 image=/home/gargula/dotfiles/wallpapers/lockscreen.jpg
 ignore-empty-password
-daemonize
+indicator-radius=200
+indicator-caps-lock
+fade-in=5
+effect-blur=100
+indicator
+
