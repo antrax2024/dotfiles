@@ -1,6 +1,9 @@
 #/bin/sh
 
-#swayidle -w timeout 300 'swaylock -f' timeout 360 'hyprctl dispatch dpms off'
+if [ -f "/usr/bin/swayidle" ]; then
+    echo "swayidle is installed."
+    swayidle -w timeout 300 'swaylock -f' timeout 360
+else
+    echo "swayidle not installed."
+fi;
 
-#hyprctl dispatch dpms off
-swaylock -f timeout 360

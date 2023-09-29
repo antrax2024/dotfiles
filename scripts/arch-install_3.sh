@@ -56,7 +56,6 @@ AUR_PKGS=(
 dunst
 fuzzel
 kitty
-swaylock
 waybar-hyprland
 hyprland-git
 papirus-icon-theme
@@ -89,7 +88,7 @@ cronie
 ethtool
 wol-systemd
 fastfetch 
-
+swaylock-effects
 	)
 printStatus "Install pacman packages"	
 sudo pacman -S ${PACMAN_PKGS[*]}
