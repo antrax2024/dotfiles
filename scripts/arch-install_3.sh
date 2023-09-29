@@ -48,7 +48,9 @@ sshfs
 exa
 bat
 notepadqq
+ethtool
 evince
+cronie
 gthumb
 	)
 
@@ -78,7 +80,7 @@ thunar-volman
 polkit-kde-agent
 qt5-wayland
 qt6-wayland
-xdg-desktop-portal-hyprland
+#xdg-desktop-portal-hyprland
 nwg-look
 snap-pac-grub
 btrfs-assistant
@@ -96,8 +98,6 @@ awesome-terminal-fonts
 gdu
 firefox
 adapta-gtk-theme
-cronie
-ethtool
 wol-systemd
 fastfetch 
 swaylock-effects
