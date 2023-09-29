@@ -99,9 +99,11 @@ gdu
 firefox
 adapta-gtk-theme
 wol-systemd
-fastfetch 
+fastfetch
 swaylock-effects
-	)
+)
+
+
 printStatus "Install pacman packages"	
 sudo pacman -S ${PACMAN_PKGS[*]}
 
