@@ -53,6 +53,7 @@ evince
 cronie
 gthumb
 gimp
+tumbler
 	)
 
 
