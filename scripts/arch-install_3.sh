@@ -54,6 +54,7 @@ cronie
 gthumb
 gimp
 tumbler
+yt-dlp
 	)
 
 
