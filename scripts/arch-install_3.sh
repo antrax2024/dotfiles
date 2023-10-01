@@ -52,6 +52,7 @@ ethtool
 evince
 cronie
 gthumb
+gimp
 	)
 
 
