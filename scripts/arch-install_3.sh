@@ -55,6 +55,7 @@ gthumb
 gimp
 tumbler
 yt-dlp
+lm_sensors
 	)
 
 

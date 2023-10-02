@@ -1,0 +1,19 @@
+{
+  "FAUXMO": {
+    "ip_address": "auto"
+  },
+  "PLUGINS": {
+    "CommandLinePlugin": {
+      "DEVICES": [
+        {
+            "name": "ShutdownPC",
+            "port": 49915,
+            "on_cmd": "/home/gargula/dotfiles/bin/shutoff",
+            "off_cmd": "/home/gargula/dotfiles/bin/shutoff",
+            "use_fake_state": true
+        }
+      ]
+    }
+  }
+}
+
