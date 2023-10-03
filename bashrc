@@ -153,4 +153,4 @@ export GEM_HOME="$HOME/gems"
 
 #fastfetch --logo $HOME/dotfiles/logos/gargula.png --logo-width 25
 fastfetch
-
+# ok
