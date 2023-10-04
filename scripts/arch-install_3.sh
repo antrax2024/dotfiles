@@ -103,7 +103,7 @@ gdu
 firefox
 adapta-gtk-theme
 wol-systemd
-fastfetch
+neofetch
 swaylock-effects
 )
 

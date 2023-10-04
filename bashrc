@@ -151,6 +151,4 @@ export PATH="$PATH:$HOME/.local/bin:$HOME/dotfiles/bin:$HOME/.local/share/gem/ru
 export GEM_HOME="$HOME/gems"
 #export TERM='xterm-256color'
 
-#fastfetch --logo $HOME/dotfiles/logos/gargula.png --logo-width 25
-fastfetch
-# ok
+neofetch

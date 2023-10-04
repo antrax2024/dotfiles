@@ -28,6 +28,7 @@ LINK_DIRS=(
 	alacritty
 	swaylock
 	waybar
+	neofetch
 )
 
 # get length of an array
