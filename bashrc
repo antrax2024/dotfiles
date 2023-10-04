@@ -5,6 +5,7 @@ alias cat='bat'
 
 
 # environment
+export STARSHIP_CONFIG=$HOME/dotfiles/starship/starship.toml
 export EDITOR="vim"
 export PATH="$PATH:$HOME/.local/bin:$HOME/dotfiles/bin:$HOME/.local/share/gem/ruby/3.0.0/bin"
 
