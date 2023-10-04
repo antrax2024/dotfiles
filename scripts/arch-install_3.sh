@@ -105,6 +105,7 @@ adapta-gtk-theme
 wol-systemd
 neofetch
 swaylock-effects
+starship
 )
 
 
