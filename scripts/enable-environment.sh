@@ -25,7 +25,7 @@ LINK_DIRS=(
 	dunst
 	fuzzel
 	hypr
-	kitty
+	alacritty
 	swaylock
 	waybar
 )

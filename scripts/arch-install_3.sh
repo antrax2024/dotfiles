@@ -73,7 +73,7 @@ paru
 AUR_PKGS=(
 dunst
 fuzzel
-kitty
+alacritty-git
 waybar-hyprland
 hyprland-git
 papirus-icon-theme
