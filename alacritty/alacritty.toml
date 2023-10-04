@@ -1,5 +1,5 @@
 [font]
-size = 16.0
+size = 14.0
 
 [font.bold]
 family = "Hack Nerd Font Mono"
@@ -21,5 +21,20 @@ style = "Regular"
 opacity = 0.6
 
 [window.padding]
-x = 15
+x = 18
 y = 15
+
+
+[colors.cursor]
+text = "#1d1f21"
+cursor = "#e7c547"
+
+
+[colors.selection]
+text =  "#1d1f21"
+background = "#b9ca4a"
+
+
+
+
+
