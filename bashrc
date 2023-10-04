@@ -141,8 +141,8 @@ fi
 # alias ohmybash="mate ~/.oh-my-bash"
 #
 
-alias l='exa -lgrh'
-alias la='exa -lgrha'
+alias l='exa -lgh'
+alias la='exa -lgha'
 alias cat='bat'
 
 
