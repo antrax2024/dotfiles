@@ -45,7 +45,7 @@ mount /dev/"$BOOT" /mnt/boot
 
 
 
-pacstrap /mnt base base-devel linux linux-firmware amd-ucode openssh vim git duf
+pacstrap /mnt base base-devel linux linux-firmware amd-ucode openssh vim git duf ruby
 genfstab -U /mnt >> /mnt/etc/fstab
 
 echo "There will go, now arch-chroot /mnt"
