@@ -58,6 +58,7 @@ yt-dlp
 lm_sensors
 w3m
 reflector
+pavucontrol
 )
 
 
