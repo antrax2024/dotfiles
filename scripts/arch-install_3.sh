@@ -56,7 +56,8 @@ gimp
 tumbler
 yt-dlp
 lm_sensors
-	)
+w3m
+)
 
 
 printStatus "Install Chaotic AUR Repository"
@@ -71,9 +72,10 @@ paru
 
 
 AUR_PKGS=(
+kitty-git
 dunst
 fuzzel
-alacritty-git
+kitty
 waybar-hyprland
 hyprland-git
 papirus-icon-theme
@@ -84,7 +86,6 @@ thunar-volman
 polkit-kde-agent
 qt5-wayland
 qt6-wayland
-#xdg-desktop-portal-hyprland
 nwg-look
 snap-pac-grub
 btrfs-assistant
