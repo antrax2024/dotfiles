@@ -26,9 +26,11 @@ show_always = true
 
 [directory]
 style = "fg:#000000 bg:#769ff0"
-format = "[ $path ]($style)"
+format = "[ $path ]($style)[$read_only]($read_only_style)"
 truncation_length = 0
 truncation_symbol = "…/"
+read_only = '🔒'
+read_only_style = 'fg:red bg:#769ff0'
 
 [directory.substitutions]
 "Documents" = "󰈙 "
