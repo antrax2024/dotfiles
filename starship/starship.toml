@@ -35,6 +35,8 @@ truncation_symbol = "…/"
 "Downloads" = " "
 "Music" = " "
 "Pictures" = " "
+"Google-Drive" = 'Google-Drive ☁️ '
+
 
 [git_branch]
 symbol = ""
