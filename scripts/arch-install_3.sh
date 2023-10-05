@@ -57,7 +57,9 @@ tumbler
 yt-dlp
 lm_sensors
 w3m
+reflector
 )
+
 
 
 printStatus "Install Chaotic AUR Repository"
@@ -117,9 +119,15 @@ printStatus "Install AUR Packages"
 
 paru -S ${AUR_PKGS[*]}
 
+printStatus "Edit Reflector Config"
+sudo vim /etc/xdg/reflector/reflector.conf
+
+
 printStatus "Enable Services"
 sudo systemctl enable cronie.service
 sudo systemctl enable "wol@$NET_IFACE".service
 sudo systemctl enable --now mpd.service
+sudo systemctl enable --now reflector.service
+sudo systemctl enable --now reflector.timer
 
 printStatus "Thats all"

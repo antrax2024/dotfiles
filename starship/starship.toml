@@ -194,7 +194,7 @@ style = "bold dimmed white"
 disabled = true
 
 [directory]
-truncation_length = 5
+truncation_length = 0
 format = "[$path]($style)[$lock_symbol]($lock_style) "
 
 [directory.substitutions]
