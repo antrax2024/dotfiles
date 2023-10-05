@@ -198,7 +198,10 @@ disabled = false
 
 [directory]
 truncation_length = 0
-format = "[$path]($style)[$lock_symbol]($lock_style) "
+format = "[$path]($style)[$lock_symbol]($lock_style)[$read_only]($read_only_style) "
+read_only = '🔒'
+read_only_style = 'red'
+disabled = false
 
 [directory.substitutions]
 "Documents" = "📒 "
