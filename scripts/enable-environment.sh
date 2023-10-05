@@ -29,6 +29,7 @@ LINK_DIRS=(
 	swaylock
 	waybar
 	neofetch
+	fish
 )
 
 # get length of an array

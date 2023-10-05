@@ -7,3 +7,5 @@
 MOZ_ENABLE_WAYLAND=1
 QT_QPA_PLATFORM=wayland
 HYPRSHOT_DIR=/home/gargula/screenshots
+
+
