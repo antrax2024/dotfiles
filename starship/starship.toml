@@ -91,7 +91,7 @@ $character"""
 ## Custom Commands
 ################################################################################
 
-#mustard = '#af8700'
+
 
 [custom.git_server]
 #disabled = true
@@ -185,13 +185,13 @@ style = "bright-white"
 disabled = false
 
 [username]
-format = '[$user](bold blue)[@](bold red)'
+format = '[[\[](bold #CCFF00)$user](bold blue)[@](bold red)'
 show_always = true
 disabled = false
 
 [hostname]
 ssh_only = false
-format = '[$hostname]($style) [󰁕](bold red) '
+format = '[$hostname]($style)[\]](bold #CCFF00) [󰁕](bold red) '
 #trim_at = "-"
 style = '#FF6820'
 disabled = false
