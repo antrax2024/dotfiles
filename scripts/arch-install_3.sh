@@ -75,6 +75,7 @@ paru
 
 
 AUR_PKGS=(
+cifs-utils
 kitty-git
 dunst
 fuzzel
