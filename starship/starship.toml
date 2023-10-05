@@ -79,7 +79,6 @@ $sudo\
 $cmd_duration\
 $line_break\
 $jobs\
-$battery\
 $time\
 $status\
 $os\
@@ -87,9 +86,13 @@ $container\
 $shell\
 $character"""
 
+
 ################################################################################
 ## Custom Commands
 ################################################################################
+
+#mustard = '#af8700'
+
 [custom.git_server]
 #disabled = true
 description = "Display symbol for remote Git server"
@@ -179,29 +182,29 @@ disabled = false
 time_format = "%T"
 format = "🕙 $time($style) "
 style = "bright-white"
-disabled = true
+disabled = false
 
 [username]
-format = '\[[$user]($style)\]'
-style_user = "bold dimmed blue"
-show_always = false
+format = '[$user](bold blue)[@](bold red)'
+show_always = true
+disabled = false
 
 [hostname]
 ssh_only = false
-format = "<[$hostname]($style)>"
-trim_at = "-"
-style = "bold dimmed white"
-disabled = true
+format = '[$hostname]($style) [󰁕](bold red) '
+#trim_at = "-"
+style = '#FF6820'
+disabled = false
 
 [directory]
 truncation_length = 0
 format = "[$path]($style)[$lock_symbol]($lock_style) "
 
 [directory.substitutions]
-"Documents" = " "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
+"Documents" = "📒 "
+"Downloads" = "💾 "
+"Music" = "🎸 "
+"Pictures" = "🖼️ "
 
 ################################################################################
 ## GIT
@@ -213,18 +216,20 @@ style = "bold green"
 
 [git_state]
 format = '\[[\($state( $progress_current of $progress_total)\)]($style)\]'
+cherry_pick = '[🍒 PICKING](bold red)'
 
 [git_status]
-conflicted = "⚔️ "
-ahead = "󰜸 ${count} "
-behind = "󰛀 ${count} "
-diverged = "󰜸 ${ahead_count} 󰛀 ${behind_count} "
-untracked = "󰐷 ${count} "
-stashed = "📦 "
-modified = "📝${count} "
-staged = "󰲻 ${count} "
-renamed = "󰑕 ${count} "
-deleted = "󰚃 ${count} "
+conflicted = '🏳'
+ahead = '🏎💨'
+behind = '😰'
+diverged = '😵'
+up_to_date = '✓'
+untracked = '🤷'
+stashed = '📦'
+modified = '📝'
+staged = '[++\($count\)](green)'
+renamed = '👅'
+deleted = '🗑'
 style = "bright-white"
 format = '\[ $all_status$ahead_behind\]'
 
@@ -383,6 +388,7 @@ format = '\[[$symbol($version)]($style)\]'
 
 [ruby]
 format = '\[[$symbol($version)]($style)\]'
+symbol = '💎 '
 
 [rust]
 format = '\[[$symbol($version)]($style)\]'
@@ -396,6 +402,8 @@ format = '\[[$symbol$environment]($style)\]'
 
 [sudo]
 format = '\[[as $symbol]\]'
+symbol="☠️'"
+ 
 
 [swift]
 format = '\[[$symbol($version)]($style)\]'
@@ -411,3 +419,5 @@ format = '\[[$symbol($version)]($style)\]'
 
 [zig]
 format = '\[[$symbol($version)]($style)\]'
+
+
