@@ -1,0 +1,12 @@
+[Unit]
+Description=Configure zram swap device
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/gargula/dotfiles/scripts/zram_start
+ExecStop=/home/gargula/dotfiles/scripts/zram_stop
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
