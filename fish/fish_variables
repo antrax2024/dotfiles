@@ -2,6 +2,7 @@
 # VERSION: 3.0
 SETUVAR --export EDITOR:vim
 SETUVAR --export GEM_HOME:/home/gargula/gems
+SETUVAR --export --path GOPATH:/home/gargula/\x2ego
 SETUVAR --export STARSHIP_CONFIG:/home/gargula/dotfiles/starship/starship\x2etoml
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:555

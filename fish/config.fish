@@ -10,6 +10,7 @@ end
 set -Ux STARSHIP_CONFIG $HOME/dotfiles/starship/starship.toml
 set -Ux EDITOR 'vim'
 set -Ux GEM_HOME "$HOME/gems"
+set -Ux GOPATH "$HOME/.go"
 
 
 # Aliases
@@ -23,7 +24,5 @@ alias clone='git clone'
 
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/dotfiles/bin
-fish_add_path $HOME/.local/share/gem/ruby/3.0.0/bin
-
 
 starship init fish | source
