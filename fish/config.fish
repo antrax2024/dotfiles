@@ -15,10 +15,14 @@ set -Ux GEM_HOME "$HOME/gems"
 # Aliases
 alias l='exa -lgh'
 alias la='exa -lgha'
-alias cat='bat'
+alias cat='bat --theme Dracula'
+
+
+# PATH
+
+fish_add_path $HOME/.local/bin
+fish_add_path $HOME/dotfiles/bin
+fish_add_path $HOME/.local/share/gem/ruby/3.0.0/bin
 
 
 starship init fish | source
-
-
-
