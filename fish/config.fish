@@ -14,7 +14,7 @@ set -Ux GEM_HOME "$HOME/gems"
 
 # Aliases
 alias l='exa --git --icons -lgh'
-alias la='exai --git --icons -lgha'
+alias la='exa --git --icons -lgha'
 alias cat='bat --theme Dracula'
 
 
