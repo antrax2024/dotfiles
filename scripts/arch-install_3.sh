@@ -114,6 +114,7 @@ swaylock-effects
 starship
 noto-fonts-emoji
 gohugo-extended-bin
+ttf-iosevka-nerd
 )
 
 
