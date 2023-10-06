@@ -16,9 +16,4 @@ killall waybar
 # ----------------------------------------------------- 
 # Loading the configuration based on the username
 # ----------------------------------------------------- 
-if [[ $USER = "gargula" ]]
-then
-    waybar -c ~/.config/waybar/config & -s ~/.config/waybar/style.css  
-else
-    waybar &
-fi 
+waybar -c ~/.config/waybar/config &  
