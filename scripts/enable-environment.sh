@@ -23,13 +23,13 @@ ln -sf $DOTFILES/oh-my-bash $HOME/.oh-my-bash
 LINK_DIRS=(
 	cava
 	dunst
+	fish
 	fuzzel
 	hypr
 	kitty
+	neofetch
 	swaylock
 	waybar
-	neofetch
-	fish
 )
 
 # get length of an array
