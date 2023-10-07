@@ -13,6 +13,11 @@ printStatus "Linking /etc/environment"
 sudo rm -rfv /etc/environment
 sudo ln -sf $DOTFILES/etc/environment /etc/environment
 
+printStatus "Linking /etc/greetd/config.toml"
+sudo ln -sf $DOTFILES/etc/greetd/config.toml /etc/greetd/config.toml
+
+printStatus "Enable Greetd..."
+sudo systemctl enable greetd.service
 
 printStatus "Enable .bashrc and oh-my-bash"
 rm $HOME/.bashrc
