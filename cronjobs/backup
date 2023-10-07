@@ -1,0 +1,2 @@
+*/5 * * * * /home/gargula/dotfiles/bin/check-fauxmo.sh
+*/15 * * * * /home/gargula/dotfiles/bin/save-cronjobs.sh
