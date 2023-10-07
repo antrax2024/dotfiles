@@ -8,7 +8,7 @@ if [ $result -gt 2 ]; then
     exit 0
 else
 	echo -e "NÃO!!!"
-	fauxmo -c $HOME/dotfiles/fauxmo/config.json
+	/home/gargula/.local/bin/fauxmo -c $HOME/dotfiles/fauxmo/config.json
 	exit 0
 fi 
 
