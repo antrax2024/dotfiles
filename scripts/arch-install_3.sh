@@ -61,6 +61,7 @@ reflector
 pavucontrol
 fish
 python-pip
+greetd
 )
 
 
