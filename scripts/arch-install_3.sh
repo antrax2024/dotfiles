@@ -60,6 +60,7 @@ w3m
 reflector
 pavucontrol
 fish
+python-pip
 )
 
 
@@ -115,6 +116,7 @@ starship
 noto-fonts-emoji
 gohugo-extended-bin
 ttf-iosevka-nerd
+python-pipx
 )
 
 
