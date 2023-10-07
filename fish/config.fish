@@ -16,7 +16,7 @@ set -Ux GOPATH "$HOME/.go"
 # Aliases
 alias l='exa --git --icons -lgh'
 alias la='exa --git --icons -lgha'
-alias cat='bat --theme Dracula'
+alias cat='bat --paging=never --theme Dracula'
 alias clone='git clone'
 
 
