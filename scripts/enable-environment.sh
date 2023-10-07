@@ -45,6 +45,8 @@ do
 done
 
 
+printStatus "Enable Fauxmo..."
 
+pipx install fauxmo
 
 
