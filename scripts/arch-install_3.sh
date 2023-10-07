@@ -62,6 +62,8 @@ pavucontrol
 fish
 python-pip
 greetd
+grub-customizer
+xorg-xhost
 )
 
 
