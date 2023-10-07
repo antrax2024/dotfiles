@@ -12,7 +12,7 @@ echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
 locale-gen
 echo 'LANG=en_US.UTF-8' >> /etc/locale.conf
 echo "KEYMAP=br-abnt2" >> /etc/vconsole.conf
-echo "FONT=ter-132b" >> /etc/vconsole.conf
+#echo "FONT=ter-132b" >> /etc/vconsole.conf
 
 echo "$HOSTNAME" >> /etc/hostname
 echo -e "127.0.0.1\tlocalhost" >> /etc/hosts
