@@ -67,6 +67,8 @@ breeze
 cliphist
 xarchiver
 unzip
+system-config-printer
+usbutils
 )
 
 
