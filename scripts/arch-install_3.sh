@@ -65,6 +65,8 @@ grub-customizer
 xorg-xhost
 breeze
 cliphist
+xarchiver
+unzip
 )
 
 
@@ -122,6 +124,7 @@ gohugo-extended-bin
 ttf-iosevka-nerd
 python-pipx
 wl-clip-persist-git
+qmplay2-git
 )
 
 
