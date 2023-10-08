@@ -58,13 +58,13 @@ yt-dlp
 lm_sensors
 w3m
 reflector
-pavucontrol
 fish
 python-pip
 greetd
 grub-customizer
 xorg-xhost
 breeze
+cliphist
 )
 
 
@@ -121,6 +121,7 @@ noto-fonts-emoji
 gohugo-extended-bin
 ttf-iosevka-nerd
 python-pipx
+wl-clip-persist-git
 )
 
 
