@@ -69,6 +69,8 @@ xarchiver
 unzip
 system-config-printer
 usbutils
+avahi
+nss-mdns
 )
 
 
@@ -152,5 +154,6 @@ printStatus "Install and Enable ZRAM Swap"
 sudo cp $HOME/dotfiles/scripts/zram-swap.service /etc/systemd/system/
 sudo systemctl enable --now zram-swap.service
 zramctl
+
 
 printStatus "Thats all"

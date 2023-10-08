@@ -16,6 +16,9 @@ sudo ln -sf $DOTFILES/etc/environment /etc/environment
 printStatus "Linking /etc/greetd/config.toml"
 sudo ln -sf $DOTFILES/etc/greetd/config.toml /etc/greetd/config.toml
 
+printStatus "Linking /etc/nsswitch.con"
+sudo ln -sf $DOTFILES/etc/nsswitch.conf /etc/nsswitch.conf
+
 printStatus "Enable Greetd..."
 sudo systemctl enable greetd.service
 
@@ -50,8 +53,14 @@ do
 done
 
 
-printStatus "Enable Fauxmo..."
-
+printStatus "Install Fauxmo..."
 pipx install fauxmo
+
+printStatus "Enable Avahi Daemon Service"
+sudo systemctl enable --now avahi-daemon.service
+
+
+printStatus "Ow yeah... Its ok baibi..."
+
 
 
