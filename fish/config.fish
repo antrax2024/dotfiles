@@ -18,6 +18,7 @@ alias l='exa --git --icons -lgh'
 alias la='exa --git --icons -lgha'
 alias cat='bat --paging=never --theme Dracula'
 alias clone='git clone'
+alias p='paru --bottomup'
 
 
 # PATH
