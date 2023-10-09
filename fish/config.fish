@@ -11,6 +11,7 @@ set -Ux STARSHIP_CONFIG $HOME/dotfiles/starship/starship.toml
 set -Ux EDITOR 'vim'
 set -Ux GEM_HOME "$HOME/gems"
 set -Ux GOPATH "$HOME/.go"
+set -Ux NODE_PATH "$HOME/nodejs/node_modules"
 
 
 # Aliases
@@ -23,8 +24,8 @@ alias premove='paru -Rcns'
 
 
 # PATH
-
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/dotfiles/bin
+fish_add_path $HOME/nodejs/bin
 
 starship init fish | source
