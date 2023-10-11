@@ -16,10 +16,8 @@
     # If this option is set to mouse or keyboard, the monitor option
     # will be ignored.
     follow = mouse
-
-		
-		width = 300
-		height = 300
+    width = 300
+    height = 300
     # Position the notification in the top right corner
     origin = top-right
     # Offset from the origin
@@ -52,7 +50,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.).
-    transparency = 15
+    #transparency = 15
 
     # Draw a line of "separator_height" pixel height between two
     # notifications.
@@ -443,5 +441,9 @@
     format = "%b"
     urgency = low
 
+
+[play_sound]
+    summary = "*"
+    script = ~/dotfiles/dunst/alert.sh
 
 # vim: ft=cfg

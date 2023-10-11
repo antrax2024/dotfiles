@@ -37,6 +37,7 @@ LINK_DIRS=(
 	kitty
 	neofetch
 	swaylock
+	systemd
 	waybar
 )
 
@@ -58,6 +59,10 @@ pipx install fauxmo
 
 printStatus "Enable Avahi Daemon Service"
 sudo systemctl enable --now avahi-daemon.service
+
+
+printStatus "Enable a2ln notifications..."
+systemctl --user enable a2ln.service
 
 
 printStatus "Ow yeah... Its ok baibi..."
