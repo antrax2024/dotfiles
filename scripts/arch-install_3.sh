@@ -72,6 +72,7 @@ usbutils
 avahi
 nss-mdns
 nvme-cli
+mako
 )
 
 
@@ -90,7 +91,6 @@ paru
 AUR_PKGS=(
 cifs-utils
 kitty-git
-dunst
 fuzzel
 kitty
 waybar-hyprland

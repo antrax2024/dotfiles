@@ -33,7 +33,7 @@ ln -sf $DOTFILES/oh-my-bash $HOME/.oh-my-bash
 
 LINK_DIRS=(
 	cava
-	dunst
+	mako
 	fish
 	fuzzel
 	hypr
