@@ -21,7 +21,7 @@
     # Position the notification in the top right corner
     origin = top-right
     # Offset from the origin
-    offset = 10x50
+    offset = 20x10
 
     # Turn on the progess bar
     progress_bar = true
@@ -50,7 +50,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.).
-    #transparency = 15
+    #transparency = 5
 
     # Draw a line of "separator_height" pixel height between two
     # notifications.
@@ -86,7 +86,7 @@
 
     ### Text ###
 
-    font = Fira Code Nerd Font Medium 8
+    font = Hack Nerd Font JBM Ligatured CCG 10
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
