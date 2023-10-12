@@ -1,7 +1,7 @@
 # CONFIG VARS
 #
 USERNAME='gargula'
-EDITOR='vim'
+EDITOR='nvim'
 NET_IFACE='enp6s0'
 
 ###############################
@@ -22,7 +22,7 @@ sudo mkdir /.snapshots
 sudo mount -a
 sudo chmod 750 /.snapshots/
 sudo chown -R :$USERNAME /.snapshots
-sudo vim /etc/snapper/configs/root
+sudo nvim /etc/snapper/configs/root
 sudo systemctl enable --now snapper-timeline.timer
 sudo systemctl enable --now snapper-cleanup.timer
 sudo systemctl enable --now snapper-boot.timer
@@ -38,7 +38,7 @@ printStatus "Upgrading"
 paru
 
 printStatus "Edit /etc/pacman.conf"
-sudo vim /etc/pacman.conf
+sudo nvim /etc/pacman.conf
 
 PACMAN_PKGS=(
 mpd
@@ -142,7 +142,7 @@ printStatus "Install AUR Packages"
 paru -S ${AUR_PKGS[*]}
 
 printStatus "Edit Reflector Config"
-sudo vim /etc/xdg/reflector/reflector.conf
+sudo nvim /etc/xdg/reflector/reflector.conf
 
 
 printStatus "Enable Services"
