@@ -71,6 +71,7 @@ system-config-printer
 usbutils
 avahi
 nss-mdns
+nvme-cli
 )
 
 
