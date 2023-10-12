@@ -5,9 +5,12 @@ DOTFILES="$HOME/dotfiles"
 function printStatus() {
 	echo "$1"
 	echo "..."
-	sleep 3
+	sleep 2
 }
 ###############################
+
+printStatus "Linking gdu..."
+ln -sf $DOTFILES/gdu/gdu.yaml $HOME/.gdu.yaml
 
 printStatus "Linking /etc/environment"
 sudo rm -rfv /etc/environment
