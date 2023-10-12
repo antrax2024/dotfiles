@@ -16,6 +16,9 @@ printStatus "Linking /etc/environment"
 sudo rm -rfv /etc/environment
 sudo ln -sf $DOTFILES/etc/environment /etc/environment
 
+printStatus "Linking vimrc.... Owww yesss!"
+sudo ln -sf $DOTFILES/etc/vimrc /etc/vimrc
+
 printStatus "Linking /etc/greetd/config.toml"
 sudo ln -sf $DOTFILES/etc/greetd/config.toml /etc/greetd/config.toml
 
