@@ -21,6 +21,7 @@ alias cat='bat --paging=never --theme Dracula'
 alias clone='git clone'
 alias p='paru --bottomup'
 alias premove='paru -Rcns'
+alias vim='nvim'
 
 
 # PATH
