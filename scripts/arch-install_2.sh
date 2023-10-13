@@ -26,7 +26,7 @@ echo -e "127.0.0.1\tlocalhost" >> /etc/hosts
 echo -e "::1\t\tlocalhost" >> /etc/hosts 
 echo -e "127.0.0.1\t$HOSTNAME.localdomain\t$HOSTNAME" >> /etc/hosts
 
-printStatus "Root password..."
+printStatus "Root password hummmmmmm..."
 passwd
 
 printStatus "Install pacman packages...."
@@ -63,8 +63,6 @@ avahi
 nss-mdns
 nvme-cli
 mako
-grub
-efibootmgr
 networkmanager
 network-manager-applet
 dialog
@@ -78,10 +76,6 @@ xdg-utils
 xdg-user-dirs
 alsa-utils
 inetutils
-base-devel
-linux-headers
-os-prober
-bash-completion
 terminus-font
 nmap
 less
@@ -95,12 +89,8 @@ sudo pacman -S ${PACMAN_PKGS[*]}
 
 
 printStatus "mkinitcpio owww yesssss!"
-nvim /etc/mkinitcpio.conf
-nvim /etc/default/grub
-
 mkinitcpio -p linux
-grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
-grub-mkconfig -o /boot/grub/grub.cfg
+
 systemctl enable NetworkManager
 systemctl enable bluetooth
 systemctl enable sshd.service
