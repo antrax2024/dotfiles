@@ -1,3 +1,13 @@
+###############################
+# Functions
+function printStatus() {
+	echo "$1"
+	echo "..."
+	sleep 2
+}
+###############################
+
+
 # CONFIG VARS
 #
 DISK_DEVICE='nvme0n1'
@@ -14,48 +24,40 @@ else
 	ROOT="$DISK_DEVICE"p2
 fi
 
+printStatus "Loadkeys, setntp and setfont..."
 loadkeys br-abnt2
 timedatectl set-ntp true
 setfont ter-132b
 
+printStatus "Zap the disk.... Loose everything... "
 sgdisk -z /dev/$DISK_DEVICE
 sgdisk -g /dev/$DISK_DEVICE
 
+printStatus "Create boot partition..."
 sgdisk -n 1:0:+300M /dev/$DISK_DEVICE -t 1:ef00 -c efi
-
+printStatus "Create Root partition..."
 sgdisk --largest-new=2 /dev/$DISK_DEVICE
 
 
+printStatus "Format boot..."
 mkfs.fat -F32 /dev/$BOOT
-mkfs.btrfs -f /dev/$ROOT
+printStatus "Format root..."
+mkfs.ext4 /dev/$ROOT
+
+printStatus "Mount root..."
 mount /dev/"$ROOT" /mnt
-btrfs su cr /mnt/@
-btrfs su cr /mnt/@home
-btrfs su cr /mnt/@snapshots
-btrfs su cr /mnt/@var_log
-umount /mnt
-mount -o noatime,compress=lzo,space_cache=v2,subvol=@ /dev/"$ROOT" /mnt
-mkdir -p /mnt/{boot,home,var,.snapshots}
-mkdir -p /mnt/var/log
 
-# home
-mount -o noatime,compress=lzo,space_cache=v2,subvol=@home \
-	/dev/"$ROOT" /mnt/home
-
-# var_log
-mount -o noatime,compress=lzo,space_cache=v2,subvol=@var_log \
-	/dev/"$ROOT" /mnt/var/log
-
-# snapshots
-mount -o noatime,compress=lzo,space_cache=v2,subvol=@snapshots \
-	/dev/"$ROOT" /mnt/.snapshots
-
-# boot
+printStatus "Mount boot..."
+mkdir -p /mnt/boot
 mount /dev/"$BOOT" /mnt/boot
 
 
-pacstrap /mnt base base-devel linux linux-firmware amd-ucode openssh \
+clear
+printStatus "Now, i will pacstrap, OOOOWHHHHH YESSSS!!!"
+pacstrap /mnt base base-devel linux linux-headers linux-firmware amd-ucode openssh \
 	neovim git duf ruby man
+
+printStatus "genfstab...."
 genfstab -U /mnt >> /mnt/etc/fstab
 
-echo "There will go, now arch-chroot /mnt"
+printStatus "There will go, now arch-chroot /mnt"
