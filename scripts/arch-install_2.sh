@@ -4,7 +4,7 @@ HOSTNAME='gargulabox'
 USERNAME='gargula'
 EDITOR='nvim'
 ROOT_PARTITION='nvme1n1p2'
-ROOT_UUID=$(sudo lsblk /dev/$ROOT_PARTITION -o UUID | sed '2!d')
+ROOT_UUID=$(lsblk /dev/$ROOT_PARTITION -o UUID | sed '2!d')
 
 ###############################
 # Functions
@@ -88,7 +88,7 @@ pipewire-pulse
 limine
 )
 
-sudo pacman -S ${PACMAN_PKGS[*]}
+pacman -S ${PACMAN_PKGS[*]}
 
 
 printStatus "mkinitcpio owww yesssss!"
