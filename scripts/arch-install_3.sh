@@ -121,6 +121,7 @@ rm $HOME/.bashrc
 ln -sf $DOTFILES/bashrc $HOME/.bashrc
 
 
+
 LINK_DIRS=(
 	cava
 	mako
@@ -155,5 +156,9 @@ sudo systemctl enable --now avahi-daemon.service
 
 printStatus "Enable a2ln notifications..."
 systemctl --user enable a2ln.service
+
+
+printStatus "Changind default shell to Fish Shell..."
+chsh -s /usr/bin/fish $USERNAME
 
 printStatus "Thats all"

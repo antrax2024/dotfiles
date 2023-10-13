@@ -86,6 +86,7 @@ pipewire-jack
 pipewire-alsa
 pipewire-pulse
 limine
+speedcrunch
 )
 
 pacman -S ${PACMAN_PKGS[*]}
