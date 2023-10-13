@@ -86,7 +86,7 @@ printStatus "Install AUR Packages"
 paru -S ${AUR_PKGS[*]}
 
 printStatus "Linking Reflector..."
-sudo ln -sf /home/$USERNAME/etc/xdg/reflector/reflector.conf /etc/xdg/reflector/reflector.conf
+sudo ln -sf $DOTFILES/etc/xdg/reflector/reflector.conf /etc/xdg/reflector/reflector.conf
 
 printStatus "Enable Services"
 sudo systemctl enable cronie.service
