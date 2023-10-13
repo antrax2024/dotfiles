@@ -3,6 +3,8 @@
 HOSTNAME='gargulabox'
 USERNAME='gargula'
 EDITOR='nvim'
+ROOT_PARTITION='nvme1n1p2'
+ROOT_UUID=$(sudo lsblk /dev/$ROOT_PARTITION -o UUID | sed '2!d')
 
 ###############################
 # Functions
@@ -83,6 +85,7 @@ blueman
 pipewire-jack
 pipewire-alsa
 pipewire-pulse
+limine
 )
 
 sudo pacman -S ${PACMAN_PKGS[*]}
@@ -97,5 +100,12 @@ systemctl enable sshd.service
 useradd -mG wheel $USERNAME
 passwd $USERNAME
 visudo
+
+printStatus "Installing limine bootloader..."
+mkdir -p /boot/EFI/BOOT
+cp /usr/share/limine/BOOTX64.EFI /boot/EFI/BOOT
+curl -fssl https://gargulaonline.github.io/limine.cfg -o /boot/limine.cfg
+sed -i "s/rootuuid/$ROOT_UUID/g" /boot/limine.cfg
+
 
 printStatus "Thats ok... Reboot and go part 3..."
