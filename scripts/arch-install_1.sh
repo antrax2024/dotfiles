@@ -30,19 +30,28 @@ mkfs.fat -F32 /dev/$BOOT
 mkfs.btrfs -f /dev/$ROOT
 mount /dev/"$ROOT" /mnt
 btrfs su cr /mnt/@
+btrfs su cr /mnt/@home
 btrfs su cr /mnt/@snapshots
 btrfs su cr /mnt/@var_log
 umount /mnt
 mount -o noatime,compress=lzo,space_cache=v2,subvol=@ /dev/"$ROOT" /mnt
-mkdir -p /mnt/{boot,var,.snapshots}
+mkdir -p /mnt/{boot,home,var,.snapshots}
 mkdir -p /mnt/var/log
+
+# home
+mount -o noatime,compress=lzo,space_cache=v2,subvol=@home \
+	/dev/"$ROOT" /mnt/home
+
+# var_log
 mount -o noatime,compress=lzo,space_cache=v2,subvol=@var_log \
 	/dev/"$ROOT" /mnt/var/log
+
+# snapshots
 mount -o noatime,compress=lzo,space_cache=v2,subvol=@snapshots \
 	/dev/"$ROOT" /mnt/.snapshots
 
+# boot
 mount /dev/"$BOOT" /mnt/boot
-
 
 
 pacstrap /mnt base base-devel linux linux-firmware amd-ucode openssh \

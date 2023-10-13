@@ -2,10 +2,17 @@
 #
 HOSTNAME='gargulabox'
 USERNAME='gargula'
-EDITOR='vim'
+EDITOR='nvim'
 
+###############################
+# Functions
+function printStatus() {
+	echo "$1"
+	echo "..."
+	sleep 2
+}
+###############################
 
-echo 'set nu' >> /etc/vimrc
 ln -sf /usr/share/zoneinfo/America/Recife /etc/localtime
 hwclock --systohc
 echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
@@ -19,14 +26,77 @@ echo -e "127.0.0.1\tlocalhost" >> /etc/hosts
 echo -e "::1\t\tlocalhost" >> /etc/hosts 
 echo -e "127.0.0.1\t$HOSTNAME.localdomain\t$HOSTNAME" >> /etc/hosts
 
-echo "Root password..."
+printStatus "Root password..."
 passwd
-pacman -S grub efibootmgr networkmanager network-manager-applet dialog mtools dosfstools reflector \
-  snapper bluez bluez-utils xdg-utils xdg-user-dirs alsa-utils inetutils base-devel linux-headers \
-  os-prober bash-completion terminus-font nmap less blueman pipewire-jack pipewire-alsa pipewire-pulse
 
-vim /etc/mkinitcpio.conf
-vim /etc/default/grub
+printStatus "Install pacman packages...."
+PACMAN_PKGS=(
+mpd
+wget
+rsync
+sshfs
+exa
+bat
+notepadqq
+ethtool
+evince
+cronie
+gthumb
+gimp
+tumbler
+yt-dlp
+lm_sensors
+w3m
+reflector
+fish
+python-pip
+greetd
+grub-customizer
+xorg-xhost
+breeze
+cliphist
+xarchiver
+unzip
+system-config-printer
+usbutils
+avahi
+nss-mdns
+nvme-cli
+mako
+grub
+efibootmgr
+networkmanager
+network-manager-applet
+dialog
+mtools
+dosfstools
+reflector
+snapper
+bluez
+bluez-utils
+xdg-utils
+xdg-user-dirs
+alsa-utils
+inetutils
+base-devel
+linux-headers
+os-prober
+bash-completion
+terminus-font
+nmap
+less
+blueman
+pipewire-jack
+pipewire-alsa
+pipewire-pulse
+)
+
+sudo pacman -S ${PACMAN_PKGS[*]}
+
+
+printStatus "mkinitcpio owww yesssss!"
+nvim /etc/mkinitcpio.conf
+nvim /etc/default/grub
 
 mkinitcpio -p linux
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
@@ -38,4 +108,4 @@ useradd -mG wheel $USERNAME
 passwd $USERNAME
 visudo
 
-echo "Thats ok... Reboot and go part 3..."
+printStatus "Thats ok... Reboot and go part 3..."

@@ -3,13 +3,15 @@
 USERNAME='gargula'
 EDITOR='nvim'
 NET_IFACE='enp6s0'
+DOTFILES="$HOME/dotfiles"
+
 
 ###############################
 # Functions
 function printStatus() {
 	echo "$1"
 	echo "..."
-	sleep 3
+	sleep 2
 }
 ###############################
 
@@ -37,56 +39,15 @@ rm -rfv paru/
 printStatus "Upgrading"
 paru
 
-printStatus "Edit /etc/pacman.conf"
-sudo nvim /etc/pacman.conf
-
-PACMAN_PKGS=(
-mpd
-wget
-rsync
-sshfs
-exa
-bat
-notepadqq
-ethtool
-evince
-cronie
-gthumb
-gimp
-tumbler
-yt-dlp
-lm_sensors
-w3m
-reflector
-fish
-python-pip
-greetd
-grub-customizer
-xorg-xhost
-breeze
-cliphist
-xarchiver
-unzip
-system-config-printer
-usbutils
-avahi
-nss-mdns
-nvme-cli
-mako
-)
-
-
 
 printStatus "Install Chaotic AUR Repository"
 sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
 sudo pacman-key --lsign-key 3056513887B78AEB
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
-echo '[chaotic-aur]' | sudo tee -a /etc/pacman.conf >/dev/null
-echo 'Include = /etc/pacman.d/chaotic-mirrorlist' | sudo tee -a /etc/pacman.conf >/dev/null
+sudo ln -sf /home/$USERNAME/dotfiles/etc/pacman.conf /etc/pacman.conf
 
 paru
-
 
 AUR_PKGS=(
 cifs-utils
@@ -134,15 +95,14 @@ a2ln
 )
 
 
-printStatus "Install pacman packages"	
-sudo pacman -S ${PACMAN_PKGS[*]}
-
 printStatus "Install AUR Packages"
 
 paru -S ${AUR_PKGS[*]}
 
-printStatus "Edit Reflector Config"
-sudo nvim /etc/xdg/reflector/reflector.conf
+printStatus "Linking Reflector..."
+sudo ln -sf /home/$USERNAME/etc/xdg/reflector/reflector.conf /etc/xdg/reflector/reflector.conf
+
+
 
 
 printStatus "Enable Services"
@@ -157,5 +117,60 @@ sudo cp $HOME/dotfiles/scripts/zram-swap.service /etc/systemd/system/
 sudo systemctl enable --now zram-swap.service
 zramctl
 
+printStatus "Linking gdu..."
+ln -sf $DOTFILES/gdu/gdu.yaml $HOME/.gdu.yaml
+
+printStatus "Linking /etc/environment"
+sudo rm -rfv /etc/environment
+sudo ln -sf $DOTFILES/etc/environment /etc/environment
+
+printStatus "Linking /etc/greetd/config.toml"
+sudo ln -sf $DOTFILES/etc/greetd/config.toml /etc/greetd/config.toml
+
+printStatus "Linking /etc/nsswitch.con"
+sudo ln -sf $DOTFILES/etc/nsswitch.conf /etc/nsswitch.conf
+
+printStatus "Enable Greetd..."
+sudo systemctl enable greetd.service
+
+printStatus "Enable .bashrc"
+rm $HOME/.bashrc
+ln -sf $DOTFILES/bashrc $HOME/.bashrc
+
+
+LINK_DIRS=(
+	cava
+	mako
+	fish
+	fuzzel
+	hypr
+	kitty
+	neofetch
+	swaylock
+	systemd
+	waybar
+)
+
+# get length of an array
+arraylength=${#LINK_DIRS[@]}
+
+
+# use for loop to read all values and indexes
+for (( i=0; i<${arraylength}; i++ ));
+do
+	printStatus "Linking ${LINK_DIRS[$i]}"
+	ln -sf "$DOTFILES/${LINK_DIRS[$i]}" "$HOME/.config/${LINK_DIRS[$i]}"
+done
+
+
+printStatus "Install Fauxmo..."
+pipx install fauxmo
+
+printStatus "Enable Avahi Daemon Service"
+sudo systemctl enable --now avahi-daemon.service
+
+
+printStatus "Enable a2ln notifications..."
+systemctl --user enable a2ln.service
 
 printStatus "Thats all"
