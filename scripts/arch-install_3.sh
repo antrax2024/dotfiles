@@ -76,7 +76,6 @@ python-pipx
 wl-clip-persist-git
 qmplay2-git
 unimatrix-git
-a2ln
 )
 
 
@@ -149,8 +148,6 @@ printStatus "Enable Avahi Daemon Service"
 sudo systemctl enable --now avahi-daemon.service
 
 
-printStatus "Enable a2ln notifications..."
-systemctl --user enable a2ln.service
 
 
 printStatus "Changind default shell to Fish Shell..."
