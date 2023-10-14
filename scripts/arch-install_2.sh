@@ -86,6 +86,7 @@ limine
 speedcrunch
 discord
 telegram-desktop
+imagemagick
 )
 
 pacman -S ${PACMAN_PKGS[*]}
