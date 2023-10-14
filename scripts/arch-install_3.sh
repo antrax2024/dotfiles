@@ -40,7 +40,6 @@ AUR_PKGS=(
 cifs-utils
 kitty-git
 fuzzel
-kitty
 waybar-hyprland
 hyprland-git
 papirus-icon-theme
@@ -84,15 +83,11 @@ printStatus "Install AUR Packages"
 
 paru -S ${AUR_PKGS[*]}
 
-printStatus "Linking Reflector..."
-sudo ln -sf $DOTFILES/etc/xdg/reflector/reflector.conf /etc/xdg/reflector/reflector.conf
 
 printStatus "Enable Services"
 sudo systemctl enable cronie.service
 sudo systemctl enable "wol@$NET_IFACE".service
 sudo systemctl enable --now mpd.service
-sudo systemctl enable --now reflector.service
-sudo systemctl enable --now reflector.timer
 
 printStatus "Install and Enable ZRAM Swap"
 sudo cp $HOME/dotfiles/scripts/zram-swap.service /etc/systemd/system/
@@ -159,5 +154,15 @@ systemctl --user enable a2ln.service
 
 printStatus "Changind default shell to Fish Shell..."
 chsh -s /usr/bin/fish $USERNAME
+
+printStatus "Installing AstroNvim..."
+mv ~/.local/share/nvim ~/.local/share/nvim.bak
+mv ~/.local/state/nvim ~/.local/state/nvim.bak
+mv ~/.cache/nvim ~/.cache/nvim.bak
+git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+ln -sf $DOTFILES/astronvim-user $HOME/.config/nvim/lua/user
+
+
+printStatus "INSTALE O nodejs em ~/nodejs"
 
 printStatus "Thats all"
