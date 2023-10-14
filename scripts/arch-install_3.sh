@@ -57,6 +57,7 @@ siji-ng
 hyprpaper
 hyprshot
 ttf-firacode-nerd
+ttf-firacode
 ttf-font-awesome
 swayidle
 wlogout
