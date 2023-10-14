@@ -52,7 +52,6 @@ polkit-kde-agent
 qt5-wayland
 qt6-wayland
 nwg-look
-btrfs-assistant
 insync
 ttf-hack-nerd
 siji-ng
