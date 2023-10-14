@@ -4,7 +4,6 @@ HOSTNAME='gargulabox'
 USERNAME='gargula'
 EDITOR='nvim'
 ROOT_PARTITION='nvme1n1p2'
-ROOT_UUID=$(lsblk /dev/$ROOT_PARTITION -o UUID | sed '2!d')
 
 ###############################
 # Functions
@@ -49,7 +48,6 @@ tumbler
 yt-dlp
 lm_sensors
 w3m
-reflector
 fish
 python-pip
 greetd
@@ -70,7 +68,6 @@ network-manager-applet
 dialog
 mtools
 dosfstools
-reflector
 snapper
 bluez
 bluez-utils
@@ -106,7 +103,7 @@ printStatus "Installing limine bootloader..."
 mkdir -p /boot/EFI/BOOT
 cp /usr/share/limine/BOOTX64.EFI /boot/EFI/BOOT
 curl -fssl https://gargulaonline.github.io/limine.cfg -o /boot/limine.cfg
-sed -i "s/rootuuid/$ROOT_UUID/g" /boot/limine.cfg
+printStatus "EDITE O ARQUIVO /boot/limine.cfg e ponha o UUID correto..."
 
 
 printStatus "Thats ok... Reboot and go part 3..."
