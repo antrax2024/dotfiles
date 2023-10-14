@@ -84,6 +84,7 @@ pipewire-alsa
 pipewire-pulse
 limine
 speedcrunch
+discord
 )
 
 pacman -S ${PACMAN_PKGS[*]}
