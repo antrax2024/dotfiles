@@ -163,6 +163,10 @@ mv ~/.cache/nvim ~/.cache/nvim.bak
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 ln -sf $DOTFILES/astronvim-user $HOME/.config/nvim/lua/user
 
+printStatus "Limine deploy pacman hook..."
+mkdir -p /etc/pacman.d/hooks
+sudo ln -sf $DOTFILES/etc/pacman.d/hooks/limine-deploy.hook /etc/pacman.d/hooks/limine-deploy.hook
+
 
 printStatus "INSTALE O nodejs em ~/nodejs"
 
