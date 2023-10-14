@@ -145,6 +145,7 @@ done
 printStatus "Install Fauxmo..."
 pipx install fauxmo
 
+
 printStatus "Enable Avahi Daemon Service"
 sudo systemctl enable --now avahi-daemon.service
 
@@ -166,6 +167,6 @@ mkdir -p /etc/pacman.d/hooks
 sudo ln -sf $DOTFILES/etc/pacman.d/hooks/limine-deploy.hook /etc/pacman.d/hooks/limine-deploy.hook
 
 
-printStatus "INSTALE O nodejs em ~/nodejs"
+printStatus "INSTALE O nodejs em ~/nodejs e ative os cronjobs!!!"
 
 printStatus "Thats all"
