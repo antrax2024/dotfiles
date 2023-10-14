@@ -87,6 +87,7 @@ speedcrunch
 discord
 telegram-desktop
 imagemagick
+ntp
 )
 
 pacman -S ${PACMAN_PKGS[*]}
@@ -95,9 +96,16 @@ pacman -S ${PACMAN_PKGS[*]}
 printStatus "mkinitcpio owww yesssss!"
 mkinitcpio -p linux
 
+
+printStatus "Enable Services..... Hummmmmmm AWWWW"
 systemctl enable NetworkManager
 systemctl enable bluetooth
 systemctl enable sshd.service
+systemctl enable ntpd.service
+timedatectl set-ntp 1
+
+
+printStatus "Add user..."
 useradd -mG wheel $USERNAME
 passwd $USERNAME
 visudo
