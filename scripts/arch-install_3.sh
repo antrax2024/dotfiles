@@ -77,6 +77,7 @@ python-pipx
 wl-clip-persist-git
 qmplay2-git
 unimatrix-git
+pasystray-wayland
 )
 
 
