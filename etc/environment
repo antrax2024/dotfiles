@@ -9,3 +9,4 @@ QT_QPA_PLATFORM=wayland
 HYPRSHOT_DIR=/home/gargula/screenshots
 
 
+
