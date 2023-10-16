@@ -88,6 +88,7 @@ discord
 telegram-desktop
 imagemagick
 ntp
+pavucontrol
 )
 
 pacman -S ${PACMAN_PKGS[*]}
