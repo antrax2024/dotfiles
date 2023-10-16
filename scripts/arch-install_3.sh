@@ -116,6 +116,9 @@ printStatus "Enable .bashrc"
 rm $HOME/.bashrc
 ln -sf $DOTFILES/bashrc $HOME/.bashrc
 
+printStatus "Linking electron-flags.conf"
+ln -sf $DOTFILES/electron-flags.conf $HOME/.config/electron-flags.conf
+
 
 
 LINK_DIRS=(
