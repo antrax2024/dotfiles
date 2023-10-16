@@ -2,7 +2,7 @@
 #
 USERNAME='gargula'
 EDITOR='nvim'
-NET_IFACE='enp6s0'
+NET_IFACE='enp7s0'
 DOTFILES="$HOME/dotfiles"
 
 
@@ -78,6 +78,7 @@ wl-clip-persist-git
 qmplay2-git
 unimatrix-git
 pasystray-wayland
+ttf-hack
 )
 
 
@@ -109,8 +110,8 @@ sudo ln -sf $DOTFILES/etc/greetd/config.toml /etc/greetd/config.toml
 printStatus "Linking /etc/nsswitch.con"
 sudo ln -sf $DOTFILES/etc/nsswitch.conf /etc/nsswitch.conf
 
-printStatus "Enable Greetd..."
-sudo systemctl enable greetd.service
+#printStatus "Enable Greetd..."
+#sudo systemctl enable greetd.service
 
 printStatus "Enable .bashrc"
 rm $HOME/.bashrc
