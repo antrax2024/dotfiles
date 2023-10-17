@@ -6,9 +6,12 @@
 
 	"modules-left": [
 		"hyprland/workspaces",
-		"custom/right-arrow-dark"
+		"custom/right-arrow-dark",
+
+
 	],
-	"modules-center": [
+	"modules-right": [
+
 		"custom/left-arrow-dark",
 		"clock#1",
 		"custom/left-arrow-light",
@@ -17,9 +20,11 @@
 		"custom/right-arrow-dark",
 		"custom/right-arrow-light",
 		"clock#3",
-		"custom/right-arrow-dark"
-	],
-	"modules-right": [
+		"custom/right-arrow-dark",
+
+		"custom/left-arrow-dark",
+		"custom/nvidia",
+		"custom/left-arrow-light",
 
 		"custom/left-arrow-dark",
 		"temperature",
@@ -67,6 +72,16 @@
 	"custom/right-arrow-light": {
 		"format": "",
 		"tooltip": false
+	},
+
+	"custom/nvidia": {
+		"format": " {icon} {}°C ",
+		"tooltip": false,
+    "exec": "/home/gargula/dotfiles/bin/nvidia-temp.sh",
+    "format-icons": [
+    	"󱧑"
+    ],
+
 	},
 
 	"hyprland/workspaces": {
@@ -131,7 +146,7 @@
  	"temperature": {
 		"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
 		"format": "  {temperatureC}°C "
-	},
+	}
 
 
 }
