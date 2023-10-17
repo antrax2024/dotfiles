@@ -114,7 +114,8 @@ visudo
 printStatus "Installing limine bootloader..."
 mkdir -p /boot/EFI/BOOT
 cp /usr/share/limine/BOOTX64.EFI /boot/EFI/BOOT
-curl -fssl https://gargulaonline.github.io/limine.cfg -o /boot/limine.cfg
+curl -fssl https://gargulaonline.github.io/limine-config/limine.cfg -o /boot/limine.cfg
+curl -fssl https://gargulaonline.github.io/limine-config/limine.jpg -o /boot/limine.jpg
 printStatus "EDITE O ARQUIVO /boot/limine.cfg e ponha o UUID correto..."
 
 
