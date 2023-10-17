@@ -90,6 +90,7 @@ imagemagick
 ntp
 pavucontrol
 mlocate
+copyq
 )
 
 pacman -S ${PACMAN_PKGS[*]}
