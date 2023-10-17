@@ -1,11 +1,12 @@
 * {
 	font-size: 20px;
-	font-family: "Fira Code Nerd Medium";
+	font-family: "FiraCode Nerd Font Propo";
 }
 
 window#waybar {
 	background: #292b2e;
 	color: #fdf6e3;
+	font-weight: bold;
 	opacity: 0.8;
 }
 
@@ -23,10 +24,8 @@ window#waybar {
 
 
 #clock.1,#clock.2,#clock.3 {
-	color: #00ffd4;
+	color: #deef7f;
 }
-
-
 
 
 #workspaces,
@@ -38,6 +37,7 @@ window#waybar {
 #cpu,
 #battery,
 #disk,
+#custom-nvidia,
 #tray {
 	background: #1a1a1a;
 }
@@ -71,8 +71,13 @@ window#waybar {
 #battery {
 	color: #859900;
 }
+
 #disk {
 	color: #b58900;
+}
+
+#custom-nvidia {
+	color: #f55696;
 }
 
 #network {
@@ -90,7 +95,9 @@ window#waybar {
 #memory,
 #cpu,
 #battery,
-#disk {
+#disk,
+#custom-nvidia,
+#tray {
 	padding: 0 10px;
 	padding-left: 20px;
 }
