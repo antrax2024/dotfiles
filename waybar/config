@@ -75,9 +75,10 @@
 	},
 
 	"custom/nvidia": {
-		"format": " {icon} {}°C ",
+		"format": " {icon} {} ",
+		"interval": 1,
 		"tooltip": false,
-    "exec": "/home/gargula/dotfiles/bin/nvidia-temp.sh",
+    "exec": "/home/gargula/dotfiles/bin/nvidia-status.sh",
     "format-icons": [
     	"󱧑"
     ],
