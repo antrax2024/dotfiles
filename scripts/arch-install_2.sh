@@ -103,7 +103,6 @@ systemctl enable NetworkManager
 systemctl enable bluetooth
 systemctl enable sshd.service
 systemctl enable ntpd.service
-timedatectl set-ntp 1
 
 
 printStatus "Add user..."
