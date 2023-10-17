@@ -89,6 +89,7 @@ telegram-desktop
 imagemagick
 ntp
 pavucontrol
+mlocate
 )
 
 pacman -S ${PACMAN_PKGS[*]}
