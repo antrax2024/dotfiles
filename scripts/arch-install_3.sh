@@ -110,8 +110,8 @@ sudo ln -sf $DOTFILES/etc/greetd/config.toml /etc/greetd/config.toml
 printStatus "Linking /etc/nsswitch.con"
 sudo ln -sf $DOTFILES/etc/nsswitch.conf /etc/nsswitch.conf
 
-#printStatus "Enable Greetd..."
-#sudo systemctl enable greetd.service
+printStatus "Enable Greetd..."
+sudo systemctl enable greetd.service
 
 printStatus "Enable .bashrc"
 rm $HOME/.bashrc
@@ -172,6 +172,13 @@ mkdir -p /etc/pacman.d/hooks
 sudo ln -sf $DOTFILES/etc/pacman.d/hooks/limine-deploy.hook /etc/pacman.d/hooks/limine-deploy.hook
 
 
+printStatus "linux-tkg (Kernel Custom)"
+paru -S linux-tkg-bmq-headers linux-tkg-bmq modprobed-db
+print "Edite o arquivo limine.cfg para incluir linux-tkg e efetue um reboot para instalar nvidia.sh...."
+
+
+
 printStatus "INSTALE O nodejs em ~/nodejs e ative os cronjobs!!!"
+
 
 printStatus "Thats all"
