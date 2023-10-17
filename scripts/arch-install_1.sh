@@ -27,14 +27,15 @@ fi
 printStatus "Loadkeys, setntp and setfont..."
 loadkeys br-abnt2
 timedatectl set-ntp true
-setfont ter-132b
 
 printStatus "Zap the disk.... Loose everything... "
 sgdisk -z /dev/$DISK_DEVICE
 sgdisk -g /dev/$DISK_DEVICE
 
 printStatus "Create boot partition..."
-sgdisk -n 1:0:+300M /dev/$DISK_DEVICE -t 1:ef00 -c efi
+sgdisk -n 1:0:+8G /dev/$DISK_DEVICE -t 1:ef00 -c efi
+
+
 printStatus "Create Root partition..."
 sgdisk --largest-new=2 /dev/$DISK_DEVICE
 
