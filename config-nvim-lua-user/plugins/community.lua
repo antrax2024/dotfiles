@@ -7,5 +7,5 @@ return {
   -- { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.colorscheme.github-nvim-theme" },
   { import = "astrocommunity.color.transparent-nvim" },
-  { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
+  { import = "astrocommunity.colorscheme.tokyonight-nvim" },
 }
