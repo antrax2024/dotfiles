@@ -64,12 +64,12 @@ python-psutil
 vulkan-tools
 powerline
 powerline-fonts
+foot
 )
 
 # pacotes AUR
 AUR_PKGS=(
 cifs-utils
-kitty-git
 fuzzel
 waybar-hyprland
 hyprland-git
