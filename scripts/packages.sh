@@ -31,7 +31,6 @@ usbutils
 avahi
 nss-mdns
 nvme-cli
-mako
 networkmanager
 network-manager-applet
 dialog
@@ -70,6 +69,7 @@ xterm
 
 # pacotes AUR
 AUR_PKGS=(
+swaync
 cifs-utils
 fuzzel
 waybar-hyprland
