@@ -1,20 +1,12 @@
 # CONFIG VARS
 #
 USERNAME='gargula'
-EDITOR='nvim'
+EDITOR='vim'
 NET_IFACE='enp7s0'
 DOTFILES="$HOME/dotfiles"
 
-
-###############################
-# Functions
-function printStatus() {
-	echo "$1"
-	echo "..."
-	sleep 2
-}
-###############################
-
+source functions.sh
+source packages.sh
 
 printStatus "Installing paru"
 git clone https://aur.archlinux.org/paru.git
@@ -34,53 +26,8 @@ sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.ta
 
 sudo ln -sf /home/$USERNAME/dotfiles/etc/pacman.conf /etc/pacman.conf
 
+printStatus "Upgrading...."
 paru
-
-AUR_PKGS=(
-cifs-utils
-kitty-git
-fuzzel
-waybar-hyprland
-hyprland-git
-papirus-icon-theme
-thunar
-thunar-archive-plugin
-thunar-media-tags-plugin
-thunar-volman
-polkit-kde-agent
-qt5-wayland
-qt6-wayland
-nwg-look
-insync
-ttf-hack-nerd
-siji-ng
-hyprpaper
-hyprshot
-ttf-firacode-nerd
-ttf-firacode
-ttf-font-awesome
-swayidle
-wlogout
-visual-studio-code-bin
-awesome-terminal-fonts
-gdu
-firefox
-adapta-gtk-theme
-wol-systemd
-neofetch
-swaylock-effects
-starship
-noto-fonts-emoji
-gohugo-extended-bin
-ttf-iosevka-nerd
-python-pipx
-wl-clip-persist-git
-qmplay2-git
-unimatrix-git
-pasystray-wayland
-ttf-hack
-)
-
 
 printStatus "Install AUR Packages"
 
@@ -160,12 +107,6 @@ sudo systemctl enable --now avahi-daemon.service
 printStatus "Changind default shell to Fish Shell..."
 chsh -s /usr/bin/fish $USERNAME
 
-printStatus "Installing AstroNvim..."
-mv ~/.local/share/nvim ~/.local/share/nvim.bak
-mv ~/.local/state/nvim ~/.local/state/nvim.bak
-mv ~/.cache/nvim ~/.cache/nvim.bak
-git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
-ln -sf $DOTFILES/astronvim-user $HOME/.config/nvim/lua/user
 
 printStatus "Limine deploy pacman hook..."
 sudo mkdir -p /etc/pacman.d/hooks
@@ -175,7 +116,6 @@ sudo ln -sf $DOTFILES/etc/pacman.d/hooks/limine-deploy.hook /etc/pacman.d/hooks/
 printStatus "linux-tkg (Kernel Custom)"
 paru -S linux-tkg-bmq-headers linux-tkg-bmq modprobed-db
 printStatus "Edite o arquivo limine.cfg para incluir linux-tkg e efetue um reboot para instalar nvidia.sh...."
-
 
 
 printStatus "INSTALE O nodejs em ~/nodejs e ative os cronjobs!!!"

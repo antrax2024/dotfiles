@@ -1,3 +1,4 @@
+#!/usr/bin/bash
 ###############################
 # Functions
 function printStatus() {
@@ -56,7 +57,7 @@ mount /dev/"$BOOT" /mnt/boot
 clear
 printStatus "Now, i will pacstrap, OOOOWHHHHH YESSSS!!!"
 pacstrap /mnt base base-devel linux linux-headers linux-firmware amd-ucode openssh \
-	neovim git duf ruby man
+	vim git duf ruby man
 
 printStatus "genfstab...."
 genfstab -U /mnt >> /mnt/etc/fstab
