@@ -1,14 +1,15 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 
-result=$(ps -ef | grep "fauxmo" | grep -v grep | wc -l | xargs)
 
-if [ $result -gt 2 ]; then
-	echo -e "The SCRIPT was already running!"
-	exit 0
-else
-	echo -e "NÃO!!!"
-	/home/gargula/.local/bin/fauxmo -c $HOME/dotfiles/fauxmo/config.json
-	exit 0
-fi 
-
+while true
+do
+	if pidof -o %PPID -x "fauxmo">/dev/null; then
+		echo "Fauxmo already running"
+	else
+		echo "Fauxmo not running..."
+		/home/gargula/.local/bin/fauxmo -c /home/orangepi/fauxmo/config.json
+		echo "Down..."
+	fi
+	sleep 5
+done
