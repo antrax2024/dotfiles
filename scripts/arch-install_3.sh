@@ -117,6 +117,10 @@ printStatus "linux-tkg (Kernel Custom)"
 paru -S linux-tkg-bmq-headers linux-tkg-bmq modprobed-db
 printStatus "Edite o arquivo limine.cfg para incluir linux-tkg e efetue um reboot para instalar nvidia.sh...."
 
+printStatus "Config vim..."
+ln -sf $DOTFILES/vimrc $HOME/.vimrc
+ln -sf $DOTFILES/vim $HOME/.vim
+
 
 printStatus "INSTALE O nodejs em ~/nodejs e ative os cronjobs!!!"
 
