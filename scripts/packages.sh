@@ -65,6 +65,7 @@ vulkan-tools
 powerline
 powerline-fonts
 foot
+xterm
 )
 
 # pacotes AUR
