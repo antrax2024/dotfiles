@@ -75,7 +75,7 @@ LINK_DIRS=(
 	fish
 	fuzzel
 	hypr
-	kitty
+    foot
 	neofetch
 	swaylock
 	systemd
