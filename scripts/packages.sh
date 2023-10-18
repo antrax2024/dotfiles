@@ -61,6 +61,7 @@ pavucontrol
 mlocate
 copyq
 python-psutil
+vulkan-tools
 )
 
 # pacotes AUR
