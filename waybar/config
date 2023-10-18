@@ -27,7 +27,7 @@
 		"custom/left-arrow-light",
 
 		"custom/left-arrow-dark",
-		"temperature",
+		"custom/cpuinfo",
 		"custom/left-arrow-light",
 
 		"custom/left-arrow-dark",
@@ -84,6 +84,17 @@
     ],
 
 	},
+
+	"custom/cpuinfo": {
+		"format": " {icon} {} ",
+		"interval": 5,
+		"tooltip": false,
+    "exec": "/home/gargula/dotfiles/bin/cpuinfo.py",
+    "format-icons": [
+    	"󰘚"
+    ],
+
+	},	
 
 	"hyprland/workspaces": {
 		"disable-scroll": true,

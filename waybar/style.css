@@ -84,8 +84,9 @@ window#waybar {
 	color: lightgreen;
 }
 
-#temperature,#network {
-	color: lightgreen;
+
+#custom-cpuinfo,#network {
+	color: #ccd9ff;
 	background: #1a1a1a;
 }
 
