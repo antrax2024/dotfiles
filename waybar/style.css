@@ -5,7 +5,7 @@
 
 window#waybar {
 	background: #292b2e;
-	color: #fdf6e3;
+	color: #ccd9f3;
 	font-weight: bold;
 	opacity: 0.8;
 }
@@ -24,7 +24,7 @@ window#waybar {
 
 
 #clock.1,#clock.2,#clock.3 {
-	color: #f6f6f6;
+	color: #ccd9ff;
 }
 
 
@@ -45,7 +45,7 @@ window#waybar {
 
 #workspaces button {
 	padding: 0 2px;
-	color: #e5e6eb;
+	color: #ccd9fb;
 }
 
 #workspaces button:hover {
@@ -60,29 +60,23 @@ window#waybar {
 }
 
 #pulseaudio {
-	color:  #dfe3ee;
+	color:  #ccd9fe;
 }
 #memory {
-	color: #dfe3ee;
-}
-#cpu {
-	color: #6c71c4;
+	color: #ccd9fe;
 }
 
-#battery {
-	color: #859900;
-}
 
 #disk {
-	color: #e5e6eb;
+	color: #ccd9fb;
 }
 
 #custom-nvidia {
-	color: #e5e6eb;
+	color: #ccd9fb;
 }
 
 #network {
-	color: #8b9dc3;
+	color: #ccd9ff;
 }
 
 
