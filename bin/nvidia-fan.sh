@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/bash
 # Change "j" for your sudo password
 password=""
 

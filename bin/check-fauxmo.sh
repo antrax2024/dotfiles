@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 
 result=$(ps -ef | grep "fauxmo" | grep -v grep | wc -l | xargs)
