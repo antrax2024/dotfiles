@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/bash
 # start waybar and programs with tray icons after pause
 
 sleep 20

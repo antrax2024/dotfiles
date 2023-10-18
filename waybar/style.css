@@ -24,7 +24,7 @@ window#waybar {
 
 
 #clock.1,#clock.2,#clock.3 {
-	color: #deef7f;
+	color: #f6f6f6;
 }
 
 
@@ -38,18 +38,18 @@ window#waybar {
 #battery,
 #disk,
 #custom-nvidia,
+#custom-cpuinfo,
 #tray {
 	background: #1a1a1a;
 }
 
 #workspaces button {
 	padding: 0 2px;
-	color: #98f5ff;
+	color: #e5e6eb;
 }
-#workspaces button.focused {
-	color: #268bd2;
-}
+
 #workspaces button:hover {
+	color: #268bd2;
 	box-shadow: inherit;
 	text-shadow: inherit;
 }
@@ -60,28 +60,29 @@ window#waybar {
 }
 
 #pulseaudio {
-	color: #268bd2;
+	color:  #dfe3ee;
 }
 #memory {
-	color: #2aa198;
+	color: #dfe3ee;
 }
 #cpu {
 	color: #6c71c4;
 }
+
 #battery {
 	color: #859900;
 }
 
 #disk {
-	color: #b58900;
+	color: #e5e6eb;
 }
 
 #custom-nvidia {
-	color: #f55696;
+	color: #e5e6eb;
 }
 
 #network {
-	color: lightgreen;
+	color: #8b9dc3;
 }
 
 
@@ -98,6 +99,7 @@ window#waybar {
 #battery,
 #disk,
 #custom-nvidia,
+#custom-cpuinfo,
 #tray {
 	padding: 0 10px;
 	padding-left: 20px;

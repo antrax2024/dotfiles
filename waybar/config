@@ -13,16 +13,6 @@
 	"modules-right": [
 
 		"custom/left-arrow-dark",
-		"clock#1",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"clock#2",
-		"custom/right-arrow-dark",
-		"custom/right-arrow-light",
-		"clock#3",
-		"custom/right-arrow-dark",
-
-		"custom/left-arrow-dark",
 		"custom/nvidia",
 		"custom/left-arrow-light",
 
@@ -31,26 +21,31 @@
 		"custom/left-arrow-light",
 
 		"custom/left-arrow-dark",
-		"cpu",
-		"custom/left-arrow-light",
-
-		"custom/left-arrow-dark",
 		"memory",
 		"custom/left-arrow-light",
-
 
 		"custom/left-arrow-dark",
 		"disk",
 		"custom/left-arrow-light",
 
-
 		"custom/left-arrow-dark",
 		"network",
 		"custom/left-arrow-light",
 
-
 		"custom/left-arrow-dark",
 		"pulseaudio",
+		"custom/left-arrow-light",
+
+		"custom/left-arrow-dark",
+		"clock#1",
+		"custom/left-arrow-light",
+
+		"custom/left-arrow-dark",
+		"clock#3",
+		"custom/left-arrow-light",
+
+		"custom/left-arrow-dark",
+		"clock#2",
 		"custom/left-arrow-light",
 
 		"custom/left-arrow-dark",
@@ -80,7 +75,7 @@
 		"tooltip": false,
     "exec": "/home/gargula/dotfiles/bin/nvidia-status.sh",
     "format-icons": [
-    	"󱧑"
+    	""
     ],
 
 	},
@@ -130,14 +125,13 @@
 		"on-click": "pamixer -t",
 		"on-click-right": "pavucontrol"
 	},
+
 	"memory": {
 		"interval": 5,
 		"format": "  {used:0.1f}G / {total:0.1f}G"
 	},
-	"cpu": {
-		"interval": 5,
-		"format": " {usage:2}%"
-	},
+
+
 	"disk": {
 		"interval": 5,
 		"format": "󰋊 {used} / {total}",
