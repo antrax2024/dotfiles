@@ -62,6 +62,8 @@ mlocate
 copyq
 python-psutil
 vulkan-tools
+powerline
+powerline-fonts
 )
 
 # pacotes AUR
