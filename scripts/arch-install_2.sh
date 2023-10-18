@@ -91,6 +91,7 @@ ntp
 pavucontrol
 mlocate
 copyq
+python-psutil
 )
 
 pacman -S ${PACMAN_PKGS[*]}
