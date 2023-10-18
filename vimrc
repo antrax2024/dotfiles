@@ -76,6 +76,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'preservim/nerdtree'
     Plug 'ayu-theme/ayu-vim' " or other package manager
     Plug 'tribela/vim-transparent'
+    Plug 'ap/vim-css-color'
 
 
 call plug#end()
