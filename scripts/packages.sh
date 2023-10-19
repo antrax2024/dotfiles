@@ -106,7 +106,6 @@ noto-fonts-emoji
 gohugo-extended-bin
 ttf-iosevka-nerd
 python-pipx
-wl-clip-persist-git
 qmplay2-git
 unimatrix-git
 pasystray-wayland
