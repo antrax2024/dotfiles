@@ -70,16 +70,16 @@ ln -sf $DOTFILES/electron-flags.conf $HOME/.config/electron-flags.conf
 
 
 LINK_DIRS=(
-	cava
-	mako
-	fish
-	fuzzel
-	hypr
-    foot
-	neofetch
-	swaylock
-	systemd
-	waybar
+cava
+swaync
+fish
+fuzzel
+hypr
+foot
+neofetch
+swaylock
+systemd
+waybar
 )
 
 # get length of an array
