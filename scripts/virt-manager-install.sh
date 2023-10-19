@@ -3,7 +3,8 @@
 sudo pacman -Syy
 sudo pacman -S archlinux-keyring
 sudo pacman -S qemu-full virt-manager virt-viewer dnsmasq vde2 \
-bridge-utils openbsd-netcat dmidecode ebtables iptables libguestfs
+bridge-utils openbsd-netcat dmidecode ebtables iptables libguestfs \
+edk2-ovmf swtpm
 
 
 sudo systemctl enable libvirtd.service
