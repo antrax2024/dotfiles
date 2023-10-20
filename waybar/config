@@ -93,7 +93,7 @@
 
 	"hyprland/workspaces": {
 		"disable-scroll": true,
-		"format": "{name}"
+		"format": "{name}",
 	},
 
 	"clock#1": {
