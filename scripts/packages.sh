@@ -65,6 +65,7 @@ powerline
 powerline-fonts
 foot
 xterm
+gtkmm
 )
 
 # pacotes AUR
