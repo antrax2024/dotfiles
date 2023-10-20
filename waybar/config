@@ -90,7 +90,8 @@
            "has-updates": "<span foreground='#fe6f5e'>󱍷</span>",
            "updated": "<span foreground='#dbf117'>󰂪</span>"
        },
-       "exec": "waybar-module-pacman-updates"
+        "exec-if": "which waybar-module-pacman-updates",
+        "exec": "waybar-module-pacman-updates"
    },
 
 	"custom/cpuinfo": {
