@@ -11,6 +11,9 @@
 
 	],
 	"modules-right": [
+		"custom/left-arrow-dark",
+		"custom/updates",
+		"custom/left-arrow-light",
 
 		"custom/left-arrow-dark",
 		"custom/nvidia",
@@ -79,6 +82,16 @@
     ],
 
 	},
+
+   "custom/updates": {
+       "format": "{icon} {} updates",
+       "return-type": "json",
+       "format-icons": {
+           "has-updates": "󱍷",
+           "updated": "󰂪"
+       },
+       "exec": "waybar-module-pacman-updates"
+   },
 
 	"custom/cpuinfo": {
 		"format": " {icon} {} ",
