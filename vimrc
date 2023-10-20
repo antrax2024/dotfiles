@@ -30,10 +30,10 @@ set expandtab
 set nobackup
 
 " Do not wrap lines. Allow long lines to extend as far as the line goes.
-set nowrap
+" set nowrap
 
 " While searching though a file incrementally highlight matching characters as you type.
-set incsearch
+" set incsearch
 
 " Ignore capital letters during search.
 set ignorecase
@@ -85,10 +85,10 @@ call plug#end()
 
 
 set termguicolors     " enable true colors support
-"let ayucolor="light"  " for light version of theme
+let ayucolor="light"  " for light version of theme
 "let ayucolor="mirage" " for mirage version of theme
 "let ayucolor="dark"   " for dark version of theme
-colorscheme darkblue
+colorscheme ayu
 
 
 
