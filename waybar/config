@@ -75,7 +75,7 @@
 		"tooltip": false,
     "exec": "/home/gargula/dotfiles/bin/nvidia-status.sh",
     "format-icons": [
-    	""
+    	"󰾲"
     ],
 
 	},
@@ -86,7 +86,7 @@
 		"tooltip": false,
     "exec": "/home/gargula/dotfiles/bin/cpuinfo.py",
     "format-icons": [
-    	"󰘚"
+    	"󰻠"
     ],
 
 	},	
@@ -128,14 +128,18 @@
 
 	"memory": {
 		"interval": 5,
-		"format": "  {used:0.1f}G / {total:0.1f}G"
+		"format": "{icon}  {used:0.1f}G / {total:0.1f}G",
+        "format-icons": {
+            "default": "󰍛"
+        }
+
 	},
 
 
 	"disk": {
 		"interval": 5,
-		"format": "󰋊 {used} / {total}",
-		"path": "/"
+		"format": " {used} / {total}",
+		"path": "/",
 	},
 	"tray": {
 		"icon-size": 20
