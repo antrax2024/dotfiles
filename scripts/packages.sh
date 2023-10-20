@@ -7,7 +7,6 @@ rsync
 sshfs
 exa
 bat
-notepadqq
 ethtool
 evince
 cronie
