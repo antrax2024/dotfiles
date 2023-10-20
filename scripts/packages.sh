@@ -69,6 +69,7 @@ gtkmm
 
 # pacotes AUR
 AUR_PKGS=(
+waybar-module-pacman-updates-git
 swaync
 cifs-utils
 fuzzel
