@@ -108,6 +108,9 @@ printStatus "Changind default shell to Fish Shell..."
 chsh -s /usr/bin/fish $USERNAME
 
 
+printStatus "Linking shiny-mirros config..."
+sudo ln -sf $DOTFILES/etc/shiny-mirrors.conf /etc/shiny-mirrors.conf
+
 printStatus "Limine deploy pacman hook..."
 sudo mkdir -p /etc/pacman.d/hooks
 sudo ln -sf $DOTFILES/etc/pacman.d/hooks/limine-deploy.hook /etc/pacman.d/hooks/limine-deploy.hook
