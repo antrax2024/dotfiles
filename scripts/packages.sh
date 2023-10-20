@@ -69,7 +69,6 @@ gtkmm
 
 # pacotes AUR
 AUR_PKGS=(
-shiny-mirrors
 swaync
 cifs-utils
 fuzzel
