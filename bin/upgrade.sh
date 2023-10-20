@@ -1,3 +1,3 @@
 #!/usr/bin/bash
 #
-sudo pacman -Sy && sudo powerpill -Su && paru -Su
+sudo pacman -Sy && paru -Su
