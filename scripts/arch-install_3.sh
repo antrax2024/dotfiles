@@ -123,7 +123,7 @@ ln -sf $DOTFILES/vimrc $HOME/.vimrc
 ln -sf $DOTFILES/vim $HOME/.vim
 
 
-printStatus "INSTALE O nodejs em ~/nodejs e ative os cronjobs!!!"
+printStatus "ATIVE os cronjobs!!!"
 
 
 printStatus "Thats all"
