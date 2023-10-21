@@ -74,6 +74,7 @@ PACMAN_PKGS=(
 
 # pacotes AUR
 AUR_PKGS=(
+    glow
     waybar-module-pacman-updates-git
     swaync
     cifs-utils
