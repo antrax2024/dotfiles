@@ -118,9 +118,9 @@ printStatus "linux-tkg (Kernel Custom)"
 paru -S linux-tkg-bmq-headers linux-tkg-bmq modprobed-db
 printStatus "Edite o arquivo limine.cfg para incluir linux-tkg e efetue um reboot para instalar nvidia.sh...."
 
-printStatus "Config vim..."
-ln -sf $DOTFILES/vimrc $HOME/.vimrc
-ln -sf $DOTFILES/vim $HOME/.vim
+printStatus "Config neovim..."
+curl -s -L https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh | bash -s
+ln -sf $DOTFILES/lvim/config.lua $HOME/.config/lvim/config.lua
 
 
 printStatus "ATIVE os cronjobs!!!"
