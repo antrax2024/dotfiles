@@ -80,6 +80,7 @@ neofetch
 swaylock
 systemd
 waybar
+wpaperd
 )
 
 # get length of an array
