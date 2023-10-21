@@ -78,6 +78,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'ap/vim-css-color'
     Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'SirVer/ultisnips'
+    Plug 'davidhalter/jedi-vim'
 
 call plug#end()
 
@@ -103,6 +104,7 @@ autocmd BufRead,BufNewFile *.conf setf dosini
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+
