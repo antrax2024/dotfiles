@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 # Pacotes pacman
 PACMAN_PKGS=(
-python-jedi
+cargo
 mpd
 wget
 rsync
