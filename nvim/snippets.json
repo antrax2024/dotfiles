@@ -1,0 +1,18 @@
+{
+	"bash shebang": {
+		"prefix": "bsb",
+		"body": [
+			"#!/usr/bin/bash"
+		]
+	},
+
+		"python shebang": {
+		"prefix": "psb",
+		"body": [
+			"#!/usr/bin/python"
+		]
+	}
+
+}
+
+

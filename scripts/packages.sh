@@ -74,6 +74,7 @@ PACMAN_PKGS=(
 
 # pacotes AUR
 AUR_PKGS=(
+    wl-clip-persist-git
     glow
     waybar-module-pacman-updates-git
     swaync
