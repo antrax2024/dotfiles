@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 # Pacotes pacman
 PACMAN_PKGS=(
+    python-pyserial
     nodejs
     npm
     cargo
