@@ -73,7 +73,7 @@
 	},
 
 	"custom/nvidia": {
-		"format": "<span foreground='#d3ffce'>{icon}</span> {} ",
+		"format": "<span foreground='#9351ff'>{icon}</span> {} ",
 		"interval": 1,
 		"tooltip": false,
     "exec": "/home/gargula/dotfiles/bin/nvidia-status.sh",
@@ -88,14 +88,14 @@
        "return-type": "json",
        "format-icons": {
            "has-updates": "<span foreground='#fe6f5e'>󱍷</span>",
-           "updated": "<span foreground='#dbf117'>󰂪</span>"
+           "updated": "<span foreground='#55e400'>󰂪</span>"
        },
         "exec-if": "which waybar-module-pacman-updates",
         "exec": "waybar-module-pacman-updates"
    },
 
 	"custom/cpuinfo": {
-		"format": "<span foreground='#addcff'>{icon}</span> {} ",
+		"format": "<span foreground='#ffe063'>{icon}</span> {} ",
 		"interval": 5,
 		"tooltip": false,
         "exec": "/home/gargula/dotfiles/bin/cpuinfo.py",
@@ -107,7 +107,7 @@
 
 	"hyprland/workspaces": {
 		"disable-scroll": true,
-		"format": "[{name}]",
+		"format": "<span foreground='#caaaff'>[</span><span foreground='#edffdb'>{name}</span><span foreground='#caaaff'>]</span>",
 	},
 
 	"clock#1": {
