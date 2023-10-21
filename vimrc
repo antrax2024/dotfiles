@@ -33,7 +33,7 @@ set nobackup
 " set nowrap
 
 " While searching though a file incrementally highlight matching characters as you type.
-" set incsearch
+set incsearch
 
 " Ignore capital letters during search.
 set ignorecase
@@ -74,10 +74,9 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 call plug#begin('~/.vim/plugged')
     Plug 'preservim/nerdtree'
-    Plug 'ayu-theme/ayu-vim' " or other package manager
     Plug 'tribela/vim-transparent'
     Plug 'ap/vim-css-color'
-
+    Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
@@ -85,12 +84,8 @@ call plug#end()
 
 
 set termguicolors     " enable true colors support
-let ayucolor="light"  " for light version of theme
-"let ayucolor="mirage" " for mirage version of theme
-"let ayucolor="dark"   " for dark version of theme
-colorscheme ayu
 
-
+colorscheme dracula
 
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
@@ -98,4 +93,4 @@ python3 del powerline_setup
 
 set laststatus=2
 
-
+autocmd BufRead,BufNewFile *.conf setf dosini

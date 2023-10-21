@@ -87,7 +87,7 @@ nwg-look
 insync
 ttf-hack-nerd
 siji-ng
-hyprpaper
+chaotic-aur/wpaperd
 hyprshot
 ttf-firacode-nerd
 ttf-firacode
