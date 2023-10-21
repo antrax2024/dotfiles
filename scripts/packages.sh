@@ -67,6 +67,7 @@ PACMAN_PKGS=(
 	foot
 	xterm
 	gtkmm
+	mpv
 )
 
 # pacotes AUR
