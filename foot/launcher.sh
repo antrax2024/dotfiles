@@ -5,7 +5,9 @@
 # ----------------------------------------------------- 
 killall foot
 
+sleep 2
+
 # ----------------------------------------------------- 
 # Loading the configuration based on the username
 # ----------------------------------------------------- 
-foot --server & disown
+foot --server &
