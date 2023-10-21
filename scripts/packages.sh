@@ -62,11 +62,8 @@ PACMAN_PKGS=(
     ntp
     pavucontrol
     mlocate
-    copyq
     python-psutil
     vulkan-tools
-    powerline
-    powerline-fonts
     foot
     xterm
     gtkmm
