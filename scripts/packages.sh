@@ -68,6 +68,7 @@ PACMAN_PKGS=(
 	xterm
 	gtkmm
 	mpv
+	xdg-desktop-portal-hyprland
 )
 
 # pacotes AUR
