@@ -78,7 +78,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'ap/vim-css-color'
     Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'SirVer/ultisnips'
-    Plug 'honza/vim-snippets'
 
 call plug#end()
 
