@@ -4,4 +4,4 @@ DOTFILES=$HOME/dotfiles
 
 FILE=$1
 
-mpv --no-audio --config-dir="$DOTFILES/screensaver" "$DOTFILES/screensaver/$FILE"
+mpv --no-audio --config-dir="$DOTFILES/screensavers" "$DOTFILES/screensavers/$FILE"
