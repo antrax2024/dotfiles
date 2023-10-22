@@ -6,6 +6,6 @@ return {
   { import = "astrocommunity.color.ccc-nvim" },
   { import = "astrocommunity.lsp.lsp-signature-nvim" },
   { import = "astrocommunity.workflow.bad-practices-nvim" },
-
+  { import = "astrocommunity.color.transparent-nvim" },
 
 }
