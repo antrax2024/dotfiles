@@ -9,4 +9,4 @@ sudo sed -i 's/MODULES=()/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/
 
 sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-linux-tkg-bmq.img
 
-sudo echo 'options nvidia-drm modeset=1' >> /etc/modprobe.d/nvidia.conf
+sudo cp ../etc/modprobe.d/nvidia.conf /etc/modprobe.d/

@@ -3,7 +3,7 @@
 #
 HOSTNAME='gargulabox'
 USERNAME='gargula'
-EDITOR='vim'
+EDITOR='nvim'
 ROOT_PARTITION='nvme1n1p2'
 
 source functions.sh
