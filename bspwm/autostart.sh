@@ -18,7 +18,7 @@ function run {
 run setxkbmap br &
 run /home/gargula/dotfiles/bin/nvidia-fan.sh &
 run copyq --start-server &
-run picom -CGb &
+run picom --config $HOME/dotfiles/picom/picom.conf &
 run nitrogen --restore & 
 run /usr/lib/polkit-kde-authentication-agent-1 &
 run dunst &
