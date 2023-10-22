@@ -2,4 +2,4 @@
 
 DOTFILES=$HOME/dotfiles
 
-swayidle -w timeout 300 "$DOTFILES/bin/screensaver.sh"
+swayidle -w timeout 120 "$DOTFILES/bin/screensaver.sh fluids.mp4"
