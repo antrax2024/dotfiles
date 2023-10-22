@@ -89,7 +89,8 @@ AUR_PKGS=(
 	neofetch
 	starship
 	gohugo-extended-bin
-	qtile-git
+	bspwm 
+	sxhk
 	alacritty-git
 	picom
 	nitrogen
@@ -121,9 +122,11 @@ LINK_DIRS=(
 	fish
 	neofetch
 	nvim
-	qtile
+	bspwm
+	sxhkd
 	fontconfig
 	dunst
+	picom
 )
 
 
