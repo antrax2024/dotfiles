@@ -47,46 +47,27 @@ zramctl
 printStatus "Linking gdu..."
 ln -sf $DOTFILES/gdu/gdu.yaml $HOME/.gdu.yaml
 
-#printStatus "Linking /etc/environment"
-#sudo rm -rfv /etc/environment
-#sudo ln -sf $DOTFILES/etc/environment /etc/environment
-
-# printStatus "Linking /etc/greetd/config.toml"
-# sudo ln -sf $DOTFILES/etc/greetd/config.toml /etc/greetd/config.toml
-
 printStatus "Linking /etc/nsswitch.con"
 sudo ln -sf $DOTFILES/etc/nsswitch.conf /etc/nsswitch.conf
-
-# printStatus "Enable Greetd..."
-# sudo systemctl enable greetd.service
 
 printStatus "Enable .bashrc"
 rm $HOME/.bashrc
 ln -sf $DOTFILES/bashrc $HOME/.bashrc
 
-#printStatus "Linking electron-flags.conf"
-#ln -sf $DOTFILES/electron-flags.conf $HOME/.config/electron-flags.conf
 
 
 
 LINK_DIRS=(
-# cava
-# swaync
-fish
-# fuzzel
-# hypr
-# foot
-neofetch
-# swaylock
-systemd
-# waybar
-# wpaperd
-nvim
+	alacritty
+	rofi
+	fish
+	neofetch
+	systemd
+	nvim
 )
 
 # get length of an array
 arraylength=${#LINK_DIRS[@]}
-
 
 # use for loop to read all values and indexes
 for (( i=0; i<${arraylength}; i++ ));
@@ -96,24 +77,16 @@ do
 done
 
 
-# printStatus "Install Fauxmo..."
-# pipx install fauxmo
-
 
 printStatus "Enable Avahi Daemon Service"
 sudo systemctl enable --now avahi-daemon.service
 
-
-
-
 printStatus "Changind default shell to Fish Shell..."
 chsh -s /usr/bin/fish $USERNAME
-
 
 printStatus "Limine deploy pacman hook..."
 sudo mkdir -p /etc/pacman.d/hooks
 sudo ln -sf $DOTFILES/etc/pacman.d/hooks/limine-deploy.hook /etc/pacman.d/hooks/limine-deploy.hook
-
 
 printStatus "linux-tkg (Kernel Custom)"
 paru -S linux-tkg-bmq-headers linux-tkg-bmq modprobed-db
@@ -123,8 +96,6 @@ printStatus "Config neovim..."
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim $HOME/.config/nvim
 ln -sf $DOTFILES/nvim/ $HOME/.config/nvim/lua/user
 
-
 printStatus "ATIVE os cronjobs!!!"
-
 
 printStatus "Thats all"

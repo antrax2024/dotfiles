@@ -91,6 +91,14 @@ AUR_PKGS=(
 	gohugo-extended-bin
 	qtile-git
 	alacritty-git
+	picom
+	nitrogen
+	xorg-server-xephyr
+	playerctl
+	pulseaudio-ctl
+	dunst
+	flameshot
+	rofi
 	#########################
 	# FONTS 
 	#########################
