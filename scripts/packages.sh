@@ -123,6 +123,7 @@ LINK_DIRS=(
 	nvim
 	qtile
 	fontconfig
+	dunst
 )
 
 

@@ -1,7 +1,7 @@
 live_config_reload = true
 
 [colors.cursor]
-cursor = "#f7f415"
+cursor = "#b7a1ef"
 text = "#000000"
 
 [colors.hints.end]
@@ -13,7 +13,7 @@ background = "#e9ff5e"
 foreground = "#1d1f21"
 
 [colors.selection]
-background = "#f7f415"
+background = "#52d318"
 text = "#000000"
 
 [cursor.style]

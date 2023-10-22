@@ -23,5 +23,6 @@ run nitrogen --restore &
 run /usr/lib/polkit-kde-authentication-agent-1 &
 run dunst 
 run insync start &
+run blueman-applet &
 
 
