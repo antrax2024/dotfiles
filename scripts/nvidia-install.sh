@@ -2,7 +2,7 @@
 #
 echo "Instalando nvidia-dkms...."
 
-paru -S nvidia-dkms nvidia-utils nvidia-settings opencl-nvidia qt5-wayland qt5ct libva libva-nvidia-driver-git
+paru -S nvidia-dkms nvidia-utils nvidia-settings opencl-nvidia qt5ct libva libva-nvidia-driver-git
 
 
 sudo sed -i 's/MODULES=()/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/g' /etc/mkinitcpio.conf

@@ -1,0 +1,53 @@
+live_config_reload = true
+
+[colors.cursor]
+cursor = "#f7f415"
+text = "#000000"
+
+[colors.hints.end]
+background = "#1d1f21"
+foreground = "#e9ff5e"
+
+[colors.hints.start]
+background = "#e9ff5e"
+foreground = "#1d1f21"
+
+[colors.selection]
+background = "#f7f415"
+text = "#000000"
+
+[cursor.style]
+blinking = "On"
+shape = "Block"
+
+[font]
+size = 12.0
+
+[font.bold]
+family = "Hack Nerd Font Propo"
+style = "Bold"
+
+[font.bold_italic]
+family = "Hack Nerd Font Propo"
+style = "Bold Italic"
+
+[font.italic]
+family = "Hack Nerd Font Propo"
+style = "Italic"
+
+[font.normal]
+family = "Hack Nerd Font Propo"
+style = "Regular"
+
+[selection]
+save_to_clipboard = true
+
+[shell]
+program = "/usr/bin/fish"
+
+[window]
+title = "Alacritty"
+
+[window.padding]
+x = 15
+y = 15

@@ -4,9 +4,7 @@ password=""
 
 # Function
 setfan() {
-  xhost si:localuser:root
-  sudo -S /usr/bin/nvidia-settings -a "*:1[gpu:0]/GPUFanControlState=1" -a "*:1[fan-0]/GPUTargetFanSpeed=$1" -a "*:1[fan-1]/GPUTargetFanSpeed=$1"
-  xhost -si:localuser:root
+  sudo -S /usr/bin/nvidia-settings -a "*:1[gpu:0]/GPUFanControlState=1" -a "*:1[fan-0]/GPUTargetFanSpeed=$1"
 }
 
 # Change 'setfan' parameter for speed % and 'X' intervals for temperature boundaries

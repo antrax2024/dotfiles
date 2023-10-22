@@ -8,7 +8,7 @@ end
 
 # environment
 set -Ux STARSHIP_CONFIG $HOME/dotfiles/starship/starship.toml
-set -Ux EDITOR 'vim'
+set -Ux EDITOR 'nvim'
 set -Ux GEM_HOME "$HOME/gems"
 set -Ux GOPATH "$HOME/.go"
 

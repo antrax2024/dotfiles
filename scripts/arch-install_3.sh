@@ -1,7 +1,7 @@
 # CONFIG VARS
 #
 USERNAME='gargula'
-EDITOR='vim'
+EDITOR='nvim'
 NET_IFACE='enp7s0'
 DOTFILES="$HOME/dotfiles"
 
@@ -81,6 +81,7 @@ neofetch
 systemd
 # waybar
 # wpaperd
+nvim
 )
 
 # get length of an array
