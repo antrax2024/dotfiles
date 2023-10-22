@@ -42,7 +42,7 @@ NORMALIZE  = "n"
 MAXIMIZE   = "o"
 
 # Floating layout
-TOOGLE_FLOATING = "f"
+TOOGLE_FLOATING = "v"
 TOOGLE_FULL     = "g"
 
 # Groups key
@@ -51,9 +51,9 @@ NEXT     = "k"
 PREVIOUS = "j"
 
 # Kill Functions
-KILL_CURRENT           = "w"
+KILL_CURRENT           = "c"
 KILL_ALL               = "x"
-KILL_ALL_MINUS_CURRENT = "c"
+KILL_ALL_MINUS_CURRENT = "z"
 
 # Rotates layouts
 

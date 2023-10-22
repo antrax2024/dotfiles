@@ -120,9 +120,9 @@ LINK_DIRS=(
 	rofi
 	fish
 	neofetch
-	systemd
 	nvim
 	qtile
+	fontconfig
 )
 
 
