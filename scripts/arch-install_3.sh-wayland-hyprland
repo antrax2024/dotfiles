@@ -47,40 +47,40 @@ zramctl
 printStatus "Linking gdu..."
 ln -sf $DOTFILES/gdu/gdu.yaml $HOME/.gdu.yaml
 
-#printStatus "Linking /etc/environment"
-#sudo rm -rfv /etc/environment
-#sudo ln -sf $DOTFILES/etc/environment /etc/environment
+printStatus "Linking /etc/environment"
+sudo rm -rfv /etc/environment
+sudo ln -sf $DOTFILES/etc/environment /etc/environment
 
-# printStatus "Linking /etc/greetd/config.toml"
-# sudo ln -sf $DOTFILES/etc/greetd/config.toml /etc/greetd/config.toml
+printStatus "Linking /etc/greetd/config.toml"
+sudo ln -sf $DOTFILES/etc/greetd/config.toml /etc/greetd/config.toml
 
 printStatus "Linking /etc/nsswitch.con"
 sudo ln -sf $DOTFILES/etc/nsswitch.conf /etc/nsswitch.conf
 
-# printStatus "Enable Greetd..."
-# sudo systemctl enable greetd.service
+printStatus "Enable Greetd..."
+sudo systemctl enable greetd.service
 
 printStatus "Enable .bashrc"
 rm $HOME/.bashrc
 ln -sf $DOTFILES/bashrc $HOME/.bashrc
 
-#printStatus "Linking electron-flags.conf"
-#ln -sf $DOTFILES/electron-flags.conf $HOME/.config/electron-flags.conf
+printStatus "Linking electron-flags.conf"
+ln -sf $DOTFILES/electron-flags.conf $HOME/.config/electron-flags.conf
 
 
 
 LINK_DIRS=(
-# cava
-# swaync
+cava
+swaync
 fish
-# fuzzel
-# hypr
-# foot
+fuzzel
+hypr
+foot
 neofetch
-# swaylock
+swaylock
 systemd
-# waybar
-# wpaperd
+waybar
+wpaperd
 )
 
 # get length of an array
@@ -95,8 +95,8 @@ do
 done
 
 
-# printStatus "Install Fauxmo..."
-# pipx install fauxmo
+printStatus "Install Fauxmo..."
+pipx install fauxmo
 
 
 printStatus "Enable Avahi Daemon Service"
