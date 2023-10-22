@@ -96,7 +96,7 @@ wmname = "LG3D"
 @hook.subscribe.startup_once
 def start_once():
     home = os.path.expanduser('~')
-    subprocess.call([home + '/.local/bin/autostart'])
+    subprocess.call([home + '/dotfiles/qtile/scripts/autostart.sh'])
 
 @hook.subscribe.client_new
 def dialogs(window):

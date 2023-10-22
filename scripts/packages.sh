@@ -113,3 +113,16 @@ AUR_PKGS=(
 	ttf-hack
  	#########################
 	)
+
+
+LINK_DIRS=(
+	alacritty
+	rofi
+	fish
+	neofetch
+	systemd
+	nvim
+	qtile
+)
+
+

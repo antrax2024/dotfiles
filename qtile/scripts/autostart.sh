@@ -14,10 +14,13 @@ function run {
     fi
 }
 
+
+setxkbmap br
+run /home/gargula/dotfiles/bin/nvidia-fan.sh &
+run copyq--start-server
 run picom -CGb &
 run nitrogen --restore & 
 run /usr/lib/polkit-kde-authentication-agent-1 &
-run megasync
-run xfce4-clipman
-run gammy
 run dunst
+
+

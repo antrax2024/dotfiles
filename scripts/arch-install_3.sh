@@ -54,18 +54,6 @@ printStatus "Enable .bashrc"
 rm $HOME/.bashrc
 ln -sf $DOTFILES/bashrc $HOME/.bashrc
 
-
-
-
-LINK_DIRS=(
-	alacritty
-	rofi
-	fish
-	neofetch
-	systemd
-	nvim
-)
-
 # get length of an array
 arraylength=${#LINK_DIRS[@]}
 
