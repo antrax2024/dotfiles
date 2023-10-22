@@ -18,7 +18,7 @@ class Layouts:
             layout.MonadTall(**self.default),
             layout.floating.Floating(**self.default),
             layout.TreeTab(
-                font="Ubuntu",
+                font="Hack Nerd Font Propo",
                 fontsize=10,
                 sections=["FIRST", "SECOND", "THIRD", "FOURTH"],
                 section_fontsize=10,
