@@ -69,6 +69,7 @@ PACMAN_PKGS=(
 	gtkmm
 	mpv
 	xdg-desktop-portal-hyprland
+	lazygit
 )
 
 # pacotes AUR
