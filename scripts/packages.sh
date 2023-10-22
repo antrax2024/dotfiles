@@ -112,6 +112,7 @@ AUR_PKGS=(
 	noto-fonts-emoji
 	ttf-iosevka-nerd
 	ttf-hack
+	wmname
  	#########################
 	)
 

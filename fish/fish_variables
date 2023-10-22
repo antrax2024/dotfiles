@@ -1,10 +1,12 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export DISPLAY:\x3a0
 SETUVAR --export EDITOR:nvim
 SETUVAR --export GEM_HOME:/home/gargula/gems
 SETUVAR --export --path GOPATH:/home/gargula/\x2ego
 SETUVAR --export --path NODE_PATH:/home/gargula/nodejs/node_modules
 SETUVAR --export STARSHIP_CONFIG:/home/gargula/dotfiles/starship/starship\x2etoml
+SETUVAR SXHKD_SHELL:/usr/bin/bash
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:555
 SETUVAR fish_color_cancel:\x2d\x2dreverse
