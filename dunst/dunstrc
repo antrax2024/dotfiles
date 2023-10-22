@@ -409,9 +409,9 @@
 #    msg_urgency = critical
 #    fullscreen = show
 
-#[play-notification]
-#    summary = "*"
-#    script = dunst_espeak.sh
+[play-notification]
+    summary = "*"
+    script = /home/gargula/dotfiles/dunst/alert.sh
 
 #[script-test]
 #    summary = "*script*"
