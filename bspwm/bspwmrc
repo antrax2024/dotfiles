@@ -19,6 +19,8 @@ bspc rule -a Screenkey manage=off
 
 wmname LG3D
 
+# Polybar
+$HOME/dotfiles/polybar/launch.sh --forest
 
 $HOME/dotfiles/bspwm/autostart.sh &
 
