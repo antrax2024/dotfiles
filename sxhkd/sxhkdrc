@@ -11,8 +11,8 @@ super + @space
 	/home/gargula/dotfiles/rofi/launchers/type-1/launcher.sh
 
 # Power Menu
-super + x
-	/home/gargula/dotfiles/rofi/powermenu/type-1/powermenu.sh
+#super + x
+#	/home/gargula/dotfiles/rofi/powermenu/type-1/powermenu.sh
 
 
 # make sxhkd reload its configuration files:
