@@ -27,11 +27,12 @@ bspc config focus_follows_pointer true
 
 wmname LG3D
 
-# Polybar
-#$HOME/dotfiles/polybar/launch.sh --forest
+# xmobar
+$HOME/dotfiles/xmobar/launch-xmobar.sh
 
-xmobar -A 180 /home/gargula/dotfiles/xmobar/xmobarrc &
-trayer --edge top --align right --transparent true --SetDockType true  --alpha 180 --height 30 --distance 0 --margin 10 --widthtype request --SetPartialStrut true --expand true &
+# trayer (tray icons)
+$HOME/dotfiles/xmobar/launch-trayer.sh
 
+# Auto start apps
 $HOME/dotfiles/bspwm/autostart.sh &
 
