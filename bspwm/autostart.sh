@@ -26,6 +26,6 @@ run dunst &
 run insync start &
 run blueman-applet &
 run nm-applet &
-run xmobar -A 180 $HOME/dotfiles/xmobar/xmobarrc &
+run xmobar -v -A 180 $HOME/dotfiles/xmobar/xmobarrc > $HOME/log/xmobar.log
 run trayer --edge top --align right --transparent true --tint 0x00000000 --SetDockType true  --alpha 200 --height 30 --distance 0 --margin 10 --widthtype request --SetPartialStrut true --expand true &
 
