@@ -11,5 +11,5 @@ Config { font = "Hack Nerd Font Propo 14"
              ]
 , sepChar = "%"
 , alignSep = "}{"
-, template = " 󰝦 󰝦 󰝦 󰝦  }{ %cpu%%k10temp%  %memory% %date%      "
+, template = " 󰝦 󰝦 󰝦 󰝦  }{ %cpu%%k10temp%  %memory% %date%          "
 }
