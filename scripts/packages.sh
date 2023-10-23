@@ -133,6 +133,7 @@ LINK_DIRS=(
 	fontconfig
 	dunst
 	picom
+	polybar
 )
 
 
