@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 # Pacotes pacman
 PACMAN_PKGS=(
+	xdotool
 	python-pynvim
 	python-pyserial
 	nodejs
