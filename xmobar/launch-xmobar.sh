@@ -2,14 +2,10 @@
 
 TARGET='xmobar'
 
-PID=(`pgrep -f $TARGET`)
-
-if [[ $PID -ne 0 ]]; then
-  echo "$TARGET running. Killing now..."
-  killall -q $TARGET
-  echo "Ok"
+PID=(`pgrep -x $TARGET`)
+if [[ $PID -ne 0 ]]; then 
+  kill -9 $PID
 fi
-
 
 echo "Running new Instance..."
 xmobar -A 180 $HOME/dotfiles/xmobar/xmobarrc &
