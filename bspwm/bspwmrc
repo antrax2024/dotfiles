@@ -29,5 +29,7 @@ wmname LG3D
 # Polybar
 #$HOME/dotfiles/polybar/launch.sh --forest
 
+xmobar -A 180 /home/gargula/dotfiles/xmobar/xmobarrc &
+
 $HOME/dotfiles/bspwm/autostart.sh &
 
