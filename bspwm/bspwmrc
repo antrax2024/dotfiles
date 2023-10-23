@@ -31,7 +31,7 @@ wmname LG3D
 #$HOME/dotfiles/polybar/launch.sh --forest
 
 xmobar -A 180 /home/gargula/dotfiles/xmobar/xmobarrc &
-trayer --edge top --align right --transparent true --SetDockType true  --alpha 255 --height 30 --distance 0 --margin 10 --widthtype request --SetPartialStrut true --expand true &
+trayer --edge top --align right --transparent true --SetDockType true  --alpha 180 --height 30 --distance 0 --margin 10 --widthtype request --SetPartialStrut true --expand true &
 
 $HOME/dotfiles/bspwm/autostart.sh &
 
