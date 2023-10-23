@@ -79,6 +79,7 @@ AUR_PKGS=(
 	#########################
 	# APPS
 	#########################
+	trayer-srg
 	glow
 	cifs-utils
 	thunar-volman
