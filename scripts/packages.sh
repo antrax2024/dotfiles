@@ -102,6 +102,9 @@ AUR_PKGS=(
 	rofi
 	wmname
 	polybar-git
+	calc
+	python-pipx
+	networkmanager-dmenu-git
 	#########################
 	# FONTS 
 	#########################
@@ -114,6 +117,7 @@ AUR_PKGS=(
 	noto-fonts-emoji
 	ttf-iosevka-nerd
 	ttf-hack
+	ttf-icomoon-feather
  	#########################
 	)
 
