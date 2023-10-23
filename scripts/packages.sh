@@ -64,6 +64,7 @@ PACMAN_PKGS=(
 	lxappearance
 	xorg
 	ttf-nerd-fonts-symbols
+	xmobar
 )
 
 # pacotes AUR
@@ -104,7 +105,6 @@ AUR_PKGS=(
 	flameshot
 	rofi
 	wmname
-	polybar-git
 	calc
 	python-pipx
 	networkmanager-dmenu-git
@@ -136,7 +136,7 @@ LINK_DIRS=(
 	fontconfig
 	dunst
 	picom
-	polybar
+	xmobar
 )
 
 
