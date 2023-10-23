@@ -100,6 +100,8 @@ AUR_PKGS=(
 	dunst
 	flameshot
 	rofi
+	wmname
+	polybar-git
 	#########################
 	# FONTS 
 	#########################
@@ -112,7 +114,6 @@ AUR_PKGS=(
 	noto-fonts-emoji
 	ttf-iosevka-nerd
 	ttf-hack
-	wmname
  	#########################
 	)
 
