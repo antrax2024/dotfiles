@@ -28,11 +28,6 @@ bspc config focus_follows_pointer true
 wmname LG3D
 
 
-
-#xmobar -A 180 $HOME/dotfiles/xmobar/xmobarrc &
-# trayer (tray icons)
-#$HOME/dotfiles/xmobar/launch-trayer.sh
-
 # Auto start apps
 $HOME/dotfiles/bspwm/autostart.sh &
 
