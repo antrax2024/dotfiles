@@ -87,6 +87,9 @@ ln -sf $DOTFILES/nvim/ $HOME/.config/nvim/lua/user
 printStatus "Install pywall..."
 pipx install pywal
 
+printStatus "Link .xprofile..."
+ln -sf $DOTFILES/xprofile $HOME/.xprofile
+
 printStatus "ATIVE os cronjobs!!!"
 
 printStatus "Thats all"
