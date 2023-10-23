@@ -4,12 +4,12 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor DP-0 -d I II II IV
 
-bspc config border_width         2
-bspc config window_gap          12
+bspc config border_width 2
+bspc config window_gap 12
 
-bspc config split_ratio          0.52
-bspc config borderless_monocle   true
-bspc config gapless_monocle      true
+bspc config split_ratio           0.52
+bspc config borderless_monocle    true
+bspc config gapless_monocle       true
 
 bspc rule -a Gimp desktop='^2' state=floating follow=on
 bspc rule -a Chromium desktop='^2'

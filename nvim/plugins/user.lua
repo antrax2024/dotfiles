@@ -10,6 +10,9 @@ return {
   --   end,
   -- },
   {
+    "elkowar/yuck.vim",
+  },
+  {
 	  "L3MON4D3/LuaSnip",
 	  -- follow latest release.
 	  version = "v2.0.0",
