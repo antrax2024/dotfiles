@@ -92,7 +92,7 @@ AUR_PKGS=(
 	bspwm 
 	sxhk
 	alacritty-git
-	picom
+	picom-allusive
 	nitrogen
 	xorg-server-xephyr
 	playerctl
