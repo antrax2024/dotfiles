@@ -63,6 +63,7 @@ PACMAN_PKGS=(
 	lazygit
 	lxappearance
 	xorg
+	ttf-nerd-fonts-symbols
 )
 
 # pacotes AUR
