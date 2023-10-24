@@ -9,6 +9,7 @@
   (box :class "rightStuff" :orientation "h" 
        :halign "end"
 
+
     (display  :iconFile "/home/gargula/dotfiles/eww/icons/device_pci.svg"
               :value nvidiaStatus
     )
@@ -17,8 +18,12 @@
               :value cpuStatus
     )
 
+    (display  :iconFile "/home/gargula/dotfiles/eww/icons/memory.svg"
+              :value ramStatus
+    )
+
     (display  :iconFile "/home/gargula/dotfiles/eww/icons/clockify-blue.svg"
-              :value time
+              :value clock
     )
 
   )
@@ -44,8 +49,6 @@
   (box
     :orientation "h"
     :class "display"
-    :valign "center"
-    :halign "end"
     (box :class "icon" (image :path iconFile)) 
     (box :class "value" value)
   )
@@ -54,14 +57,21 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Variables
-(defpoll nvidiaStatus :interval "300ms"
+(defpoll nvidiaStatus :interval "500ms"
   "/home/gargula/dotfiles/bin/nvidia-status.sh")
 
 (defpoll cpuStatus :interval "500ms"
   "/home/gargula/dotfiles/bin/cpuinfo.py"
 )
 
-(defpoll time :interval "1s" 'date "+%H:%M:%S"')
+(defpoll ramStatus :interval "500ms"
+  "/home/gargula/dotfiles/bin/raminfo.py"
+)
+
+(defpoll clock :interval "1s" 
+  "/home/gargula/dotfiles/bin/gettime.py"
+)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defwindow bar
@@ -72,5 +82,5 @@
                       :width "100%"
                       :height "32px"
                       :anchor "top center")
-  :reserve (struts :side "top" :distance "4%")
+  :reserve (struts :side "top" :distance "0%")
   (bar))
