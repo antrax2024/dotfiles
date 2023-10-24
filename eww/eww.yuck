@@ -79,11 +79,13 @@
 
 (defwindow bar
   :monitor 0
-  :windowtype "dock"
   :geometry (geometry :x "0%"
-                      :y "0%"
-                      :width "100%"
-                      :height "32px"
-                      :anchor "top center")
-  :reserve (struts :side "top" :distance "0%")
+                     :y "0px"
+                     :width "100%"
+                     :height "32px"
+                     :anchor "top center")
+  :stacking "bg"
+  ;:reserve (struts :distance "20px" :side "top")
+  :windowtype "dock"
+  :wm-ignore false
   (bar))
