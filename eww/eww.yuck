@@ -58,6 +58,13 @@
   
 )
 
+(defwidget cpuGraph [cpuUtilization]
+  (progress :class "cpuProgress"
+            :value cpuUtilization
+            :orientation "h"
+  )
+)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Variables
 (defpoll nvidiaStatus :interval "500ms"
@@ -79,11 +86,11 @@
 
 (defwindow bar
   :monitor 0
-  :geometry (geometry :x "0%"
-                     :y "0px"
-                     :width "100%"
-                     :height "32px"
-                     :anchor "top center")
+  :geometry (geometry :x "0px"
+                      :y "0px"
+                      :width "100%"
+                      :height "32px"
+                      :anchor "top center")
   :stacking "bg"
   ;:reserve (struts :distance "20px" :side "top")
   :windowtype "dock"
