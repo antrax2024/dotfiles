@@ -28,6 +28,9 @@ bspc config focus_follows_pointer true
 wmname LG3D
 
 
+run setxkbmap br &
+run xsetroot -cursor_name left_ptr &
+
 # Auto start apps
 $HOME/dotfiles/bspwm/autostart.sh &
 

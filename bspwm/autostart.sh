@@ -15,7 +15,6 @@ function run {
 }
 
 
-run setxkbmap br &
 run killall nvidia-fan.sh
 run /home/gargula/dotfiles/bin/nvidia-fan.sh &
 run copyq --start-server &
