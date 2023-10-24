@@ -8,26 +8,24 @@
 (defwidget rightStuff []
   (box :class "rightStuff" :orientation "h" 
        :halign "end"
+       :space-evenly false
 
 
     (display  :iconFile "/home/gargula/dotfiles/eww/icons/device_pci.svg"
               :value nvidiaStatus
-              :size 11
     )
 
     (display  :iconFile "/home/gargula/dotfiles/eww/icons/cpu.svg"
               :value cpuStatus
-              :size 14
     )
 
     (display  :iconFile "/home/gargula/dotfiles/eww/icons/memory.svg"
               :value ramStatus
-              :size 14
     )
 
-    ;(display  :iconFile "/home/gargula/dotfiles/eww/icons/clockify-blue.svg"
-    ;          :value clock
-    ;)
+    (display  :iconFile "/home/gargula/dotfiles/eww/icons/clockify-blue.svg"
+              :value clock
+    )
 
   )
 )
@@ -48,13 +46,14 @@
   )
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defwidget display [iconFile value size]
+(defwidget display [iconFile value]
   (box
     :orientation "h"
-    :width size
     :class "display"
-    (box :class "icon" (image :path iconFile)) 
-    (box :class "value" value)
+    :halign "end"
+    :space-evenly false
+    (image :class "icon" :path iconFile :halign "end" :valign "center") 
+    (label :class "value" :text value :halign "start" :valign "center")
   )
   
 )

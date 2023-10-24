@@ -1,32 +1,21 @@
 * {
   all: unset; //Unsets everything so you can style everything from scratch
-  font-family: 'Hack Nerd Font';
+  font: 16px 'Hack Nerd Font';
   font-weight: bold;
-  font-size: 16px;
 }
 
 //Global Styles
 .bar {
   background-color: #000000;
   color: #b0b4bc;
-  padding: 10px;
 }
 
-// Styles on classes (see eww.yuck for more information)
-
-.rightStuf {
-  all: unset;
-}
-
-.display {
-  all: unset;
-}
 
 .icon {
-  font-size: 40px;
-  //background-color: red;
-  margin: 0px;
-  padding: 0px;
+  margin-right: 8px;
+}
+.display {
+  margin-right: 15px;
 }
 
 
