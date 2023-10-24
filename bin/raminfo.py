@@ -8,5 +8,5 @@ used=(psutil.virtual_memory().used)/ factor
 total=psutil.virtual_memory().total/ factor
 
 
-print("{}G / {} G".format(round(used,2),round(total,3)))
+print("{}G / {} G".format(round(used,1),round(total,1)))
 

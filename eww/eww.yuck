@@ -12,19 +12,22 @@
 
     (display  :iconFile "/home/gargula/dotfiles/eww/icons/device_pci.svg"
               :value nvidiaStatus
+              :size 11
     )
 
     (display  :iconFile "/home/gargula/dotfiles/eww/icons/cpu.svg"
               :value cpuStatus
+              :size 14
     )
 
     (display  :iconFile "/home/gargula/dotfiles/eww/icons/memory.svg"
               :value ramStatus
+              :size 14
     )
 
-    (display  :iconFile "/home/gargula/dotfiles/eww/icons/clockify-blue.svg"
-              :value clock
-    )
+    ;(display  :iconFile "/home/gargula/dotfiles/eww/icons/clockify-blue.svg"
+    ;          :value clock
+    ;)
 
   )
 )
@@ -45,9 +48,10 @@
   )
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defwidget display [iconFile value]
+(defwidget display [iconFile value size]
   (box
     :orientation "h"
+    :width size
     :class "display"
     (box :class "icon" (image :path iconFile)) 
     (box :class "value" value)
