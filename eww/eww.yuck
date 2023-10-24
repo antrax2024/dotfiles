@@ -13,10 +13,13 @@
   (box :class "rightStuff" :orientation "h" 
        :halign "end"
 
+    (display  :iconFile "icons/clockify-blue.svg"
+              :value {EWW_CPU['cores'][0].usage}
+    )
+
     (display  :iconFile "icons/device_pci.svg"
               :value nvidiaStatus
     )
-
     (display  :iconFile "icons/clockify-blue.svg"
               :value time
     )
