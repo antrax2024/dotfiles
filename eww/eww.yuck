@@ -1,3 +1,7 @@
+
+(defvar currentPath "/home/gargula/dotfiles/eww")
+(defvar iconsPath "/home/gargula/dotfiles/eww/icons")
+
 (defwidget bar []
   (box :orientation "h"
     (workspaces)
@@ -7,11 +11,16 @@
 
 (defwidget rightStuff []
   (box :class "rightStuff" :orientation "h" 
-       :space-evenly false 
        :halign "end"
-    (display  :label "󱑔"
+
+    (display  :iconFile "icons/device_pci.svg"
+              :value nvidiaStatus
+    )
+
+    (display  :iconFile "icons/clockify-blue.svg"
               :value time
     )
+
   )
 )
 
@@ -20,9 +29,8 @@
 (defwidget workspaces []
   (box :class "workspaces"
        :orientation "h"
-       :space-evenly true
        :halign "start"
-       :spacing 10
+       :spacing 15
     (button :onclick "bspc desktop -f 1" 1)
     (button :onclick "bspc desktop -f 2" 2)
     (button :onclick "bspc desktop -f 3" 3)
@@ -32,21 +40,23 @@
   )
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defwidget display [label value]
+(defwidget display [iconFile value]
   (box
     :orientation "h"
     :class "display"
-    (box :class "label" label) 
+    :valign "center"
+    :halign "end"
+    (box :class "icon" (image :path iconFile)) 
     (box :class "value" value)
   )
   
 )
 
-(defpoll nvidiaTemp :interval "300ms"
-  "/home/gargula/dotfiles/bin/nvidia-temp.sh")
+(defpoll nvidiaStatus :interval "300ms"
+  "/home/gargula/dotfiles/bin/nvidia-status.sh")
 
 
-(defpoll time :interval "1s" "date +%H:%M:%S")
+(defpoll time :interval "1s" 'date "+%H:%M:%S"')
 
 (defwindow bar
   :monitor 0

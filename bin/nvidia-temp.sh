@@ -3,4 +3,4 @@
 
 TEMP=$(nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader)
 
-printf "%s\n" $TEMP
+printf "%s°C\n" $TEMP
