@@ -1,22 +1,22 @@
 (defwidget bar []
-  (centerbox :orientation "h"
+  (box :orientation "h"
     (workspaces)
-    (music)
-    (sidestuff)))
+    (rightStuff))
+)
 
-(defwidget sidestuff []
-  (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
-    (metric :label "🔊"
-            :value volume
-            :onchange "amixer -D pulse sset Master {}%")
-    (metric :label ""
-            :value {EWW_RAM.used_mem_perc}
-            :onchange "")
-    (metric :label "💾"
-            :value {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)}
-            :onchange "")
-    time))
 
+(defwidget rightStuff []
+  (box :class "rightStuff" :orientation "h" 
+       :space-evenly false 
+       :halign "end"
+    (display  :label "󱑔"
+              :value time
+    )
+  )
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Workspaces
 (defwidget workspaces []
   (box :class "workspaces"
        :orientation "h"
@@ -30,36 +30,23 @@
 
     )
   )
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defwidget music []
-  (box :class "music"
-       :orientation "h"
-       :space-evenly false
-       :halign "center"
-    {music != "" ? "🎵${music}" : ""}))
+(defwidget display [label value]
+  (box
+    :orientation "h"
+    :class "display"
+    (box :class "label" label) 
+    (box :class "value" value)
+  )
+  
+)
 
-
-(defwidget metric [label value onchange]
-  (box :orientation "h"
-       :class "metric"
-       :space-evenly false
-    (box :class "label" label)
-    (scale :min 0
-           :max 101
-           :active {onchange != ""}
-           :value value
-           :onchange onchange)))
+(defpoll nvidiaTemp :interval "300ms"
+  "/home/gargula/dotfiles/bin/nvidia-temp.sh")
 
 
-
-(deflisten music :initial ""
-  "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true")
-
-(defpoll volume :interval "1s"
-  "scripts/getvol")
-
-(defpoll time :interval "1s"
-  "date '+%d-%m-%Y %H:%M:%S' ")
+(defpoll time :interval "1s" "date +%H:%M:%S")
 
 (defwindow bar
   :monitor 0
