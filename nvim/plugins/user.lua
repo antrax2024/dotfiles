@@ -9,9 +9,7 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
-  {
-    "elkowar/yuck.vim",
-  },
+  { "elkowar/yuck.vim" },
   {
 	  "L3MON4D3/LuaSnip",
 	  -- follow latest release.
