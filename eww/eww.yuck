@@ -1,5 +1,5 @@
 
-(defvar currentPath "/home/gargula/dotfiles/eww")
+(defvar dotfilesPath "/home/gargula/dotfiles")
 (defvar iconsPath "/home/gargula/dotfiles/eww/icons")
 
 (defwidget bar []
@@ -13,13 +13,14 @@
   (box :class "rightStuff" :orientation "h" 
        :halign "end"
 
-    (display  :iconFile "icons/clockify-blue.svg"
-              :value {EWW_CPU['cores'][0].usage}
-    )
-
     (display  :iconFile "icons/device_pci.svg"
               :value nvidiaStatus
     )
+
+    (display  :iconFile "icons/cpu.svg"
+              :value cpuStatus
+    )
+
     (display  :iconFile "icons/clockify-blue.svg"
               :value time
     )
@@ -55,11 +56,17 @@
   
 )
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Variables
 (defpoll nvidiaStatus :interval "300ms"
   "/home/gargula/dotfiles/bin/nvidia-status.sh")
 
+(defpoll cpuStatus :interval "500ms"
+  "/home/gargula/dotfiles/bin/cpuinfo.py"
+)
 
 (defpoll time :interval "1s" 'date "+%H:%M:%S"')
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defwindow bar
   :monitor 0
