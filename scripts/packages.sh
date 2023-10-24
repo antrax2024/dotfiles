@@ -126,6 +126,7 @@ AUR_PKGS=(
 
 
 LINK_DIRS=(
+	nitrogen
 	alacritty
 	rofi
 	fish
