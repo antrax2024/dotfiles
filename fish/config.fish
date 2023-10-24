@@ -11,6 +11,7 @@ set -Ux STARSHIP_CONFIG $HOME/dotfiles/starship/starship.toml
 set -Ux EDITOR 'nvim'
 set -Ux GEM_HOME "$HOME/gems"
 set -Ux GOPATH "$HOME/.go"
+set -Ux MANPAGER 'nvim +Man!'
 
 
 # Aliases

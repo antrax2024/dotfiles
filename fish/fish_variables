@@ -4,6 +4,7 @@ SETUVAR --export DISPLAY:\x3a0
 SETUVAR --export EDITOR:nvim
 SETUVAR --export GEM_HOME:/home/gargula/gems
 SETUVAR --export --path GOPATH:/home/gargula/\x2ego
+SETUVAR --export MANPAGER:nvim\x20\x2bMan\x21
 SETUVAR --export --path NODE_PATH:/home/gargula/nodejs/node_modules
 SETUVAR --export STARSHIP_CONFIG:/home/gargula/dotfiles/starship/starship\x2etoml
 SETUVAR SXHKD_SHELL:/usr/bin/bash
