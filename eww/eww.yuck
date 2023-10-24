@@ -1,7 +1,3 @@
-
-(defvar dotfilesPath "/home/gargula/dotfiles")
-(defvar iconsPath "/home/gargula/dotfiles/eww/icons")
-
 (defwidget bar []
   (box :orientation "h"
     (workspaces)
@@ -13,15 +9,15 @@
   (box :class "rightStuff" :orientation "h" 
        :halign "end"
 
-    (display  :iconFile "icons/device_pci.svg"
+    (display  :iconFile "/home/gargula/dotfiles/eww/icons/device_pci.svg"
               :value nvidiaStatus
     )
 
-    (display  :iconFile "icons/cpu.svg"
+    (display  :iconFile "/home/gargula/dotfiles/eww/icons/cpu.svg"
               :value cpuStatus
     )
 
-    (display  :iconFile "icons/clockify-blue.svg"
+    (display  :iconFile "/home/gargula/dotfiles/eww/icons/clockify-blue.svg"
               :value time
     )
 
