@@ -18,18 +18,25 @@
   margin-right: 15px;
 }
 
-
-.cpuProgress trough {
-  min-width: 190px;  
+.progressBar {
+  margin-right: 8px;
 }
 
-.cpuProgress trough progress {
+.progressBar trough {
+  min-width: 100px;
+  background-color: #343434;
+  min-height: 16px;
+}
+
+.progressBar trough progress {
   background-color: #D35D6E;
   min-height: 16px;
 
 }
 
-
+.workspaces {
+  margin-left: 20px;
+}
 
 .workspaces button:hover {
   color: #2d9c18;

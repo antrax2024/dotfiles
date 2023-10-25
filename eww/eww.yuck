@@ -19,11 +19,13 @@
               :value cpuStatus
     )
 
-    (cpuProgress :cpuUtilization 25)
+    (progressBar :progressValue cpuPercent)
 
     (display  :iconFile "/home/gargula/dotfiles/eww/icons/memory.svg"
               :value ramStatus
     )
+
+    (progressBar :progressValue {EWW_RAM.used_mem_perc})
 
     (display  :iconFile "/home/gargula/dotfiles/eww/icons/clockify-blue.svg"
               :value clock
@@ -39,10 +41,10 @@
        :orientation "h"
        :halign "start"
        :spacing 15
-    (button :onclick "bspc desktop -f 1" 1)
-    (button :onclick "bspc desktop -f 2" 2)
-    (button :onclick "bspc desktop -f 3" 3)
-    (button :onclick "bspc desktop -f 4" 4)
+    (button :onclick "bspc desktop -f 1" "󰺕")
+    (button :onclick "bspc desktop -f 2" "󰺕")
+    (button :onclick "bspc desktop -f 3" "󰺕")
+    (button :onclick "bspc desktop -f 4" "󰺕")
 
     )
   )
@@ -60,12 +62,12 @@
   
 )
 
-(defwidget cpuProgress [cpuUtilization]
-  (progress :class "cpuProgress"
-            :value cpuUtilization
+(defwidget progressBar [progressValue]
+  (progress :class "progressBar"
+            :value progressValue
             :orientation "h"
             :valign "center"
-            :css {cpuUtilization<=20.0 ? ".cpuProgress trough progress {background-color: blue;}" : ".cpuProgress trough progress {background-color: green;}"}
+            :css { progressValue<=20.0 ? ".progressBar trough progress {background-color: blue;}" : ".progressBar trough progress {background-color: green;}"}
 
   )
 )
@@ -82,6 +84,11 @@
 (defpoll ramStatus :interval "500ms"
   "/home/gargula/dotfiles/bin/raminfo.py"
 )
+
+(defpoll cpuPercent :interval "500ms"
+  "/home/gargula/dotfiles/bin/cpupercent.py"
+)
+
 
 (defpoll clock :interval "1s" 
   "/home/gargula/dotfiles/bin/gettime.py"
