@@ -109,6 +109,7 @@ AUR_PKGS=(
 	networkmanager-dmenu-git
 	chaotic-aur/eww-git
 	volctl
+	xidle
 	#########################
 	# FONTS 
 	#########################
