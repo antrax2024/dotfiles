@@ -41,10 +41,10 @@ dunst &
 
 eww open bar &
 
+sleep 8; trayer --edge top --align right --transparent true --tint 0x00000000 --SetDockType true  --alpha 200 --height 30 --distance 0 --margin 10 --widthtype request --SetPartialStrut true --expand true &
 insync start &
 blueman-applet &
 nm-applet &
 volctl &
 
-trayer --edge top --align right --transparent true --tint 0x00000000 --SetDockType true  --alpha 200 --height 30 --distance 0 --margin 10 --widthtype request --SetPartialStrut true --expand true &
 
