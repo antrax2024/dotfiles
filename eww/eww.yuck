@@ -90,6 +90,7 @@
 (defpoll nvidiaStatus :interval "500ms"
   "/home/gargula/dotfiles/bin/nvidia-status.sh")
 
+
 (defpoll cpuStatus :interval "500ms"
   "/home/gargula/dotfiles/bin/cpuinfo.py"
 )
