@@ -19,7 +19,7 @@
               :value cpuStatus
     )
 
-    (cpuProgress :cpuUtilization 50)
+    (cpuProgress :cpuUtilization 25)
 
     (display  :iconFile "/home/gargula/dotfiles/eww/icons/memory.svg"
               :value ramStatus
@@ -65,6 +65,8 @@
             :value cpuUtilization
             :orientation "h"
             :valign "center"
+            :css {cpuUtilization<=20.0 ? ".cpuProgress trough progress {background-color: blue;}" : ".cpuProgress trough progress {background-color: green;}"}
+
   )
 )
 
