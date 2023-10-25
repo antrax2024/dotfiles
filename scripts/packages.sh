@@ -64,7 +64,6 @@ PACMAN_PKGS=(
 	lxappearance
 	xorg
 	ttf-nerd-fonts-symbols
-	chaotic-aur/eww-git
 )
 
 # pacotes AUR
@@ -108,6 +107,8 @@ AUR_PKGS=(
 	calc
 	python-pipx
 	networkmanager-dmenu-git
+	chaotic-aur/eww-git
+	volctl
 	#########################
 	# FONTS 
 	#########################
