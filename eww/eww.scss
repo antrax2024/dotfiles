@@ -38,7 +38,14 @@
   margin-left: 20px;
 }
 
+/*.workspace_1 {
+  color: #03fca5;
+}*/
+
 .workspaces button:hover {
-  color: #2d9c18;
+  color: #c61d1f;
 }
 
+.active {
+  color: #03fca5;
+}

@@ -41,13 +41,21 @@
        :orientation "h"
        :halign "start"
        :spacing 15
-    (button :onclick "bspc desktop -f 1" "󰺕")
-    (button :onclick "bspc desktop -f 2" "󰺕")
-    (button :onclick "bspc desktop -f 3" "󰺕")
-    (button :onclick "bspc desktop -f 4" "󰺕")
-
+    (button :class {currentDesktop=="1" ? "active" : "inactive"}
+            :onclick "bspc desktop -f 1" "󰪥"
     )
+    (button :class {currentDesktop=="2" ? "active" : "inactive"}
+            :onclick "bspc desktop -f 2" "󰪥"
+    )
+    (button :class {currentDesktop=="3" ? "active" : "inactive"}
+            :onclick "bspc desktop -f 3" "󰪥"
+    )
+    (button :class {currentDesktop=="4" ? "active" : "inactive"}
+            :onclick "bspc desktop -f 4" "󰪥"
+    )
+
   )
+)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defwidget display [iconFile value]
@@ -87,6 +95,10 @@
 
 (defpoll cpuPercent :interval "500ms"
   "/home/gargula/dotfiles/bin/cpupercent.py"
+)
+
+(defpoll currentDesktop :interval "200ms"
+  "bspc query -D -d focused --names"
 )
 
 
