@@ -64,7 +64,7 @@ PACMAN_PKGS=(
 	lxappearance
 	xorg
 	ttf-nerd-fonts-symbols
-	xmobar
+	chaotic-aur/eww-git
 )
 
 # pacotes AUR
@@ -137,7 +137,7 @@ LINK_DIRS=(
 	fontconfig
 	dunst
 	picom
-	xmobar
+	eww
 )
 
 
