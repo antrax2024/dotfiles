@@ -27,6 +27,11 @@
 
     (progressBar :progressValue {EWW_RAM.used_mem_perc})
 
+    (display  :iconFile "/home/gargula/dotfiles/eww/icons/disk.svg"
+              :value diskStatus
+    )
+
+
     (display  :iconFile "/home/gargula/dotfiles/eww/icons/clockify-blue.svg"
               :value clock
     )
@@ -101,6 +106,9 @@
   "bspc query -D -d focused --names"
 )
 
+(defpoll diskStatus :interval "1s"
+  "/home/gargula/dotfiles/bin/get-disk-status.py"
+)
 
 (defpoll clock :interval "1s" 
   "/home/gargula/dotfiles/bin/gettime.py"
