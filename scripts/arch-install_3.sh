@@ -84,8 +84,6 @@ printStatus "Config neovim..."
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim $HOME/.config/nvim
 ln -sf $DOTFILES/nvim/ $HOME/.config/nvim/lua/user
 
-printStatus "Install pywall..."
-pipx install pywal
 
 printStatus "Link .xprofile..."
 ln -sf $DOTFILES/xprofile $HOME/.xprofile
