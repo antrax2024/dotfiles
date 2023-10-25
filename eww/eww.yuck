@@ -19,6 +19,8 @@
               :value cpuStatus
     )
 
+    (cpuProgress :cpuUtilization 50)
+
     (display  :iconFile "/home/gargula/dotfiles/eww/icons/memory.svg"
               :value ramStatus
     )
@@ -58,10 +60,11 @@
   
 )
 
-(defwidget cpuGraph [cpuUtilization]
+(defwidget cpuProgress [cpuUtilization]
   (progress :class "cpuProgress"
             :value cpuUtilization
             :orientation "h"
+            :valign "center"
   )
 )
 
