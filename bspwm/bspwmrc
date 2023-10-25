@@ -20,6 +20,7 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a power-menu.py state=floating
+bspc rule -a TelegramDesktop state=floating
 
 
 # Mouse Follow the Focus

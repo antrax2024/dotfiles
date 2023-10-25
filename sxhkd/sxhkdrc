@@ -14,6 +14,9 @@ super + @space
 super + x
 	/home/gargula/dotfiles/bin/power-menu.py
 
+# Telegram
+super + t
+	telegram-desktop
 
 # make sxhkd reload its configuration files:
 super + Escape
