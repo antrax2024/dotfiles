@@ -94,7 +94,7 @@ AUR_PKGS=(
 	starship
 	gohugo-extended-bin
 	bspwm 
-	sxhk
+	sxhkd
 	alacritty-git
 	picom-allusive
 	nitrogen
