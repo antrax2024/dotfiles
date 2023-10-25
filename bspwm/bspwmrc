@@ -49,4 +49,8 @@ blueman-applet &
 nm-applet &
 volctl &
 
+# Screensaver
+xidle -timeout 120 -program "$HOME/dotfiles/bin/screensaver.sh" &
+
+
 
