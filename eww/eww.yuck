@@ -32,6 +32,8 @@
     )
 
 
+    (progressBar :progressValue {EWW_DISK["/"].used_perc})
+
     (display  :iconFile "/home/gargula/dotfiles/eww/icons/clockify-blue.svg"
               :value clock
     )
