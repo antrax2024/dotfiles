@@ -34,6 +34,7 @@ setxkbmap br &
 xsetroot -cursor_name left_ptr &
 
 # Auto start apps
+numlockx &
 /home/gargula/dotfiles/bin/nvidia-fan.sh &
 copyq --start-server &
 picom --daemon &

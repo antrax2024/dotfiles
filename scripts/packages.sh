@@ -68,6 +68,7 @@ PACMAN_PKGS=(
 	lightdm
 	lightdm-gtk-greeter
 	gtk-engine-murrine
+	numlockx
 )
 
 # pacotes AUR
