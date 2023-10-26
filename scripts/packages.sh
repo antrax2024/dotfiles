@@ -65,6 +65,8 @@ PACMAN_PKGS=(
 	xorg
 	ttf-nerd-fonts-symbols
 	pyqt6
+	lightdm
+	lightdm-gtk-greeter
 )
 
 # pacotes AUR

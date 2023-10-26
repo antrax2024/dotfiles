@@ -89,6 +89,11 @@ ln -sf $DOTFILES/nvim/ $HOME/.config/nvim/lua/user
 printStatus "Link .xprofile..."
 ln -sf $DOTFILES/xprofile $HOME/.xprofile
 
+printStatus "Enable lightdm"
+sudo systemctl enable lightdm.service
+sudo groupadd -r autologin
+sudo gpasswd -a gargula autologin
+
 printStatus "ATIVE os cronjobs!!!"
 
 printStatus "Thats all"
