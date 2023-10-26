@@ -67,6 +67,7 @@ PACMAN_PKGS=(
 	pyqt6
 	lightdm
 	lightdm-gtk-greeter
+	gtk-engine-murrine
 )
 
 # pacotes AUR
