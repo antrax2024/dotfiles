@@ -2,7 +2,6 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-# bspc monitor DP-0 -d I II II IV
 bspc monitor DP-0 -d 1 2 3 4
 
 bspc config border_width 2
@@ -24,9 +23,9 @@ bspc rule -a TelegramDesktop state=floating
 
 
 # Mouse Follow the Focus
-bspc config pointer_follows_focus true
-bspc config pointer_follows_monitor true
-bspc config focus_follows_pointer true
+#bspc config pointer_follows_focus true
+#bspc config pointer_follows_monitor true
+#bspc config focus_follows_pointer true
 
 wmname LG3D
 
