@@ -35,17 +35,23 @@ xsetroot -cursor_name left_ptr &
 # Auto start apps
 numlockx &
 /home/gargula/dotfiles/bin/nvidia-fan.sh &
-copyq --start-server &
 picom --daemon &
 nitrogen --restore & 
 /usr/lib/polkit-kde-authentication-agent-1 &
 dunst &
+flameshot &
 
+# eww bar
 eww open bar &
 
+# Wallpaper
+$HOME/dotfiles/bspwm/change-wallpaper.sh 
+# change wallpaper after 30min
+xidle -timeout 1800 -program "$HOME/dotfiles/bspwm/change-wallpaper.sh" &
 
 sleep 8; $HOME/dotfiles/bspwm/start-trayer.sh
 
+# tray Applets 
 insync start &
 blueman-applet &
 nm-applet &
