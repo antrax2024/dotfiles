@@ -11,10 +11,6 @@
        :space-evenly false
 
 
-    (display  :iconFile "/home/gargula/dotfiles/eww/icons/device_pci.svg"
-              :value nvidiaStatus
-    )
-
     (display  :iconFile "/home/gargula/dotfiles/eww/icons/cpu.svg"
               :value cpuStatus
     )
@@ -89,9 +85,6 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Variables
-(defpoll nvidiaStatus :interval "500ms"
-  "/home/gargula/dotfiles/bin/nvidia-status.sh")
-
 
 (defpoll cpuStatus :interval "500ms"
   "/home/gargula/dotfiles/bin/cpuinfo.py"

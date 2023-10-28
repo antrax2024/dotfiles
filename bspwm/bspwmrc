@@ -34,7 +34,7 @@ xsetroot -cursor_name left_ptr &
 
 # Auto start apps
 numlockx &
-/home/gargula/dotfiles/bin/nvidia-fan.sh &
+#/home/gargula/dotfiles/bin/nvidia-fan.sh &
 picom --daemon &
 nitrogen --restore & 
 /usr/lib/polkit-kde-authentication-agent-1 &
