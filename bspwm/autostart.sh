@@ -20,7 +20,7 @@ fork_once eww open bar
 
 sleep 5
 # Tray Icons
-fork_once trayer --edge top --align right --transparent true --alpha 0 --tint 0x000000 --SetDockType true --height 30 --distance 0 --margin 10 --widthtype request --SetPartialStrut false --expand true --monitor DP-1 
+fork_once trayer --edge top --align right --transparent true --alpha 0 --tint 0x000000 --SetDockType true --height 30 --distance 0 --margin 10 --widthtype request --SetPartialStrut false --expand true --monitor DP-0 
 
 # tray Applets 
 fork_once insync start 

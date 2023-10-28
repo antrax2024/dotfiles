@@ -113,7 +113,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defwindow bar
-  :monitor 'DP-1'
+  :monitor 'DP-0'
   :geometry (geometry :x "0px"
                       :y "0px"
                       :width "100%"
