@@ -11,6 +11,8 @@ fork_once xsetroot -cursor_name left_ptr
 fork_once numlockx 
 fork_once picom --daemon 
 fork_once /usr/lib/polkit-kde-authentication-agent-1  
+# Wallpaper
+fork_once $HOME/dotfiles/bspwm/change-wallpaper.sh 
 
 # eww bar
 fork_once eww open bar 
@@ -26,8 +28,6 @@ fork_once blueman-applet
 fork_once nm-applet 
 fork_once volctl
 fork_once copyq --start-server
-# Wallpaper
-fork_once $HOME/dotfiles/bspwm/change-wallpaper.sh 
 # change wallpaper after 30min
 fork_once xidle -timeout 1800 -program "$HOME/dotfiles/bspwm/change-wallpaper.sh" 
 # Screensaver
