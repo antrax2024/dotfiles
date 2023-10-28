@@ -14,6 +14,8 @@ fork_once /usr/lib/polkit-kde-authentication-agent-1
 # Wallpaper
 fork_once $HOME/dotfiles/bspwm/change-wallpaper.sh 
 
+# Nvidia Fan
+fork_once /home/gargula/dotfiles/bin/nvidia-fan.sh
 # eww bar
 fork_once eww open bar 
 
