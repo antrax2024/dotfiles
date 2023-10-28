@@ -19,7 +19,7 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a power-menu.py state=floating
-bspc rule -a TelegramDesktop state=floating
+bspc rule -a kotatogram-desktop state=floating
 
 
 # Mouse Follow the Focus
@@ -29,36 +29,11 @@ bspc rule -a TelegramDesktop state=floating
 
 wmname LG3D
 
-setxkbmap br &
-xsetroot -cursor_name left_ptr &
 
-# Auto start apps
-numlockx &
-#/home/gargula/dotfiles/bin/nvidia-fan.sh &
-picom --daemon &
-nitrogen --restore & 
-/usr/lib/polkit-kde-authentication-agent-1 &
-dunst &
-flameshot &
 
-# eww bar
-eww open bar &
+sleep 8; $HOME/dotfiles/bspwm/autostart.sh
 
-# Wallpaper
-$HOME/dotfiles/bspwm/change-wallpaper.sh 
-# change wallpaper after 30min
-xidle -timeout 1800 -program "$HOME/dotfiles/bspwm/change-wallpaper.sh" &
 
-sleep 8; $HOME/dotfiles/bspwm/start-trayer.sh
-
-# tray Applets 
-insync start &
-blueman-applet &
-nm-applet &
-volctl &
-
-# Screensaver
-xidle -timeout 120 -program "$HOME/dotfiles/bin/screensaver.sh" &
 
 
 
