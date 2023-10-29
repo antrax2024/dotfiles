@@ -15,8 +15,8 @@ super + x
 	/home/gargula/dotfiles/bin/power-menu.py
 
 # Telegram
-super + k
-	kotatogram-desktop	
+super + t
+	telegram-desktop	
 
 # make sxhkd reload its configuration files:
 super + Escape
