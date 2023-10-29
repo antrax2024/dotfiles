@@ -14,8 +14,6 @@ fork_once /usr/lib/polkit-kde-authentication-agent-1
 # Wallpaper
 fork_once $HOME/dotfiles/bspwm/change-wallpaper.sh 
 
-# Nvidia Fan
-fork_once /home/gargula/dotfiles/bin/nvidia-fan.sh
 # eww bar
 fork_once eww open bar 
 
@@ -36,4 +34,8 @@ fork_once xidle -timeout 1800 -program "$HOME/dotfiles/bspwm/change-wallpaper.sh
 fork_once xidle -timeout 120 -program "$HOME/dotfiles/bin/screensaver.sh" 
 fork_once dunst  
 fork_once flameshot 
+
+# Nvidia Fan
+fork_once /home/gargula/dotfiles/bin/nvidia-fan.sh
+
 

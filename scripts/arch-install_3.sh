@@ -96,4 +96,5 @@ sudo gpasswd -a gargula autologin
 
 printStatus "ATIVE os cronjobs!!!"
 
+printStatus "Ativa o autologin no lightdm agora..."
 printStatus "Thats all"
