@@ -1,8 +1,7 @@
-#!/usr/bin/bash
-shopt -s nullglob
-for g in /sys/kernel/iommu_groups/*; do
-    echo "IOMMU Group ${g##*/}:"
-    for d in $g/devices/*; do
-        echo -e "\t$(lspci -nns ${d##*/})"
-    done;
-done;
+#!/bin/bash
+
+for d in /sys/kernel/iommu_groups/*/devices/*; do
+  n=${d#*/iommu_groups/*}; n=${n%%/*}
+  printf 'IOMMU Group %s ' "$n"
+  lspci -nns "${d##*/}"
+done
