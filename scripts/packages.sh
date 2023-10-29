@@ -103,7 +103,6 @@ AUR_PKGS=(
 	sxhkd
 	alacritty-git
 	picom-allusive
-	nitrogen
 	xorg-server-xephyr
 	playerctl
 	pulseaudio-ctl
@@ -135,7 +134,6 @@ AUR_PKGS=(
 
 
 LINK_DIRS=(
-	nitrogen
 	alacritty
 	rofi
 	fish
