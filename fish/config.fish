@@ -29,3 +29,4 @@ fish_add_path $HOME/dotfiles/bin
 
 
 starship init fish | source
+#sysinfo
