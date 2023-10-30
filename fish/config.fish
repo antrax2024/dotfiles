@@ -26,6 +26,7 @@ alias premove='paru -Rcns'
 # PATH
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/dotfiles/bin
+fish_add_path $HOME/dotfiles/nvidia-fan-control
 
 
 starship init fish | source
