@@ -44,6 +44,7 @@ LINK_DIRS=(
 	neofetch
 	nvim
 	bspwm
+	polybar
 )
 
 
