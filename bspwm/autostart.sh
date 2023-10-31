@@ -27,21 +27,13 @@ else
   run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 fi
 
-#Some ways to set your wallpaper besides variety or nitrogen
-#feh --bg-scale ~/.config/bspwm/wall.png &
-#feh --bg-fill /usr/share/backgrounds/archlinux/arch-wallpaper.jpg &
-#feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
-
 #wallpaper for other Arch based systems
 #feh --bg-fill /usr/share/archlinux-tweak-tool/data/wallpaper/wallpaper.png &
-#feh --randomize --bg-fill ~/Dropbox/Apps/Desktoppr/*
 feh --randomize --bg-fill /home/gargula/dotfiles/wallpapers/*
 
 dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
 xsetroot -cursor_name left_ptr &
 
-#conky -c $HOME/.config/bspwm/system-overview &
-#run variety &
 run nm-applet &
 run pamac-tray &
 run xfce4-power-manager &
@@ -51,6 +43,9 @@ picom --config $HOME/.config/bspwm/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 run volumeicon &
+run /home/gargula/dotfiles/nvidia-fan-control/nvidia-fan-curve.sh &
+
+
 #nitrogen --restore &
 #run caffeine &
 #run vivaldi-stable &
