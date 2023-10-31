@@ -92,7 +92,7 @@ module-margin-right = 1
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "Hack Nerd Font Propo:size=12;0"
-font-1 = "FontAwesome:size=13;0"
+font-1 = "FontAwesome:size=12;0"
 font-2 = "Hack Nerd Font Propo:size=12;0"
 font-3 = "Hack Nerd Font Propo:size=12;0"
 
@@ -158,11 +158,6 @@ padding-right = 0
 module-margin-left = 2
 module-margin-right = 2
 
-;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = "Noto Sans:size=12;0"
-font-1 = "FontAwesome:size=13;0"
-font-2 = "Noto Sans:size=12;0"
-font-3 = "Noto Sans Mono:size=12;0"
 
 modules-left = load-average
 modules-center = networkspeeddown networkspeedup
@@ -291,7 +286,7 @@ interval = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 ;   
-format-prefix = "󰍛 "
+format-prefix = " "
 format-prefix-foreground = #afb4d6
 ;format-underline = #cb5e38
 
@@ -303,7 +298,7 @@ format-prefix-foreground = #afb4d6
 ;format = <label> <ramp-coreload>
 format = <label> <ramp-coreload>
 
-format-padding = 2
+format-padding = 0
 
 ; Available tokens:
 ;   %percentage% (default) - total cpu load
@@ -434,7 +429,7 @@ bar-used-empty = 
 bar-used-empty-foreground = #ffffff
 
 format = <label> <bar-used>
-format-prefix = "  "
+format-prefix = " 󰘚 "
 format-prefix-foreground = #3384d0
 ;format-underline = #3384d0
 format-foreground = ${colors.foreground}
