@@ -23,6 +23,7 @@ PKGS=(
 	starship
 	alacritty-git
 	xidle
+	picom-allusive
 	#########################
 	# FONTS 
 	#########################
