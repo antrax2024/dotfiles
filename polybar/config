@@ -296,8 +296,8 @@ format-prefix-foreground = #afb4d6
 ;   <ramp-load>
 ;   <ramp-coreload>
 ;format = <label> <ramp-coreload>
-format = <label> <ramp-coreload>
-
+;format = <label> <ramp-coreload>
+format = <label> <bar-load>
 format-padding = 0
 
 ; Available tokens:
@@ -305,32 +305,24 @@ format-padding = 0
 ;   %percentage-cores% - load percentage for each core
 ;   %percentage-core[1-9]% - load percentage for specific core
 label-font = 3
-label = %percentage:3%%
+label = %percentage%%
 
-ramp-coreload-0 = ▁
-ramp-coreload-0-font = 3
-ramp-coreload-0-foreground = #aaff77
-ramp-coreload-1 = ▂
-ramp-coreload-1-font = 3
-ramp-coreload-1-foreground = #aaff77
-ramp-coreload-2 = ▃
-ramp-coreload-2-font = 3
-ramp-coreload-2-foreground = #aaff77
-ramp-coreload-3 = ▄
-ramp-coreload-3-font = 3
-ramp-coreload-3-foreground = #aaff77
-ramp-coreload-4 = ▅
-ramp-coreload-4-font = 3
-ramp-coreload-4-foreground = #fba922
-ramp-coreload-5 = ▆
-ramp-coreload-5-font = 3
-ramp-coreload-5-foreground = #fba922
-ramp-coreload-6 = ▇
-ramp-coreload-6-font = 3
-ramp-coreload-6-foreground = #ff5555
-ramp-coreload-7 = █
-ramp-coreload-7-font = 3
-ramp-coreload-7-foreground = #ff5555
+;bar-cpu-format =  %fill%%indicator%%empty%
+; Defines the text color of the filled part.
+; If the gradient is enabled, the filled part's color is a gradient using the listed colors.
+; Otherwise the entire filled part will have the same color, based on the current value.
+bar-load-gradient = true
+bar-load-foreground-0 = #3384d0
+bar-load-foreground-1 = #aaff77
+bar-load-foreground-2 = #ff0000
+bar-load-empty-foreground = #ffffff
+bar-load-width = 15
+
+
+; The fill, indicator and empty icon can be configured like any <label>
+bar-load-fill = 
+bar-load-indicator = 
+bar-load-empty = 
 
 ################################################################################
 [module/date]
