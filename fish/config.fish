@@ -21,7 +21,7 @@ alias cat='bat --paging=never --theme Dracula'
 alias clone='git clone'
 alias p='paru --bottomup'
 alias premove='paru -Rcns'
-
+alias neofetch='neofetch | lolcat'
 
 # PATH
 fish_add_path $HOME/.local/bin
