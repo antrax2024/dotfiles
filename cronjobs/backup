@@ -1,2 +1,0 @@
-*/15 * * * * /home/gargula/dotfiles/bin/save-cronjobs.sh
-*/5 * * * * /home/gargula/dotfiles/bin/limine-backup.sh
