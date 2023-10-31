@@ -30,7 +30,7 @@ compositing-border = over
 ; Define fallback values used by all module formats
 format-foreground = #FF0000
 format-background = #00FF00
-format-underline = #ffc663
+;format-underline = #ffc663
 format-overline =
 format-spacing =
 format-padding =
