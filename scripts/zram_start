@@ -1,9 +1,0 @@
-#!/usr/bin/bash
-
-bash -c "echo 0 > /sys/module/zswap/parameters/enabled"
-swapoff --all
-modprobe zram num_devices=1
-bash -c "echo zstd > /sys/block/zram0/comp_algorithm"
-bash -c "echo 2G > /sys/block/zram0/disksize"
-mkswap -f --label zram0 /dev/zram0
-swapon --priority 32767 /dev/zram0

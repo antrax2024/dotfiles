@@ -1,7 +1,0 @@
-export DISPLAY=:0
-export JAVA_AWT_WM_NONREPARENTING=1
-export SXHKD_SHELL="/usr/bin/bash"
-
-
-
-

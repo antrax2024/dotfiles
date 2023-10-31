@@ -1,21 +1,12 @@
 #!/usr/bin/bash
 # Pacotes pacman
-PACMAN_PKGS=(
-	copyq
-	xdotool
+PKGS=(
 	python-pynvim
 	python-pyserial
 	nodejs
 	npm
 	cargo
-	mpd
-	wget
-	rsync
-	sshfs
 	exa
-	bat
-	ethtool
-	evince
 	cronie
 	gthumb
 	gimp
@@ -71,26 +62,9 @@ PACMAN_PKGS=(
 	gtk-engine-murrine
 	numlockx
 	xwallpaper
-)
-
-# pacotes AUR
-AUR_PKGS=(
-	#########################
-	# TEMAS
-	#########################
-	papirus-icon-theme
-	thunar
-	thunar-archive-plugin
-	thunar-media-tags-plugin
-	adapta-gtk-theme
 	#########################
 	# APPS
 	#########################
-	trayer-srg
-	glow
-	cifs-utils
-	thunar-volman
-	polkit-kde-agent
 	insync
 	visual-studio-code-bin
 	gdu

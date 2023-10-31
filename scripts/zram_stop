@@ -1,5 +1,0 @@
-#!/usr/bin/bash
-
-swapoff /dev/zram0
-bash -c "echo 1 > /sys/block/zram0/reset"
-modprobe -r zram
