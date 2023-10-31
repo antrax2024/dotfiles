@@ -16,7 +16,6 @@ PKGS=(
 	speedcrunch
 	python-psutil
 	ttf-nerd-fonts-symbols
-	insync
 	visual-studio-code-bin
 	gdu
 	wol-systemd
@@ -24,6 +23,7 @@ PKGS=(
 	alacritty-git
 	xidle
 	picom-allusive
+	neovim
 	#########################
 	# FONTS 
 	#########################
