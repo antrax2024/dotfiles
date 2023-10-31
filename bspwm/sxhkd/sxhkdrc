@@ -7,6 +7,9 @@
 # SUPER + ... KEYS
 #################################################################
 
+# Tunar
+super + t
+    /usr/bin/thunar
 
 #Htop
 super + h
