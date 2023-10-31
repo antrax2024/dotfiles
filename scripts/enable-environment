@@ -11,27 +11,19 @@ source packages.sh
 printStatus "Upgrading"
 paru
 
+printStatus "Linking environment and profile to /etc"
+sudo ln -sf $DOTFILES/etc/environment /etc/environment
+sudo ln -sf $DOTFILES/etc/profile /etc/profile
+
 
 printStatus "Install Packages"
 
 paru -S ${PKGS[*]}
 
 
-printStatus "Enable Services"
-sudo systemctl enable cronie.service
+printStatus "Enable Wake on LAN..."
 sudo systemctl enable "wol@$NET_IFACE".service
-sudo systemctl enable --now mpd.service
 
-printStatus "Install and Enable ZRAM Swap"
-sudo cp $HOME/dotfiles/scripts/zram-swap.service /etc/systemd/system/
-sudo systemctl enable --now zram-swap.service
-zramctl
-
-printStatus "Linking gdu..."
-ln -sf $DOTFILES/gdu/gdu.yaml $HOME/.gdu.yaml
-
-printStatus "Linking /etc/nsswitch.con"
-sudo ln -sf $DOTFILES/etc/nsswitch.conf /etc/nsswitch.conf
 
 printStatus "Enable .bashrc"
 rm $HOME/.bashrc
@@ -41,43 +33,21 @@ ln -sf $DOTFILES/bashrc $HOME/.bashrc
 arraylength=${#LINK_DIRS[@]}
 
 printStatus "Installing Astronvim hummmmmm.... "
+verifyIfConfigExists "nvim"
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim $HOME/.config/nvim
+printStatus "Config neovim..."
+ln -sf $DOTFILES/nvim/ $HOME/.config/nvim/lua/user
 
 # use for loop to read all values and indexes
 for (( i=0; i<${arraylength}; i++ ));
 do
 	printStatus "Linking ${LINK_DIRS[$i]}"
+	verifyIfConfigExists "${LINK_DIRS[$i]}"
 	ln -sf "$DOTFILES/${LINK_DIRS[$i]}" "$HOME/.config/${LINK_DIRS[$i]}"
 done
 
 
-
-printStatus "Enable Avahi Daemon Service"
-sudo systemctl enable --now avahi-daemon.service
-
 printStatus "Changind default shell to Fish Shell..."
 chsh -s /usr/bin/fish $USERNAME
 
-printStatus "Limine deploy pacman hook..."
-sudo mkdir -p /etc/pacman.d/hooks
-sudo ln -sf $DOTFILES/etc/pacman.d/hooks/limine-deploy.hook /etc/pacman.d/hooks/limine-deploy.hook
-
-printStatus "linux-tkg (Kernel Custom)"
-paru -S linux-tkg-bmq-headers linux-tkg-bmq modprobed-db
-
-printStatus "Config neovim..."
-ln -sf $DOTFILES/nvim/ $HOME/.config/nvim/lua/user
-
-
-printStatus "Link .xprofile..."
-ln -sf $DOTFILES/xprofile $HOME/.xprofile
-
-printStatus "Enable lightdm"
-sudo systemctl enable lightdm.service
-sudo groupadd -r autologin
-sudo gpasswd -a gargula autologin
-
-printStatus "ATIVE os cronjobs!!!"
-
-printStatus "Ativa o autologin no lightdm agora..."
 printStatus "Thats all"

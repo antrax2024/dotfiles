@@ -1,111 +1,40 @@
 #!/usr/bin/bash
 # Pacotes pacman
 PKGS=(
+	#########################
+	# APPS
+	#########################
 	python-pynvim
 	python-pyserial
 	nodejs
 	npm
 	cargo
 	exa
-	cronie
-	gthumb
 	gimp
-	tumbler
 	yt-dlp
-	lm_sensors
-	w3m
-	fish
-	python-pip
-	breeze
-	xarchiver
-	unzip
-	system-config-printer
-	usbutils
-	avahi
-	nss-mdns
-	nvme-cli
-	network-manager-applet
-	dialog
-	mtools
-	dosfstools
-	bluez
-	bluez-utils
-	xdg-utils
-	xdg-user-dirs
-	inetutils
 	nmap
-	less
-	blueman
-	pipewire-jack
-	pipewire-alsa
-	pipewire-pulse
-	alsa-utils
-	limine
 	speedcrunch
-	discord
-	telegram-desktop
-	imagemagick
-	ntp
-	pavucontrol
-	mlocate
 	python-psutil
-	vulkan-tools
-	gtkmm
-	mpv
-	lazygit
-	lxappearance
-	xorg
 	ttf-nerd-fonts-symbols
-	pyqt6
-	lightdm
-	lightdm-gtk-greeter
-	gtk-engine-murrine
-	numlockx
-	xwallpaper
-	#########################
-	# APPS
-	#########################
 	insync
 	visual-studio-code-bin
 	gdu
-	firefox
 	wol-systemd
-	neofetch
 	starship
-	gohugo-extended-bin
-	bspwm 
-	sxhkd
 	alacritty-git
-	picom-allusive
-	xorg-server-xephyr
-	playerctl
-	pulseaudio-ctl
-	dunst
-	flameshot
-	rofi
-	wmname
-	calc
-	python-pipx
-	networkmanager-dmenu-git
-	chaotic-aur/eww-git
-	volctl
 	xidle
 	#########################
 	# FONTS 
 	#########################
 	ttf-hack-nerd
-	siji-ng
 	ttf-firacode-nerd
 	ttf-firacode
 	ttf-font-awesome
 	awesome-terminal-fonts
 	noto-fonts-emoji
-	ttf-iosevka-nerd
-	ttf-hack
 	ttf-icomoon-feather
- 	#########################
+	#########################
 	)
-
 
 LINK_DIRS=(
 	alacritty
@@ -114,11 +43,6 @@ LINK_DIRS=(
 	neofetch
 	nvim
 	bspwm
-	sxhkd
-	fontconfig
-	dunst
-	picom
-	eww
 )
 
 
