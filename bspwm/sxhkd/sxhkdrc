@@ -26,7 +26,7 @@ super + r
 
 #Pavucontrol
 super + v
-    pavucontrol
+	bspc node -t floating
 
 #Pragha
 super + m
@@ -370,8 +370,10 @@ super + bracket{left,right}
 	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
 
 # set the window state
+#super + space
+#	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 super + space
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+    /home/gargula/dotfiles/rofi/launchers/type-2/launcher.sh
 
 # Move focus to other monitor
 super + BackSpace
