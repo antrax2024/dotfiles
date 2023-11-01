@@ -24,6 +24,7 @@ PKGS=(
 	xidle
 	picom-allusive
 	neovim
+	dunst
 	#########################
 	# FONTS 
 	#########################
