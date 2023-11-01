@@ -91,15 +91,15 @@ module-margin-left = 1
 module-margin-right = 1
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = "Hack Nerd Font Propo:size=12;0"
-font-1 = "FontAwesome:size=12;0"
-font-2 = "Hack Nerd Font Propo:size=12;0"
-font-3 = "Hack Nerd Font Propo:size=12;0"
+font-0 = "Hack Nerd Font Propo:size=13;0"
+font-1 = "Hack Nerd Font Propo:size=13;0"
+font-2 = "Hack Nerd Font Propo:size=13;0"
+font-3 = "Hack Nerd Font Propo:size=13;0"
 
 
-modules-left = bspwm xwindow
+modules-left = bspwm 
 ;modules-center = kernel
-modules-right = cpu temperature memory filesystem wired-network pavolume date
+modules-right = nvidia cpu temperature memory filesystem wired-network pavolume date
 
 tray-detached = false
 tray-offset-x = 0
@@ -114,66 +114,6 @@ scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 
 
-################################################################################
-################################################################################
-############                  MAINBAR-BSPWM-EXTRA                   ############
-################################################################################
-################################################################################
-
-[bar/mainbar-bspwm-extra]
-monitor = ${env:MONITOR}
-;monitor-fallback = HDMI1
-width = 100%
-height = 30
-;offset-x = 1%
-;offset-y = 1%
-radius = 0.0
-fixed-center = true
-bottom = true
-separator = |
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 2
-line-color = #f00
-
-wm-restack = bspwm
-override-redirect = true
-
-; Enable support for inter-process messaging
-; See the Messaging wiki page for more details.
-enable-ipc = true
-
-border-size = 0
-;border-left-size = 0
-;border-right-size = 25
-;border-top-size = 0
-;border-bottom-size = 25
-border-color = #00000000
-
-padding-left = 0
-padding-right = 0
-
-module-margin-left = 2
-module-margin-right = 2
-
-
-modules-left = load-average
-modules-center = networkspeeddown networkspeedup
-modules-right = filesystem
-
-;tray-detached = false
-;tray-offset-x = 0
-;tray-offset-y = 0
-;tray-padding = 2
-;tray-maxsize = 20
-;tray-scale = 1.0
-;tray-position = right
-;tray-background = ${colors.background}
-
-scroll-up = bspwm-desknext
-scroll-down = bspwm-deskprev
 
 ################################################################################
 ################################################################################
@@ -204,11 +144,10 @@ ws-icon-default = " "
 
 format = <label-state> <label-mode>
 
-label-focused = %icon%
+label-focused = [ %icon% ]
 label-focused-background = ${colors.background}
-;label-focused-underline= #f4be54
 label-focused-padding = 1
-label-focused-foreground = #98c830
+label-focused-foreground = #0f8bf9
 
 label-occupied = %icon%
 label-occupied-padding = 1
@@ -238,11 +177,6 @@ label-sticky = "  "
 label-sticky-foreground = ${colors.foreground}
 label-private =  "     "
 label-private-foreground = ${colors.foreground}
-
-; Separator in between workspaces
-;label-separator = |
-;label-separator-padding = 10
-;label-separator-foreground = #ffb52a
 
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
@@ -287,7 +221,7 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 ;   
 format-prefix = " "
-format-prefix-foreground = #afb4d6
+format-prefix-foreground = #F39B6D 
 ;format-underline = #cb5e38
 
 ; Available tags:
@@ -316,7 +250,7 @@ bar-load-foreground-0 = #3384d0
 bar-load-foreground-1 = #aaff77
 bar-load-foreground-2 = #ff0000
 bar-load-empty-foreground = #ffffff
-bar-load-width = 15
+bar-load-width = 10
 
 
 ; The fill, indicator and empty icon can be configured like any <label>
@@ -624,3 +558,18 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
 ###############################################################################
+[module/nvidia]
+type = custom/script
+
+exec = /home/gargula/dotfiles/bin/nvidia-status.sh
+
+; Seconds to sleep between updates
+; Default: 5 (0 if `tail = true`)
+interval = 1
+
+format-prefix = "󰃽 "
+format-prefix-foreground = #56a932
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+label = %output:9%
+
