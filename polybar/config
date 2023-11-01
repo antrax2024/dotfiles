@@ -464,9 +464,7 @@ warn-temperature = 60
 format = <ramp> <label>
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-;format-underline = #00a1de
 format-warn = <ramp> <label-warn>
-;format-warn-underline = #c7254f
 label = %temperature%
 label-warn =  %temperature%
 label-warn-foreground = #c7254f
@@ -476,8 +474,7 @@ ramp-1 = 
 ramp-2 = 
 ramp-3 = 
 ramp-4 = 
-;ramp-foreground =${colors.foreground}
-ramp-foreground = #8a87d2
+ramp-foreground = #FF0000
 
 ################################################################################
 [module/volume]
