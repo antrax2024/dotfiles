@@ -465,6 +465,7 @@ format = <ramp> <label>
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-warn = <ramp> <label-warn>
+format-warn-background=${colors.background}
 label = %temperature%
 label-warn =  %temperature%
 label-warn-foreground = #c7254f

@@ -25,6 +25,7 @@ PKGS=(
 	picom-allusive
 	neovim
 	dunst
+	flameshot
 	#########################
 	# FONTS 
 	#########################

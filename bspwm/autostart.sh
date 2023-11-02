@@ -39,6 +39,7 @@ run pamac-tray &
 run xfce4-power-manager &
 run dunst &
 run xfce4-clipman &
+run flameshot &
 numlockx on &
 blueberry-tray &
 picom --config $HOME/.config/bspwm/picom.conf &
