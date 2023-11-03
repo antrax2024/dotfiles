@@ -26,6 +26,7 @@ PKGS=(
 	neovim
 	dunst
 	flameshot
+	openssh
 	#########################
 	# FONTS 
 	#########################

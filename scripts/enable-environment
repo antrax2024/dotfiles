@@ -50,4 +50,7 @@ done
 printStatus "Changind default shell to Fish Shell..."
 chsh -s /usr/bin/fish $USERNAME
 
+printStatus "Enable openSSH..."
+sudo systemctl enable --now sshd.service
+
 printStatus "Thats all"
