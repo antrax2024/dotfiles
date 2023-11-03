@@ -94,7 +94,7 @@ module-margin-right = 1
 font-0 = "Hack Nerd Font Propo:size=13;0"
 font-1 = "Hack Nerd Font Propo:size=13;0"
 font-2 = "Hack Nerd Font Propo:size=13;0"
-font-3 = "Noto Color Emoji:size=13;0"
+font-3 = "Noto Color Emoji:style=Regular:scale=8;0"
 
 
 modules-left = bspwm 
@@ -129,17 +129,17 @@ enable-scroll = true
 reverse-scroll = true
 pin-workspaces = true
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-9 = 10;
-ws-icon-default = " "
+ws-icon-0 = 1;🌎
+ws-icon-1 = 2;🐧
+ws-icon-2 = 3;💧
+ws-icon-3 = 4;🧪
+ws-icon-4 = 5;🖼️
+ws-icon-5 = 6;🎬
+ws-icon-6 = 7;💻
+ws-icon-7 = 8;📂
+ws-icon-8 = 9;🎮
+ws-icon-9 = 10;✔️
+ws-icon-default = "👁 "
 
 
 format = <label-state> <label-mode>
@@ -188,28 +188,6 @@ format-background = ${colors.background}
 ################################################################################
 ################################################################################
 
-[module/arch-updates]
-type = custom/script
-exec = ~/.config/polybar/scripts/check-arch-updates.sh
-interval = 1000
-label = Arch: %output%
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-format-prefix = "  "
-format-prefix-foreground = #FFBB00
-;format-underline = #FFBB00
-
-[module/aur-updates]
-type = custom/script
-exec = ~/.config/polybar/scripts/check-aur-updates.sh
-interval = 1000
-label = Aur: %output%
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-format-prefix = "  "
-format-prefix-foreground = #FFBB00
-;format-underline = #FFBB00
-
 ################################################################################
 [module/cpu]
 ;https://github.com/jaagr/polybar/wiki/Module:-cpu
@@ -220,7 +198,8 @@ interval = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 ;   
-format-prefix = " "
+format-prefix-font = 3
+format-prefix = "🔲 "
 format-prefix-foreground = #F39B6D 
 ;format-underline = #cb5e38
 
@@ -270,7 +249,8 @@ date = " %d/%m/%Y%"
 date-alt = " %d-%m-%Y"
 time = %H:%M:%S
 time-alt = %H:%M
-format-prefix = " "
+format-prefix-font = 3
+format-prefix = "🗓️ "
 format-prefix-foreground = #ff11ff
 ;format-underline = #c1941a
 format-foreground = ${colors.foreground}
@@ -304,7 +284,8 @@ spacing = 4
 ;   <bar-free>
 ;   <bar-used>
 ;   <ramp-capacity>
-format-mounted-prefix = "󰋊 "
+format-prefix-font = 3
+format-mounted-prefix = "💾 "
 format-mounted-prefix-foreground = #8fc1e3
  
 format-mounted = <label-mounted>
@@ -355,7 +336,8 @@ bar-used-empty = 
 bar-used-empty-foreground = #ffffff
 
 format = <label> <bar-used>
-format-prefix = " 󰘚 "
+format-prefix-font = 3
+format-prefix = "🧠 "
 format-prefix-foreground = #3384d0
 ;format-underline = #3384d0
 format-foreground = ${colors.foreground}
@@ -461,20 +443,17 @@ hwmon-path = /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input
 base-temperature = 20
 warn-temperature = 60
 
-format = <ramp> <label>
+format = <label>
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-warn = <ramp> <label-warn>
+format-warn = <label-warn>
 format-warn-background=${colors.background}
 label = %temperature%
-label-warn =  %temperature%
+label-warn = 🔥 %temperature%
 label-warn-foreground = #c7254f
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-3 = 
-ramp-4 = 
+format-prefix-font = 3
+format-prefix = "🌡 "
 ramp-foreground = #FF0000
 
 ################################################################################
@@ -533,7 +512,7 @@ label-disconnected = %ifname% disconnected
 format-connected-foreground = ${colors.foreground}
 format-connected-background = ${colors.background}
 ;format-connected-underline = #55aa55
-format-connected-prefix = " "
+format-connected-prefix = "🔌 "
 format-connected-prefix-foreground = #55aa55
 format-connected-prefix-background = ${colors.background}
 
@@ -565,7 +544,8 @@ exec = /home/gargula/dotfiles/bin/nvidia-status.sh
 ; Default: 5 (0 if `tail = true`)
 interval = 1
 
-format-prefix = "󰃽 "
+format-prefix-font = 3
+format-prefix = "📹 "
 format-prefix-foreground = #56a932
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
