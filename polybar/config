@@ -91,15 +91,15 @@ module-margin-left = 1
 module-margin-right = 1
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = "Hack Nerd Font Propo:size=13;0"
-font-1 = "Hack Nerd Font Propo:size=13;0"
-font-2 = "Hack Nerd Font Propo:size=13;0"
-font-3 = "Noto Color Emoji:style=Regular:scale=8;0"
+font-0 = "Hack Nerd Font Propo:size=12;0"
+font-1 = "FontAwesome:size=12;0"
+font-2 = "Hack Nerd Font Propo:size=12;0"
+font-3 = "Hack Nerd Font Propo:size=12;0"
 
 
-modules-left = bspwm 
+modules-left = bspwm xwindow
 ;modules-center = kernel
-modules-right = nvidia cpu temperature memory filesystem wired-network pavolume date
+modules-right = cpu temperature memory filesystem wired-network pavolume date
 
 tray-detached = false
 tray-offset-x = 0
@@ -114,6 +114,66 @@ scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 
 
+################################################################################
+################################################################################
+############                  MAINBAR-BSPWM-EXTRA                   ############
+################################################################################
+################################################################################
+
+[bar/mainbar-bspwm-extra]
+monitor = ${env:MONITOR}
+;monitor-fallback = HDMI1
+width = 100%
+height = 30
+;offset-x = 1%
+;offset-y = 1%
+radius = 0.0
+fixed-center = true
+bottom = true
+separator = |
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = #f00
+
+wm-restack = bspwm
+override-redirect = true
+
+; Enable support for inter-process messaging
+; See the Messaging wiki page for more details.
+enable-ipc = true
+
+border-size = 0
+;border-left-size = 0
+;border-right-size = 25
+;border-top-size = 0
+;border-bottom-size = 25
+border-color = #00000000
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 2
+module-margin-right = 2
+
+
+modules-left = load-average
+modules-center = networkspeeddown networkspeedup
+modules-right = filesystem
+
+;tray-detached = false
+;tray-offset-x = 0
+;tray-offset-y = 0
+;tray-padding = 2
+;tray-maxsize = 20
+;tray-scale = 1.0
+;tray-position = right
+;tray-background = ${colors.background}
+
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
 
 ################################################################################
 ################################################################################
@@ -129,25 +189,26 @@ enable-scroll = true
 reverse-scroll = true
 pin-workspaces = true
 
-ws-icon-0 = 1;🌎
-ws-icon-1 = 2;🐧
-ws-icon-2 = 3;💧
-ws-icon-3 = 4;🧪
-ws-icon-4 = 5;🖼️
-ws-icon-5 = 6;🎬
-ws-icon-6 = 7;💻
-ws-icon-7 = 8;📂
-ws-icon-8 = 9;🎮
-ws-icon-9 = 10;✔️
-ws-icon-default = "👁 "
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+ws-icon-default = " "
 
 
 format = <label-state> <label-mode>
 
-label-focused = [ %icon% ]
+label-focused = %icon%
 label-focused-background = ${colors.background}
+;label-focused-underline= #f4be54
 label-focused-padding = 1
-label-focused-foreground = #0f8bf9
+label-focused-foreground = #98c830
 
 label-occupied = %icon%
 label-occupied-padding = 1
@@ -178,6 +239,11 @@ label-sticky-foreground = ${colors.foreground}
 label-private =  "     "
 label-private-foreground = ${colors.foreground}
 
+; Separator in between workspaces
+;label-separator = |
+;label-separator-padding = 10
+;label-separator-foreground = #ffb52a
+
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
@@ -187,6 +253,28 @@ format-background = ${colors.background}
 ############                       MODULES A-Z                      ############
 ################################################################################
 ################################################################################
+
+[module/arch-updates]
+type = custom/script
+exec = ~/.config/polybar/scripts/check-arch-updates.sh
+interval = 1000
+label = Arch: %output%
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-prefix = "  "
+format-prefix-foreground = #FFBB00
+;format-underline = #FFBB00
+
+[module/aur-updates]
+type = custom/script
+exec = ~/.config/polybar/scripts/check-aur-updates.sh
+interval = 1000
+label = Aur: %output%
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-prefix = "  "
+format-prefix-foreground = #FFBB00
+;format-underline = #FFBB00
 
 ################################################################################
 [module/cpu]
@@ -198,9 +286,8 @@ interval = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 ;   
-format-prefix-font = 3
-format-prefix = "🔲 "
-format-prefix-foreground = #F39B6D 
+format-prefix = " "
+format-prefix-foreground = #afb4d6
 ;format-underline = #cb5e38
 
 ; Available tags:
@@ -229,7 +316,7 @@ bar-load-foreground-0 = #3384d0
 bar-load-foreground-1 = #aaff77
 bar-load-foreground-2 = #ff0000
 bar-load-empty-foreground = #ffffff
-bar-load-width = 10
+bar-load-width = 15
 
 
 ; The fill, indicator and empty icon can be configured like any <label>
@@ -249,9 +336,8 @@ date = " %d/%m/%Y%"
 date-alt = " %d-%m-%Y"
 time = %H:%M:%S
 time-alt = %H:%M
-format-prefix-font = 3
-format-prefix = "🗓️ "
-format-prefix-foreground = #ff11ff
+format-prefix = " "
+format-prefix-foreground = #c1941a
 ;format-underline = #c1941a
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
@@ -284,8 +370,7 @@ spacing = 4
 ;   <bar-free>
 ;   <bar-used>
 ;   <ramp-capacity>
-format-prefix-font = 3
-format-mounted-prefix = "💾 "
+format-mounted-prefix = "󰆓 "
 format-mounted-prefix-foreground = #8fc1e3
  
 format-mounted = <label-mounted>
@@ -336,8 +421,7 @@ bar-used-empty = 
 bar-used-empty-foreground = #ffffff
 
 format = <label> <bar-used>
-format-prefix-font = 3
-format-prefix = "🧠 "
+format-prefix = " 󰘚 "
 format-prefix-foreground = #3384d0
 ;format-underline = #3384d0
 format-foreground = ${colors.foreground}
@@ -443,18 +527,23 @@ hwmon-path = /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input
 base-temperature = 20
 warn-temperature = 60
 
-format = <label>
+format = <ramp> <label>
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-warn = <label-warn>
-format-warn-background=${colors.background}
+;format-underline = #00a1de
+format-warn = <ramp> <label-warn>
+;format-warn-underline = #c7254f
 label = %temperature%
-label-warn = 🔥 %temperature%
+label-warn =  %temperature%
 label-warn-foreground = #c7254f
 
-format-prefix-font = 3
-format-prefix = "🌡 "
-ramp-foreground = #FF0000
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+;ramp-foreground =${colors.foreground}
+ramp-foreground = #8a87d2
 
 ################################################################################
 [module/volume]
@@ -512,7 +601,7 @@ label-disconnected = %ifname% disconnected
 format-connected-foreground = ${colors.foreground}
 format-connected-background = ${colors.background}
 ;format-connected-underline = #55aa55
-format-connected-prefix = "🔌 "
+format-connected-prefix = " "
 format-connected-prefix-foreground = #55aa55
 format-connected-prefix-background = ${colors.background}
 
@@ -535,19 +624,3 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
 ###############################################################################
-[module/nvidia]
-type = custom/script
-
-exec = /home/gargula/dotfiles/bin/nvidia-status.sh
-
-; Seconds to sleep between updates
-; Default: 5 (0 if `tail = true`)
-interval = 1
-
-format-prefix-font = 3
-format-prefix = "📹 "
-format-prefix-foreground = #56a932
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-label = %output:9%
-
