@@ -1,3 +1,3 @@
 #!/usr/bin/bash
 #
-git remote set-url origin $1
+git remote set-url origin git@github.com:gargulaonline/dotfiles.git

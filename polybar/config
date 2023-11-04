@@ -51,7 +51,7 @@ max         = #c23127
 ################################################################################
 
 [bar/mainbar-bspwm]
-monitor = "DP-0"
+monitor = "DP-1"
 width = 100%
 height = 30
 radius = 0.0
@@ -92,7 +92,7 @@ font-0 = "Hack Nerd Font Propo:style=Regular:antialias=true:size=14;3"
 
 modules-left = bspwm
 ;modules-center = kernel
-modules-right = nvidia cpu temperature memory filesystem wired-network pavolume date
+modules-right = cpu temperature memory filesystem wired-network pavolume date
 
 tray-detached = false
 tray-offset-x = 0
