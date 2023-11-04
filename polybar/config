@@ -39,6 +39,10 @@ volume-min  = #2aa889
 volume-med  = #edb443
 volume-max  = #c23127
 separator   = #905C99
+min         = #2aa889
+med         = #edb443
+max         = #c23127
+
 ; =======================
 
 ################################################################################
@@ -510,14 +514,14 @@ base-temperature = 20
 warn-temperature = 60
 
 format = <ramp> <label>
-format-foreground = ${colors.foreground}
+;format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-;format-underline = #00a1de
 format-warn = <ramp> <label-warn>
-;format-warn-underline = #c7254f
 label = %temperature-c%
 label-warn =  %temperature-c%
-label-warn-foreground = #c7254f
+label-warn-foreground = ${colors.max}
+label-warn-background = ${colors.background}
+
 
 ramp-0 = 
 ramp-1 = 
