@@ -38,6 +38,7 @@ alert       = #d26937
 volume-min  = #2aa889
 volume-med  = #edb443
 volume-max  = #c23127
+separator   = #905C99
 ; =======================
 
 ################################################################################
@@ -55,7 +56,8 @@ height = 30
 radius = 0.0
 fixed-center = true
 bottom = false
-separator = |
+separator = 󰇝
+separator-foreground = ${colors.separator}
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -120,7 +122,6 @@ height = 30
 radius = 0.0
 fixed-center = true
 bottom = true
-separator = |
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -229,11 +230,6 @@ label-sticky-foreground = ${colors.foreground}
 label-private =  "     "
 label-private-foreground = ${colors.foreground}
 
-; Separator in between workspaces
-;label-separator = |
-;label-separator-padding = 10
-;label-separator-foreground = #ffb52a
-
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
@@ -327,8 +323,7 @@ date-alt = " %d-%m-%Y"
 time = %H:%M:%S
 time-alt = %H:%M
 format-prefix = " "
-format-prefix-foreground = #c1941a
-;format-underline = #c1941a
+format-prefix-foreground = #cfecf7
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 label = %date% %time%
