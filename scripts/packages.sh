@@ -36,7 +36,7 @@ PKGS=(
 	ttf-font-awesome
 	awesome-terminal-fonts
 	noto-fonts-emoji
-	ttf-icomoon-feather
+	chaotic-aur/ttf-material-design-icons-extended
 	#########################
 	)
 

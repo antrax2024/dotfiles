@@ -18,8 +18,6 @@ margin-bottom = 0
 
 [settings]
 ;https://github.com/jaagr/polybar/wiki/Configuration#application-settings
-throttle-output = 5
-throttle-output-for = 10
 screenchange-reload = true
 compositing-background = over
 compositing-foreground = over
@@ -31,11 +29,6 @@ compositing-border = over
 format-foreground = #FF0000
 format-background = #00FF00
 ;format-underline = #ffc663
-format-overline =
-format-spacing =
-format-padding =
-format-margin =
-format-offset =
 
 [colors]
 ; =======================
@@ -53,7 +46,7 @@ volume-max  = #c23127
 ################################################################################
 
 [bar/mainbar-bspwm]
-monitor = ${env:MONITOR}
+monitor = "DP-0"
 ;monitor-fallback = HDMI1
 width = 100%
 height = 30
@@ -91,15 +84,12 @@ module-margin-left = 1
 module-margin-right = 1
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = "Hack Nerd Font Propo:size=12;0"
-font-1 = "FontAwesome:size=12;0"
-font-2 = "Hack Nerd Font Propo:size=12;0"
-font-3 = "Hack Nerd Font Propo:size=12;0"
+font-0 = "Hack Nerd Font Propo:style=Regular:antialias=true:size=14;0"
 
 
-modules-left = bspwm xwindow
+modules-left = bspwm
 ;modules-center = kernel
-modules-right = cpu temperature memory filesystem wired-network pavolume date
+modules-right = nvidia cpu temperature memory filesystem wired-network pavolume date
 
 tray-detached = false
 tray-offset-x = 0
@@ -304,7 +294,7 @@ format-padding = 0
 ;   %percentage% (default) - total cpu load
 ;   %percentage-cores% - load percentage for each core
 ;   %percentage-core[1-9]% - load percentage for specific core
-label-font = 3
+label-font = 0
 label = %percentage%%
 
 ;bar-cpu-format =  %fill%%indicator%%empty%
@@ -316,7 +306,7 @@ bar-load-foreground-0 = #3384d0
 bar-load-foreground-1 = #aaff77
 bar-load-foreground-2 = #ff0000
 bar-load-empty-foreground = #ffffff
-bar-load-width = 15
+bar-load-width = 10
 
 
 ; The fill, indicator and empty icon can be configured like any <label>
@@ -533,8 +523,8 @@ format-background = ${colors.background}
 ;format-underline = #00a1de
 format-warn = <ramp> <label-warn>
 ;format-warn-underline = #c7254f
-label = %temperature%
-label-warn =  %temperature%
+label = %temperature-c%
+label-warn =  %temperature-c%
 label-warn-foreground = #c7254f
 
 ramp-0 = 
@@ -565,11 +555,11 @@ bar-volume-foreground-5 = #40ad4b
 bar-volume-foreground-6 = #40ad4b
 bar-volume-gradient = false
 bar-volume-indicator = 
-bar-volume-indicator-font = 2
+bar-volume-indicator-font = 0
 bar-volume-fill = 
-bar-volume-fill-font = 2
+bar-volume-fill-font = 0
 bar-volume-empty = 
-bar-volume-empty-font = 2
+bar-volume-empty-font = 0
 bar-volume-empty-foreground = ${colors.foreground}
 format-volume-foreground = ${colors.foreground}
 format-volume-background = ${colors.background}
@@ -624,3 +614,18 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
 ###############################################################################
+[module/nvidia]
+type = custom/script
+
+exec = /home/gargula/dotfiles/bin/nvidia-status.sh
+
+; Seconds to sleep between updates
+; Default: 5 (0 if `tail = true`)
+interval = 1
+
+format-prefix-font = 0
+format-prefix = "󰍛 "
+format-prefix-foreground = #56a932
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+label = %output:9%
