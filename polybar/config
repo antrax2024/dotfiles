@@ -48,11 +48,8 @@ separator   = #905C99
 
 [bar/mainbar-bspwm]
 monitor = "DP-0"
-;monitor-fallback = HDMI1
 width = 100%
 height = 30
-;offset-x = 1%
-;offset-y = 1%
 radius = 0.0
 fixed-center = true
 bottom = false
