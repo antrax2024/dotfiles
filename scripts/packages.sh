@@ -30,6 +30,7 @@ PKGS=(
 	mesa-vdpau
 	libva-mesa-driver
 	chaotic-aur/moonlight-qt
+	obs-studio
 	#########################
 	# FONTS 
 	#########################
