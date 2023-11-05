@@ -46,6 +46,7 @@ PKGS=(
 
 LINK_DIRS=(
 	alacritty
+	dunst
 	rofi
 	fish
 	neofetch
