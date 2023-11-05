@@ -45,7 +45,7 @@ blueberry-tray &
 picom --config $HOME/.config/bspwm/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 run volumeicon &
-run /home/gargula/dotfiles/nvidia-fan-control/nvidia-fan-curve.sh &
+#run /home/gargula/dotfiles/nvidia-fan-control/nvidia-fan-curve.sh &
 run insync start &
 
 
