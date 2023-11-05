@@ -1,0 +1,6 @@
+<input type='evdev'>
+  <source dev='/dev/input/by-id/usb-Microsoft_Microsoft_Nano_Transceiver_1.1-if02-mouse'/>
+</input>
+<input type='evdev'>
+  <source dev='/dev/input/by-id/usb-SINO_WEALTH_Gaming_KB-if01-event-kbd' grab='all' repeat='on' grabToggle='ctrl-ctrl'/>
+</input>
