@@ -54,4 +54,7 @@ chsh -s /usr/bin/fish $USERNAME
 printStatus "Enable openSSH..."
 sudo systemctl enable --now sshd.service
 
+printStatus "bashrc for root... ow yes man!"
+sudo ln -sf $DOTFILES/scripts/bashrc-root /root/.bashrc
+
 printStatus "Thats all"
