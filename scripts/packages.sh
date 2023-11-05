@@ -27,6 +27,9 @@ PKGS=(
 	dunst
 	flameshot
 	openssh
+	mesa-vdpau
+	libva-mesa-driver
+	chaotic-aur/moonlight-qt
 	#########################
 	# FONTS 
 	#########################
