@@ -567,7 +567,7 @@ format-connected-prefix = "󰌘 "
 format-connected-prefix-foreground = ${colors.net-fg}
 format-connected-prefix-background = ${colors.background}
 
-format-disconnected-prefix = "󰌙"
+format-disconnected-prefix = "󰌙 "
 format-disconnected = <label-disconnected>
 format-disconnected-underline = ${colors.alert}
 format-disconnected-prefix-foreground = ${colors.alert}
