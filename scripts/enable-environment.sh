@@ -57,4 +57,10 @@ sudo systemctl enable --now sshd.service
 printStatus "bashrc for root... ow yes man!"
 sudo ln -sf $DOTFILES/scripts/bashrc-root /root/.bashrc
 
+printStatus "Disable ipv6 for local network...."
+sudo ln -sf $DOTFILES/etc/sysctl.d/40-ipv6.conf /etc/sysctl.d/40-ipv6.conf
+
+printStatus "Link mkinitcpio..."
+sudo ln -sf $DOTFILES/etc/mkinitcpio.conf /etc/mkinitcpio.conf
+
 printStatus "Thats all"
