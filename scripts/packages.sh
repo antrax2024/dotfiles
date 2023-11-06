@@ -31,6 +31,7 @@ PKGS=(
 	libva-mesa-driver
 	chaotic-aur/moonlight-qt
 	obs-studio
+	xf86-video-amdgpu
 	#########################
 	# FONTS 
 	#########################
