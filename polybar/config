@@ -509,7 +509,7 @@ format-muted-background = ${colors.background}
 [module/wired-network]
 ;https://github.com/jaagr/polybar/wiki/Module:-network
 type = internal/network
-interface = enp7s0
+interface = bridge0
 ;interface = enp14s0
 interval = 3.0
 
