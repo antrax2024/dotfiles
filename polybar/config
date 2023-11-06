@@ -28,21 +28,27 @@ compositing-border = over
 ; Define fallback values used by all module formats
 format-foreground = #FF0000
 format-background = #00FF00
-;format-underline = #ffc663
 
 [colors]
 ; =======================
 background  = #0a0f14
 foreground  = #ffffff
 alert       = #d26937
-volume-min  = #2aa889
-volume-med  = #edb443
-volume-max  = #c23127
+danger      = #c23127
 separator   = #905C99
 min         = #2aa889
 med         = #edb443
 max         = #c23127
-
+cpu-fg      = #E57B41
+temp-fg     = #00FFFF
+mem-fg      = #0a9f0a
+fs-fg       = #9c1160
+net-fg      = #8400ff
+disable     = #8b8989
+vol-fg      = #FFFF00
+date-fg     = #ff00ff
+ws-fg       = #cd8637
+ws-oc       = #f38488
 ; =======================
 
 ################################################################################
@@ -92,7 +98,7 @@ font-0 = "Hack Nerd Font Propo:style=Regular:antialias=true:size=14;3"
 
 modules-left = bspwm
 ;modules-center = kernel
-modules-right = cpu temperature memory filesystem wired-network pavolume date
+modules-right = cpu temperature memory filesystem wired-network pulseaudio date
 
 tray-detached = false
 tray-offset-x = 0
@@ -139,14 +145,15 @@ format = <label-state> <label-mode>
 
 label-focused = %icon%
 label-focused-background = ${colors.background}
-label-focused-underline= #f4be54
+label-focused-underline= ${colors.ws-fg}
 label-focused-padding = 1
-label-focused-foreground = #f4be54
+label-focused-foreground = ${colors.ws-fg}
 
 label-occupied = %icon%
 label-occupied-padding = 1
 label-occupied-background = ${colors.background}
-label-occupied-foreground = #706f6f
+label-occupied-foreground = ${colors.ws-oc}
+
 
 label-urgent = %icon%
 label-urgent-padding = 1
@@ -214,9 +221,9 @@ interval = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 ;   
-format-prefix = " "
-format-prefix-foreground = #afb4d6
-;format-underline = #cb5e38
+format-prefix = "󰻠 "
+format-prefix-foreground = ${colors.cpu-fg}
+format-underline = #cb5e38
 
 ; Available tags:
 ;   <label> (default)
@@ -265,7 +272,8 @@ date-alt = " %d-%m-%Y"
 time = %H:%M:%S
 time-alt = %H:%M
 format-prefix = " "
-format-prefix-foreground = #cfecf7
+format-prefix-foreground = ${colors.date-fg}
+format-underline = ${colors.date-fg}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 label = %date% %time%
@@ -298,12 +306,11 @@ spacing = 4
 ;   <bar-used>
 ;   <ramp-capacity>
 format-mounted-prefix = "󰆓 "
-format-mounted-prefix-foreground = #8fc1e3
- 
+format-mounted-prefix-foreground = ${colors.fs-fg}
 format-mounted = <label-mounted>
 format-mounted-foreground = ${colors.foreground}
 format-mounted-background = ${colors.background}
-;format-mounted-underline = #8fc1e3
+format-mounted-underline = ${colors.fs-fg}
 
 ; Available tokens:
 ;   %mountpoint%
@@ -315,7 +322,7 @@ format-mounted-background = ${colors.background}
 ;   %free%
 ;   %used%
 ; Default: %mountpoint% %percentage_free%%
-label-mounted = "%used% used of %total%"
+label-mounted = "%used%/%total%"
 
 ; Available tokens:
 ;   %mountpoint%
@@ -339,18 +346,18 @@ interval = 1
 ;   %mb_used%
 ;   %mb_free%
 ;   %mb_total%
-label = %percentage_used%%
+label = %gb_used%/%gb_total%
 bar-used-indicator =
 bar-used-width = 10
-bar-used-foreground-0 = #3384d0
+bar-used-foreground-0 = ${colors.mem-fg}
 bar-used-fill = 
 bar-used-empty = 
 bar-used-empty-foreground = #ffffff
 
 format = <label> <bar-used>
 format-prefix = " 󰘚 "
-format-prefix-foreground = #3384d0
-;format-underline = #3384d0
+format-prefix-foreground = ${colors.mem-fg}
+format-underline = ${colors.mem-fg}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
@@ -417,32 +424,59 @@ click-left = pamac-manager &
 format-prefix = " "
 
 ################################################################################
+[module/pulseaudio]
+type = internal/pulseaudio
 
-[module/pavolume]
-type = custom/script
-tail = true
-label = %output%
-exec = ~/.config/polybar/scripts/pavolume.sh --listen
-click-right = exec pavucontrol
-click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
-scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
-scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
-;format-underline = #3EC13F
-format-foreground = ${colors.foreground}
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+; sink = alsa_output.pci-0000_12_00.3.analog-stereo
+
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = true
+
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 5
+
+; Reverses the increment/decrement on scroll event. Set this to true if you are
+; using natural scrolling option on your touchpad.
+; New in version 3.7.0
+; Default: false
+reverse-scroll = false
+; Available tags:
+;   <label-volume> (default)
+;   <ramp-volume>
+;   <bar-volume>
+format-volume = <label-volume>
+
+; Available tags:
+;   <label-muted> (default)
+;   <ramp-volume>
+;   <bar-volume>
+;format-muted = <label-muted>
+
+; Available tokens:
+;   %percentage% (default)
+;   %decibels%
+label-volume = %percentage%%
+
+; Available tokens:
+;   %percentage% (default)
+;   %decibels%
+label-muted = 🔇 muted
+label-muted-foreground = ${colors.disable}
 format-background = ${colors.background}
+format-volume-prefix = "󰕾 "
+format-volume-prefix-foreground = ${colors.vol-fg}
+format-volume-foreground = ${colors.foreground}
+format-volume-background = ${colors.background}
+format-volume-underline = ${colors.vol-fg}
 
 
-
-################################################################################
-[module/sep]
-; alternative separator
-type = custom/text
-content = 
-content-foreground = ${colors.foreground}
-content-background =  ${colors.background}
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-
+; Right and Middle click
+click-right = pavucontrol
+; click-middle =
 ################################################################################
 [module/temperature]
 ;https://github.com/jaagr/polybar/wiki/Module:-temperature
@@ -463,6 +497,7 @@ label-warn =  %temperature-c%
 label-warn-foreground = ${colors.max}
 label-warn-background = ${colors.background}
 
+format-underline = ${colors.temp-fg}
 
 ramp-0 = 
 ramp-1 = 
@@ -470,7 +505,7 @@ ramp-2 = 
 ramp-3 = 
 ramp-4 = 
 ;ramp-foreground =${colors.foreground}
-ramp-foreground = #8a87d2
+ramp-foreground = ${colors.temp-fg}
 
 ################################################################################
 [module/volume]
@@ -527,13 +562,16 @@ label-disconnected = %ifname% disconnected
 
 format-connected-foreground = ${colors.foreground}
 format-connected-background = ${colors.background}
-;format-connected-underline = #55aa55
-format-connected-prefix = " "
-format-connected-prefix-foreground = #55aa55
+format-connected-underline = ${colors.net-fg}
+format-connected-prefix = "󰌘 "
+format-connected-prefix-foreground = ${colors.net-fg}
 format-connected-prefix-background = ${colors.background}
 
+format-disconnected-prefix = "󰌙"
 format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${colors.alert}
+format-disconnected-underline = ${colors.alert}
+format-disconnected-prefix-foreground = ${colors.alert}
+format-disconnected-background = ${colors.background}
 label-disconnected-foreground = ${colors.foreground}
 
 ################################################################################
