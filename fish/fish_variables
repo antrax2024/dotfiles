@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export DOTFILES:/home/gargula/dotfiles
 SETUVAR --export EDITOR:nvim
 SETUVAR --export GEM_HOME:/home/gargula/gems
 SETUVAR --export --path GOPATH:/home/gargula/\x2ego

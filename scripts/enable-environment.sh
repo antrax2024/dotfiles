@@ -63,4 +63,7 @@ sudo ln -sf $DOTFILES/etc/sysctl.d/40-ipv6.conf /etc/sysctl.d/40-ipv6.conf
 printStatus "Link mkinitcpio..."
 sudo ln -sf $DOTFILES/etc/mkinitcpio.conf /etc/mkinitcpio.conf
 
+printStatus "Link vfio.conf"
+sudo ln -sf $DOTFILES/etc/modprobe.d/vfio.conf /etc/modprobe.d/vfio.conf
+
 printStatus "Thats all"
