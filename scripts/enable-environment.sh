@@ -47,7 +47,6 @@ do
 	ln -sf "$DOTFILES/${LINK_DIRS[$i]}" "$HOME/.config/${LINK_DIRS[$i]}"
 done
 
-
 printStatus "Changind default shell to Fish Shell..."
 chsh -s /usr/bin/fish $USERNAME
 
@@ -63,7 +62,10 @@ sudo ln -sf $DOTFILES/etc/sysctl.d/40-ipv6.conf /etc/sysctl.d/40-ipv6.conf
 printStatus "Link mkinitcpio..."
 sudo ln -sf $DOTFILES/etc/mkinitcpio.conf /etc/mkinitcpio.conf
 
-printStatus "Link vfio.conf"
+printStatus "Link /etc/modprobe.d/vfio.conf"
 sudo ln -sf $DOTFILES/etc/modprobe.d/vfio.conf /etc/modprobe.d/vfio.conf
+
+printStatus "Link /etc/environment"
+sudo ln -sf $DOTFILES/etc/environment /etc/environment
 
 printStatus "Thats all"
