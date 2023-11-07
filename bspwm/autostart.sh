@@ -9,7 +9,8 @@ function run {
 
 #Find out your monitor name with xrandr or arandr (save and you get this line)
 # Monitor em DP-0
-#xrandr --output DP-1 --primary --mode 2560x1080 --rate 144.00 &
+export MONITOR='DisplayPort-0'
+xrandr --output $MONITOR --primary --mode 2560x1080 --rate 144.00 &
 #xrandr --output LVDS1 --mode 1366x768 --output DP3 --mode 1920x1080 --right-of LVDS1
 #xrandr --output HDMI2 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 #autorandr horizontal
