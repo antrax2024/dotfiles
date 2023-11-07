@@ -12,7 +12,7 @@ set -Ux EDITOR 'nvim'
 set -Ux GEM_HOME "$HOME/gems"
 set -Ux GOPATH "$HOME/.go"
 set -Ux MANPAGER 'nvim +Man!'
-set -Ux DOTFILES '$HOME/dotfiles"
+set -Ux DOTFILES "$HOME/dotfiles"
 
 
 # Aliases
