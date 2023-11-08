@@ -34,6 +34,7 @@ PKGS=(
 	ttf-nerd-fonts-symbols
 	visual-studio-code-bin
 	gdu
+	duf
 	starship
 	alacritty-git
 	xidle
