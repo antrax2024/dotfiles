@@ -35,7 +35,7 @@ feh --randomize --bg-fill /home/gargula/dotfiles/wallpapers/*
 dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
 xsetroot -cursor_name left_ptr &
 
-run pipewire &
+run $HOME/dotfiles/bspwm/scripts/pipewire-up.sh &
 run nm-applet &
 run pamac-tray &
 run xfce4-power-manager &
