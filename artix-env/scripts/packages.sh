@@ -67,6 +67,7 @@ PKGS=(
 	bluez-utils
 	bluez-runit
 	blueberry
+	betterlockscreen
 	#########################
 	# FONTS 
 	#########################
