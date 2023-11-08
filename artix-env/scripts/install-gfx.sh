@@ -71,14 +71,21 @@ sudo ln -s /etc/runit/sv/sshd $SERVICE
 
 printStatus "Enable pipewire..."
 sudo mkdir /etc/pipewire
-cp /usr/share/pipewire/pipewire* /etc/pipewire
+sudo cp /usr/share/pipewire/pipewire* /etc/pipewire
 
 
 printStatus "Enable bluetooth"
-ln -s /etc/runit/sv/bluetoothd $SERVICE
+sudo ln -s /etc/runit/sv/bluetoothd $SERVICE
 
 printStatus "Install fonts..."
 ./install-fonts.sh
 
+printStatus "Enable lightdm..."
+sudo ln -s
+
+printStatus "Install Nerd Fonts..."
+mkdir -p $HOME/.local/share/fonts
+cp $DOTFILES/fonts/* $HOME/.local/share/fonts
+fc-cache -fv
 
 printStatus "Thats all"

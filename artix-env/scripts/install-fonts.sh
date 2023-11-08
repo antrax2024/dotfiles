@@ -1,9 +1,7 @@
 #!/bin/sh
-set -e
-if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root" ; exit 1 ; fi
 echo "Setting up Noto Emoji font..."
 # 1 - install  noto-fonts-emoji package
-pacman -S noto-fonts-emoji --needed
+sudo pacman -S noto-fonts-emoji --needed
 # pacman -S powerline-fonts --needed
 echo "Recommended system font: inconsolata regular (ttf-inconsolata or powerline-fonts)"
 # 2 - add font config to /etc/fonts/conf.d/01-notosans.conf

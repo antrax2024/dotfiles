@@ -13,8 +13,10 @@ PKGS=(
 	bspwm
 	sxhkd
 	firefox
+	lolcat
 	feh
 	rofi
+	less
 	numlockx
 	xfce4-clipman-plugin
 	pamac
@@ -36,7 +38,6 @@ PKGS=(
 	alacritty-git
 	xidle
 	picom
-	neovim
 	dunst
 	flameshot
 	openssh
@@ -68,9 +69,6 @@ PKGS=(
 	#########################
 	# FONTS 
 	#########################
-	ttf-hack-nerd
-	ttf-firacode-nerd
-	ttf-firacode
 	ttf-font-awesome
 	awesome-terminal-fonts
 	noto-fonts-emoji
