@@ -81,7 +81,7 @@ printStatus "Install fonts..."
 ./install-fonts.sh
 
 printStatus "Enable lightdm..."
-sudo ln -s
+sudo ln -s /etc/runit/sv/lightdm $SERVICE
 
 printStatus "Install Nerd Fonts..."
 mkdir -p $HOME/.local/share/fonts
