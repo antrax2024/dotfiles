@@ -41,10 +41,6 @@ paru -S ${PKGS[*]}
 #sudo systemctl enable "wol@$NET_IFACE".service
 
 
-printStatus "Enable .bashrc"
-rm $HOME/.bashrc
-ln -sf $DOTFILES/bashrc $HOME/.bashrc
-
 # get length of an array
 arraylength=${#LINK_DIRS[@]}
 
