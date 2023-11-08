@@ -9,7 +9,7 @@ source functions.sh
 source packages.sh
 
 printStatus "Install packages need..."
-pacman -S git neovim networkmanager networkmanager-runit network-manager-applet
+pacman -S networkmanager networkmanager-runit network-manager-applet
 ln -s /etc/runit/sv/NetworkManager /run/runit/service
 
 printStatus "System clock config...."
