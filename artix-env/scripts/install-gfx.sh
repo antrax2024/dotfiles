@@ -78,7 +78,7 @@ sudo cp -fv $DOTFILES/artix-env/scripts/pipewire.conf /etc/pipewire/
 printStatus "Enable bluetooth"
 sudo ln -s /etc/runit/sv/bluetoothd $SERVICE
 
-printStatus "Install fonts..."
+printStatus "Install fontconfig..."
 ./install-fonts.sh
 
 
