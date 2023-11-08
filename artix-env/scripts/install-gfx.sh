@@ -89,6 +89,6 @@ fc-cache -fv
 
 printStatus "Enable lightdm..."
 sudo cp -fv $DOTFILES/artix-env/etc/lightdm/lightdm.conf /etc/lightdm/
-sudo ln -s /etc/runit/sv/lightdm $SERVICE
+#sudo ln -s /etc/runit/sv/lightdm $SERVICE
 
 printStatus "Thats all"
