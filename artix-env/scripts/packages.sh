@@ -68,9 +68,11 @@ PKGS=(
 	bluez-runit
 	blueberry
 	betterlockscreen
-
+	thunar-extended
+	thunar-archive-plugin
+	thunar-media-tags-plugin
+	thunar-volman
 	chaotic-aur/insync
-
 	#########################
 	# FONTS 
 	#########################
