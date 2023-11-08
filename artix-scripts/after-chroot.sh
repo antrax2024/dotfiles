@@ -4,15 +4,15 @@ USERNAME='gargula'
 HOSTNAME='artixBox'
 EDITOR='nvim'
 
-printStatus "Install packages need..."
+echo "Install packages need..."
 pacman -S networkmanager networkmanager-runit network-manager-applet
 ln -s /etc/runit/sv/NetworkManager /run/runit/service
 
-printStatus "System clock config...."
+echo "System clock config...."
 ln -sf /usr/share/zoneinfo/America/Recife /etc/localtime
 hwclock --systohc
 
-printStatus "Localization..."
+echo "Localization..."
 echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
 locale-gen
 
@@ -27,24 +27,24 @@ LC_PAPER=pt_BR.UTF-8
 LC_TELEPHONE=pt_BR.UTF-8
 LC_TIME=pt_BR.UTF-8' >> /etc/locale.conf
 
-printStatus "vconsole.conf"
+echo "vconsole.conf"
 echo 'FONT=gr737c-8x14
 KEYMAP=br-abnt2' >> /etc/vconsole.conf
 
-printStatus "Install grub bootloader"
+echo "Install grub bootloader"
 pacman -S grub os-prober efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
-printStatus "Passwork for root..."
+echo "Passwork for root..."
 passwd
 
-printStatus "Adduser"
+echo "Adduser"
 useradd -m $USERNAME
-printStatus "Password for $USERNAME"
+echo "Password for $USERNAME"
 passwd $USERNAME
 
-printStatus "Network config..."
+echo "Network config..."
 echo "$HOSTNAME" > /etc/hostname
 
 echo "127.0.0.1   localhost
@@ -52,8 +52,8 @@ echo "127.0.0.1   localhost
 127.0.1.1   $HOSTNAME.localdomain  $HOSTNAME" >> /etc/hosts
 
 
-printStatus "EDITOR=nvim..."
+echo "EDITOR=nvim..."
 echo 'export EDITOR="nvim"' >> /etc/bash/bashrc
 
 
-printStatus "Thats all"
+echo "Thats all"
