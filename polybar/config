@@ -57,7 +57,7 @@ ws-oc       = #f38488
 ################################################################################
 
 [bar/mainbar-bspwm]
-;monitor = "DisplayPort-0"
+monitor = "DisplayPort-0"
 width = 100%
 height = 30
 radius = 0.0

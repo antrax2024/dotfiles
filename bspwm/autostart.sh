@@ -43,7 +43,8 @@ run xfce4-clipman &
 run flameshot &
 numlockx on &
 blueberry-tray &
-picom --config $HOME/.config/bspwm/picom.conf &
+#picom --config $HOME/.config/bspwm/picom.conf &
+run picom &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 run volumeicon &
 #run /home/gargula/dotfiles/nvidia-fan-control/nvidia-fan-curve.sh &

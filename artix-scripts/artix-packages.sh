@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+
 # Pacotes pacman
 PKGS=(
 	#########################
@@ -22,7 +23,7 @@ PKGS=(
 	starship
 	alacritty-git
 	xidle
-	picom
+	picom-allusive
 	neovim
 	dunst
 	flameshot
