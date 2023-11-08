@@ -4,9 +4,6 @@ USERNAME='gargula'
 HOSTNAME='artixBox'
 EDITOR='nvim'
 
-source functions.sh
-source packages.sh
-
 printStatus "Install packages need..."
 pacman -S networkmanager networkmanager-runit network-manager-applet
 ln -s /etc/runit/sv/NetworkManager /run/runit/service
