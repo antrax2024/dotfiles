@@ -75,6 +75,7 @@ PKGS=(
 	chaotic-aur/insync
 	file-roller
 	tumbler
+	cmake
 	#########################
 	# FONTS 
 	#########################
