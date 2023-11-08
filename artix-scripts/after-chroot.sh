@@ -31,6 +31,7 @@ echo "Adduser"
 useradd -m $USERNAME
 echo "Password for $USERNAME"
 passwd $USERNAME
+usermod -aG wheel $USERNAME
 
 echo "Network config..."
 echo "$HOSTNAME" > /etc/hostname
@@ -43,8 +44,11 @@ echo "127.0.0.1   localhost
 echo "EDITOR=nvim..."
 echo 'export EDITOR="nvim"' >> /etc/bash/bashrc
 
-echo "Install networkmanager"
-pacman -S networkmanager networkmanager-runit network-manager-applet
-ln -s /etc/runit/sv/NetworkManager /run/runit/service
+echo "Install connman"
+pacman -S connman-runit connman-gtk dhclient
+ln -s /etc/runit/sv/connmand /etc/runit/runsvdir/default
+
+echo "visudo"
+visudo
 
 echo "Thats all"
