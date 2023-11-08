@@ -29,7 +29,6 @@ PKGS=(
 	gimp
 	yt-dlp
 	nmap
-	speedcrunch
 	python-psutil
 	ttf-nerd-fonts-symbols
 	visual-studio-code-bin
