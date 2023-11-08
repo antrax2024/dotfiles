@@ -51,7 +51,7 @@ echo 'export MANPAGER="nvim +Man!"' >> /etc/bash/bashrc
 
 
 echo "Install Network Manager..."
-pacman -S networkmanager networkmanager-runit network-manager-applet
+pacman -S networkmanager networkmanager-runit network-manager-applet man-db man-pages
 ln -s /etc/runit/sv/NetworkManager /run/runit/service
 
 echo "visudo"
