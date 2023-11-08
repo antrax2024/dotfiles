@@ -17,7 +17,7 @@ super + h
 
 #archlinux-logout
 super + x
-    archlinux-logout
+    /home/gargula/dotfiles/rofi/powermenu/type-2/powermenu.sh
 
 #Rofi theme selector
 super + r
