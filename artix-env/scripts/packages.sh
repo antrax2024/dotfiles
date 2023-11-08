@@ -81,6 +81,7 @@ PKGS=(
 	lazygit-git
 	ripgrep
 	aur/bottom-nightly-bin
+	telegram-desktop
 	#########################
 	# FONTS 
 	#########################
