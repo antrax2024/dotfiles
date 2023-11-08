@@ -18,7 +18,7 @@ xrandr --output $MONITOR --primary --mode 2560x1080 --rate 144.00 &
 $HOME/.config/polybar/launch.sh &
 
 #change your keyboard if you need it
-#setxkbmap -layout be
+setxkbmap -layout br
 
 keybLayout=$(setxkbmap -v | awk -F "+" '/symbols/ {print $2}')
 
@@ -45,9 +45,8 @@ numlockx on &
 blueberry-tray &
 #picom --config $HOME/.config/bspwm/picom.conf &
 run picom &
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 run volumeicon &
-#run /home/gargula/dotfiles/nvidia-fan-control/nvidia-fan-curve.sh &
 run insync start &
 
 
