@@ -49,11 +49,9 @@ ln -sf $DOTFILES/bashrc $HOME/.bashrc
 arraylength=${#LINK_DIRS[@]}
 
 printStatus "Installing Astronvim hummmmmm.... "
-verifyIfConfigExists "nvim"
+#verifyIfConfigExists "nvim"
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim $HOME/.config/nvim
-printStatus "Config neovim..."
-#ln -sf $DOTFILES/nvim/ $HOME/.config/nvim/lua/user
-ln -sf /home/gargula/dotfiles/nvim /home/gargula/.config/nvim/lua/user
+ln -sf $DOTFILES/nvim/ $HOME/.config/nvim/lua/user
 
 # use for loop to read all values and indexes
 for (( i=0; i<${arraylength}; i++ ));
