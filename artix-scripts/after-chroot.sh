@@ -49,6 +49,6 @@ pacman -S connman-runit connman-gtk dhclient
 ln -s /etc/runit/sv/connmand /etc/runit/runsvdir/default
 
 echo "visudo"
-visudo
+export EDITOR='nvim'; visudo
 
 echo "Thats all"
