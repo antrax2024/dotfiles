@@ -3,7 +3,6 @@
 USERNAME='gargula'
 HOSTNAME='artixBox'
 EDITOR='nvim'
-NET_IFACE='enp7s0'
 
 source functions.sh
 source packages.sh
@@ -49,16 +48,15 @@ printStatus "Password for $USERNAME"
 passwd $USERNAME
 
 printStatus "Network config..."
-echo "$HOSTNAME" >> /etc/hostname
+echo "$HOSTNAME" > /etc/hostname
 
 echo "127.0.0.1   localhost
 ::1         localhost
 127.0.1.1   $HOSTNAME.localdomain  $HOSTNAME" >> /etc/hosts
 
 
-
-
-
+printStatus "EDITOR=nvim..."
+echo 'export EDITOR="nvim"' >> /etc/bash/bashrc
 
 
 printStatus "Thats all"
