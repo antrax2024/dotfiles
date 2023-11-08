@@ -29,6 +29,7 @@ PKGS=(
 	gimp
 	yt-dlp
 	nmap
+	bat
 	python-psutil
 	ttf-nerd-fonts-symbols
 	visual-studio-code-bin
