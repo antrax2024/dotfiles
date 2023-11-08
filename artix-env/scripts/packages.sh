@@ -73,6 +73,8 @@ PKGS=(
 	thunar-media-tags-plugin
 	thunar-volman
 	chaotic-aur/insync
+	file-roller
+	tumbler
 	#########################
 	# FONTS 
 	#########################
