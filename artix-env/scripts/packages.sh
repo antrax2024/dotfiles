@@ -77,6 +77,7 @@ PKGS=(
 	tumbler
 	cmake
 	mlocate
+	volumeicon
 	#########################
 	# FONTS 
 	#########################
