@@ -77,5 +77,8 @@ cp /usr/share/pipewire/pipewire* /etc/pipewire
 printStatus "Enable bluetooth"
 ln -s /etc/runit/sv/bluetoothd $SERVICE
 
+printStatus "Install fonts..."
+./install-fonts.sh
+
 
 printStatus "Thats all"

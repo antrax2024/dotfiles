@@ -4,25 +4,11 @@ PKGS=(
 	#########################
 	# APPS
 	#########################
-	xorg
-	xorg-setxkbmap
-	xdg-user-dirs
-	lightdm
-	lightdm-gtk-greeter
-	lightdm-runit
-	bspwm
-	sxhkd
-	firefox
-	feh
-	rofi
-	numlockx
-	xfce4-clipman-plugin
-	pamac
-	polkit-gnome
 	python-pynvim
 	python-pyserial
 	nodejs
 	npm
+	cargo
 	exa
 	gimp
 	yt-dlp
@@ -32,39 +18,20 @@ PKGS=(
 	ttf-nerd-fonts-symbols
 	visual-studio-code-bin
 	gdu
+	wol-systemd
 	starship
 	alacritty-git
 	xidle
-	picom
+	picom-allusive
 	neovim
 	dunst
 	flameshot
 	openssh
-	openssh-runit
 	mesa-vdpau
 	libva-mesa-driver
 	chaotic-aur/moonlight-qt
 	obs-studio
 	xf86-video-amdgpu
-	neofetch
-	fish
-	polybar
-	lxappearance
-	adwaita-cursors
-	adwaita-icon-theme
-	adw-gtk-theme
-	adwaita-dark-darose
-	papirus-icon-theme
-	breeze
-	pipewire
-	pipewire-pulse
-	pipewire-alsa
-	pipewire-jack
-	wireplumber
-	bluez
-	bluez-utils
-	bluez-runit
-	blueberry
 	#########################
 	# FONTS 
 	#########################
