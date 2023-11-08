@@ -76,6 +76,7 @@ PKGS=(
 	file-roller
 	tumbler
 	cmake
+	mlocate
 	#########################
 	# FONTS 
 	#########################
