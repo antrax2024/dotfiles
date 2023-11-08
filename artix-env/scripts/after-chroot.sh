@@ -44,9 +44,9 @@ echo "127.0.0.1   localhost
 echo "EDITOR=nvim..."
 echo 'export EDITOR="nvim"' >> /etc/bash/bashrc
 
-echo "Install connman"
-pacman -S connman-runit connman-gtk dhclient
-ln -s /etc/runit/sv/connmand /etc/runit/runsvdir/default
+echo "Install Network Manager..."
+pacman -S networkmanager networkmanager-runit network-manager-applet
+ln -s /etc/runit/sv/NetworkManager /run/runit/service
 
 echo "visudo"
 export EDITOR='nvim'; visudo

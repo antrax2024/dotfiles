@@ -72,6 +72,7 @@ sudo ln -s /etc/runit/sv/sshd $SERVICE
 printStatus "Enable pipewire..."
 sudo mkdir /etc/pipewire
 sudo cp /usr/share/pipewire/pipewire* /etc/pipewire/
+sudo cp -fv $DOTFILES/artix-env/scripts/pipewire.conf /etc/pipewire/
 
 
 printStatus "Enable bluetooth"
