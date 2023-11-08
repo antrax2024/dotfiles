@@ -13,16 +13,7 @@ echo "Localization..."
 echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
 locale-gen
 
-echo 'LANG=en_US.UTF-8
-LC_ADDRESS=pt_BR.UTF-8
-LC_IDENTIFICATION=pt_BR.UTF-8
-LC_MEASUREMENT=pt_BR.UTF-8
-LC_MONETARY=pt_BR.UTF-8
-LC_NAME=pt_BR.UTF-8
-LC_NUMERIC=pt_BR.UTF-8
-LC_PAPER=pt_BR.UTF-8
-LC_TELEPHONE=pt_BR.UTF-8
-LC_TIME=pt_BR.UTF-8' >> /etc/locale.conf
+echo 'LANG=en_US.UTF-8' >> /etc/locale.conf
 
 echo "vconsole.conf"
 echo 'FONT=gr737c-8x14
@@ -52,7 +43,7 @@ echo "127.0.0.1   localhost
 echo "EDITOR=nvim..."
 echo 'export EDITOR="nvim"' >> /etc/bash/bashrc
 
-echo "Install connman..."
+echo "Install networkmanager"
 pacman -S networkmanager networkmanager-runit network-manager-applet
 ln -s /etc/runit/sv/NetworkManager /run/runit/service
 
