@@ -48,11 +48,6 @@ ln -sf $DOTFILES/bashrc $HOME/.bashrc
 # get length of an array
 arraylength=${#LINK_DIRS[@]}
 
-printStatus "Installing Astronvim hummmmmm.... "
-#verifyIfConfigExists "nvim"
-git clone --depth 1 https://github.com/AstroNvim/AstroNvim $HOME/.config/nvim
-ln -sf $DOTFILES/nvim/ $HOME/.config/nvim/lua/user
-
 # use for loop to read all values and indexes
 for (( i=0; i<${arraylength}; i++ ));
 do

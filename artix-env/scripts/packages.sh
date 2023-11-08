@@ -78,6 +78,9 @@ PKGS=(
 	cmake
 	mlocate
 	volumeicon
+	lazygit-git
+	ripgrep
+	aur/bottom-nightly-bin
 	#########################
 	# FONTS 
 	#########################
