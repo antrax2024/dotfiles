@@ -32,6 +32,8 @@ useradd -m $USERNAME
 echo "Password for $USERNAME"
 passwd $USERNAME
 usermod -aG wheel $USERNAME
+groupadd -r autologin
+gpasswd -a $USERNAME autologin
 
 echo "Network config..."
 echo "$HOSTNAME" > /etc/hostname
