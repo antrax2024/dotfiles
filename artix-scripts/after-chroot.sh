@@ -4,9 +4,6 @@ USERNAME='gargula'
 HOSTNAME='artixBox'
 EDITOR='nvim'
 
-echo "Install packages need..."
-pacman -S networkmanager networkmanager-runit network-manager-applet
-ln -s /etc/runit/sv/NetworkManager /run/runit/service
 
 echo "System clock config...."
 ln -sf /usr/share/zoneinfo/America/Recife /etc/localtime
@@ -55,5 +52,10 @@ echo "127.0.0.1   localhost
 echo "EDITOR=nvim..."
 echo 'export EDITOR="nvim"' >> /etc/bash/bashrc
 
+echo "Install connman..."
+pacman -S connman-runit connman-gtk
+#pacman -S networkmanager networkmanager-runit network-manager-applet
+#ln -s /etc/runit/sv/NetworkManager /run/runit/service
+ln -s /etc/runit/sv/connmand /etc/runit/runsvdir/default
 
 echo "Thats all"
