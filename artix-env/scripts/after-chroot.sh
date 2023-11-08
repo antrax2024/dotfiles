@@ -45,6 +45,10 @@ echo "127.0.0.1   localhost
 
 echo "EDITOR=nvim..."
 echo 'export EDITOR="nvim"' >> /etc/bash/bashrc
+echo 'export GOPATH="$HOME/.go"' >> /etc/bash/bashrc
+echo 'export GEM_HOME="$HOME/.gems"' >> /etc/bash/bashrc
+echo 'export MANPAGER="nvim +Man!"' >> /etc/bash/bashrc
+
 
 echo "Install Network Manager..."
 pacman -S networkmanager networkmanager-runit network-manager-applet
