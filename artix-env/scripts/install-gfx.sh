@@ -41,8 +41,11 @@ paru -S ${PKGS[*]}
 #sudo systemctl enable "wol@$NET_IFACE".service
 
 
+printStatus "Prepare to link..."
 # get length of an array
 arraylength=${#LINK_DIRS[@]}
+
+mkdir $HOME/.config
 
 # use for loop to read all values and indexes
 for (( i=0; i<${arraylength}; i++ ));
