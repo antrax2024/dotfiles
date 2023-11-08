@@ -68,6 +68,9 @@ PKGS=(
 	bluez-runit
 	blueberry
 	betterlockscreen
+
+	chaotic-aur/insync
+
 	#########################
 	# FONTS 
 	#########################
