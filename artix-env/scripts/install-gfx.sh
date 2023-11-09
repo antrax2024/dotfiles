@@ -18,6 +18,9 @@ printStatus "Update grub..."
 sudo ln -sf $DOTFILES/artix-env/etc/default/grub /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
+printStatus "Linking mkinitcpio.conf"
+sudo ln -sf $DOTFILES/artix-env/etc/mkinitcpio.conf /etc/mkinitcpio.conf
+
 printStatus "Install paru..."
 git clone https://aur.archlinux.org/paru.git
 cd paru
