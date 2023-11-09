@@ -38,7 +38,7 @@ PKGS=(
 	starship
 	alacritty-git
 	xidle
-	picom
+	picom-allusive
 	dunst
 	flameshot
 	openssh

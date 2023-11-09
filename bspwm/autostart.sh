@@ -38,13 +38,12 @@ xsetroot -cursor_name left_ptr &
 run $HOME/dotfiles/bspwm/scripts/pipewire-up.sh &
 run nm-applet &
 run pamac-tray &
-run xfce4-power-manager &
 run dunst &
 run xfce4-clipman &
 run flameshot &
-numlockx on &
-blueberry-tray &
-#picom --config $HOME/.config/bspwm/picom.conf &
+run numlockx on &
+run blueberry-tray &
+run picom --config /home/gargula/dotfiles/bspwm/picom.conf &
 run picom &
 run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 run volumeicon &
