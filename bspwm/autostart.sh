@@ -19,20 +19,12 @@ $HOME/.config/polybar/launch.sh &
 
 #change your keyboard if you need it
 setxkbmap -layout br
-
-keybLayout=$(setxkbmap -v | awk -F "+" '/symbols/ {print $2}')
-
-if [ $keybLayout = "be" ]; then
-  run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc-azerty &
-else
-  run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
-fi
+run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 
 #wallpaper for other Arch based systems
 #feh --bg-fill /usr/share/archlinux-tweak-tool/data/wallpaper/wallpaper.png &
 feh --randomize --bg-fill /home/gargula/dotfiles/wallpapers/*
 
-dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
 xsetroot -cursor_name left_ptr &
 
 run $HOME/dotfiles/bspwm/scripts/pipewire-up.sh &
@@ -44,9 +36,8 @@ run flameshot &
 run numlockx on &
 run blueberry-tray &
 run picom --config /home/gargula/dotfiles/bspwm/picom.conf &
-run picom &
 run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-run volumeicon &
+volumeicon &
 run insync start &
 
 

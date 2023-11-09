@@ -101,5 +101,4 @@ bspc rule -a Xfce4-settings-manager state=tiled
 ##Adjust new window: splits biggest windows to keep windows about the same size
 #bspc config external_rules_command ~/.config/bspwm/scripts/adjust-new-window
 #
-sleep 1
 $HOME/.config/bspwm/autostart.sh
