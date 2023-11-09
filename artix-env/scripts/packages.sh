@@ -98,7 +98,6 @@ LINK_DIRS=(
 	rofi
 	fish
 	neofetch
-	nvim
 	bspwm
 	polybar
 )
