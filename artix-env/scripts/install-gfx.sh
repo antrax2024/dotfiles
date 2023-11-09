@@ -14,6 +14,10 @@ sudo nvim /etc/pacman.conf
 printStatus "Upgrading..."
 sudo pacman -Syu
 
+printStatus "Update grub..."
+sudo ln -sf $DOTFILES/artix-env/etc/default/grub /etc/default/grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
 printStatus "Install paru..."
 git clone https://aur.archlinux.org/paru.git
 cd paru

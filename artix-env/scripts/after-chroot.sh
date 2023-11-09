@@ -50,9 +50,9 @@ echo 'export GEM_HOME="$HOME/.gems"' >> /etc/bash/bashrc
 echo 'export MANPAGER="nvim +Man!"' >> /etc/bash/bashrc
 
 
-echo "Install Network Manager..."
-pacman -S networkmanager networkmanager-runit network-manager-applet man-db man-pages inetutils
-ln -s /etc/runit/sv/NetworkManager /run/runit/service
+echo "Install Network Manager, man-db, inetutils and amd-ucode"
+pacman -S networkmanager networkmanager-runit network-manager-applet man-db man-pages inetutils amd-ucode
+grub-mkconfig -o /boot/grub/grub.cfg
 
 echo "visudo"
 export EDITOR='nvim'; visudo
