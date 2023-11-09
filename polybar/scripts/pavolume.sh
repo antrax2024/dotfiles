@@ -17,7 +17,7 @@ limit=$((100 - inc))
 maxlimit=$((maxvol - inc))
 
 reloadSink() {
-    active_sink=$(pacmd list-sinks | awk '/* index:/{print $3}')
+    active_sink=$(pactl list-sinks | awk '/* index:/{print $3}')
 }
 
 function volUp {
@@ -72,7 +72,7 @@ function volDown {
 }
 
 function getSinkInputs {
-    input_array=$(pacmd list-sink-inputs | grep -B 4 "sink: $1 " | awk '/index:/{print $2}')
+    input_array=$(pactl list-sink-inputs | grep -B 4 "sink: $1 " | awk '/index:/{print $2}')
 }
 
 function volSync {
@@ -86,7 +86,7 @@ function volSync {
 }
 
 function getCurVol {
-    curVol=$(pacmd list-sinks | grep -A 15 "index: $active_sink$" | grep 'volume:' | grep -E -v 'base volume:' | awk -F : '{print $3}' | grep -o -P '.{0,3}%'| sed s/.$// | tr -d ' ')
+    curVol=$(pactl list-sinks | grep -A 15 "index: $active_sink$" | grep 'volume:' | grep -E -v 'base volume:' | awk -F : '{print $3}' | grep -o -P '.{0,3}%'| sed s/.$// | tr -d ' ')
 }
 
 function volMute {
@@ -111,7 +111,7 @@ function volMute {
 }
 
 function volMuteStatus {
-    curStatus=$(pacmd list-sinks | grep -A 15 "index: $active_sink$" | awk '/muted/{ print $2}')
+    curStatus=$(pactl list-sinks | grep -A 15 "index: $active_sink$" | awk '/muted/{ print $2}')
 }
 
 # Prints output for bar
