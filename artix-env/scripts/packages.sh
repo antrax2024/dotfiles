@@ -82,6 +82,7 @@ PKGS=(
 	ripgrep
 	aur/bottom-nightly-bin
 	telegram-desktop
+	pavucontrol
 	#########################
 	# FONTS 
 	#########################
