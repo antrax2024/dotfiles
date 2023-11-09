@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 sudo pacman -Syy
-sudo pacman -S qemu-full virt-manager dnsmasq vde2 \
+sudo pacman -S qemu-full virt-manager virt-viewer dnsmasq vde2 \
 bridge-utils openbsd-netcat dmidecode ebtables iptables libguestfs \
 edk2-ovmf swtpm libvirt-runit
 

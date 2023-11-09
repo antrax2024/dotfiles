@@ -89,6 +89,11 @@ PKGS=(
 	#########################
 	# FONTS 
 	#########################
+	ttf-jetbrains-mono-nerd
+	ttc-iosevka
+	ttf-icomoon-feather
+	ttf-firacode-nerd
+	ttf-hack-nerd
 	ttf-font-awesome
 	awesome-terminal-fonts
 	noto-fonts-emoji

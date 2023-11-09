@@ -80,14 +80,7 @@ sudo ln -s /etc/runit/sv/bluetoothd $SERVICE
 printStatus "Install fontconfig..."
 ./install-fonts.sh
 
-
-printStatus "Install Nerd Fonts..."
-mkdir -p $HOME/.local/share/fonts
-cp $DOTFILES/fonts/* $HOME/.local/share/fonts
-fc-cache -fv
-
 printStatus "Enable lightdm..."
 sudo cp -fv $DOTFILES/artix-env/etc/lightdm/lightdm.conf /etc/lightdm/
-#sudo ln -s /etc/runit/sv/lightdm $SERVICE
 
 printStatus "Thats all"
