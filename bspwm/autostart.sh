@@ -32,6 +32,7 @@ run nm-applet &
 run pamac-tray &
 run dunst &
 run xfce4-clipman &
+run xfce4-power-manager &
 run flameshot &
 run numlockx on &
 run blueberry-tray &

@@ -84,6 +84,7 @@ PKGS=(
 	telegram-desktop
 	pavucontrol
 	scrot
+	xfce4-power-manager
 	#########################
 	# FONTS 
 	#########################
