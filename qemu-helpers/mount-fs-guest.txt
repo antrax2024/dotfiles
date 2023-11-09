@@ -1,0 +1,1 @@
+sudo mount -t virtiofs mount_tag_pictures /mnt/pictures
