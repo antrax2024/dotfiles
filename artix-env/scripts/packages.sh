@@ -78,13 +78,14 @@ PKGS=(
 	cmake
 	mlocate
 	volumeicon
-	lazygit-git
+	lazygit
 	ripgrep
 	aur/bottom-nightly-bin
 	telegram-desktop
 	pavucontrol
 	scrot
 	xfce4-power-manager
+	wget
 	#########################
 	# FONTS 
 	#########################
