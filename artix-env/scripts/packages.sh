@@ -86,6 +86,8 @@ PKGS=(
 	scrot
 	xfce4-power-manager
 	wget
+	cronie
+	cronie-runit
 	#########################
 	# FONTS 
 	#########################

@@ -83,4 +83,7 @@ printStatus "Install fontconfig..."
 printStatus "Enable lightdm..."
 sudo cp -fv $DOTFILES/artix-env/etc/lightdm/lightdm.conf /etc/lightdm/
 
+printStatus "Enable cronie..."
+sudo ln -s /etc/runit/sv/cronie $SERVICE
+
 printStatus "Thats all"
