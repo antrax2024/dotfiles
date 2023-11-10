@@ -604,3 +604,5 @@ format-prefix-foreground = #56a932
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 label = %output:9%
+
+
