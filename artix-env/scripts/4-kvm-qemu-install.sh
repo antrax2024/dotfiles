@@ -1,10 +1,26 @@
 #!/usr/bin/bash
 
-sudo pacman -Syy
+sudo pacman -Syu
 
-sudo pacman -S qemu-full virt-manager virt-viewer dnsmasq vde2 \
-bridge-utils openbsd-netcat dmidecode ebtables iptables libguestfs \
-edk2-ovmf swtpm libvirt-runit
+PKGS=(
+  extra/qemu-full
+  extra/virt-manager
+  extra/virt-viewer
+  extra/dnsmasq
+  extra/vde2
+  extra/bridge-utils
+  extra/openbsd-netcat
+  extra/dmidecode
+  system/iptables-nft
+  system/iptables
+  extra/libguestfs
+  extra/edk2-ovmf
+  extra/swtpm
+  world/libvirt-runit
+)
+
+
+paru -S ${PKGS[*]}
 
 
 
