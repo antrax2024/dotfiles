@@ -7,8 +7,8 @@ PKGS=(
 	xorg
 	xorg-setxkbmap
 	xdg-user-dirs
-	lightdm
-	lightdm-gtk-greeter
+	extra/lightdm
+	extran/lightdm-gtk-greeter
 	lightdm-runit
 	bspwm
 	sxhkd
@@ -29,18 +29,18 @@ PKGS=(
 	gimp
 	yt-dlp
 	nmap
-	bat
+	extra/bat
 	python-psutil
 	ttf-nerd-fonts-symbols
 	visual-studio-code-bin
-	gdu
-	duf
-	starship
+	extra/gdu
+	extra/duf
+	extra/starship
 	alacritty-git
-	xidle
-	picom-allusive
-	dunst
-	flameshot
+	aur/xidle
+	aur/picom-allusive
+	extra/dunst
+	extra/flameshot
 	openssh
 	openssh-runit
 	mesa-vdpau
@@ -78,7 +78,7 @@ PKGS=(
 	cmake
 	mlocate
 	volumeicon
-	lazygit
+	extra/lazygit
 	ripgrep
 	aur/bottom-nightly-bin
 	telegram-desktop
