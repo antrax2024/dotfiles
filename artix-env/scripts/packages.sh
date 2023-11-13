@@ -25,13 +25,12 @@ PKGS=(
 	python-pyserial
 	nodejs
 	npm
-	exa
+	extra/eza
 	gimp
 	yt-dlp
-	nmap
+	extra/nmap
 	extra/bat
 	python-psutil
-	ttf-nerd-fonts-symbols
 	visual-studio-code-bin
 	extra/gdu
 	extra/duf
@@ -93,6 +92,7 @@ PKGS=(
 	#########################
 	ttf-jetbrains-mono-nerd
 	ttc-iosevka
+	ttf-nerd-fonts-symbols
 	ttf-icomoon-feather
 	ttf-firacode-nerd
 	ttf-hack-nerd

@@ -3,7 +3,7 @@ if status is-interactive
 end
 
 function fish_greeting
-	neofetch | lolcat
+	neofetch | lolcat -p 20
 end
 
 # environment
@@ -16,8 +16,8 @@ set -Ux DOTFILES "$HOME/dotfiles"
 
 
 # Aliases
-alias l='exa --git --icons -lgh'
-alias la='exa --git --icons -lgha'
+alias l='eza --git --icons -lgh'
+alias la='eza --git --icons -lgha'
 alias cat='bat --paging=never --theme Dracula'
 alias clone='git clone'
 alias p='paru --bottomup'
