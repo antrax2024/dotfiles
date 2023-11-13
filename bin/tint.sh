@@ -1,0 +1,319 @@
+#!/usr/bin/env bash
+#
+# The ANSI/VT100 terminals and terminal emulators can display colors
+# and formatted text using escape sequences. Instead of using the raw
+# ANSI escape sequences, we use the tput command which is ensures
+# portability between various terminals and terminal emulators.
+
+# Returns the position of the matching closing bracket in the string
+# Note: $2 specifies the position of a open bracket to find the match for
+_bash_tint__get_closing_bracket_position() {
+    local text="$1"
+    local position=${2:-0}
+    local counter=0
+    local ch prev_ch
+    local closing_bracket_position=
+    for (( j=position; j<${#text}; j++ )); do
+        ch="${text:$j:1}"
+        if [[ "$ch" == '(' ]]; then
+            ((counter++))
+        elif [[ "$ch" == ')' ]] && [[ "$prev_ch" != '\' ]]; then
+            ((counter--))
+        fi
+        if [[ $counter -eq 0 ]]; then
+            closing_bracket_position=$j
+            return $j
+        fi
+        prev_ch="$ch"
+    done
+    return 0
+}
+
+_debug() {
+    [[ -z "$DEBUG" ]] && return
+    echo >&2 "$@"
+}
+
+# Echoes the resulting transform
+_bash_tint__parse() {
+    local text="$1"
+    local context
+    eval "declare -A context="${2#*=}
+
+    local i char word cmd result content
+    word_char_regex="[a-zA-Z0-9_]"
+    word=""
+    result=""
+    for (( i=0; i<"${#text}"; i++ )); do
+        char="${text:$i:1}"
+        if [[ "$char" =~ $word_char_regex ]]; then
+            word="${word}${char}"
+        else 
+            if [[ ! -z "$word" ]]; then
+                if [[ "$char" == '(' ]]; then
+                    _bash_tint__get_closing_bracket_position "${text:$i}"
+                    local closing_bracket_position=$?
+                    if [[ $closing_bracket_position -gt 0 ]]; then
+                        # copy context
+                        context_string=$(declare -p context)
+                        eval "declare -A child_context="${context_string#*=}
+
+                        content="${text:$(( i + 1)):$(( closing_bracket_position - 1 ))}"
+
+                        ctx=
+                        cmd=
+                        # re-match brackets for commands that return functions, i.e. color(123)(text)
+                        rematch=
+                        case "$word" in
+                            # Text effects
+                            bold)               cmd="bold"    ctx="$word" ;;
+                            dim)                cmd="dim"     ctx="$word" ;;
+                            underline)          cmd="smul"    ctx="$word" ;;
+                            standout)           cmd="smso"    ctx="$word" ;;
+                            blink)              cmd="blink"   ctx="$word" ;;
+                            invert)             cmd="rev"     ctx="$word" ;;
+                            hidden)             cmd="invis"   ctx="$word" ;;
+
+                            # Foreground colors
+                            light_red)          cmd="setaf 9"  ctx="fg" ;;
+                            light_green)        cmd="setaf 10" ctx="fg" ;;
+                            light_yellow)       cmd="setaf 11" ctx="fg" ;;
+                            light_blue)         cmd="setaf 12" ctx="fg" ;;
+                            light_magenta)      cmd="setaf 13" ctx="fg" ;;
+                            light_cyan)         cmd="setaf 14" ctx="fg" ;;
+                            light_gray | light_grey) 
+                                                cmd="setaf 15" ctx="fg" ;;
+                            black)              cmd="setaf 0"  ctx="fg" ;;
+                            red)                cmd="setaf 1"  ctx="fg" ;;
+                            green)              cmd="setaf 2"  ctx="fg" ;;
+                            yellow)             cmd="setaf 3"  ctx="fg" ;;
+                            blue)               cmd="setaf 4"  ctx="fg" ;;
+                            magenta)            cmd="setaf 5"  ctx="fg" ;;
+                            cyan)               cmd="setaf 6"  ctx="fg" ;;
+                            white)              cmd="setaf 7"  ctx="fg" ;;
+                            gray | grey)        cmd="setaf 8"  ctx="fg" ;;
+
+                            # Background colors
+                            Light_red)          cmd="setab 9" ctx="bg" ;;
+                            Light_green)        cmd="setab 10" ctx="bg" ;;
+                            Light_yellow)       cmd="setab 11" ctx="bg" ;;
+                            Light_blue)         cmd="setab 12" ctx="bg" ;;
+                            Light_magenta)      cmd="setab 13" ctx="bg" ;;
+                            Light_cyan)         cmd="setab 14" ctx="bg" ;;
+                            Light_gray | Light_grey) 
+                                                cmd="setab 15" ctx="bg" ;;
+                            Black)              cmd="setab 0" ctx="bg" ;;
+                            Red)                cmd="setab 1" ctx="bg" ;;
+                            Green)              cmd="setab 2" ctx="bg" ;;
+                            Yellow)             cmd="setab 3" ctx="bg" ;;
+                            Blue)               cmd="setab 4" ctx="bg" ;;
+                            Magenta)            cmd="setab 5" ctx="bg" ;;
+                            Cyan)               cmd="setab 6" ctx="bg" ;;
+                            White)              cmd="setab 7" ctx="bg" ;;
+                            Gray | Grey)        cmd="setab 8" ctx="bg" ;;
+
+                            # Commands
+                            reset)              cmd="sgr0"    ;;
+                            clear)              cmd="clear"   ;;
+                            save_cursor)        cmd="sc"      ;;
+                            restore_cursor)     cmd="rc"      ;;
+                            move_cursor)
+                                IFS=$',' read -r X Y <<< "$content"
+                                cmd="cup $Y $X"
+                                ;;
+                            color)  
+                                if [[ "$content" =~ ^[0-9]+$ ]]; then
+                                    cmd="setaf $content"
+                                    ctx="fg"
+                                    rematch=1
+                                fi
+                                ;;
+                            Color) 
+                                if [[ "$content" =~ ^[0-9]+$ ]]; then
+                                    cmd="setab $content"
+                                    ctx="bg"
+                                    rematch=1
+                                fi
+                                ;;
+                        esac
+
+                        if [ ! -z "$cmd" ]; then
+                            (( i+=closing_bracket_position ))
+                            if [[ ! -z "$ctx" ]]; then
+                                if [[ ! -z "$rematch" ]]; then
+                                    content="${text:$(( i + 1))}"
+                                    _bash_tint__get_closing_bracket_position "$content"
+                                    closing_bracket_position=$?
+                                    content="${content:1:$(( closing_bracket_position - 1 ))}"
+                                    (( i+=closing_bracket_position + 1))
+                                fi
+                                # reset all contexts then set all the active contexts
+                                local tputargs="sgr0" 
+                                for context_name in fg bg bold dim underline standout blink invert hidden; do
+                                    if [ ! -z "${context[$context_name]}" ]; then
+                                        tputargs="${tputargs}\n${context[$context_name]}"
+                                    fi
+                                done
+                                child_context["$ctx"]="$cmd"
+                                content="$(_bash_tint__parse "$content" "$(declare -p child_context)")"
+                                # if the sub content ends with a context reset, we truncate it, since the same thing is
+                                # going to happen in this step as well
+                                # sed 's,\x1B(B\x1B\[m\(\x1B\[[^m]\+m\)\+$,,g'
+                                re="(.*)\(B\[m(\[[^m]+m)*$";
+                                while [[ "$content" =~ $re ]]; do
+                                  content="${BASH_REMATCH[1]}"
+                                done
+                                result="${result}$(tput $cmd)${content}$(printf "$tputargs" | tput -S)"
+                            else 
+                                # No need to reset context
+                                result="${result}$(tput $cmd)"
+                            fi
+                        fi
+                    else
+                        result="${result}${word}${char}"
+                    fi
+                    word=
+                    char=
+                fi
+                result="${result}${word}${char}"
+                word=""
+            else
+                result="${result}${char}"
+                word=""
+            fi
+        fi
+    done
+    result="${result}${word}"
+    printf "$result"
+}
+
+_bash_tint__exec_command() {
+    local cmd=
+    local content="$2"
+}
+
+_bash_tint__logo() {
+    colors=(Red Green Yellow Magenta Blue Cyan)
+    regex="#"
+    while IFS= read -r line; do
+        while true; do
+            if ! [[ "$line" =~ $regex ]]; then
+                break;
+            fi
+            color="${colors[$RANDOM % ${#colors[@]}]}"
+            line=${line/\#\#/$color(  )}
+        done
+        tint "$line"
+    done < <(cat <<-'EOF'
+	##########  ######  ####    ##  ##########
+	    ##        ##    ##  ##  ##      ##    
+	    ##        ##    ##    ####      ##    
+	    ##      ######  ##      ##      ##    
+	EOF
+    )
+}
+
+tint_usage() {
+    usage=$(cat <<"HELP_USAGE"
+
+Usage: tint <string>
+
+String format:                  String can  contain one or more tint functions.
+
+Functions:                      Result:
+
+  Effects:
+
+    bold\(text)                   bold(text)
+    underline\(text)              underline(text)
+    invert\(text)                 invert(text)
+    blink\(text)                  blink(text)
+    hidden\(text)                 hidden(text)
+
+  Foreground colors:
+
+    black\(text)                  black(text)
+    red\(text)                    red(text)
+    green\(text)                  green(text)
+    yellow\(text)                 yellow(text)
+    blue\(text)                   blue(text)
+    magenta\(text)                magenta(text)
+    cyan\(text)                   cyan(text)
+    white\(text)                  white(text)
+    gray\(text)                   gray(text)
+    light_red\(text)              light_red(text)
+    light_green\(text)            light_green(text)
+    light_yellow\(text)           light_yellow(text)
+    light_blue\(text)             light_blue(text)
+    light_magenta\(text)          light_magenta(text)
+    light_cyan\(text)             light_cyan(text)
+    light_gray\(text)             light_gray(text)
+
+  Background colors:
+
+    Black\(text)                  Black(text)
+    Red\(text)                    Red(text)
+    Green\(text)                  Green(text)
+    Yellow\(text)                 Yellow(text)
+    Blue\(text)                   Blue(text)
+    Magenta\(text)                Magenta(text)
+    Cyan\(text)                   Cyan(text)
+    White\(text)                  White(text)
+    Gray\(text)                   Gray(text)
+    Light_red\(text)              Light_red(text)
+    Light_green\(text)            Light_green(text)
+    Light_yellow\(text)           Light_yellow(text)
+    Light_blue\(text)             Light_blue(text)
+    Light_magenta\(text)          Light_magenta(text)
+    Light_cyan\(text)             Light_cyan(text)
+    Light_gray\(text)             Light_gray(text)
+
+Example:
+    tint "white\(Cyan\(T)Magenta\(I)Yellow\(N)Black\(T)) is fun!"
+Outputs:
+    bold(Cyan(T)Magenta(I)Yellow(N)Black(T)) is fun!
+    
+HELP_USAGE
+)
+    _bash_tint__logo
+    tint "$usage"
+}
+
+tint() {
+    if [ "$1" == "-n" ]; then
+        shift
+        tintf "$@"
+    else
+        tintf "$@"
+        printf "\n"
+    fi
+}
+
+tintf() {
+    if [ "$1" == "-h" -o "$1" == "--help" ]; then
+        tint_usage
+        return
+    fi
+
+    # trailing newlines are removed with command substitution, to circumvent this, we add a trailing dot to the input string
+    # and then remove the last character from the result string
+    input="$1."
+    shift
+
+    # This is the initial context
+    declare -A context
+    context=( ["fg"]= ["bg"]= ["bold"]= ["dim"]= ["underline"]= ["standout"]= ["blink"]= ["invert"]= ["hidden"]= )
+    result="$(_bash_tint__parse "$(printf "$input" "${@}")" "$(declare -p context)")"
+    result="${result//\\(/(}"
+    result="${result//\\)/)}"
+
+    printf "${result::-1}"
+}
+
+export -f tint tintf
+
+# If not sourced, execute the main function
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]
+then
+    tint "$@"
+fi

@@ -6,8 +6,8 @@ NET_IFACE='enp7s0'
 DOTFILES="$HOME/dotfiles"
 SERVICE='/run/runit/service'
 
-source functions.sh
-source packages.sh
+source ../../bin/functions.sh
+source ../../bin/packages-artix.sh
 
 printStatus "Pacman Edit"
 sudo nvim /etc/pacman.conf
