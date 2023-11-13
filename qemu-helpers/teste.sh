@@ -1,5 +1,5 @@
 #!/usr/bin/bash
 #
-source ../bin/tint.sh
+source ../bin/functions.sh
 
-tint "bold(%s) %s" "red([Error:])" "Could not load config file."
+printStatus "Gol"

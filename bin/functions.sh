@@ -1,11 +1,12 @@
 #!/usr/bin/bash
 ################################
 # Imprime o status
+source /home/gargula/dotfiles/bin/tint.sh
 function printStatus() {
-	echo "######################################################"
-	echo "$1"
-	echo "######################################################"
-	sleep 2
+	tint "yellow(######################################################)"
+	tint "bold(%s)" "green($1)"
+	tint "yellow(######################################################)"
+	sleep 1
 }
 
 function verifyIfConfigExists() {
