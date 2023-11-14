@@ -91,7 +91,6 @@ PKGS=(
 	adwaita-dark-darose
 	papirus-icon-theme
 	breeze
-	chaotic-aur/catppuccin-gtk-theme-latte
 	extra/arc-gtk-theme
 	#########################
 	# FONTS 
