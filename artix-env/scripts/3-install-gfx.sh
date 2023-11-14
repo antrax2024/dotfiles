@@ -2,7 +2,7 @@
 #
 USERNAME='gargula'
 EDITOR='nvim'
-NET_IFACE='enp7s0'
+NET_IFACE='eth0'
 DOTFILES="$HOME/dotfiles"
 SERVICE='/run/runit/service'
 
