@@ -75,9 +75,6 @@ sudo cp $DOTFILES/artix-env/etc/pipewire.conf /etc/pipewire/
 printStatus "Enable bluetooth"
 sudo ln -s /etc/runit/sv/bluetoothd $SERVICE
 
-printStatus "Install fontconfig..."
-./install-fonts.sh
-
 printStatus "Enable lightdm..."
 sudo cp -fv $DOTFILES/artix-env/etc/lightdm/lightdm.conf /etc/lightdm/
 
