@@ -14,7 +14,9 @@ printStatus "Enable artix-archlinux-support..."
 sudo pacman -Syu artix-archlinux-support
 
 printStatus "Editing /etc/pacman.conf..."
-sudo cat ./arch-repos.conf >> $TARGET
+su
+cat ./arch-repos.conf >> $TARGET
+exit
 
 
 printStatus "Populating...."
