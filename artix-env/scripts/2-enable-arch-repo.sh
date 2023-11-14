@@ -27,7 +27,7 @@ $APPEND_CMD 'Include = /etc/pacman.d/mirrorlist-arch' $TARGET
 $APPEND_CMD '#' $TARGET
 $APPEND_CMD '[multilib]' $TARGET
 $APPEND_CMD 'Include = /etc/pacman.d/mirrorlist-arch' $TARGET
-sudo sed -i '############################################################' $TARGET
+$APPEND_CMD '############################################################' $TARGET
 
 
 printStatus "Populating...."
