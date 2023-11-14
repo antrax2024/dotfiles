@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-# Pacotes pacman
+# Pacotes 
 PKGS=(
 	#########################
 	# APPS
@@ -52,13 +52,6 @@ PKGS=(
 	neofetch
 	fish
 	polybar
-	lxappearance
-	adwaita-cursors
-	adwaita-icon-theme
-	adw-gtk-theme
-	adwaita-dark-darose
-	papirus-icon-theme
-	breeze
 	pipewire
 	pipewire-pulse
 	pipewire-alsa
@@ -89,6 +82,17 @@ PKGS=(
 	wget
 	cronie
 	cronie-runit
+	#########################
+	# Themes
+	lxappearance
+	adwaita-cursors
+	adwaita-icon-theme
+	adw-gtk-theme
+	adwaita-dark-darose
+	papirus-icon-theme
+	breeze
+	chaotic-aur/catppuccin-gtk-theme-latte
+	extra/arc-gtk-theme
 	#########################
 	# FONTS 
 	#########################
