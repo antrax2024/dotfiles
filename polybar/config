@@ -481,7 +481,7 @@ click-right = pavucontrol
 [module/temperature]
 ;https://github.com/jaagr/polybar/wiki/Module:-temperature
 type = internal/temperature
-hwmon-path = /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon3/temp1_input
+hwmon-path = /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input
 
 ; Base temperature for where to start the ramp (in degrees celsius)
 ; Default: 0
