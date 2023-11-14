@@ -9,8 +9,6 @@ SERVICE='/run/runit/service'
 source ../../bin/functions.sh
 source ../../bin/packages-artix.sh
 
-printStatus "Pacman Edit"
-sudo nvim /etc/pacman.conf
 printStatus "Upgrading..."
 sudo pacman -Syu
 

@@ -8,7 +8,7 @@ PKGS=(
 	xorg-setxkbmap
 	xdg-user-dirs
 	extra/lightdm
-	extran/lightdm-gtk-greeter
+	extra/lightdm-gtk-greeter
 	lightdm-runit
 	bspwm
 	sxhkd
