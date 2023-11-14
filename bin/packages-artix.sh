@@ -38,7 +38,6 @@ PKGS=(
 	extra/duf
 	extra/starship
 	alacritty-git
-	aur/xidle
 	aur/picom-allusive
 	extra/dunst
 	extra/flameshot
