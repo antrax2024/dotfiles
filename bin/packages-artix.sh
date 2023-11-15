@@ -81,6 +81,8 @@ PKGS=(
 	wget
 	cronie
 	cronie-runit
+	ntp
+	ntp-runit
 	#########################
 	# Themes
 	lxappearance
