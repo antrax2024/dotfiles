@@ -285,7 +285,7 @@ type = internal/fs
 
 ; Mountpoints to display
 mount-0 = /
-mount-1 = /Virtual-Machines
+mount-1 = /VMs
 ;mount-2 = /var
 
 ; Seconds to sleep between updates
