@@ -68,6 +68,14 @@ PKGS=(
 	# Hyprland Correlated 
 	# Packages
 	chaotic-aur/hyprland-git
+	chaotic-aur/xdg-desktop-portal-hyprland-git
+	qt6-wayland
+	qt5-wayland
+	world/polkit-kde-agent
+	chaotic-aur/hyprpaper-git
+	extra/fuzzel
+	aur/wl-clip-persist-git
+	extra/copyq
 	#########################
 	# Themes
 	chaotic-aur/nwg-look-bin
