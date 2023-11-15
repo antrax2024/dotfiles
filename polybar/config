@@ -98,7 +98,7 @@ font-0 = "Hack Nerd Font Propo:style=Regular:antialias=true:size=14;3"
 
 modules-left = bspwm
 ;modules-center = kernel
-modules-right = cpu temperature memory filesystem wired-network pulseaudio date
+modules-right = cpu temperature memory filesystem network pulseaudio date
 
 tray-detached = false
 tray-offset-x = 0
@@ -541,12 +541,15 @@ format-muted-foreground = ${colors.foreground}
 format-muted-background = ${colors.background}
 
 ################################################################################
-[module/wired-network]
+[module/network]
 ;https://github.com/jaagr/polybar/wiki/Module:-network
 type = internal/network
 interface = bridge0
+interface-type = wired
 ;interface = enp14s0
-interval = 3.0
+interval = 1.0
+
+#speed-unit = Mb/s
 
 ; Available tokens:
 ;   %ifname%    [wireless+wired]
@@ -557,7 +560,7 @@ interval = 3.0
 ;   %downspeed% [wireless+wired]
 ;   %linkspeed% [wired]
 ; Default: %ifname% %local_ip%
-label-connected =  %ifname% %local_ip%
+label-connected =  %ifname% 󰜷%upspeed:9% 󰜮%downspeed:9%
 label-disconnected = %ifname% disconnected
 
 format-connected-foreground = ${colors.foreground}
