@@ -65,6 +65,10 @@ PKGS=(
 	ntp
 	ntp-runit
 	#########################
+	# Hyprland Correlated 
+	# Packages
+	chaotic-aur/hyprland-git
+	#########################
 	# Themes
 	chaotic-aur/nwg-look-bin
 	adwaita-cursors
