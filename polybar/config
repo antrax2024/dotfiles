@@ -133,11 +133,11 @@ ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
 ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-9 = 10;
+;ws-icon-5 = 6;
+;ws-icon-6 = 7;
+;ws-icon-7 = 8;
+;ws-icon-8 = 9;
+;ws-icon-9 = 10;
 ws-icon-default = " "
 
 
@@ -285,7 +285,7 @@ type = internal/fs
 
 ; Mountpoints to display
 mount-0 = /
-;mount-1 = /home
+mount-1 = /Virtual-Machines
 ;mount-2 = /var
 
 ; Seconds to sleep between updates
@@ -322,7 +322,7 @@ format-mounted-underline = ${colors.fs-fg}
 ;   %free%
 ;   %used%
 ; Default: %mountpoint% %percentage_free%%
-label-mounted = "%used%/%total%"
+label-mounted = "%mountpoint% %used%/%total%"
 
 ; Available tokens:
 ;   %mountpoint%
