@@ -36,7 +36,7 @@ run xfce4-power-manager &
 run flameshot &
 run numlockx on &
 run blueberry-tray &
-run picom --config /home/gargula/dotfiles/bspwm/picom.conf &
+run compfy --config /home/gargula/dotfiles/bspwm/compfy.conf &
 run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 volumeicon &
 run insync start &
