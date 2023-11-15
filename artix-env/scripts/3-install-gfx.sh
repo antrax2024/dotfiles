@@ -84,4 +84,13 @@ sudo ln -s /etc/runit/sv/cronie $SERVICE
 printStatus "Enable NTP Sync"
 sudo ln -s /etc/runit/sv/ntpd /run/runit/service
 
+printStatus "Enable Swap File... Hummmmmm"
+sudo fallocate -l 4G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+echo '# Swapfile' | sudo tee --append /etc/fstab
+echo '/swapfile none swap defaults 0 0' | sudo tee --append /etc/fstab
+
+
 printStatus "Thats all"
