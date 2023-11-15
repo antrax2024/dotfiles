@@ -66,12 +66,6 @@ chsh -s /usr/bin/fish $USERNAME
 printStatus "Enable openSSH..."
 sudo ln -s /etc/runit/sv/sshd $SERVICE
 
-printStatus "Enable pipewire..."
-#sudo mkdir /etc/pipewire
-sudo cp /usr/share/pipewire/pipewire* /etc/pipewire/
-sudo cp $DOTFILES/artix-env/etc/pipewire.conf /etc/pipewire/
-
-
 printStatus "Enable bluetooth"
 sudo ln -s /etc/runit/sv/bluetoothd $SERVICE
 
