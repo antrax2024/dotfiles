@@ -6,7 +6,6 @@ PKGS=(
 	#########################
 	xdg-user-dirs
 	firefox
-	feh
 	less
 	python-pynvim
 	python-pyserial
@@ -19,6 +18,7 @@ PKGS=(
 	yt-dlp
 	extra/nmap
 	extra/bat
+	dosfstools
 	python-psutil
 	visual-studio-code-bin
 	extra/gdu
@@ -55,7 +55,6 @@ PKGS=(
 	mlocate
 	extra/lazygit
 	ripgrep
-	aur/bottom-nightly-bin
 	telegram-desktop
 	pavucontrol
 	wget
@@ -63,6 +62,7 @@ PKGS=(
 	cronie-runit
 	ntp
 	ntp-runit
+	extra/bashtop
 	#########################
 	# Hyprland Correlated 
 	# Packages
