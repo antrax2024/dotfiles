@@ -25,7 +25,6 @@ PKGS=(
 	extra/duf
 	extra/starship
 	alacritty-git
-	aur/compfy
 	extra/dunst
 	extra/flameshot
 	openssh
@@ -45,7 +44,7 @@ PKGS=(
 	bluez-utils
 	bluez-runit
 	blueberry
-	thunar-extended
+	thunar
 	thunar-archive-plugin
 	thunar-media-tags-plugin
 	thunar-volman
