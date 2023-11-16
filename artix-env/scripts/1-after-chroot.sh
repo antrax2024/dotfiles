@@ -23,7 +23,7 @@ echo "127.0.0.1   localhost
 127.0.1.1   $HOSTNAME.localdomain  $HOSTNAME" > /etc/hosts
 
 echo "EDITOR=nvim..."
-echo 'export EDITOR="nvim"' > /etc/bash/bashrc
+echo 'export EDITOR="nvim"' >> /etc/bash/bashrc
 echo 'export GOPATH="$HOME/.go"' >> /etc/bash/bashrc
 echo 'export GEM_HOME="$HOME/.gems"' >> /etc/bash/bashrc
 echo 'export MANPAGER="nvim +Man!"' >> /etc/bash/bashrc
