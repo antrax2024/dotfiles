@@ -7,23 +7,23 @@ ln -sf /usr/share/zoneinfo/America/Recife /etc/localtime
 hwclock --systohc
 
 echo "Localization..."
-echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
+echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen
 locale-gen
 
-echo 'LANG=en_US.UTF-8' >> /etc/locale.conf
+echo 'LANG=en_US.UTF-8' > /etc/locale.conf
 
 echo "vconsole.conf"
-echo 'KEYMAP=br-abnt2' >> /etc/vconsole.conf
+echo 'KEYMAP=br-abnt2' > /etc/vconsole.conf
 
 echo "Network config..."
 echo "$HOSTNAME" > /etc/hostname
 
 echo "127.0.0.1   localhost
 ::1         localhost
-127.0.1.1   $HOSTNAME.localdomain  $HOSTNAME" >> /etc/hosts
+127.0.1.1   $HOSTNAME.localdomain  $HOSTNAME" > /etc/hosts
 
 echo "EDITOR=nvim..."
-echo 'export EDITOR="nvim"' >> /etc/bash/bashrc
+echo 'export EDITOR="nvim"' > /etc/bash/bashrc
 echo 'export GOPATH="$HOME/.go"' >> /etc/bash/bashrc
 echo 'export GEM_HOME="$HOME/.gems"' >> /etc/bash/bashrc
 echo 'export MANPAGER="nvim +Man!"' >> /etc/bash/bashrc
