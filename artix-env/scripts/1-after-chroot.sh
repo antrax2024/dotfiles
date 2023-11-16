@@ -50,3 +50,13 @@ export EDITOR='nvim'; visudo
 echo "Install Network Manager, man-db, inetutils and amd-ucode"
 pacman -S networkmanager networkmanager-runit network-manager-applet man-db man-pages inetutils amd-ucode
 
+
+echo "Install Limine bootloader..."
+
+pacman -S limine
+mkdir -p /boot/efi/BOOT
+cp /usr/share/limine/BOOTX64.EFI /boot/EFI/BOOT
+cp ../boot/limine.cfg /boot/
+nvim /boot/limine.cfg
+
+echo "Thats ok..."
