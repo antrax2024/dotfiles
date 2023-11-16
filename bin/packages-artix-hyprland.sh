@@ -106,6 +106,7 @@ LINK_DIRS=(
 	dunst
 	fish
 	neofetch
+	hypr
 )
 
 
