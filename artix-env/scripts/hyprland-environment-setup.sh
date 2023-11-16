@@ -81,8 +81,7 @@ echo '/swapfile none swap defaults 0 0' | sudo tee --append /etc/fstab
 
 printStatus "Enable greetd..."
 sudo ln -sf $DOTFILES/artix-env/etc/greetd/config.toml /etc/greetd/config.toml
-
-
+sudo ln -s /etc/runit/sv/greetd /run/runit/service
 
 
 printStatus "Thats all"
