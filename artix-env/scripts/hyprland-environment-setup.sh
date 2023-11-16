@@ -14,7 +14,7 @@ sudo pacman -Syu
 
 printStatus "Linking mkinitcpio.conf"
 sudo ln -sf $DOTFILES/artix-env/etc/mkinitcpio.conf /etc/mkinitcpio.conf
-sudo mkinitcpio -p linux
+sudo mkinitcpio -p linux-zen
 
 printStatus "Update grub..."
 sudo ln -sf $DOTFILES/artix-env/etc/default/grub /etc/default/grub
