@@ -79,5 +79,9 @@ sudo swapon /swapfile
 echo '# Swapfile' | sudo tee --append /etc/fstab
 echo '/swapfile none swap defaults 0 0' | sudo tee --append /etc/fstab
 
+printStatus "Enable greetd..."
+sudo ln -sf $DOTFILES/artix-env/etc/greetd/config.toml /etc/greetd/config.toml
+
+
 
 printStatus "Thats all"

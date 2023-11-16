@@ -75,6 +75,7 @@ PKGS=(
 	extra/fuzzel
 	aur/wl-clip-persist-git
 	extra/copyq
+	aur/greetd-artix-runit
 	#########################
 	# Themes
 	chaotic-aur/nwg-look-bin
