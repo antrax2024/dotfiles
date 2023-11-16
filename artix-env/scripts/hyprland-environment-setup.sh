@@ -84,4 +84,5 @@ sudo ln -sf $DOTFILES/artix-env/etc/greetd/config.toml /etc/greetd/config.toml
 
 
 
+
 printStatus "Thats all"

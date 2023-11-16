@@ -17,5 +17,5 @@ user = "gargula"
 
 
 [initial_session]
-command = "hyprland"
+command = "Hyprland"
 user = "gargula"
