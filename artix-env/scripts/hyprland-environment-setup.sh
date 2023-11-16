@@ -17,8 +17,8 @@ sudo ln -sf $DOTFILES/artix-env/etc/mkinitcpio.conf /etc/mkinitcpio.conf
 sudo mkinitcpio -p linux-zen
 
 printStatus "Update grub..."
-sudo ln -sf $DOTFILES/artix-env/etc/default/grub /etc/default/grub
-sudo grub-mkconfig -o /boot/grub/grub.cfg
+#sudo ln -sf $DOTFILES/artix-env/etc/default/grub /etc/default/grub
+#sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 printStatus "Install paru..."
 git clone https://aur.archlinux.org/paru.git
