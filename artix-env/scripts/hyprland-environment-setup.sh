@@ -11,6 +11,10 @@ source $DOTFILES/bin/packages-artix-hyprland.sh
 printStatus "Upgrading..."
 sudo pacman -Syu
 
+printStatus "Ranking mirrors, please wait..."
+sudo pacman -S parallel pacman-contrib
+$DOTFILES/bin/get-fast-artix-mirror.sh
+
 
 printStatus "Linking mkinitcpio.conf"
 sudo ln -sf $DOTFILES/artix-env/etc/mkinitcpio.conf /etc/mkinitcpio.conf

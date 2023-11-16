@@ -13,8 +13,6 @@ PKGS=(
 	npm
 	extra/eza
 	gimp
-	world/pacman-contrib
-	extra/parallel
 	yt-dlp
 	extra/nmap
 	extra/bat
