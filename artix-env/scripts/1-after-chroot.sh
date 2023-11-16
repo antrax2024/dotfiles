@@ -54,8 +54,8 @@ pacman -S networkmanager networkmanager-runit network-manager-applet man-db man-
 echo "Install Limine bootloader..."
 
 pacman -S limine
-mkdir -p /boot/efi/BOOT
-cp /usr/share/limine/BOOTX64.EFI /boot/EFI/BOOT
+mkdir -p /boot/efi/EFI/BOOT
+cp /usr/share/limine/BOOTX64.EFI /boot/efi/EFI/BOOT
 cp ../boot/limine.cfg /boot/
 nvim /boot/limine.cfg
 
