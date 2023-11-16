@@ -49,5 +49,5 @@ export EDITOR='nvim'; visudo
 
 git clone https://github.com/Frogging-Family/linux-tkg.git
 cd linux-tkg
-nvim customization.cfg
-makepkg -si
+sed -i 's/.*configfile.*/_configfile="running-kernel"/' customization.cfg
+sudo -u gargula makepkg -si
