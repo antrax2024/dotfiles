@@ -6,8 +6,11 @@ cd linux-tkg
 sed -i 's/.*configfile.*/_configfile="running-kernel"/' customization.cfg
 makepkg -si
 
+cd ../
 rm -rfv linux-tkg/
 
-cat newkernel.cfg >> /boot/limine.cfg
+
+echo "Please edit /boot/limine.cfg and add entry to new kernel..."
+
 
 echo "Thats all..."
