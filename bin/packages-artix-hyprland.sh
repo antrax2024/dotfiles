@@ -77,7 +77,7 @@ PKGS=(
 	world/sddm-runit
 	#########################
 	# Themes
-	chaotic-aur/nwg-look-bin
+	nwg-look
 	adwaita-cursors
 	adwaita-icon-theme
 	adw-gtk-theme
