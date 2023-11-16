@@ -14,7 +14,6 @@ sudo pacman -Syu
 
 printStatus "Linking mkinitcpio.conf"
 sudo ln -sf $DOTFILES/artix-env/etc/mkinitcpio.conf /etc/mkinitcpio.conf
-sudo mkinitcpio -p linux-zen
 
 printStatus "Install paru..."
 git clone https://aur.archlinux.org/paru.git
@@ -79,5 +78,20 @@ sudo swapon /swapfile
 echo '# Swapfile' | sudo tee --append /etc/fstab
 echo '/swapfile none swap defaults 0 0' | sudo tee --append /etc/fstab
 
+printStatus "Link /boot/limine.cfg"
+sudo ln -sf $DOTFILES/artix-env/boot/limine.cfg /boot/limine.cfg
+nvim /boot/limine.cfg
+
+printStatus "Link vfio and blacklist..."
+sudo ln -sf $DOTFILES/artix-env/etc/modprobe.d/vfio.conf /etc/modprobe.d/vfio.conf
+sudo ln -sf $DOTFILES/artix-env/etc/modprobe.d/blacklist.conf /etc/modprobe.d/blacklist.conf
+
+printStatus "Generating kernel image...."
+sudo mkinitcpio -p linux-zen
+
 printStatus "Dont forget to enable sddm..."
+sudo mkdir -p /etc/sddm.conf.d
 sudo ln -sf $DOTFILES/artix-env/etc/sddm.conf.d/autologin.conf /etc/sddm.conf.d/autologin.conf
+
+
+
