@@ -47,7 +47,6 @@ gpasswd -a $USERNAME autologin
 echo "visudo"
 export EDITOR='nvim'; visudo
 
-git clone https://github.com/Frogging-Family/linux-tkg.git
-cd linux-tkg
-sed -i 's/.*configfile.*/_configfile="running-kernel"/' customization.cfg
-sudo -u gargula makepkg -si
+echo "Install Network Manager, man-db, inetutils and amd-ucode"
+pacman -S networkmanager networkmanager-runit network-manager-applet man-db man-pages inetutils amd-ucode
+
