@@ -8,9 +8,9 @@ function run {
 }
 
 run /home/gargula/dotfiles/waybar/launch.sh & 
+run wpaperd &
 run nm-applet &
 run dunst &
-run flameshot &
 run blueberry-tray &
 run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 run insync start --qt-qpa-platform=xcb &
