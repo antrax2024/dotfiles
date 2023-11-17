@@ -86,6 +86,9 @@ printStatus "Link vfio and blacklist..."
 sudo ln -sf $DOTFILES/artix-env/etc/modprobe.d/vfio.conf /etc/modprobe.d/vfio.conf
 sudo ln -sf $DOTFILES/artix-env/etc/modprobe.d/blacklist.conf /etc/modprobe.d/blacklist.conf
 
+printStatus "Linking /etc/environment..."
+sudo ln -sf $DOTFILES/artix-env/etc/environment /etc/environment
+
 printStatus "Generating kernel image...."
 sudo mkinitcpio -p linux-zen
 
