@@ -61,6 +61,7 @@ PKGS=(
 	ntp
 	ntp-runit
 	extra/bashtop
+	chafa
 	#########################
 	# Hyprland Correlated 
 	# Packages
