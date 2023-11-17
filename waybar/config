@@ -14,7 +14,7 @@
     	"path": "/"
 	},
 	"custom/disk_vms": {
-		"format": "󰋊 {}",
+		"format": "󰋊 /VMs {}",
 		"interval": 5,
 		"exec": "/home/gargula/dotfiles/bin/vmsinfo.py"
 	},
