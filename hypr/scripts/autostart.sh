@@ -15,6 +15,8 @@ run blueberry-tray &
 run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 run insync start &
 run copyq &
-
+run pipewire & 
+run pipewire-pulse & 
+run wireplumber &
 
 
