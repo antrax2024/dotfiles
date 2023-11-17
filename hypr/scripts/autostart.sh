@@ -7,7 +7,7 @@ function run {
   fi
 }
 
-
+run /home/gargula/dotfiles/waybar/launch.sh & 
 run nm-applet &
 run dunst &
 run flameshot &
