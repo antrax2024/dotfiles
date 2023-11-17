@@ -63,6 +63,7 @@ PKGS=(
 	extra/bashtop
 	chafa
 	world/grim
+	world/slurp
 	#########################
 	# Hyprland Correlated 
 	# Packages
