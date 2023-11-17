@@ -32,9 +32,9 @@ sudo ln -s /etc/runit/sv/virtlogd/ /run/runit/service/
 sudo ln -s /etc/runit/sv/virtlockd/ /run/runit/service/
 
 
-sudo sv up libvirtd
-sudo sv up virtlogd
-sudo sv up virtlockd
+#sudo sv up libvirtd
+#sudo sv up virtlogd
+#sudo sv up virtlockd
 
 sleep 3
 sudo virsh net-start default
