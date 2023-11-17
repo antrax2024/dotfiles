@@ -24,7 +24,7 @@ PKGS=(
 	extra/starship
 	alacritty-git
 	extra/dunst
-	extra/flameshot
+	chaotic-aur/flameshot-git
 	openssh
 	openssh-runit
 	mesa-vdpau
@@ -62,6 +62,7 @@ PKGS=(
 	ntp-runit
 	extra/bashtop
 	chafa
+	world/grim
 	#########################
 	# Hyprland Correlated 
 	# Packages
