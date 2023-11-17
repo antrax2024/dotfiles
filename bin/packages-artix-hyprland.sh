@@ -73,8 +73,6 @@ PKGS=(
 	extra/fuzzel
 	aur/wl-clip-persist-git
 	extra/copyq
-	world/sddm
-	world/sddm-runit
 	xdg-desktop-portal-gtk
 	#########################
 	# Themes

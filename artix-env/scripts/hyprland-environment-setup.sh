@@ -89,9 +89,6 @@ sudo ln -sf $DOTFILES/artix-env/etc/modprobe.d/blacklist.conf /etc/modprobe.d/bl
 printStatus "Generating kernel image...."
 sudo mkinitcpio -p linux-zen
 
-printStatus "Dont forget to enable sddm..."
-sudo mkdir -p /etc/sddm.conf.d
-sudo ln -sf $DOTFILES/artix-env/etc/sddm.conf.d/autologin.conf /etc/sddm.conf.d/autologin.conf
 
 
 
