@@ -75,6 +75,7 @@ PKGS=(
 	extra/copyq
 	world/sddm
 	world/sddm-runit
+	xdg-desktop-portal-gtk
 	#########################
 	# Themes
 	nwg-look
