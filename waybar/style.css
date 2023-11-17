@@ -9,13 +9,7 @@
 
 window#waybar {
 	background: rgba(0, 0, 0, 0.7);
-	color: gray;
 	color: #ffffff;
-}
-
-#window {
-	color: #e4e4e4;
-	font-weight: bold;
 }
 
 #workspaces {
@@ -47,13 +41,40 @@ window#waybar {
 }
 
 
-#clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode {
-	padding: 0 3px;
+#cpu,#temperature,#memory,#disk,#custom-disk_vms,#network,#pulseaudio,#clock,#tray {
+	padding: 0 8px;
 	margin: 0 2px;
 }
 
 #cpu {
-
+	color:  #a04000;	 
 }
 
+#temperature {
+	color: #33c1ff;
+}
+
+#memory {
+	color: #e033ff;
+}
+
+#disk {
+	color: #337dff;
+}
+
+#custom-disk_vms {
+	color: #ddff33; 
+}
+
+#network {
+	color: #33ffe6;
+}
+
+#pulseaudio {
+	color: #be33ff;
+}
+
+#clock {
+	color: #3fff33;
+}
 
