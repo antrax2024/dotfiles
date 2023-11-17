@@ -107,6 +107,7 @@ LINK_DIRS=(
 	fish
 	neofetch
 	hypr
+	waybar
 )
 
 
