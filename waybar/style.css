@@ -26,17 +26,16 @@ window#waybar {
 }
 
 #workspaces button:hover {
-	color: #1B6F0E;
+	color: #ce7e00;
 }
 
 #workspaces button.active {
-	color: #ce7e00;
+	color: #98e695;
+	border-bottom: 2px solid #ce7e00;
 }
 
 
 #workspaces button.focused {
-	background: #e88939;
-	background: #00afd7;
 	color: #1b1d1e;
 }
 
