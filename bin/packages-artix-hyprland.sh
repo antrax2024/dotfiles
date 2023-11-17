@@ -71,7 +71,7 @@ PKGS=(
 	qt6-wayland
 	qt5-wayland
 	world/polkit-kde-agent
-	chaotic-aur/hyprpaper-git
+	chaotic-aur/wpaperd
 	extra/fuzzel
 	aur/wl-clip-persist-git
 	extra/copyq
@@ -109,6 +109,7 @@ LINK_DIRS=(
 	neofetch
 	hypr
 	waybar
+	wpaperd
 )
 
 
