@@ -64,6 +64,7 @@ PKGS=(
 	chafa
 	world/grim
 	world/slurp
+	chaotic-aur/grimblast-git
 	#########################
 	# Hyprland Correlated 
 	# Packages
