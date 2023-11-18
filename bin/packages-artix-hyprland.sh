@@ -83,6 +83,7 @@ PKGS=(
 	world/kitty
 	chaotic-aur/hyprshot
 	aur/greetd-artix-runit
+	chaotic-aur/cava
 	#########################
 	# Themes
 	nwg-look
