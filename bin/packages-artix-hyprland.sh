@@ -60,10 +60,9 @@ PKGS=(
 	ntp
 	ntp-runit
 	extra/bashtop
-	chafa
 	world/grim
 	world/slurp
-	chaotic-aur/hyprshot
+	world/ethtool
 	#########################
 	# Hyprland Correlated 
 	# Packages
@@ -82,6 +81,7 @@ PKGS=(
 	world/swayidle
 	world/mpv
 	world/kitty
+	chaotic-aur/hyprshot
 	#########################
 	# Themes
 	nwg-look
