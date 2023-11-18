@@ -78,6 +78,7 @@ PKGS=(
 	aur/wl-clip-persist-git
 	extra/copyq
 	xdg-desktop-portal-gtk
+	chaotic-aur/qview
 	#########################
 	# Themes
 	nwg-look
