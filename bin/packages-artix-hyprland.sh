@@ -79,6 +79,7 @@ PKGS=(
 	extra/copyq
 	xdg-desktop-portal-gtk
 	chaotic-aur/qview
+	extra/wofi
 	#########################
 	# Themes
 	nwg-look
