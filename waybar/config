@@ -20,11 +20,11 @@
 	},	
 	"disk": {
     	"interval": 5,
-    	"format": "󰆓 {path} {used}/{total}",
+    	"format": "󰆓 <span color=\"white\">{path} {used}/{total}</span>",
     	"path": "/"
 	},
 	"custom/disk_vms": {
-		"format": "󰋊 /VMs {}",
+		"format": "󰋊 <span color=\"white\">/VMs {}</span>",
 		"interval": 5,
 		"exec": "/home/gargula/dotfiles/bin/vmsinfo.py"
 	},
@@ -32,25 +32,25 @@
 		"interval": 1,
 		"hwmon-path": "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input",
 		"critical-threshold": 80,
-		"format": "{icon} {temperatureC}°C",
+		"format": "{icon} <span color=\"white\">{temperatureC}°C</span>",
 		"format-icons": ["󱃃", "󰔏", "󰸁"]
 	},
 	"cpu": {
 		"interval": 1,
-		"format": "󰻠 {usage}%",
+		"format": "󰻠 <span color=\"white\">{usage}%</span>",
 		"tooltip": false
 	},
 	"memory": {
-		"format": "󰍛 {used:0.1f}G/{total:0.1f}G"
+		"format": "󰍛 <span color=\"white\">{used:0.1f}G/{total:0.1f}G</span>"
 	},
 	"network": {
 		"interface": "bridge0", 
-		"format-ethernet": "󰌗 {ifname}: {ipaddr}",
+		"format-ethernet": "󰌗 <span color=\"white\">{ifname}: {ipaddr}</span>",
 		"format-disconnected": "󰅜 Disconnected!",
 		"interval": 1
 	},
 	"pulseaudio": {
-		"format": "{icon} {volume}% {format_source}",
+		"format": "{icon} <span color=\"white\">{volume}% {format_source}</span>",
 		"format-muted": "󰖁 {format_source}",
 		"format-bluetooth": "{icon} {volume}% {format_source}",
 		"format-bluetooth-muted": "󰂲 {format_source}",
@@ -66,7 +66,7 @@
 	},
 	"clock": {
 		"interval": 1,
-		"format": "󱑎 {:%d-%m-%Y %H:%M:%S}",
+		"format": "󱑎 <span color=\"white\">{:%d-%m-%Y %H:%M:%S}</span>",
 		"tooltip-format": "{:%Y-%m-%d | %H:%M:%S}"
 	},
 	"tray": {
