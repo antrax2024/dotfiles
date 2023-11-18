@@ -92,6 +92,10 @@ sudo ln -sf $DOTFILES/artix-env/etc/environment /etc/environment
 printStatus "Generating kernel image...."
 sudo mkinitcpio -p linux-zen
 
+printStatus "Linking greetd..."
+sudo ln -sf $DOTFILES/artix-env/etc/greetd/config.toml /etc/greetd/config.toml
+
+printStatus "Dont forget to enable greetd... Bye.."
 
 
 

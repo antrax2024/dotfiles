@@ -82,6 +82,7 @@ PKGS=(
 	world/mpv
 	world/kitty
 	chaotic-aur/hyprshot
+	aur/greetd-artix-runit
 	#########################
 	# Themes
 	nwg-look
