@@ -22,7 +22,6 @@ PKGS=(
 	extra/gdu
 	extra/duf
 	extra/starship
-	alacritty-git
 	extra/dunst
 	chaotic-aur/flameshot-git
 	openssh
@@ -110,7 +109,7 @@ PKGS=(
 	)
 
 LINK_DIRS=(
-	alacritty
+	kitty
 	dunst
 	fish
 	neofetch
