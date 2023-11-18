@@ -117,6 +117,7 @@ LINK_DIRS=(
 	hypr
 	waybar
 	wpaperd
+	cava
 )
 
 
