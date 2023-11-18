@@ -3,7 +3,16 @@
 	"modules-left": ["hyprland/workspaces"],
 	"modules-right": ["cpu","temperature","memory","disk", "custom/disk_vms","network", "pulseaudio", "clock", "tray"],
 	"hyprland/workspaces": {
-			"format": "[{name}]",
+			"format": "{icon}",
+			"format-icons": {
+				"1": "",
+				"2": "",
+				"3": "",
+				"4": "",
+				"5": "",
+				"active": "",
+				"default": ""
+			},
     	"persistent-workspaces": {
              	 "*": 5,
              	 "DP-1": 5
