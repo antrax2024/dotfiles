@@ -82,6 +82,7 @@ PKGS=(
 	extra/wofi
 	world/swayidle
 	world/mpv
+	world/kitty
 	#########################
 	# Themes
 	nwg-look
