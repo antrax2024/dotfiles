@@ -15,8 +15,11 @@ run blueberry-tray &
 run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 run insync start --qt-qpa-platform=xcb &
 run copyq &
+# Pipewire UP
 run pipewire & 
 run pipewire-pulse & 
 run wireplumber &
+# Screensaver
+run swayidle -w timeout 5 '/home/gargula/dotfiles/bin/screensaver.sh' &
 
 

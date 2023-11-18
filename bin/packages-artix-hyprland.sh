@@ -80,6 +80,8 @@ PKGS=(
 	xdg-desktop-portal-gtk
 	chaotic-aur/qview
 	extra/wofi
+	world/swayidle
+	world/mpv
 	#########################
 	# Themes
 	nwg-look
