@@ -20,6 +20,6 @@ run pipewire &
 run pipewire-pulse & 
 run wireplumber &
 # Screensaver
-run swayidle -w timeout 5 '/home/gargula/dotfiles/bin/screensaver.sh' &
+run swayidle -w timeout 300 '/home/gargula/dotfiles/bin/screensaver.sh' &
 
 
