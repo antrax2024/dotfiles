@@ -93,7 +93,10 @@ printStatus "Generating kernel image...."
 sudo mkinitcpio -p linux-zen
 
 printStatus "Linking greetd..."
+sudo sv stop logind
+sudo rm /run/runit/service/logind
 sudo ln -sf $DOTFILES/artix-env/etc/greetd/config.toml /etc/greetd/config.toml
+
 
 printStatus "Dont forget to enable greetd... Bye.."
 

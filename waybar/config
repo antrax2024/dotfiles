@@ -51,10 +51,10 @@
 	},
 	"pulseaudio": {
 		"format": "{icon} <span color=\"white\">{volume}% {format_source}</span>",
-		"format-muted": "󰖁 {format_source}",
-		"format-bluetooth": "{icon} {volume}% {format_source}",
-		"format-bluetooth-muted": "󰂲 {format_source}",
-		"format-source": " {volume}%",
+		"format-muted": "󰖁 <span color=\"white\">{format_source}</span>",
+		"format-bluetooth": "{icon} <span color=\"white\">{volume}% {format_source}</span>",
+		"format-bluetooth-muted": "󰂲 <span color=\"white\">{format_source}</span>",
+		"format-source": " <span color=\"white\">{volume}%</span>",
 		"format-source-muted": "",
 		"format-icons": {
 			"headphones": "󰋋",
