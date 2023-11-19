@@ -83,7 +83,7 @@ PKGS=(
 	world/mpv
 	world/kitty
 	chaotic-aur/hyprshot
-	aur/greetd-artix-runit
+	world/greetd-runit
 	chaotic-aur/cava
 	#########################
 	# Themes
