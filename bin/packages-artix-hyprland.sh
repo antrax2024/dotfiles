@@ -7,8 +7,6 @@ PKGS=(
 	xdg-user-dirs
 	firefox
 	less
-	python-pynvim
-	python-pyserial
 	nodejs
 	npm
 	extra/eza
@@ -17,7 +15,6 @@ PKGS=(
 	extra/nmap
 	extra/bat
 	dosfstools
-	python-psutil
 	visual-studio-code-bin
 	extra/gdu
 	extra/duf
@@ -63,6 +60,12 @@ PKGS=(
 	world/grim
 	world/slurp
 	world/ethtool
+	#########################
+	#Python Packages
+	python-pynvim
+	python-pyserial
+	world/python-termcolor
+	python-psutil
 	#########################
 	# Hyprland Correlated 
 	# Packages
