@@ -2,7 +2,6 @@
 import glob
 
 kernels = glob.glob('/boot/vmlinuz*')
-print('Found {} kernels: '.format(len(kernels)))
 for k in kernels:
     kernelLine = k.replace('/boot/vmlinuz-', '')
     print(':{}'.format(kernelLine))
