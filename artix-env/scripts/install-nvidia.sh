@@ -2,7 +2,6 @@
 #
 
 source ../../bin/functions.sh
-source ../../bin/packages-artix.sh
 
 printStatus "Install DKMS drivers..."
 paru -S nvidia-dkms nvidia-utils nvidia-settings

@@ -1,56 +1,32 @@
 #!/usr/bin/bash
-# Pacotes 
+# Pacotes para hyprland
 PKGS=(
 	#########################
 	# APPS
 	#########################
-	xorg
-	xorg-setxkbmap
-	xdg-user-dirs
-	extra/lightdm
-	extra/lightdm-gtk-greeter
-	lightdm-runit
-	bspwm
-	sxhkd
 	firefox
-	lolcat
-	feh
-	rofi
 	less
-	numlockx
-	xfce4-clipman-plugin
-	pamac
-	polkit-gnome
-	python-pynvim
-	python-pyserial
 	nodejs
 	npm
 	extra/eza
 	gimp
-	world/pacman-contrib
-	extra/parallel
 	yt-dlp
 	extra/nmap
 	extra/bat
-	python-psutil
-	visual-studio-code-bin
+	dosfstools
 	extra/gdu
 	extra/duf
 	extra/starship
-	alacritty-git
-	aur/picom-allusive
 	extra/dunst
-	extra/flameshot
+	chaotic-aur/flameshot-git
 	openssh
 	openssh-runit
 	mesa-vdpau
 	libva-mesa-driver
 	chaotic-aur/moonlight-qt
 	obs-studio
-	xf86-video-amdgpu
 	neofetch
 	fish
-	polybar
 	pipewire
 	pipewire-pulse
 	pipewire-alsa
@@ -60,8 +36,7 @@ PKGS=(
 	bluez-utils
 	bluez-runit
 	blueberry
-	betterlockscreen
-	thunar-extended
+	thunar
 	thunar-archive-plugin
 	thunar-media-tags-plugin
 	thunar-volman
@@ -70,22 +45,50 @@ PKGS=(
 	tumbler
 	cmake
 	mlocate
-	volumeicon
 	extra/lazygit
 	ripgrep
-	aur/bottom-nightly-bin
 	telegram-desktop
+	extra/discord
 	pavucontrol
-	scrot
-	xfce4-power-manager
 	wget
 	cronie
 	cronie-runit
 	ntp
 	ntp-runit
+	extra/bashtop
+	world/grim
+	world/slurp
+	world/ethtool
+	visual-studio-code-bin
+	#########################
+	#Python Packages
+	python-pynvim
+	python-pyserial
+	python-psutil
+	#########################
+	# Hyprland Correlated 
+	# Packages
+	chaotic-aur/hyprland-git
+	chaotic-aur/xdg-desktop-portal-hyprland-git
+	qt6-wayland
+	qt5-wayland
+	world/polkit-kde-agent
+	chaotic-aur/wpaperd
+	extra/fuzzel
+	aur/wl-clip-persist-git
+	extra/copyq
+	xdg-desktop-portal-gtk
+	chaotic-aur/qview
+	extra/wofi
+	world/swayidle
+	world/mpv
+	world/kitty
+	chaotic-aur/hyprshot
+	world/greetd-runit
+	chaotic-aur/cava
 	#########################
 	# Themes
-	lxappearance
+	nwg-look
 	adwaita-cursors
 	adwaita-icon-theme
 	adw-gtk-theme
@@ -110,13 +113,14 @@ PKGS=(
 	)
 
 LINK_DIRS=(
-	alacritty
+	kitty
 	dunst
-	rofi
 	fish
 	neofetch
-	bspwm
-	polybar
+	hypr
+	waybar
+	wpaperd
+	cava
 )
 
 

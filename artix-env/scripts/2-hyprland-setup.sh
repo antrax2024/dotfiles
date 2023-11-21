@@ -6,7 +6,7 @@ DOTFILES="$HOME/dotfiles"
 SERVICE='/run/runit/service'
 
 source $DOTFILES/bin/functions.sh
-source $DOTFILES/bin/packages-artix-hyprland.sh
+source ./packages.sh
 
 printStatus "Upgrading..."
 sudo pacman -Syu
