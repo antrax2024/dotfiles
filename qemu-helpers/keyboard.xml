@@ -1,5 +1,5 @@
 <input type='keyboard' bus='virtio'/>
-</input>
+<input>
   <input type='evdev'>
   <source dev='/dev/input/by-id/usb-SINO_WEALTH_Gaming_KB-event-if01' grab='all' repeat='on' grabToggle='ctrl-ctrl'/>
 </input>
