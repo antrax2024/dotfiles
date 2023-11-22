@@ -97,6 +97,8 @@ sudo sv stop logind
 sudo rm /run/runit/service/logind
 sudo ln -sf $DOTFILES/artix-env/etc/greetd/config.toml /etc/greetd/config.toml
 
+printStatus "Enable cupsd Print Service..."
+sudo ln -s /etc/runit/sv/cupsd $SERVICE
 
 printStatus "Dont forget to enable greetd... Bye.."
 

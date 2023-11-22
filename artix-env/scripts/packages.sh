@@ -62,6 +62,11 @@ PKGS=(
 	chaotic-aur/visual-studio-code-bin
 	world/keepassxc
 	#########################
+	# Print Service
+	world/cups
+	world/cups-runit
+	world/hplip
+	#########################
 	#Python Packages
 	python-pynvim
 	python-pyserial
