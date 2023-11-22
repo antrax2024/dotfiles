@@ -59,7 +59,8 @@ PKGS=(
 	world/grim
 	world/slurp
 	world/ethtool
-	visual-studio-code-bin
+	chaotic-aur/visual-studio-code-bin
+	world/keepassxc
 	#########################
 	#Python Packages
 	python-pynvim
