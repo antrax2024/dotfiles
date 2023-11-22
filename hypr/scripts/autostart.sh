@@ -24,3 +24,5 @@ run swayidle -w timeout 300 '/home/gargula/dotfiles/bin/screensaver.sh' &
 # Delete old files
 run $HOME/dotfiles/bin/delete-old-files.sh &
 
+sleep 5
+keepassxc & disown
