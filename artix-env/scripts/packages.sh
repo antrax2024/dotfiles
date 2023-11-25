@@ -61,6 +61,7 @@ PKGS=(
 	world/ethtool
 	chaotic-aur/visual-studio-code-bin
 	world/keepassxc
+	world/imagemagick
 	#########################
 	# Print Service
 	world/cups
