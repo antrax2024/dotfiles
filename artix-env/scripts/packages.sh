@@ -82,7 +82,6 @@ PKGS=(
 	polkit-kde-agent
 	wpaperd
 	fuzzel
-	wl-clip-persist-git
 	copyq
 	xdg-desktop-portal-gtk
 	qview
