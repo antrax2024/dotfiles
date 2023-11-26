@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 source ~/dotfiles/bin/functions.sh
-$SERVICE='/run/runit/service'
+SERVICE='/run/runit/service'
 
 printStatus "Updating..."
 
@@ -33,9 +33,9 @@ paru -S ${PKGS[*]}
 sudo nvim /etc/libvirt/libvirtd.conf
 
 sudo usermod -aG libvirt $USER
-sudo ln -s /etc/runit/sv/libvirtd /run/runit/service/
-sudo ln -s /etc/runit/sv/virtlogd/ /run/runit/service/
-sudo ln -s /etc/runit/sv/virtlockd/ /run/runit/service/
+sudo ln -s /etc/runit/sv/libvirtd $SERVICE
+sudo ln -s /etc/runit/sv/virtlogd $SERVICE
+sudo ln -s /etc/runit/sv/virtlockd $SERVICE
 
 
 #sudo sv up libvirtd
