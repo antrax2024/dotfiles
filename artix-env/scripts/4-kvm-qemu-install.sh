@@ -8,20 +8,20 @@ printStatus "Updating..."
 sudo pacman -Syu
 
 PKGS=(
-  extra/qemu-full
-  extra/virt-manager
-  extra/virt-viewer
-  extra/dnsmasq
-  extra/vde2
-  extra/bridge-utils
-  extra/openbsd-netcat
-  extra/dmidecode
-  system/iptables-nft
-  system/iptables
-  extra/libguestfs
-  extra/edk2-ovmf
-  extra/swtpm
-  world/libvirt-runit
+  qemu
+  virt-manager
+  virt-viewer
+  dnsmasq
+  vde2
+  bridge-utils
+  openbsd-netcat
+  dmidecode
+  iptables-nft
+  iptables
+  libguestfs
+  edk2-ovmf
+  swtpm
+  libvirt-runit
 )
 
 printStatus "Installing packages..."
