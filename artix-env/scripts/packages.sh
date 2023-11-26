@@ -92,6 +92,7 @@ PKGS=(
 	chaotic-aur/hyprshot
 	world/greetd-runit
 	chaotic-aur/cava
+	world/waybar
 	#########################
 	# Themes
 	nwg-look
@@ -128,6 +129,7 @@ LINK_DIRS=(
 	wpaperd
 	cava
 	rustdesk
+	fuzzel
 )
 
 
