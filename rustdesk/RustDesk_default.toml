@@ -1,0 +1,5 @@
+[options]
+custom_image_quality = '100.0'
+custom-fps = '60.0'
+view_style = 'adaptive'
+image_quality = 'custom'

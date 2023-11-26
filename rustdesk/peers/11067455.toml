@@ -1,0 +1,120 @@
+password = [
+    48,
+    48,
+    89,
+    116,
+    55,
+    69,
+    84,
+    122,
+    111,
+    121,
+    80,
+    79,
+    99,
+    99,
+    66,
+    98,
+    114,
+    97,
+    106,
+    70,
+    112,
+    90,
+    76,
+    65,
+    110,
+    85,
+    82,
+    47,
+    56,
+    99,
+    105,
+    68,
+    97,
+    84,
+    101,
+    101,
+    111,
+    47,
+    55,
+    105,
+    75,
+    108,
+    66,
+    69,
+    72,
+    72,
+    99,
+    112,
+    43,
+    118,
+    66,
+    51,
+    53,
+    119,
+    47,
+    101,
+    67,
+    56,
+    71,
+    83,
+    65,
+    52,
+    118,
+    74,
+    122,
+    101,
+]
+size = [
+    0,
+    0,
+    0,
+    0,
+]
+size_ft = [
+    0,
+    0,
+    0,
+    0,
+]
+size_pf = [
+    0,
+    0,
+    0,
+    0,
+]
+view_style = 'adaptive'
+scroll_style = 'scrollauto'
+image_quality = 'custom'
+custom_image_quality = [100]
+show_remote_cursor = false
+lock_after_session_end = false
+privacy_mode = false
+allow_swap_key = false
+port_forwards = []
+direct_failures = 0
+disable_audio = false
+disable_clipboard = false
+enable_file_transfer = false
+show_quality_monitor = false
+keyboard_mode = 'map'
+view_only = false
+
+[options]
+codec-preference = 'auto'
+touch-mode = ''
+custom-fps = '60'
+zoom-cursor = ''
+
+[ui_flutter]
+wm_RemoteDesktop = '{"width":0.0,"height":0.0,"offsetWidth":0.0,"offsetHeight":0.0,"isMaximized":true,"isFullscreen":false}'
+
+[info]
+username = 'gargula'
+hostname = 'voidlinux'
+platform = 'Linux'
+
+[transfer]
+write_jobs = []
+read_jobs = []

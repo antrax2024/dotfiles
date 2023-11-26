@@ -1,0 +1,120 @@
+password = [
+    48,
+    48,
+    109,
+    51,
+    75,
+    105,
+    47,
+    57,
+    56,
+    101,
+    108,
+    47,
+    43,
+    77,
+    118,
+    102,
+    103,
+    65,
+    43,
+    43,
+    100,
+    71,
+    85,
+    56,
+    101,
+    71,
+    120,
+    104,
+    43,
+    100,
+    109,
+    105,
+    57,
+    66,
+    69,
+    114,
+    57,
+    114,
+    57,
+    116,
+    49,
+    54,
+    51,
+    49,
+    71,
+    70,
+    56,
+    49,
+    122,
+    114,
+    101,
+    81,
+    98,
+    98,
+    89,
+    112,
+    102,
+    111,
+    88,
+    86,
+    77,
+    88,
+    48,
+    106,
+    53,
+    75,
+]
+size = [
+    0,
+    0,
+    0,
+    0,
+]
+size_ft = [
+    0,
+    0,
+    0,
+    0,
+]
+size_pf = [
+    0,
+    0,
+    0,
+    0,
+]
+view_style = 'adaptive'
+scroll_style = 'scrollauto'
+image_quality = 'custom'
+custom_image_quality = [100]
+show_remote_cursor = false
+lock_after_session_end = false
+privacy_mode = false
+allow_swap_key = false
+port_forwards = []
+direct_failures = 0
+disable_audio = false
+disable_clipboard = false
+enable_file_transfer = false
+show_quality_monitor = false
+keyboard_mode = 'map'
+view_only = false
+
+[options]
+custom-fps = '80'
+codec-preference = 'auto'
+touch-mode = ''
+zoom-cursor = ''
+
+[ui_flutter]
+wm_RemoteDesktop = '{"width":0.0,"height":0.0,"offsetWidth":0.0,"offsetHeight":0.0,"isMaximized":true,"isFullscreen":false}'
+
+[info]
+username = 'gargula'
+hostname = 'manjaro'
+platform = 'Linux'
+
+[transfer]
+write_jobs = []
+read_jobs = []

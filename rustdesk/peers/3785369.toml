@@ -1,0 +1,120 @@
+password = [
+    48,
+    48,
+    83,
+    82,
+    85,
+    75,
+    109,
+    97,
+    111,
+    48,
+    52,
+    68,
+    87,
+    77,
+    104,
+    118,
+    87,
+    119,
+    112,
+    119,
+    114,
+    80,
+    89,
+    71,
+    115,
+    122,
+    117,
+    84,
+    70,
+    106,
+    85,
+    105,
+    115,
+    107,
+    99,
+    71,
+    74,
+    57,
+    54,
+    48,
+    122,
+    87,
+    51,
+    47,
+    43,
+    112,
+    53,
+    81,
+    98,
+    57,
+    73,
+    109,
+    119,
+    87,
+    56,
+    121,
+    70,
+    68,
+    56,
+    112,
+    56,
+    85,
+    80,
+    65,
+    53,
+    83,
+]
+size = [
+    0,
+    0,
+    0,
+    0,
+]
+size_ft = [
+    0,
+    0,
+    0,
+    0,
+]
+size_pf = [
+    0,
+    0,
+    0,
+    0,
+]
+view_style = 'adaptive'
+scroll_style = 'scrollauto'
+image_quality = 'custom'
+custom_image_quality = [85]
+show_remote_cursor = false
+lock_after_session_end = false
+privacy_mode = false
+allow_swap_key = false
+port_forwards = []
+direct_failures = 0
+disable_audio = false
+disable_clipboard = false
+enable_file_transfer = false
+show_quality_monitor = false
+keyboard_mode = 'map'
+view_only = false
+
+[options]
+codec-preference = 'auto'
+touch-mode = ''
+custom-fps = '60'
+zoom-cursor = ''
+
+[ui_flutter]
+wm_RemoteDesktop = '{"width":0.0,"height":0.0,"offsetWidth":0.0,"offsetHeight":0.0,"isMaximized":true,"isFullscreen":false}'
+
+[info]
+username = 'gargula'
+hostname = 'artixvm'
+platform = 'Linux'
+
+[transfer]
+write_jobs = []
+read_jobs = []

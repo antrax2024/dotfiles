@@ -1,0 +1,120 @@
+password = [
+    48,
+    48,
+    73,
+    51,
+    77,
+    47,
+    90,
+    83,
+    100,
+    121,
+    70,
+    68,
+    117,
+    110,
+    104,
+    119,
+    99,
+    99,
+    85,
+    71,
+    67,
+    107,
+    117,
+    74,
+    119,
+    48,
+    115,
+    120,
+    90,
+    102,
+    111,
+    48,
+    47,
+    102,
+    101,
+    66,
+    115,
+    114,
+    122,
+    106,
+    114,
+    65,
+    76,
+    78,
+    84,
+    49,
+    112,
+    98,
+    120,
+    53,
+    50,
+    75,
+    67,
+    107,
+    54,
+    111,
+    98,
+    79,
+    121,
+    99,
+    78,
+    76,
+    89,
+    122,
+    88,
+    76,
+]
+size = [
+    0,
+    0,
+    0,
+    0,
+]
+size_ft = [
+    0,
+    0,
+    0,
+    0,
+]
+size_pf = [
+    0,
+    0,
+    0,
+    0,
+]
+view_style = 'adaptive'
+scroll_style = 'scrollauto'
+image_quality = 'custom'
+custom_image_quality = [100]
+show_remote_cursor = false
+lock_after_session_end = false
+privacy_mode = false
+allow_swap_key = false
+port_forwards = []
+direct_failures = 0
+disable_audio = false
+disable_clipboard = false
+enable_file_transfer = false
+show_quality_monitor = false
+keyboard_mode = 'map'
+view_only = false
+
+[options]
+zoom-cursor = ''
+codec-preference = 'auto'
+touch-mode = ''
+custom-fps = '75'
+
+[ui_flutter]
+wm_RemoteDesktop = '{"width":0.0,"height":0.0,"offsetWidth":0.0,"offsetHeight":0.0,"isMaximized":true,"isFullscreen":false}'
+
+[info]
+username = 'gargula'
+hostname = 'endeavouros'
+platform = 'Linux'
+
+[transfer]
+write_jobs = []
+read_jobs = []

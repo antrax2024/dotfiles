@@ -127,6 +127,7 @@ LINK_DIRS=(
 	waybar
 	wpaperd
 	cava
+	rustdesk
 )
 
 
