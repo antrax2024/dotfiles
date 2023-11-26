@@ -8,22 +8,22 @@ PKGS=(
 	less
 	nodejs
 	npm
-	extra/eza
+	eza
 	gimp
 	yt-dlp
-	extra/nmap
-	extra/bat
+	nmap
+	bat
 	dosfstools
-	extra/gdu
-	extra/duf
-	extra/starship
-	extra/dunst
+	gdu
+	duf
+	starship
+	dunst
 	openssh
 	openssh-runit
 	mesa-vdpau
 	libva-mesa-driver
-	chaotic-aur/rustdesk-bin
-	chaotic-aur/parsec-bin
+	rustdesk-bin
+	parsec-bin
 	obs-studio
 	neofetch
 	fish
@@ -40,33 +40,33 @@ PKGS=(
 	thunar-archive-plugin
 	thunar-media-tags-plugin
 	thunar-volman
-	chaotic-aur/insync
+	insync
 	file-roller
 	tumbler
 	cmake
 	mlocate
-	extra/lazygit
+	lazygit
 	ripgrep
 	telegram-desktop
-	extra/discord
+	discord
 	pavucontrol
 	wget
 	cronie
 	cronie-runit
 	ntp
 	ntp-runit
-	extra/bashtop
-	world/grim
-	world/slurp
-	world/ethtool
-	chaotic-aur/visual-studio-code-bin
-	world/keepassxc
-	world/imagemagick
+	bashtop
+	grim
+	slurp
+	ethtool
+	visual-studio-code-bin
+	keepassxc
+	imagemagick
 	#########################
 	# Print Service
-	world/cups
-	world/cups-runit
-	world/hplip
+	cups
+	cups-runit
+	hplip
 	#########################
 	#Python Packages
 	python-pynvim
@@ -75,25 +75,25 @@ PKGS=(
 	#########################
 	# Hyprland Correlated 
 	# Packages
-	chaotic-aur/hyprland-git
-	chaotic-aur/xdg-desktop-portal-hyprland-git
+	hyprland-git
+	xdg-desktop-portal-hyprland-git
 	qt6-wayland
 	qt5-wayland
-	world/polkit-kde-agent
-	chaotic-aur/wpaperd
-	extra/fuzzel
-	aur/wl-clip-persist-git
-	extra/copyq
+	polkit-kde-agent
+	wpaperd
+	fuzzel
+	wl-clip-persist-git
+	copyq
 	xdg-desktop-portal-gtk
-	chaotic-aur/qview
-	extra/wofi
-	world/swayidle
-	world/mpv
-	world/kitty
-	chaotic-aur/hyprshot
-	world/greetd-runit
-	chaotic-aur/cava
-	world/waybar
+	qview
+	wofi
+	swayidle
+	mpv
+	kitty
+	hyprshot
+	greetd-runit
+	cava
+	waybar
 	#########################
 	# Themes
 	nwg-look
@@ -103,7 +103,7 @@ PKGS=(
 	adwaita-dark-darose
 	papirus-icon-theme
 	breeze
-	extra/arc-gtk-theme
+	arc-gtk-theme
 	#########################
 	# FONTS 
 	#########################
@@ -116,7 +116,7 @@ PKGS=(
 	ttf-font-awesome
 	awesome-terminal-fonts
 	noto-fonts-emoji
-	chaotic-aur/ttf-material-design-icons-extended
+	ttf-material-design-icons-extended
 	#########################
 	)
 
