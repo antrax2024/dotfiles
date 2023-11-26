@@ -18,12 +18,11 @@ PKGS=(
 	extra/duf
 	extra/starship
 	extra/dunst
-	chaotic-aur/flameshot-git
 	openssh
 	openssh-runit
 	mesa-vdpau
 	libva-mesa-driver
-	chaotic-aur/moonlight-qt
+	chaotic-aur/rustdesk-bin
 	obs-studio
 	neofetch
 	fish
