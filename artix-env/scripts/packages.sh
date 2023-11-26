@@ -23,6 +23,7 @@ PKGS=(
 	mesa-vdpau
 	libva-mesa-driver
 	chaotic-aur/rustdesk-bin
+	chaotic-aur/parsec-bin
 	obs-studio
 	neofetch
 	fish
