@@ -8,7 +8,7 @@ printStatus "Updating..."
 sudo pacman -Syu
 
 PKGS=(
-  qemu
+  qemu-full
   virt-manager
   virt-viewer
   dnsmasq
