@@ -92,7 +92,7 @@ PKGS=(
 	hyprshot
 	greetd-runit
 	cava
-	waybar
+	waybar-experimental-git
 	#########################
 	# Themes
 	nwg-look
