@@ -20,7 +20,6 @@ PKGS=(
 	openssh
 	obs
 	neofetch
-	fish
 	pipewire
 	pipewire-pulse
 	pipewire-alsa
@@ -28,13 +27,11 @@ PKGS=(
 	wireplumber
 	bluez
 	bluez-utils
-	bluez-runit
 	blueberry
 	thunar
 	thunar-archive-plugin
 	thunar-media-tags-plugin
 	thunar-volman
-	insync
 	file-roller
 	tumbler
 	cmake
@@ -44,55 +41,41 @@ PKGS=(
 	telegram-desktop
 	discord
 	pavucontrol
-	wget
 	cronie
-	cronie-runit
-	ntp
-	ntp-runit
-	bashtop
 	grim
 	slurp
 	ethtool
-	visual-studio-code-bin
 	keepassxc
 	imagemagick
 	#########################
 	# Print Service
 	cups
-	cups-runit
 	hplip
 	#########################
 	#Python Packages
-	python-pynvim
 	python-pyserial
-	python-psutil
+	python3-psutil
 	#########################
 	# Hyprland Correlated 
 	# Packages
-	hyprland-git
-	xdg-desktop-portal-hyprland-git
 	qt6-wayland
 	qt5-wayland
 	polkit-kde-agent
-	wpaperd
 	fuzzel
 	copyq
 	xdg-desktop-portal-gtk
 	qview
 	wofi
 	swayidle
-	mpv
 	kitty
-	hyprshot
-	greetd-runit
 	cava
-	waybar
 	#########################
 	# Themes
 	nwg-look
 	papirus-icon-theme
-	papirus-folders
 	breeze
+	adwaita-plus
+	adwaita-qt
 	#########################
 	# FONTS 
 	#########################

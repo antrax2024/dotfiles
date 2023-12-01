@@ -65,13 +65,10 @@ sudo ln -sf $VOID_ENV/etc/modprobe.d/blacklist.conf /etc/modprobe.d/blacklist.co
 printStatus "Generating kernel image...."
 sudo mkinitcpio -p linux-zen
 
-printStatus "Linking greetd..."
-sudo ln -sf $VOID_ENV/etc/greetd/config.toml /etc/greetd/config.toml
 
 printStatus "Enable cupsd Print Service..."
 sudo ln -s $SOURCE/cupsd $DESTINATION
 
-printStatus "Dont forget to enable greetd... Bye.."
 
 
 
