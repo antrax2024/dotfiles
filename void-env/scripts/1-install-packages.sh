@@ -23,7 +23,7 @@ sudo xbps-install -Su
 
 
 printStatus "Install Packages"
-sudo xbps-install ${PKGS[*]}
+sudo xbps-install $PKGS
 
 
 printStatus "Prepare to link..."
