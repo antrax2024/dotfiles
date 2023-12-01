@@ -50,7 +50,7 @@ PKGS=$(cat <<-END
 	fuzzel
 	CopyQ
 	xdg-desktop-portal-gtk
-	qview
+	qView
 	wofi
 	swayidle
 	kitty
