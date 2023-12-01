@@ -13,12 +13,10 @@ PKGS=(
 	gimp
 	nmap
 	bat
-	dosfstools
 	gdu
 	duf
 	starship
 	dunst
-	openssh
 	obs
 	neofetch
 	pipewire
