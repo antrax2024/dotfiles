@@ -14,6 +14,13 @@ source ./packages.sh
 printStatus "Upgrading..."
 sudo xbps-install -Su
 
+printStatus "Install NON-Free repositories support.... "
+sudo xbps-install void-repo-nonfree
+
+printStatus "Updating  again  ooowwww..."
+sudo xbps-install -Su
+
+
 
 printStatus "Install Packages"
 sudo xbps-install ${PKGS[*]}
