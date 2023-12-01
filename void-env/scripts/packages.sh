@@ -4,12 +4,12 @@ PKGS=(
 	#########################
 	# APPS
 	#########################
+	avahi
+	dbus
 	firefox
 	nodejs
-	npm
 	eza
 	gimp
-	yt-dlp
 	nmap
 	bat
 	dosfstools
@@ -18,12 +18,7 @@ PKGS=(
 	starship
 	dunst
 	openssh
-	openssh-runit
-	mesa-vdpau
-	libva-mesa-driver
-	rustdesk-bin
-	parsec-bin
-	obs-studio
+	obs
 	neofetch
 	fish
 	pipewire
@@ -91,30 +86,17 @@ PKGS=(
 	hyprshot
 	greetd-runit
 	cava
-	waybar-experimental-git
+	waybar
 	#########################
 	# Themes
 	nwg-look
-	adwaita-cursors
-	adwaita-icon-theme
-	adw-gtk-theme
-	adwaita-dark-darose
 	papirus-icon-theme
+	papirus-folders
 	breeze
-	arc-gtk-theme
 	#########################
 	# FONTS 
 	#########################
-	ttf-jetbrains-mono-nerd
-	ttc-iosevka
-	ttf-nerd-fonts-symbols
-	ttf-icomoon-feather
-	ttf-firacode-nerd
-	ttf-hack-nerd
-	ttf-font-awesome
-	awesome-terminal-fonts
-	noto-fonts-emoji
-	ttf-material-design-icons-extended
+	nerd-fonts-ttf
 	#########################
 	)
 
