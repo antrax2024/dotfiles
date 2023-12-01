@@ -77,6 +77,10 @@ sudo ln -s $SOURCE/avahi-daemon $DESTINATION
 printStatus "Enable dbus service..."
 sudo ln -s $SOURCE/dbus $DESTINATION
 
+printStatus "Linking conf file huuuuuummmmm...."
+sudo ln -s $VOID_ENV/etc/conf /etc/conf
+
+
 printStatus "Hummmmmmmm......"
 
 
