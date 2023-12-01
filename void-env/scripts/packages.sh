@@ -4,6 +4,7 @@ PKGS=(
 	#########################
 	# APPS
 	#########################
+	neovim
 	avahi
 	dbus
 	firefox
