@@ -1,9 +1,9 @@
 #!/usr/bin/bash
-
-PKGS=(
+PKGS=$(cat <<-END
 	#########################
 	# APPS
 	#########################
+	xtools
 	neovim
 	avahi
 	dbus
@@ -80,7 +80,8 @@ PKGS=(
 	#########################
 	nerd-fonts-ttf
 	#########################
-	)
+END
+)
 
 LINK_DIRS=(
 	kitty
