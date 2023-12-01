@@ -48,7 +48,7 @@ PKGS=$(cat <<-END
 	qt5-wayland
 	polkit-kde-agent
 	fuzzel
-	copyq
+	CopyQ
 	xdg-desktop-portal-gtk
 	qview
 	wofi
