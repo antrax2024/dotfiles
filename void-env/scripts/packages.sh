@@ -61,6 +61,7 @@ PKGS=$(cat <<-END
 	adwaita-plus
 	adwaita-qt
 	nerd-fonts-ttf
+	fish-shell
 END
 )
 
