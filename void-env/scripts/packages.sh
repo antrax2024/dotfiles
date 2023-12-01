@@ -38,9 +38,8 @@ PKGS=$(cat <<-END
 	cronie
 	grim
 	slurp
-	ethtool
 	keepassxc
-	imagemagick
+	Imagemagick
 	cups
 	hplip
 	python-pyserial
