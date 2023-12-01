@@ -39,7 +39,7 @@ PKGS=$(cat <<-END
 	grim
 	slurp
 	keepassxc
-	Imagemagick
+	ImageMagick
 	cups
 	hplip
 	python-pyserial
