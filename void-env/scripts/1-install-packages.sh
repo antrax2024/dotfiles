@@ -15,12 +15,8 @@ printStatus "Upgrading..."
 sudo xbps-install -Su
 
 
-printStatus "Default editor = nvim.... "
-echo "export EDITOR='nvim'" >> /etc/bash/bashrc
-
-
 printStatus "Install Packages"
-paru -S ${PKGS[*]}
+sudo xbps-install ${PKGS[*]}
 
 
 printStatus "Prepare to link..."
@@ -62,13 +58,18 @@ printStatus "Link vfio and blacklist..."
 sudo ln -sf $VOID_ENV/etc/modprobe.d/vfio.conf /etc/modprobe.d/vfio.conf
 sudo ln -sf $VOID_ENV/etc/modprobe.d/blacklist.conf /etc/modprobe.d/blacklist.conf
 
-printStatus "Generating kernel image...."
-sudo mkinitcpio -p linux-zen
-
+printStatus "Regenerating kernel image.... hooowwwww!!! Ow yues,,, yes man yesssss!!!!"
+sudo xbps-reconfigure --force linux
 
 printStatus "Enable cupsd Print Service..."
 sudo ln -s $SOURCE/cupsd $DESTINATION
 
+printStatus "Enable Avahi Service..."
+sudo ln -s $SOURCE/avahi-daemon $DESTINATION
 
+printStatus "Enable dbus service..."
+sudo ln -s $SOURCE/dbus $DESTINATION
+
+printStatus "Hummmmmmmm......"
 
 

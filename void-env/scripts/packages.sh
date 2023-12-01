@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-# Pacotes para hyprland
+
 PKGS=(
 	#########################
 	# APPS
