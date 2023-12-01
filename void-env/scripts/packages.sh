@@ -23,7 +23,7 @@ PKGS=$(cat <<-END
 	libjack-pipewire
 	wireplumber
 	bluez
-	thunar
+	Thunar
 	thunar-archive-plugin
 	thunar-media-tags-plugin
 	thunar-volman
