@@ -1,0 +1,133 @@
+#!/usr/bin/bash
+# Pacotes para hyprland
+PKGS=(
+	#########################
+	# APPS
+	#########################
+	firefox
+	nodejs
+	npm
+	eza
+	gimp
+	yt-dlp
+	nmap
+	bat
+	dosfstools
+	gdu
+	duf
+	starship
+	dunst
+	openssh
+	openssh-runit
+	mesa-vdpau
+	libva-mesa-driver
+	rustdesk-bin
+	parsec-bin
+	obs-studio
+	neofetch
+	fish
+	pipewire
+	pipewire-pulse
+	pipewire-alsa
+	pipewire-jack
+	wireplumber
+	bluez
+	bluez-utils
+	bluez-runit
+	blueberry
+	thunar
+	thunar-archive-plugin
+	thunar-media-tags-plugin
+	thunar-volman
+	insync
+	file-roller
+	tumbler
+	cmake
+	mlocate
+	lazygit
+	ripgrep
+	telegram-desktop
+	discord
+	pavucontrol
+	wget
+	cronie
+	cronie-runit
+	ntp
+	ntp-runit
+	bashtop
+	grim
+	slurp
+	ethtool
+	visual-studio-code-bin
+	keepassxc
+	imagemagick
+	#########################
+	# Print Service
+	cups
+	cups-runit
+	hplip
+	#########################
+	#Python Packages
+	python-pynvim
+	python-pyserial
+	python-psutil
+	#########################
+	# Hyprland Correlated 
+	# Packages
+	hyprland-git
+	xdg-desktop-portal-hyprland-git
+	qt6-wayland
+	qt5-wayland
+	polkit-kde-agent
+	wpaperd
+	fuzzel
+	copyq
+	xdg-desktop-portal-gtk
+	qview
+	wofi
+	swayidle
+	mpv
+	kitty
+	hyprshot
+	greetd-runit
+	cava
+	waybar-experimental-git
+	#########################
+	# Themes
+	nwg-look
+	adwaita-cursors
+	adwaita-icon-theme
+	adw-gtk-theme
+	adwaita-dark-darose
+	papirus-icon-theme
+	breeze
+	arc-gtk-theme
+	#########################
+	# FONTS 
+	#########################
+	ttf-jetbrains-mono-nerd
+	ttc-iosevka
+	ttf-nerd-fonts-symbols
+	ttf-icomoon-feather
+	ttf-firacode-nerd
+	ttf-hack-nerd
+	ttf-font-awesome
+	awesome-terminal-fonts
+	noto-fonts-emoji
+	ttf-material-design-icons-extended
+	#########################
+	)
+
+LINK_DIRS=(
+	kitty
+	dunst
+	fish
+	neofetch
+	hypr
+	waybar
+	wpaperd
+	cava
+	fuzzel
+)
+
+
