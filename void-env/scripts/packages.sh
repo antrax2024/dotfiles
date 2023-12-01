@@ -34,7 +34,6 @@ PKGS=$(cat <<-END
 	lazygit
 	ripgrep
 	telegram-desktop
-	discord
 	pavucontrol
 	cronie
 	grim
