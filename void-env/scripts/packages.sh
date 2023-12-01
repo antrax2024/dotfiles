@@ -2,9 +2,6 @@
 #
 
 PKGS=$(cat <<-END
-	#########################
-	# APPS
-	#########################
 	xtools
 	neovim
 	avahi
@@ -48,17 +45,10 @@ PKGS=$(cat <<-END
 	ethtool
 	keepassxc
 	imagemagick
-	#########################
-	# Print Service
 	cups
 	hplip
-	#########################
-	#Python Packages
 	python-pyserial
 	python3-psutil
-	#########################
-	# Hyprland Correlated 
-	# Packages
 	qt6-wayland
 	qt5-wayland
 	polkit-kde-agent
@@ -70,18 +60,12 @@ PKGS=$(cat <<-END
 	swayidle
 	kitty
 	cava
-	#########################
-	# Themes
 	nwg-look
 	papirus-icon-theme
 	breeze
 	adwaita-plus
 	adwaita-qt
-	#########################
-	# FONTS 
-	#########################
 	nerd-fonts-ttf
-	#########################
 END
 )
 
