@@ -19,9 +19,8 @@ PKGS=$(cat <<-END
 	obs
 	neofetch
 	pipewire
-	pipewire-pulse
-	pipewire-alsa
-	pipewire-jack
+	alsa-pipewire
+	libjack-pipewire
 	wireplumber
 	bluez
 	bluez-utils
