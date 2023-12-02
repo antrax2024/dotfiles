@@ -26,3 +26,6 @@ cp -r $HYPRLAND_VOID/srcpkgs/* $VOID_PACKAGES/srcpkgs
 printStatus "Compiling Hyprland. "
 cd $VOID_PACKAGES
 ./xbps-src pkg hyprland
+
+printStatus "Installing...."
+sudo xbps-install -R hostdir/binpkgs hyprland
