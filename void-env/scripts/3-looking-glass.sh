@@ -11,7 +11,7 @@ LG_REPO="$HOME/repos/LG"
 source $DOTFILES/bin/functions.sh
 
 printStatus "Install Dependencies.... hummmm"
-xbps-install -Syu binutils-devel cmake freefont-ttf fontconfig-devel SDL2-devel SDL2_ttf-devel spice-protocol libX11-devel libXpresent-devel libXinerama-devel nettle-devel gcc make pkg-config
+sudo xbps-install -Syu binutils-devel cmake freefont-ttf fontconfig-devel SDL2-devel SDL2_ttf-devel spice-protocol libX11-devel libXpresent-devel libXinerama-devel nettle-devel gcc make pkg-config
 
 printStatus "Clone the Repository..."
 git clone --recursive https://github.com/gnif/LookingGlass.git $LG_REPO
