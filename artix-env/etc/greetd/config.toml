@@ -13,7 +13,7 @@ command = "agreety --cmd $SHELL"
 user = "gargula"
 
 [initial_session]
-command = "dbus-launch Hyprland"
+command = "dbus-run-session Hyprland"
 user = "gargula"
 
 
