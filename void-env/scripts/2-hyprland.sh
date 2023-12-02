@@ -1,7 +1,8 @@
 #!/usr/bin/bash
 
 DOTFILES="$HOME/dotfiles"
-REPOS_DIR="$HOME/repos"
+HYPRLAND_VOID="$HOME/repos/hyprland-void"
+VOID_PACKAGES="$HOME/repos/void-packages"
 
 source $DOTFILES/bin/functions.sh
 
@@ -11,18 +12,17 @@ sudo xbps-install ninja mason xcb-proto wayland-protocols xorg-server-xwayland l
 
 
 printStatus "Cloning repos to [$REPOS_DIR]... "
-git clone https://github.com/void-linux/void-packages $REPOS_DIR
-git clone https://github.com/Makrennel/hyprland-void.git $REPOS_DIR
+git clone https://github.com/void-linux/void-packages $VOID_PACKAGES
+git clone https://github.com/Makrennel/hyprland-void.git $HYPRLAND_VOID
 
 printStatus "Install binary bootstrap..."
-cd $REPOS_DIR/void-packages
+cd $VOID_PACKAGES
 ./xbps-src binary-bootstrap
 
 printStatus "Prepare to compile Hyprland..."
-cd $REPOS_DIR/hyprland-void
-cat $REPOS_DIR/hyprland-void/common/shlibs >> $REPOS_DIR/void-packages/common/shlibs
-cp -r $REPOS_DIR/hyprland-void/srcpkgs/* $REPOS_DIR/void-packages/srcpkgs
+cat $HYPRLAND_VOID/common/shlibs >> $VOID_PACKAGES/common/shlibs
+cp -r $HYPRLAND_VOID/srcpkgs/* $VOID_PACKAGES/srcpkgs
 
 printStatus "Compiling Hyprland. "
-cd $REPOS_DIR/void-packages
+cd $VOID_PACKAGES
 ./xbps-src pkg hyprland
