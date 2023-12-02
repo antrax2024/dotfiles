@@ -3,12 +3,18 @@
 DOTFILES="$HOME/dotfiles"
 HYPRLAND_VOID="$HOME/repos/hyprland-void"
 VOID_PACKAGES="$HOME/repos/void-packages"
+COMPILE_CMD="./xbps-src pkg "
+INSTALL_CMD="sudo xbps-install -R hostdir/binpkgs "
+DESTINATION="/var/service"
+SOURCE="/etc/sv"
+
 
 source $DOTFILES/bin/functions.sh
 
+
 printStatus "Install Hyprland Dependencies.... hummmm"
 sudo xbps-install -Su
-sudo xbps-install ninja xcb-proto wayland-protocols xorg-server-xwayland libinput wlroots-devel
+sudo xbps-install ninja xcb-proto wayland-protocols xorg-server-xwayland libinput wlroots-devel seatd elogind
 
 
 printStatus "Cloning repos to [$REPOS_DIR]... "
@@ -25,7 +31,25 @@ cp -r $HYPRLAND_VOID/srcpkgs/* $VOID_PACKAGES/srcpkgs
 
 printStatus "Compiling Hyprland. "
 cd $VOID_PACKAGES
-./xbps-src pkg hyprland
+$COMPILE_CMD hyprland
 
 printStatus "Installing...."
-sudo xbps-install -R hostdir/binpkgs hyprland
+$INSTALL_CMD hyprland
+
+
+printStatus "Compile Waybar... hummmmm"
+./xbps-src pkg Waybar
+$COMPILE_CMD Waybar
+printStatus "Inslall Waybar..."
+$INSTALL_CMD Waybar
+
+print "Compile and Install xdg-desktop-portal-hyprland"
+$COMPILE_CMD xdg-desktop-portal-hyprland
+$INSTALL_CMD xdg-desktop-portal-hyprland
+
+
+printStatus "Enable seatd..."
+sudo ln -s $SOURCE/seatd $DESTINATION
+
+printStatus "Enable elogind..."
+sudo ln -s $SOURCE/elogind $DESTINATION

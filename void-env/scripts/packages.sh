@@ -22,6 +22,7 @@ PKGS=$(cat <<-END
 	alsa-pipewire
 	libjack-pipewire
 	wireplumber
+	mesa-dri
 	bluez
 	Thunar
 	thunar-archive-plugin
