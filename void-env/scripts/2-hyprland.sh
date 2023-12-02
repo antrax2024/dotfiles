@@ -8,7 +8,7 @@ source $DOTFILES/bin/functions.sh
 
 printStatus "Install Hyprland Dependencies.... hummmm"
 sudo xbps-install -Su
-sudo xbps-install ninja mason xcb-proto wayland-protocols xorg-server-xwayland libinput wlroots-devel
+sudo xbps-install ninja xcb-proto wayland-protocols xorg-server-xwayland libinput wlroots-devel
 
 
 printStatus "Cloning repos to [$REPOS_DIR]... "
