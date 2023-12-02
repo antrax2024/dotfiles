@@ -93,6 +93,11 @@ sudo mkinitcpio -p linux-zen
 printStatus "Linking greetd..."
 sudo ln -sf $DOTFILES/artix-env/etc/greetd/config.toml /etc/greetd/config.toml
 
+
+printStatus "Remove elogind-runit and install seatd-runit..."
+sudo pacman -S seatd-runit
+sudo ln -s $SV_SCR/seatd $SV_DST
+
 printStatus "Dont forget to enable greetd... Bye.."
 
 
