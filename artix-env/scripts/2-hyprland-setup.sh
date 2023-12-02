@@ -65,7 +65,7 @@ arraylength=${#SERVICES[@]}
 for (( i=0; i<${arraylength}; i++ ));
 do
 	printStatus "Link ${SERVICES[$i]}"
-	ln -s $SV_SCR/${SERVICES[$i]} $SV_DST
+	sudo ln -s $SV_SCR/${SERVICES[$i]} $SV_DST
 done
 
 printStatus "Enable Swap File... Hummmmmm"
