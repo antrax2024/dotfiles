@@ -98,24 +98,16 @@ PKGS=(
 	nwg-look
 	adwaita-cursors
 	adwaita-icon-theme
-	adw-gtk-theme
-	adwaita-dark-darose
 	papirus-icon-theme
 	breeze
 	arc-gtk-theme
 	#########################
 	# FONTS 
 	#########################
-	ttf-jetbrains-mono-nerd
-	ttc-iosevka
 	ttf-nerd-fonts-symbols
-	ttf-icomoon-feather
-	ttf-firacode-nerd
 	ttf-hack-nerd
 	ttf-font-awesome
-	awesome-terminal-fonts
 	noto-fonts-emoji
-	ttf-material-design-icons-extended
 	#########################
 	)
 
