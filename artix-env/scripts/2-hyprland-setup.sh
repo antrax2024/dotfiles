@@ -53,7 +53,7 @@ for (( i=0; i<${arraylength}; i++ ));
 do
 	printStatus "Linking ${LINK_DIRS[$i]}"
 	verifyIfConfigExists "${LINK_DIRS[$i]}"
-	ln -sf "$DOTFILES/${LINK_DIRS[$i]}" "$HOME/.config/${LINK_DIRS[$i]}"
+	sudo ln -sf "$DOTFILES/${LINK_DIRS[$i]}" "$HOME/.config/${LINK_DIRS[$i]}"
 done
 
 printStatus "Changind default shell to Fish Shell..."
