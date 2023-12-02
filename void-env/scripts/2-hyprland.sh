@@ -16,7 +16,7 @@ printStatus "Install Hyprland Dependencies.... hummmm"
 sudo xbps-install -Su
 sudo xbps-install ninja xcb-proto wayland-protocols xorg-server-xwayland libinput wlroots-devel seatd elogind
 
-printStatus "Cloning repos to [$REPOS_DIR]... "
+printStatus "Cloning repos to $REPOS_DIR "
 git clone https://github.com/void-linux/void-packages $VOID_PACKAGES
 git clone https://github.com/Makrennel/hyprland-void.git $HYPRLAND_VOID
 
