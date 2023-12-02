@@ -59,3 +59,9 @@ sudo ln -s $SOURCE/seatd $DESTINATION
 
 printStatus "Enable elogind..."
 sudo ln -s $SOURCE/elogind $DESTINATION
+
+printStatus "Add $USER to group _seatd.... hummmm"
+sudo usermod -aG _seatd $USER
+
+printStatus "Finish..."
+
