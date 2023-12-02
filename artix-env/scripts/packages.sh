@@ -129,6 +129,5 @@ SERVICES=(
 	bluetoothd
 	cronie
 	ntpd
-	dbus
 	cupsd
 )
