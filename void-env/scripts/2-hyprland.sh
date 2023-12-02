@@ -46,7 +46,7 @@ print "Compile and Install hyprpaper"
 $COMPILE_CMD hyprpaper
 $INSTALL_CMD hyprpaper
 
-print "Compile and Install WpaperD..."
+printStatus "Compile and Install WpaperD..."
 git clone https://github.com/danyspin97/wpaperd $WPAPER_REPO
 cd $WPAPER_REPO
 cargo build --release
