@@ -3,6 +3,8 @@
 
 PKGS=$(cat <<-END
 	xtools
+	libxkbcommon
+	pkg-config
 	neovim
 	avahi
 	dbus
