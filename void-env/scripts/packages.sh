@@ -2,6 +2,7 @@
 #
 
 PKGS=$(cat <<-END
+	cargo
 	xtools
 	libxkbcommon
 	pkg-config
