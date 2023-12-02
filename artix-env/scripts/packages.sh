@@ -53,6 +53,9 @@ PKGS=(
 	wget
 	cronie
 	cronie-runit
+	dbus-runit
+	seatd-runit
+	seatd
 	ntp
 	ntp-runit
 	bashtop
@@ -123,4 +126,12 @@ LINK_DIRS=(
 	fuzzel
 )
 
-
+SERVICES=(
+	sshd
+	bluetoothd
+	cronie
+	ntpd
+	seatd
+	dbus
+	cupsd
+)

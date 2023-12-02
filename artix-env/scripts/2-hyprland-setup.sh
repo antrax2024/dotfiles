@@ -4,13 +4,17 @@ USERNAME='gargula'
 EDITOR='nvim'
 DOTFILES="$HOME/dotfiles"
 SERVICE='/run/runit/service'
+SV_DST='/run/runit/service'
+SV_SCR='/etc/runit/sv'
+ARTIX_ENV="$DOTFILES/artix-env"
+
+
 
 source $DOTFILES/bin/functions.sh
 source ./packages.sh
 
 printStatus "Upgrading..."
 sudo pacman -Syu
-
 
 printStatus "Linking mkinitcpio.conf"
 sudo ln -sf $DOTFILES/artix-env/etc/mkinitcpio.conf /etc/mkinitcpio.conf
@@ -37,16 +41,13 @@ printStatus "Install dependencies for hyprland..."
 paru -S gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info cpio
 
 printStatus "Install Packages"
-
 paru -S ${PKGS[*]}
 
 
 printStatus "Prepare to link..."
 # get length of an array
 arraylength=${#LINK_DIRS[@]}
-
 mkdir $HOME/.config
-
 # use for loop to read all values and indexes
 for (( i=0; i<${arraylength}; i++ ));
 do
@@ -58,17 +59,14 @@ done
 printStatus "Changind default shell to Fish Shell..."
 chsh -s /usr/bin/fish $USERNAME
 
-printStatus "Enable openSSH..."
-sudo ln -s /etc/runit/sv/sshd $SERVICE
-
-printStatus "Enable bluetooth"
-sudo ln -s /etc/runit/sv/bluetoothd $SERVICE
-
-printStatus "Enable cronie..."
-sudo ln -s /etc/runit/sv/cronie $SERVICE
-
-printStatus "Enable NTP Sync"
-sudo ln -s /etc/runit/sv/ntpd /run/runit/service
+printStatus "Enable Services..."
+arraylength=${#SERVICES[@]}
+# use for loop to read all values and indexes
+for (( i=0; i<${arraylength}; i++ ));
+do
+	printStatus "Link ${SERVICES[$i]}"
+	ln -s $SV_SCR/${SERVICES[$i]} $SV_DST
+done
 
 printStatus "Enable Swap File... Hummmmmm"
 sudo fallocate -l 4G /swapfile
@@ -94,9 +92,6 @@ sudo mkinitcpio -p linux-zen
 
 printStatus "Linking greetd..."
 sudo ln -sf $DOTFILES/artix-env/etc/greetd/config.toml /etc/greetd/config.toml
-
-printStatus "Enable cupsd Print Service..."
-sudo ln -s /etc/runit/sv/cupsd $SERVICE
 
 printStatus "Dont forget to enable greetd... Bye.."
 
