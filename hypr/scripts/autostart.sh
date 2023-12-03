@@ -26,3 +26,6 @@ run $HOME/dotfiles/bin/delete-old-files.sh &
 
 sleep 5
 keepassxc & disown
+
+run $HOME/dotfiles/hypr/scripts/wol.sh
+
