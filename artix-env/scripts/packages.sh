@@ -6,6 +6,7 @@ PKGS=(
 	#########################
 	firefox
 	looking-glass
+	sdbus-cpp
 	less
 	nodejs
 	npm
