@@ -1,7 +1,10 @@
 #!/usr/bin/bash
 
 source ~/dotfiles/bin/functions.sh
+DOTFILES="$HOME/dotfiles"
 SERVICE='/run/runit/service'
+LG_TMP_CFG_SRC="$DOTFILES/artix-env/etc/tmpfiles.d/10-looking-glass.conf"
+LG_TMP_CFG_DST="/etc/tmpfiles.d/10-looking-glass.conf"
 
 printStatus "Updating..."
 
@@ -46,6 +49,9 @@ sleep 5
 sudo virsh net-start default
 sudo virsh net-autostart default
 sudo virsh net-list --all
+
+printStatus "Linking $LG_TMP_CFG_DST"
+sudo ln -sf $LG_TMP_CFG_SRC $LG_TMP_CFG_DST
 
 
 printStatus "reboot your system, baby..."

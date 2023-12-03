@@ -5,6 +5,7 @@ PKGS=(
 	# APPS
 	#########################
 	firefox
+	looking-glass
 	less
 	nodejs
 	npm
