@@ -43,7 +43,8 @@ PKGS=(
 	thunar-archive-plugin
 	thunar-media-tags-plugin
 	thunar-volman
-	insync
+	megasync-bin
+	gvfs
 	file-roller
 	tumbler
 	cmake

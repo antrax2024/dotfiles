@@ -13,7 +13,7 @@ run nm-applet &
 run dunst &
 run blueberry-tray &
 run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-run insync start --qt-qpa-platform=xcb &
+run megasync &
 run copyq &
 # Pipewire UP
 run pipewire & 
