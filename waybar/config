@@ -26,7 +26,7 @@
 	"custom/disk_vms": {
 		"format": "󰋊 <span color=\"white\">/VMs {}</span>",
 		"interval": 5,
-		"exec": "/home/gargula/dotfiles/bin/vmsinfo.py"
+		"exec": "/home/crow/dotfiles/bin/vmsinfo.py"
 	},
 	"temperature": {
 		"interval": 1,

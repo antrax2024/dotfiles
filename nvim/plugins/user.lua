@@ -16,7 +16,7 @@ return {
 	  dependencies = { "rafamadriz/friendly-snippets" },
 	  -- install jsregexp (optional!).
 	  build = "make install_jsregexp",
-	  require("luasnip.loaders.from_vscode").load_standalone({path = "/home/gargula/dotfiles/nvim/snippets.json"})
+	  require("luasnip.loaders.from_vscode").load_standalone({path = "/home/crow/dotfiles/nvim/snippets.json"})
   },
 
   { "elkowar/yuck.vim" },

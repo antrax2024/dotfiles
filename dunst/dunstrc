@@ -332,7 +332,7 @@
 
 [play_sound]
     summary = "*"
-    script = /home/gargula/dotfiles/dunst/alert.sh
+    script = /home/crow/dotfiles/dunst/alert.sh
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
 #

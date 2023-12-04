@@ -7,7 +7,7 @@ function run {
   fi
 }
 
-run /home/gargula/dotfiles/waybar/launch.sh & 
+run $HOME/dotfiles/waybar/launch.sh & 
 run wpaperd &
 run nm-applet &
 run dunst &
@@ -20,7 +20,7 @@ run pipewire &
 run pipewire-pulse & 
 run wireplumber &
 # Screensaver
-run swayidle -w timeout 300 '/home/gargula/dotfiles/bin/screensaver.sh' &
+run swayidle -w timeout 300 "$HOME/dotfiles/bin/screensaver.sh" &
 # Delete old files
 run $HOME/dotfiles/bin/delete-old-files.sh &
 

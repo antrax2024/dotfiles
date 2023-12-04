@@ -1,3 +1,3 @@
-#!/usr/bin/bash
+!/usr/bin/bash
 
-paplay /home/gargula/dotfiles/dunst/alert.mp3
+paplay /home/crow/dotfiles/dunst/alert.mp3

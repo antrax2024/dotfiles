@@ -1,7 +1,8 @@
 #!/usr/bin/bash
 ################################
 # Imprime o status
-source /home/gargula/dotfiles/bin/tint.sh
+
+source $HOME/dotfiles/bin/tint.sh
 function printStatus() {
 	tint "yellow(######################################################)"
 	tint "bold(%s)" "green($1)"
