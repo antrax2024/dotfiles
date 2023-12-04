@@ -6,7 +6,7 @@ source ../../bin/functions.sh
 printStatus "Install DKMS drivers..."
 paru -S nvidia-dkms nvidia-utils nvidia-settings
 
-sudo ln -sf /home/gargula/dotfiles/artix-env/etc/modprobe.d/nvidia.conf /etc/modprobe.d/nvidia.conf
+sudo ln -sf /home/crow/dotfiles/artix-env/etc/modprobe.d/nvidia.conf /etc/modprobe.d/nvidia.conf
 
 printStatus "Append: nvidia nvidia_modeset nvidia_uvm nvidia_drm to Modules mkinitcpio.conf"
 

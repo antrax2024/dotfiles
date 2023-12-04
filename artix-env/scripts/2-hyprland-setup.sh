@@ -1,6 +1,6 @@
 # CONFIG VARS
 #
-USERNAME='gargula'
+USERNAME='crow'
 EDITOR='nvim'
 DOTFILES="$HOME/dotfiles"
 SERVICE='/run/runit/service'

@@ -1,4 +1,4 @@
-USERNAME='gargula'
+USERNAME='crow'
 HOSTNAME='artixBox'
 EDITOR='nvim'
 
