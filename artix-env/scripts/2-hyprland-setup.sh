@@ -98,6 +98,11 @@ printStatus "Remove elogind-runit and install seatd-runit..."
 sudo pacman -S seatd-runit
 sudo ln -s $SV_SCR/seatd $SV_DST
 
+printStatus "Linking mDNS file..."
+sudo ln -sf $DOTFILES/artix-env/etc/nsswitch.conf /etc/nsswitch.conf
+
+
+
 printStatus "Dont forget to enable greetd... Bye.."
 
 
