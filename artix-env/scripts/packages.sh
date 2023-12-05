@@ -114,6 +114,10 @@ PKGS=(
 	ttf-font-awesome
 	noto-fonts-emoji
 	#########################
+	#mDNS
+	avahi
+	nss-mdns
+	#########################
 	)
 
 LINK_DIRS=(
@@ -134,4 +138,5 @@ SERVICES=(
 	cronie
 	ntpd
 	cupsd
+	avahi-daemon
 )
