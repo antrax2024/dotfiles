@@ -1,7 +1,7 @@
 
 <shmem name='looking-glass'>
   <model type='ivshmem-plain'/>
-  <size unit='M'>32</size>
+  <size unit='M'>128</size>
 </shmem>
 
 
