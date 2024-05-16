@@ -9,7 +9,7 @@ end
 # environment
 set -Ux STARSHIP_CONFIG $HOME/dotfiles/starship/starship.toml
 set -Ux EDITOR 'nvim'
-set -Ux GEM_HOME "$HOME/gems"
+set -Ux GEM_HOME "$HOME/.gems"
 set -Ux GOPATH "$HOME/.go"
 set -Ux MANPAGER 'nvim +Man!'
 set -Ux DOTFILES "$HOME/dotfiles"
@@ -25,8 +25,6 @@ alias premove='paru -Rcns'
 
 # PATH
 fish_add_path $HOME/.local/bin
-fish_add_path $HOME/dotfiles/bin
-fish_add_path $HOME/dotfiles/nvidia-fan-control
 
 
 starship init fish | source
