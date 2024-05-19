@@ -26,7 +26,7 @@ foreground = "#F9F9F9"
 size = 12.0
 
 [font.bold]
-family = "hack"
+family= "Hack Nerd Font Propo"
 style = "Bold"
 
 [font.bold_italic]
@@ -34,11 +34,11 @@ family = "monospace"
 style = "Bold Italic"
 
 [font.italic]
-family = "hack"
+family= "Hack Nerd Font Propo"
 style = "Italic"
 
 [font.normal]
-family = "hack"
+family= "Hack Nerd Font Propo"
 style = "Regular"
 
 [[keyboard.bindings]]
