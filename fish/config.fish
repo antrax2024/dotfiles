@@ -8,11 +8,11 @@ end
 
 # environment
 set -Ux STARSHIP_CONFIG $HOME/dotfiles/starship/starship.toml
-set -Ux EDITOR 'nvim'
-set -Ux VISUAL 'nvim'
+set -Ux EDITOR 'lvim'
+set -Ux VISUAL 'lvim'
 set -Ux GEM_HOME "$HOME/.gems"
 set -Ux GOPATH "$HOME/.go"
-set -Ux MANPAGER 'nvim +Man!'
+set -Ux MANPAGER 'lvim +Man!'
 set -Ux DOTFILES "$HOME/dotfiles"
 
 
