@@ -1,4 +1,4 @@
 #!/bin/bash
 
 
-./cortile -config /home/gargula/dotfiles/cortile/config.toml & disown
+$HOME/dotfiles/cortile/cortile -config /home/gargula/dotfiles/cortile/config.toml & disown
