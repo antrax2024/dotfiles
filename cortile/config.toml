@@ -40,6 +40,8 @@ tiling_icon = [
 #   ["WM_CLASS", "WM_NAME"] = ["ignore all windows with this class", "but allow those with this name"]
 # ]
 window_ignore = [
+    ["vlc", ""],
+    ["qbittorrent",""],
     ["keepassxc",""],
     ["blueberry.py",""],
     ["surfshark", ""],
