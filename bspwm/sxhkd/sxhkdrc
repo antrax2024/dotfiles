@@ -45,7 +45,7 @@ super + e
 
 #Browser
 super + w
-    vivaldi-stable
+    firefox-developer-edition
 
 #Conky-toggle
 super + c
