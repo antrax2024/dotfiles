@@ -40,8 +40,8 @@ super + F12
 #################################################################
 
 #Atom
-super + e
-    atom
+super + space
+    /home/gargula/dotfiles/rofi/launchers/type-4/launcher.sh
 
 #Browser
 super + w
