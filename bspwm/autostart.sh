@@ -47,6 +47,8 @@ run surfshark
 run ~/dotfiles/bin/nvidia.sh
 run ~/dotfiles/bin/onedrive.sh
 
+run xfce4-screensaver &
+
 
 #nitrogen --restore &
 #run caffeine &
