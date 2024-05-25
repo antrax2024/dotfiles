@@ -53,7 +53,7 @@ run surfshark
 run ~/dotfiles/bin/nvidia.sh
 run ~/dotfiles/bin/onedrive.sh
 
-run albert 
+albert & 
 
 #nitrogen --restore &
 #run caffeine &
