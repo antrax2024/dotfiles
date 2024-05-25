@@ -63,21 +63,10 @@ super + x
 super + shift + x
     arcolinux-powermenu
 
-#Rofi theme selector
-super + r
-    rofi-theme-selector
-
-#Urxvt
-super + t
-    urxvt
-
 #Pavucontrol
 super + v
     pavucontrol
 
-#Audio player
-super + m
-    lollypop
 
 #alacritty
 super + Return
@@ -421,8 +410,8 @@ super + bracket{left,right}
 	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
 
 # set the window state
-super + space
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+#super + space
+#	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # Move focus to other monitor
 super + BackSpace
