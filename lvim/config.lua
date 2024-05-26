@@ -23,5 +23,7 @@ lvim.plugins = {
           input = { enabled = false },
         })
       end,
-    }
+    },
+
+  {'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}}
 }
