@@ -50,3 +50,4 @@ history = 50000
 
 [window]
 opacity = 0.2
+option_as_alt = "Both"

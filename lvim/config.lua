@@ -7,5 +7,21 @@
 --
 lvim.transparent_window = true
 
+lvim.colorscheme = "codedark"
 
 
+lvim.plugins = {
+  { "lunarvim/colorschemes" },
+    {
+      'tomasiser/vim-code-dark',
+    },
+    {
+
+      "stevearc/dressing.nvim",
+      config = function()
+        require("dressing").setup({
+          input = { enabled = false },
+        })
+      end,
+    }
+}
