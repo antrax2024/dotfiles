@@ -10,6 +10,10 @@ PACKAGES=(
 	python-virtualenv
 	starship
 	keepassxc
+	eza
+	duf
+	gdu
+	qbittorrent
 )
 
-paru -S $PACKAGES
+paru -S ${PACKAGES[@]}
