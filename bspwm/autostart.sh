@@ -45,7 +45,7 @@ run xfce4-clipman &
 run keepassxc
 run surfshark
 run ~/dotfiles/bin/nvidia.sh
-run ~/dotfiles/bin/onedrive.sh
+#run ~/dotfiles/bin/onedrive.sh
 
 run xfce4-screensaver &
 
