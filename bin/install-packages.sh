@@ -9,6 +9,7 @@ PACKAGES=(
 	neovim-git
 	python-virtualenv
 	starship
+	keepassxc
 )
 
 paru -S $PACKAGES
