@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PACKAGES=(
-	firefox-developer-edition-i18n-en-us
+	firefox-developer-edition
 	surfshark-client
 	ventoy
 	gthumb
@@ -14,6 +14,7 @@ PACKAGES=(
 	duf
 	gdu
 	qbittorrent
+	onedrivegui
 )
 
 paru -S ${PACKAGES[@]}

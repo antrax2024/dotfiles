@@ -1,10 +1,9 @@
 #!/bin/bash
 
 function run {
-  if ! pgrep $1 ;
-  then
-    $@&
-  fi
+	if ! pgrep $1; then
+		$@ &
+	fi
 }
 
 #Find out your monitor name with xrandr or arandr (save and you get this line)
@@ -22,16 +21,16 @@ $HOME/.config/polybar/launch.sh &
 keybLayout=$(setxkbmap -v | awk -F "+" '/symbols/ {print $2}')
 
 if [ $keybLayout = "be" ]; then
-  run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc-azerty &
+	run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc-azerty &
 else
-  run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
+	run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 fi
 
 feh --bg-fill ~/dotfiles/wallpapers/the_tree_of_life-wallpaper-2560x1080.jpg &
 
 dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
 xsetroot -cursor_name left_ptr &
-picom --config ~/dotfiles/picom/picom.conf &
+compfy &
 run nm-applet &
 run xfce4-power-manager &
 numlockx on &
@@ -41,14 +40,13 @@ blueberry-tray &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 run xfce4-clipman &
 
-
 run keepassxc
 run surfshark
 run ~/dotfiles/bin/nvidia.sh
-#run ~/dotfiles/bin/onedrive.sh
+
+run onedrivegui
 
 run xfce4-screensaver &
-
 
 #nitrogen --restore &
 #run caffeine &
