@@ -26,7 +26,7 @@ foreground = "#F9F9F9"
 size = 12.0
 
 [font.bold]
-family= "Hack Nerd Font Propo"
+family = "Hack Nerd Font Propo"
 style = "Bold"
 
 [font.bold_italic]
@@ -34,11 +34,11 @@ family = "monospace"
 style = "Bold Italic"
 
 [font.italic]
-family= "Hack Nerd Font Propo"
+family = "Hack Nerd Font Propo"
 style = "Italic"
 
 [font.normal]
-family= "Hack Nerd Font Propo"
+family = "Hack Nerd Font Propo"
 style = "Regular"
 
 [[keyboard.bindings]]
@@ -51,3 +51,4 @@ history = 50000
 [window]
 opacity = 0.2
 option_as_alt = "Both"
+padding = { x = 8, y = 8 }
