@@ -17,3 +17,6 @@ for t in ${CONFIGS[@]}; do
 	rm -rfv $DST/$t
 	ln -sf $SRC/$t $DST/$t
 done
+
+mkdir $DST/gtk-4.0
+cp -rv $DST/gtk-3.0/* $DST/gtk-4.0/
