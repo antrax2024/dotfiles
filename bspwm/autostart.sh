@@ -26,7 +26,8 @@ else
 	run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 fi
 
-feh --bg-fill ~/dotfiles/wallpapers/the_tree_of_life-wallpaper-2560x1080.jpg &
+#feh --bg-fill ~/dotfiles/wallpapers/the_tree_of_life-wallpaper-2560x1080.jpg &
+feh --bg-fill ~/dotfiles/wallpapers/beyond_the_story_i-wallpaper-2560x1600.jpg &
 
 dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
 xsetroot -cursor_name left_ptr &
