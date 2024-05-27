@@ -50,7 +50,7 @@ super + w
 
 #archlinux-logout
 super + x
-    archlinux-logout
+    /home/gargula/dotfiles/rofi/powermenu/type-2/powermenu.sh
 
 #Pavucontrol
 super + v
