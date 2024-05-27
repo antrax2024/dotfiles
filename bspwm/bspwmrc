@@ -66,6 +66,7 @@ bspc rule -a TelegramDesktop state=floating
 bspc rule -a OneDriveGUI state=floating
 bspc rule -a vlc state=floating
 bspc rule -a Deluge-gtk state=floating
+bspc rule -a Qalculate-gtk state=floating
 
 #bspc rule -a Archlinux-tweak-tool.py state=floating
 bspc rule -a Arcolinux-calamares-tool.py state=floating
