@@ -7,8 +7,8 @@
 #################################################################
 
 # Vivaldi
-super + F1
-  firefox-developer-edition
+super + n
+  /usr/bin/looking-glass-client
 
 # Atom
 super + F2
