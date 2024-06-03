@@ -38,7 +38,6 @@ numlockx on &
 blueberry-tray &
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-/usr/bin/copyq &
 
 run dunst &
 run keepassxc
@@ -46,3 +45,6 @@ run surfshark
 run ~/dotfiles/bin/nvidia.sh
 run onedrivegui
 run xfce4-screensaver &
+
+sleep 5
+/usr/bin/copyq &
