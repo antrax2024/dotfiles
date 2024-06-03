@@ -38,24 +38,11 @@ numlockx on &
 blueberry-tray &
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-/usr/lib/xfce4/notifyd/xfce4-notifyd &
-run xfce4-clipman &
 
+run dunst &
+run xfce4-clipman &
 run keepassxc
 run surfshark
 run ~/dotfiles/bin/nvidia.sh
-
 run onedrivegui
-
 run xfce4-screensaver &
-
-#nitrogen --restore &
-#run caffeine &
-#run vivaldi-stable &
-#run firefox &
-#run thunar &
-#run dropbox &
-#run insync start &
-#run discord &
-#run spotify &
-#run atom &
