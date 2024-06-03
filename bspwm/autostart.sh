@@ -38,13 +38,12 @@ numlockx on &
 blueberry-tray &
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+/usr/bin/copyq &
 
 run dunst &
-run xfce4-clipman &
 run keepassxc
 run surfshark
 run ~/dotfiles/bin/nvidia.sh
 run onedrivegui
 run xfce4-screensaver &
-run /usr/bin/zapzap &
 run /usr/bin/telegram-desktop &
