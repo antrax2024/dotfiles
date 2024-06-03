@@ -46,4 +46,3 @@ run surfshark
 run ~/dotfiles/bin/nvidia.sh
 run onedrivegui
 run xfce4-screensaver &
-run /usr/bin/telegram-desktop &
