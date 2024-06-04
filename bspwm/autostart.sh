@@ -41,10 +41,10 @@ blueberry-tray &
 
 run dunst &
 run keepassxc
-run surfshark
 run ~/dotfiles/bin/nvidia.sh
 run onedrivegui
 run xfce4-screensaver &
 
 sleep 5
 /usr/bin/copyq &
+/usr/bin/surfshark &
