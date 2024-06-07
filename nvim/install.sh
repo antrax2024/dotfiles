@@ -4,6 +4,8 @@
 #
 #
 
+
+
 DST="$HOME/.config/nvim"
 DOTFILES="$HOME/dotfiles"
 
