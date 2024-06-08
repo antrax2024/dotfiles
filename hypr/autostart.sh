@@ -6,6 +6,8 @@ function run {
 	fi
 }
 
+run hypridle
+
 sleep 5
 /usr/bin/keepassxc &
 /home/gargula/dotfiles/bin/nvidiafan.sh &
