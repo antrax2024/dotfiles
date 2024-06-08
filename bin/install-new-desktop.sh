@@ -25,6 +25,9 @@ PACKAGES=(
 	nwg-look
 	zapzap
 	copyq
+	hypridle
+	mpv
+	hyprpaper
 )
 
 paru -S ${PACKAGES[@]}
