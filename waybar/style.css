@@ -6,6 +6,7 @@
 window#waybar {
 	background: #292b2e;
 	color: #fdf6e3;
+  opacity: 0.8;
 }
 
 #custom-right-arrow-dark,
@@ -36,6 +37,12 @@ window#waybar {
 	padding: 0 2px;
 	color: #fdf6e3;
 }
+
+#workspaces button.active {
+  color: #2aa198;
+  border-bottom: 1px solid;
+}
+
 #workspaces button.focused {
 	color: #268bd2;
 }

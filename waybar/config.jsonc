@@ -62,10 +62,12 @@
 		"tooltip": false
 	},
 
-	"sway/workspaces": {
-		"disable-scroll": true,
-		"format": "{name}"
-	},
+  "hyprland/workspaces": {
+    "persistent-workspaces": {
+      "*": 5, // 5 workspaces by default on every monitor
+    },
+  },
+
 
 	"clock#1": {
 		"format": "{:%A}",
@@ -130,7 +132,7 @@
 
   "bluetooth": {
 	// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-	"on-click-right": "overskride",
+	"on-click-right": "blueberry",
 	"format": " {status}",
 	"format-disabled": "", // an empty format will hide the module
 	"format-connected": " {num_connections} connected",
