@@ -30,9 +30,17 @@
 		"custom/left-arrow-dark",
 		"disk",
 		"custom/left-arrow-light",
+
+		"custom/left-arrow-dark",
+		"bluetooth",
+		"custom/left-arrow-light",
+
+
 		"custom/left-arrow-dark",
 		"pulseaudio",
 		"custom/left-arrow-light",
+
+
 
 		"tray"
 	],
@@ -118,5 +126,19 @@
 	},
 	"tray": {
 		"icon-size": 20
-	}
+	},
+
+  "bluetooth": {
+	// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+	"on-click-right": "overskride",
+	"format": " {status}",
+	"format-disabled": "", // an empty format will hide the module
+	"format-connected": " {num_connections} connected",
+	"tooltip-format": "{controller_alias}\t{controller_address}",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+}
+
+
+
 }

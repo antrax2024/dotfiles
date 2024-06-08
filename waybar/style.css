@@ -19,6 +19,7 @@ window#waybar {
 }
 
 #workspaces,
+#bluetooth,
 #clock.1,
 #clock.2,
 #clock.3,
@@ -48,6 +49,10 @@ window#waybar {
 	padding: 0 3px;
 }
 
+#bluetooth {
+  color: #7532a8;
+}
+
 #pulseaudio {
 	color: #268bd2;
 }
@@ -64,6 +69,7 @@ window#waybar {
 	color: #b58900;
 }
 
+#bluetooth,
 #clock,
 #pulseaudio,
 #memory,
