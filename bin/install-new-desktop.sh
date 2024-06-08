@@ -13,6 +13,12 @@ PACKAGES=(
 	eza
 	duf
 	gdu
+	fd
+	lazygit
+	npm
+	nodejs
+	python-pip
+	python-virtualenv
 	qbittorrent
 	onedrivegui
 	dunst
