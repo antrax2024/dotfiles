@@ -6,6 +6,7 @@
 window#waybar {
 	background: #292b2e;
 	color: #fdf6e3;
+  font-weight: bold;
   opacity: 0.8;
 }
 
