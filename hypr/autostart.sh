@@ -7,6 +7,7 @@ function run {
 }
 
 run hypridle
+run dunst
 
 sleep 5
 /usr/bin/keepassxc &
