@@ -28,6 +28,12 @@ PACKAGES=(
 	hypridle
 	mpv
 	hyprpaper
+	wlogout
+	thunar
+	thunar-archive-plugin
+	thunar-media-tags-plugin
+	thunar-volman
+
 )
 
 paru -S ${PACKAGES[@]}
