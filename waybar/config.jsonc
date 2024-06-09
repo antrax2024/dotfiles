@@ -25,6 +25,11 @@
 		"custom/left-arrow-light",
 
 		"custom/left-arrow-dark",
+		"temperature",
+		"custom/left-arrow-light",
+
+
+		"custom/left-arrow-dark",
 		"memory",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
@@ -139,8 +144,14 @@
 	"tooltip-format": "{controller_alias}\t{controller_address}",
 	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
 	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
-}
+},
 
-
+ "temperature": {
+    // "thermal-zone": 2,
+    "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+    // "critical-threshold": 80,
+    // "format-critical": "{temperatureC}°C ",
+    "format": "Temp {temperatureC}°C "
+},
 
 }

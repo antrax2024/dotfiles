@@ -20,6 +20,7 @@ window#waybar {
 	background: #1a1a1a;
 }
 
+#temperature,
 #workspaces,
 #bluetooth,
 #clock.1,
@@ -77,6 +78,11 @@ window#waybar {
 	color: #b58900;
 }
 
+#temperature {
+  color: #33ccff;
+}
+
+#temperature,
 #bluetooth,
 #clock,
 #pulseaudio,
