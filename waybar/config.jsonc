@@ -9,15 +9,6 @@
 		"custom/right-arrow-dark"
 	],
 	"modules-center": [
-		"custom/left-arrow-dark",
-		"clock#1",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"clock#2",
-		"custom/right-arrow-dark",
-		"custom/right-arrow-light",
-		"clock#3",
-		"custom/right-arrow-dark"
 	],
 	"modules-right": [
 		"custom/left-arrow-dark",
@@ -45,6 +36,9 @@
 		"pulseaudio",
 		"custom/left-arrow-light",
 
+		"custom/left-arrow-dark",
+		"clock",
+		"custom/left-arrow-light",
 
 
 		"tray"
@@ -73,26 +67,12 @@
     },
   },
 
-
-	"clock#1": {
-		"format": "{:%A}",
-		"tooltip": false
-	},
-	"clock#2": {
-		"format": "{:%H:%M:%S}",
+	"clock": {
+		"format": "{:%m-%d-%Y %H:%M:%S}",
 		"tooltip": false,
     "interval": 1
 	},
-	"clock#3": {
-		"format": "{:%m-%d-%Y}",
-		"tooltip": false
-	},
 
-
-  "clock": {
-		"format": "{:%m-%d-%Y}",
-		"tooltip": false
-  },
 
 	"pulseaudio": {
 		"format": "{icon} {volume:2}%",
