@@ -88,6 +88,12 @@
 		"tooltip": false
 	},
 
+
+  "clock": {
+		"format": "{:%m-%d-%Y}",
+		"tooltip": false
+  },
+
 	"pulseaudio": {
 		"format": "{icon} {volume:2}%",
 		"format-bluetooth": "{icon}  {volume}%",

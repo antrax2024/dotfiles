@@ -36,6 +36,7 @@ PACKAGES=(
 	ripgrep
 	plocate
 	nvidia-settings
+	cups
 
 )
 
@@ -60,3 +61,6 @@ for t in ${CONFIGS[@]}; do
 	echo "Linking $SRC -> $DST / ($t)..."
 	ln -sf $SRC/$t $DST/$t
 done
+
+echo 'Enable cups service'
+sudo systemctl enable cups.service
