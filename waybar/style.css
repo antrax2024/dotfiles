@@ -23,9 +23,7 @@ window#waybar {
 #temperature,
 #workspaces,
 #bluetooth,
-#clock.1,
-#clock.2,
-#clock.3,
+#clock,
 #pulseaudio,
 #memory,
 #cpu,
@@ -56,6 +54,10 @@ window#waybar {
 	background: #1a1a1a;
 	border: #1a1a1a;
 	padding: 0 3px;
+}
+
+#clock {
+  color: #00cc00;
 }
 
 #bluetooth {
