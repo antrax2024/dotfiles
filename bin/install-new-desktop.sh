@@ -35,6 +35,7 @@ PACKAGES=(
 	thunar-volman
 	ripgrep
 	plocate
+	nvidia-settings
 
 )
 
