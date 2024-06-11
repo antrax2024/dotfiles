@@ -37,6 +37,7 @@ PACKAGES=(
 	plocate
 	nvidia-settings
 	cups
+	cronie
 
 )
 
@@ -62,5 +63,7 @@ for t in ${CONFIGS[@]}; do
 	ln -sf $SRC/$t $DST/$t
 done
 
-echo 'Enable cups service'
+echo 'Enable cups.service'
 sudo systemctl enable cups.service
+echo "Enable cronie.service"
+sudo systemctl enable cronie.service
