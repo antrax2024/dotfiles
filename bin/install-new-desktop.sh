@@ -34,6 +34,7 @@ PACKAGES=(
 	thunar-media-tags-plugin
 	thunar-volman
 	ripgrep
+	plocate
 
 )
 
