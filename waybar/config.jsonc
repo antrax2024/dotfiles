@@ -63,7 +63,7 @@
   },
 
 	"clock": {
-		"format": "{:%m-%d-%Y %H:%M:%S}",
+		"format": "  {:%m-%d-%Y %H:%M:%S}",
 		"tooltip": false,
     "interval": 1
 	},
@@ -86,11 +86,11 @@
 	},
 	"memory": {
 		"interval": 5,
-		"format": "Mem {used:0.1f} G/{total:0.1f} G"
+		"format": " {used:0.1f} G/{total:0.1f} G"
 	},
 	"cpu": {
 		"interval": 2,
-		"format": "CPU {usage:2}%"
+		"format": " {usage:2}%"
 	},
 	"battery": {
 		"states": {
@@ -109,7 +109,7 @@
 	},
 	"disk": {
 		"interval": 5,
-		"format": "Disk {used}/{total}",
+		"format": "󱊞 {used}/{total}",
 		"path": "/"
 	},
 	"tray": {
@@ -132,7 +132,7 @@
     "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
     // "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C ",
-    "format": "Temp {temperatureC}°C "
+    "format": " {temperatureC}°C"
 },
 
 }
