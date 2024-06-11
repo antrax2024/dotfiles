@@ -38,6 +38,7 @@ PACKAGES=(
 	nvidia-settings
 	cups
 	cronie
+	file-roller
 
 )
 
