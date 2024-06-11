@@ -33,6 +33,7 @@ PACKAGES=(
 	thunar-archive-plugin
 	thunar-media-tags-plugin
 	thunar-volman
+	ripgrep
 
 )
 
@@ -50,11 +51,10 @@ CONFIGS=(
 	waybar
 )
 
-SRC="~/dotfiles"
-DST="~/.config"
+SRC="$HOME/dotfiles"
+DST="$HOME/.config"
 
 for t in ${CONFIGS[@]}; do
 	echo "Linking $SRC -> $DST / ($t)..."
-	rm -rfv $DST/$t
 	ln -sf $SRC/$t $DST/$t
 done
