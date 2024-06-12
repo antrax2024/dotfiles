@@ -28,7 +28,7 @@ print(Fore.YELLOW + '=============================================')
 print('Please, click in the window and the magical happen...')
 
 data = subprocess.run(['/home/gargula/dotfiles/bin/hyprprop.sh'], capture_output=True)
-jsondata = json.loads(data.stdout.decode('utf-8'))
+jsondata = json.loads(data.stdout)
 
 
 
