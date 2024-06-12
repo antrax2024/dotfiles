@@ -1,4 +1,7 @@
-#!/usr/bin/env -S PYENV_VERSION=dotfiles-bin python
+#!/home/gargula/dotfiles/bin/hyprwindow/bin/python3
+
+import os
+os.system('source /home/gargula/dotfiles/bin/hyprwindow/bin/activate.fish')
 
 import json
 import subprocess
@@ -25,9 +28,6 @@ print(Fore.YELLOW + '=============================================')
 print('Please, click in the window and the magical happen...')
 
 data = subprocess.run(['/home/gargula/dotfiles/bin/hyprprop.sh'], capture_output=True)
-
-
-
 jsondata = json.loads(data.stdout.decode('utf-8'))
 
 
