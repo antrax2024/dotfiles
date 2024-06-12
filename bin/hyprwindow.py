@@ -1,6 +1,13 @@
 #!/usr/bin/env -S PYENV_VERSION=dotfiles-bin python
 
-from colorama import Fore, Back, Style
+from colorama import Fore, Back, Style, init
+init(autoreset=True)
 
-print(Back.GREEN + 'and with a green background')
+version=0.12
 
+
+print(Fore.YELLOW + '=============================================')
+print(Fore.GREEN + 'Hyprwindow version ' + str(version))
+print(Fore.YELLOW + '=============================================')
+
+print('Please, click in the window and the magical happen...')
