@@ -39,6 +39,7 @@ PACKAGES=(
 	cups
 	cronie
 	file-roller
+	reflector
 
 )
 
@@ -68,3 +69,6 @@ echo 'Enable cups.service'
 sudo systemctl enable cups.service
 echo "Enable cronie.service"
 sudo systemctl enable cronie.service
+echo "Enable reflector.service"
+sudo systemctl enable --now reflector.service
+sudo systemctl enable --now reflector.timer
