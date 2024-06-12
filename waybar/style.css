@@ -71,7 +71,7 @@ window#waybar {
 	color: #2aa198;
 }
 #cpu {
-	color: #6c71c4;
+	color: #ffffcc;
 }
 #battery {
 	color: #859900;
@@ -81,7 +81,7 @@ window#waybar {
 }
 
 #temperature {
-  color: #33ccff;
+  color: #ff00ff;
 }
 
 #temperature,
