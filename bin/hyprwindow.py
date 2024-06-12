@@ -34,21 +34,20 @@ jsondata = json.loads(data.stdout)
 
 
 initialTitle = jsondata['initialTitle']
-
 initialClass = jsondata['initialClass']
+sizeX = jsondata['size'][0]
+sizeY = jsondata['size'][1]
 
 
 
 comment = "# Floating [Title = {} Class = {}]".format(initialTitle, initialClass)
-ruleLine = 'windowrulev2 = float,class:({}) title:({})'.format(initialClass, initialTitle)
+ruleLineFloat = 'windowrulev2 = float,class:({}) title:({})'.format(initialClass, initialTitle)
+ruleLineSize = 'windowrulev2 = size {} {},class:({}) title:({})'.format(sizeX, sizeY, initialClass, initialTitle)
+
 
 file_path = '/home/gargula/dotfiles/hypr/hyprland.conf'
-lines_to_append = [comment, ruleLine]
+lines_to_append = [comment, ruleLineFloat, ruleLineSize]
 append_lines_to_file(file_path, lines_to_append)
-
-
-print(comment)
-print(ruleLine)
 
 print(Fore.GREEN + "Lines appended with success!")
 
