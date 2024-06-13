@@ -44,6 +44,7 @@ PACKAGES=(
 	hyprshot
 	ntp
 	swappy
+	okular
 
 )
 
