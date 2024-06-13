@@ -63,6 +63,7 @@ CONFIGS=(
 	neofetch
 	waybar
 	swappy
+	fontconfig
 )
 
 SRC="$HOME/dotfiles"
@@ -88,5 +89,7 @@ done
 
 echo 'Adjust system clock...'
 sudo timedatectl set-local-rtc 1 --adjust-system-clock
+
+fc-cache -fv
 
 echo 'Finish...'
