@@ -40,6 +40,9 @@ PACKAGES=(
 	cronie
 	file-roller
 	reflector
+	wl-clipboard
+	hyprshot
+	ntp
 
 )
 
@@ -72,3 +75,6 @@ sudo systemctl enable cronie.service
 echo "Enable reflector.service"
 sudo systemctl enable --now reflector.service
 sudo systemctl enable --now reflector.timer
+
+echo "Enable ntpd.service"
+sudo systemctl enable --now ntpd.service
