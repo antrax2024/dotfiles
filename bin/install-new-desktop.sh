@@ -43,6 +43,7 @@ PACKAGES=(
 	wl-clipboard
 	hyprshot
 	ntp
+	swappy
 
 )
 
