@@ -25,9 +25,7 @@ PACKAGES=(
 	nwg-look
 	zapzap
 	copyq
-	hypridle
 	mpv
-	hyprpaper
 	wlogout
 	thunar
 	thunar-archive-plugin
@@ -41,11 +39,16 @@ PACKAGES=(
 	file-roller
 	reflector
 	wl-clipboard
-	hyprshot
 	swappy
 	okular
 	pynvim
 	noto-fonts-emoji
+	# Hyprland
+	hyprland
+	hyprcursor
+	hypridle
+	hyprpaper
+	hyprshot
 
 )
 
