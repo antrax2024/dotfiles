@@ -6,19 +6,11 @@ PACKAGES=(
 	firefox-developer-edition
 	surfshark-client
 	ttf-hack-nerd
-	neovim-git
-	python-virtualenv
 	starship
 	keepassxc
 	eza
 	duf
 	gdu
-	fd
-	lazygit
-	npm
-	nodejs
-	python-pip
-	python-virtualenv
 	qbittorrent
 	onedrivegui
 	dunst
@@ -31,24 +23,34 @@ PACKAGES=(
 	thunar-archive-plugin
 	thunar-media-tags-plugin
 	thunar-volman
-	ripgrep
 	plocate
 	nvidia-settings
 	cups
 	cronie
 	file-roller
 	reflector
-	wl-clipboard
 	swappy
 	okular
+	# neovim-git
+	neovim-git
+	python-virtualenv
+	lazygit
 	pynvim
 	noto-fonts-emoji
+	fd
+	npm
+	nodejs
+	python-pip
+	python-virtualenv
+	ripgrep
+
 	# Hyprland
 	hyprland
 	hyprcursor
 	hypridle
 	hyprpaper
 	hyprshot
+	wl-clipboard
 
 )
 
