@@ -61,6 +61,7 @@ CONFIGS=(
 	hypr
 	neofetch
 	waybar
+	swappy
 )
 
 SRC="$HOME/dotfiles"
