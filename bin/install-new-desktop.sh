@@ -46,6 +46,7 @@ PACKAGES=(
 	swappy
 	okular
 	pynvim
+	noto-fonts-emoji
 
 )
 
@@ -72,13 +73,20 @@ for t in ${CONFIGS[@]}; do
 	ln -sf $SRC/$t $DST/$t
 done
 
-echo 'Enable cups.service'
-sudo systemctl enable cups.service
-echo "Enable cronie.service"
-sudo systemctl enable cronie.service
-echo "Enable reflector.service"
-sudo systemctl enable --now reflector.service
-sudo systemctl enable --now reflector.timer
+SERVICES=(
+	cups.service
+	cronie.service
+	reflector.service
+	reflector.timer
+	ntpd.service
+)
 
-echo "Enable ntpd.service"
-sudo systemctl enable --now ntpd.service
+for s in ${SERVICES[@]}; do
+	echo "Enable ($s)..."
+	sudo systemctl enable %s
+done
+
+echo 'Adjust system clock...'
+sudo timedatectl set-local-rtc 1 --adjust-system-clock
+
+echo 'Finish...'
