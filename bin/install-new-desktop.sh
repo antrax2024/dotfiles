@@ -45,6 +45,7 @@ PACKAGES=(
 	ntp
 	swappy
 	okular
+	pynvim
 
 )
 
