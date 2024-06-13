@@ -42,7 +42,6 @@ PACKAGES=(
 	reflector
 	wl-clipboard
 	hyprshot
-	ntp
 	swappy
 	okular
 	pynvim
@@ -79,7 +78,6 @@ SERVICES=(
 	cronie.service
 	reflector.service
 	reflector.timer
-	ntpd.service
 )
 
 for s in ${SERVICES[@]}; do
@@ -89,6 +87,7 @@ done
 
 echo 'Adjust system clock...'
 sudo timedatectl set-local-rtc 1 --adjust-system-clock
+sudo hwclock --systohc
 
 fc-cache -fv
 
