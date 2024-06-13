@@ -1,7 +1,7 @@
 #!/home/gargula/dotfiles/bin/hyprwindow/bin/python3
 import json
 import subprocess
-from colorama import Fore, Back, Style, init
+from colorama import Fore, init
 
 init(autoreset=True)
 
@@ -47,4 +47,4 @@ file_path = "/home/gargula/dotfiles/hypr/hyprland.conf"
 lines_to_append = [comment, ruleLineFloat, ruleLineSize]
 append_lines_to_file(file_path, lines_to_append)
 
-print(Fore.GREEN + "Lines appended with success!")
+print(Fore.GREEN + "*** Lines appended with success!")
