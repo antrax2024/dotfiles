@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source "$HOME/dotfiles/bin/rainbow.sh"
+
 #Install Packages
 
 PACKAGES=(

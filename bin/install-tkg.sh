@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source rainbow.sh
+source "$HOME/dotfiles/bin/rainbow.sh"
 
 echoblue "*****************************"
 echoyellow "Cloning Repository..."
