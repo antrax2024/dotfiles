@@ -27,6 +27,8 @@ PACKAGES=(
 	thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman plocate
 	# pipewire
 	pipewire pipewire-audio pipewire-pulse wireplumber pavucontrol
+	# bluetooth
+	bluez blueberry
 	# neovim-git
 	neovim-git python-virtualenv lazygit pynvim noto-fonts-emoji fd npm nodejs python-pip python-virtualenv ripgrep
 	# Hyprland
@@ -62,6 +64,7 @@ SERVICES=(
 	cronie.service
 	reflector.service
 	reflector.timer
+	bluetooth.service
 )
 
 for s in "${SERVICES[@]}"; do
