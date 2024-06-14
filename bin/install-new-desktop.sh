@@ -14,47 +14,26 @@ PACKAGES=(
 	qbittorrent
 	onedrivegui
 	dunst
-	nwg-look
 	zapzap
 	copyq
 	mpv
-	wlogout
-	thunar
-	thunar-archive-plugin
-	thunar-media-tags-plugin
-	thunar-volman
-	plocate
 	nvidia-settings
 	cups
 	cronie
 	file-roller
 	reflector
-	swappy
 	okular
+	# Thunar
+	thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman plocate
+	# pipewire
+	pipewire pipewire-audio pipewire-pulse wireplumber pavucontrol
 	# neovim-git
-	neovim-git
-	python-virtualenv
-	lazygit
-	pynvim
-	noto-fonts-emoji
-	fd
-	npm
-	nodejs
-	python-pip
-	python-virtualenv
-	ripgrep
-
+	neovim-git python-virtualenv lazygit pynvim noto-fonts-emoji fd npm nodejs python-pip python-virtualenv ripgrep
 	# Hyprland
-	hyprland
-	hyprcursor
-	hypridle
-	hyprpaper
-	hyprshot
-	wl-clipboard
-
+	hyprland hyprcursor hypridle hyprpaper hyprshot wl-clipboard xdg-desktop-portal-hyprland wlogout swappy nwg-look
 )
 
-paru -S ${PACKAGES[@]}
+paru -S "${PACKAGES[@]}"
 
 # Config
 
@@ -73,9 +52,9 @@ CONFIGS=(
 SRC="$HOME/dotfiles"
 DST="$HOME/.config"
 
-for t in ${CONFIGS[@]}; do
+for t in "${CONFIGS[@]}"; do
 	echo "Linking $SRC -> $DST / ($t)..."
-	ln -sf $SRC/$t $DST/$t
+	ln -sf "$SRC/$t" "$DST/$t"
 done
 
 SERVICES=(
@@ -85,7 +64,7 @@ SERVICES=(
 	reflector.timer
 )
 
-for s in ${SERVICES[@]}; do
+for s in "${SERVICES[@]}"; do
 	echo "Enable ($s)..."
 	sudo systemctl enable %s
 done
@@ -95,5 +74,7 @@ sudo timedatectl set-local-rtc 1 --adjust-system-clock
 sudo hwclock --systohc
 
 fc-cache -fv
+
+# systemctl --user --now enable pipewire pipewire-pulse wireplumber
 
 echo 'Finish...'
