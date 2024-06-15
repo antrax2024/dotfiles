@@ -26,7 +26,7 @@ PACKAGES=(
 	reflector
 	okular
 	# Thunar
-	thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman plocate
+	thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman plocate tumbler
 	# pipewire
 	pipewire pipewire-audio pipewire-pulse wireplumber pavucontrol
 	# bluetooth
