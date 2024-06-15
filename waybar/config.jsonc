@@ -46,7 +46,8 @@
   },
   "hyprland/workspaces": {
     "persistent-workspaces": {
-      "*": 5 // 5 workspaces by default on every monitor
+      "DP-1": 5,
+      "HDMI-A-1": 5
     }
   },
   "clock": {
