@@ -46,8 +46,8 @@
   },
   "hyprland/workspaces": {
     "persistent-workspaces": {
-      "*": 5, // 5 workspaces by default on every monitor
-    },
+      "*": 5 // 5 workspaces by default on every monitor
+    }
   },
   "clock": {
     "format": "  {:%m-%d-%Y %H:%M:%S}",
