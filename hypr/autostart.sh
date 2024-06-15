@@ -12,5 +12,6 @@ run dunst
 sleep 5
 /usr/bin/keepassxc &
 /home/gargula/dotfiles/bin/nvidiafan.sh &
-blueberry-tray &
+#blueberry-tray &
+blueman-applet &
 onedrivegui &
