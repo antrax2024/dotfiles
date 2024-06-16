@@ -90,8 +90,6 @@ sudo cp /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf.d/default.conf
 sudo sed -i 's/Numlock=none/Numlock=on/g' /etc/sddm.conf.d/default.conf
 sudo sed -i 's/Current=/Current=archlinux-simplyblack/g' /etc/sddm.conf.d/default.conf
 
-echoyellow "Turn Bluetooth Enabled by Default..."
-
 fc-cache -fv
 
 echo 'Finish...'
