@@ -1,11 +1,11 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export DOTFILES:/home/gargula/dotfiles
+SETUVAR --export DOTFILES:/home/antrax/dotfiles
 SETUVAR --export EDITOR:nvim
-SETUVAR --export GEM_HOME:/home/gargula/\x2egems
-SETUVAR --export --path GOPATH:/home/gargula/\x2ego
+SETUVAR --export GEM_HOME:/home/antrax/\x2egems
+SETUVAR --export --path GOPATH:/home/antrax/\x2ego
 SETUVAR --export MANPAGER:nvim\x20\x2bMan\x21
-SETUVAR --export STARSHIP_CONFIG:/home/gargula/dotfiles/starship/starship\x2etoml
+SETUVAR --export STARSHIP_CONFIG:/home/antrax/dotfiles/starship/starship\x2etoml
 SETUVAR --export VISUAL:nvim
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
@@ -36,4 +36,4 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/home/gargula/dotfiles/bin\x1e/home/crow/dotfiles/nvidia\x2dfan\x2dcontrol\x1e/home/crow/dotfiles/bin
+SETUVAR fish_user_paths:/home/antrax/dotfiles/bin\x1e/home/gargula/dotfiles/bin\x1e/home/crow/dotfiles/nvidia\x2dfan\x2dcontrol\x1e/home/crow/dotfiles/bin

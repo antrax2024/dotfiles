@@ -1,4 +1,4 @@
-#!/home/gargula/dotfiles/bin/hyprwindow/bin/python3
+#!/home/antrax/dotfiles/bin/hyprwindow/bin/python3
 import json
 import subprocess
 from colorama import Fore, init
@@ -24,7 +24,7 @@ print(Fore.YELLOW + "=============================================")
 
 print("Please, click in the window and the magical happen...")
 
-data = subprocess.run(["/home/gargula/dotfiles/bin/hyprprop.sh"], capture_output=True)
+data = subprocess.run(["/home/antrax/dotfiles/bin/hyprprop.sh"], capture_output=True)
 jsondata = json.loads(data.stdout)
 
 
@@ -43,7 +43,7 @@ ruleLineSize = "windowrulev2 = size {} {},class:({}) title:({})".format(
 )
 
 
-file_path = "/home/gargula/dotfiles/hypr/hyprland.conf"
+file_path = "/home/antrax/dotfiles/hypr/hyprland.conf"
 lines_to_append = [comment, ruleLineFloat, ruleLineSize]
 append_lines_to_file(file_path, lines_to_append)
 

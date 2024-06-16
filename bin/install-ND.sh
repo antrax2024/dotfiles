@@ -25,6 +25,7 @@ PACKAGES=(
 	file-roller
 	reflector
 	okular
+	xorg-xhost
 	# Thunar
 	thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman plocate tumbler
 	# pipewire
@@ -32,7 +33,7 @@ PACKAGES=(
 	# bluetooth
 	bluez blueman
 	# neovim-git
-	neovim-git python-virtualenv lazygit pynvim noto-fonts-emoji fd npm nodejs python-pip python-virtualenv ripgrep
+	neovim-git python-virtualenv lazygit python-pynvim noto-fonts-emoji fd npm nodejs python-pip python-virtualenv ripgrep
 	# Hyprland
 	hyprland hyprcursor hypridle hyprpaper hyprshot wl-clipboard xdg-desktop-portal-hyprland wlogout swappy nwg-look
 )

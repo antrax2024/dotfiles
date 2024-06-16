@@ -485,6 +485,6 @@
 #
 [play_sound]
     summary = "*"
-    script = /home/gargula/dotfiles/dunst/alert.sh
+    script = /home/antrax/dotfiles/dunst/alert.sh
 # vim: ft=cfg
 
