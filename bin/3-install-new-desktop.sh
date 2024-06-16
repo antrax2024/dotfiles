@@ -36,7 +36,8 @@ PACKAGES=(
 	# neovim-git
 	neovim-git python-virtualenv lazygit python-pynvim noto-fonts-emoji fd npm nodejs python-pip python-virtualenv ripgrep
 	# Hyprland
-	hyprland hyprcursor hypridle hyprpaper hyprshot wl-clipboard xdg-desktop-portal-hyprland wlogout swappy nwg-look
+	hyprland hyprcursor hypridle hyprpaper hyprshot wl-clipboard xdg-desktop-portal-hyprland
+	wlogout swappy nwg-look sddm archlinux-themes-sddm numlockx
 )
 
 paru -S "${PACKAGES[@]}"
@@ -59,9 +60,9 @@ CONFIGS=(
 SRC="$HOME/dotfiles"
 DST="$HOME/.config"
 
-for t in "${CONFIGS[@]}"; do
+for t in ${CONFIGS[@]}; do
 	echo "Linking $SRC -> $DST / ($t)..."
-	ln -sf "$SRC/$t" "$DST/$t"
+	ln -sf $SRC/$t $DST/$t
 done
 
 SERVICES=(
@@ -70,9 +71,10 @@ SERVICES=(
 	reflector.service
 	reflector.timer
 	bluetooth.service
+	sddm.service
 )
 
-for s in "${SERVICES[@]}"; do
+for s in ${SERVICES[@]}; do
 	echo "Enable ($s)..."
 	sudo systemctl enable %s
 done
