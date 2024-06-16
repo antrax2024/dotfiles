@@ -7,3 +7,6 @@ sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg
 
 echo "[chaotic-aur]" | sudo tee -a /etc/pacman.conf >/dev/null
 echo "Include = /etc/pacman.d/chaotic-mirrorlist" | sudo tee -a /etc/pacman.conf >/dev/null
+
+sudo sed -i 's/#Color/Color/g' /etc/pacman.conf
+sudo sed '/#ParalelDownloads = 5/a ILoveCandy' /etc/pacman.conf
