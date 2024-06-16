@@ -34,7 +34,7 @@ PACKAGES=(
 	# Hyprland
 	hyprland hyprcursor hypridle hyprpaper hyprshot wl-clipboard xdg-desktop-portal-hyprland
 	wlogout swappy nwg-look sddm-git archlinux-themes-sddm sddm-kcm
-	alacritty-git neofetch-git copyq dunst
+	alacritty-git neofetch-git copyq dunst fuzzel
 	# Shell
 	eza duf gdu fish-git ttf-hack-nerd reflector
 	# Nvidia
