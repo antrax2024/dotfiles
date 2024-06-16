@@ -77,7 +77,7 @@ SERVICES=(
 
 for s in "${SERVICES[@]}"; do
 	echo "Enable ($s)..."
-	sudo systemctl enable %s
+	sudo systemctl enable "$s"
 done
 
 echoyellow "Adjust system clock..."
@@ -85,9 +85,12 @@ sudo timedatectl set-local-rtc 1 --adjust-system-clock
 sudo hwclock --systohc
 
 echoyellow "Edit sddm files"
+sudo mkdir -p /etc/sddm.conf.d/
 sudo cp /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf.d/default.conf
 sudo sed -i 's/Numlock=none/Numlock=on/g' /etc/sddm.conf.d/default.conf
 sudo sed -i 's/Current=/Current=archlinux-simplyblack/g' /etc/sddm.conf.d/default.conf
+
+echoyellow "Turn Bluetooth Enabled by Default..."
 
 fc-cache -fv
 
