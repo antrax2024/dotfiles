@@ -5,25 +5,20 @@ source "./rainbow.sh"
 #Install Packages
 
 PACKAGES=(
+	# Utils
 	firefox-developer-edition
 	surfshark-client
-	ttf-hack-nerd
 	starship
 	keepassxc
-	eza
-	duf
-	gdu
 	qbittorrent
 	onedrivegui
-	dunst
 	zapzap
-	copyq
 	mpv
 	nvidia-settings
-	cups
-	cronie
-	reflector
 	okular
+	# System
+	cronie
+	cups
 	xorg-xhost
 	ntfs-3g
 	dmidecode
@@ -39,7 +34,11 @@ PACKAGES=(
 	# Hyprland
 	hyprland hyprcursor hypridle hyprpaper hyprshot wl-clipboard xdg-desktop-portal-hyprland
 	wlogout swappy nwg-look sddm-git archlinux-themes-sddm sddm-kcm
-	alacritty-git neofetch-git
+	alacritty-git neofetch-git copyq dunst
+	# Shell
+	eza duf gdu fish-git ttf-hack-nerd reflector
+	# Nvidia
+	nvidia-dkms
 )
 
 paru -S "${PACKAGES[@]}"
