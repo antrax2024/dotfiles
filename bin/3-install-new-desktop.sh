@@ -92,4 +92,7 @@ sudo sed -i 's/Current=/Current=archlinux-simplyblack/g' /etc/sddm.conf.d/defaul
 
 fc-cache -fv
 
+echoyellow "Change bash -> fish..."
+chsh -s /usr/bin/fish antrax
+
 echo 'Finish...'
