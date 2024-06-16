@@ -42,6 +42,7 @@ PACKAGES=(
 paru -S "${PACKAGES[@]}"
 
 # Config
+mkdir ~/.config
 
 CONFIGS=(
 	alacritty
@@ -81,7 +82,5 @@ sudo timedatectl set-local-rtc 1 --adjust-system-clock
 sudo hwclock --systohc
 
 fc-cache -fv
-
-# systemctl --user --now enable pipewire pipewire-pulse wireplumber
 
 echo 'Finish...'
