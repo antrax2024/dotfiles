@@ -27,6 +27,7 @@ PACKAGES=(
 	okular
 	xorg-xhost
 	ntfs-3g
+	dmidecode
 	# Thunar
 	thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman plocate tumbler
 	# pipewire
