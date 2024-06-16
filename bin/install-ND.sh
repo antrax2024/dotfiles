@@ -26,6 +26,7 @@ PACKAGES=(
 	reflector
 	okular
 	xorg-xhost
+	ntfs-3g
 	# Thunar
 	thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman plocate tumbler
 	# pipewire
