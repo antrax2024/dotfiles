@@ -24,6 +24,9 @@
     "pulseaudio",
     "custom/left-arrow-light",
     "custom/left-arrow-dark",
+    "bluetooth",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
     "clock",
     "custom/left-arrow-light",
     "tray"
@@ -72,8 +75,7 @@
       ]
     },
     "scroll-step": 5,
-    "on-click": "pamixer -t",
-    "on-click-right": "pavucontrol"
+    "on-click": "pavucontrol"
   },
   "memory": {
     "interval": 5,
@@ -114,7 +116,8 @@
     "format-connected": " {num_connections} connected",
     "tooltip-format": "{controller_alias}\t{controller_address}",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click": "blueman-manager"
   },
   "temperature": {
     // "thermal-zone": 2,
