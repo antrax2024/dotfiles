@@ -28,7 +28,6 @@ PACKAGES=(
 	xorg-xhost
 	ntfs-3g
 	dmidecode
-	deluge-gtk
 	# Thunar
 	thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman plocate tumbler
 	# pipewire
