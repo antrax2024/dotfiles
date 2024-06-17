@@ -15,6 +15,7 @@ PACKAGES=(
 	qbittorrent
 	onedrivegui
 	zapzap
+	64gram-desktop
 	mpv
 	nvidia-settings
 	okular
