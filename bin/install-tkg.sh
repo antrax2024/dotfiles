@@ -1,12 +1,12 @@
 #!/bin/bash
 
-source "$HOME/dotfiles/bin/rainbow.sh"
+source "./rainbow.sh"
 
-echoblue "*****************************"
-echoyellow "Cloning Repository..."
-echoblue "*****************************"
+gA=$(echogreen "==>")
+
+echo "$gA Cloning Repository..."
 git clone https://github.com/Frogging-Family/linux-tkg.git
-cd linux-tkg
+cd linux-tkg || exit
 makepkg -si
 
-echogreen 'Finish...'
+echo "$gA Finish..."
