@@ -41,6 +41,8 @@ PACKAGES=(
 	eza duf gdu fish-git ttf-hack-nerd reflector
 	# Nvidia
 	nvidia-dkms
+	#xfce
+	xfce4 xfce4-goodies
 )
 
 echo "$gA Install Packages..."
