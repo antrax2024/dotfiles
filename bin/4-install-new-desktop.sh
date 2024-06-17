@@ -2,6 +2,8 @@
 
 source "./rainbow.sh"
 
+gA=$(echogreen "==>")
+
 #Install Packages
 
 PACKAGES=(
@@ -41,7 +43,11 @@ PACKAGES=(
 	nvidia-dkms
 )
 
+echo "$gA Install Packages..."
+
 paru -S "${PACKAGES[@]}"
+
+echo "$gA Link config files..."
 
 # Config
 mkdir ~/.config
@@ -62,29 +68,29 @@ SRC="$HOME/dotfiles"
 DST="$HOME/.config"
 
 for t in "${CONFIGS[@]}"; do
-	echo "Linking $SRC -> $DST / ($t)..."
+	echo "$gA Linking $SRC -> $DST / ($t)..."
 	ln -sf "$SRC/$t" "$DST/$t"
 done
 
 SERVICES=(
 	cups.service
 	cronie.service
-	reflector.service
-	reflector.timer
 	bluetooth.service
 	sddm.service
 )
 
+echo "$gA Enable Services..."
+
 for s in "${SERVICES[@]}"; do
-	echo "Enable ($s)..."
+	echo "$gA Enable ($s)..."
 	sudo systemctl enable "$s"
 done
 
-echoyellow "Adjust system clock..."
+echo "$gA Adjust system clock..."
 sudo timedatectl set-local-rtc 1 --adjust-system-clock
 sudo hwclock --systohc
 
-echoyellow "Edit sddm files"
+echo "$gA Edit sddm files"
 sudo mkdir -p /etc/sddm.conf.d/
 sudo cp /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf.d/default.conf
 sudo sed -i 's/Numlock=none/Numlock=on/g' /etc/sddm.conf.d/default.conf
@@ -92,7 +98,7 @@ sudo sed -i 's/Current=/Current=archlinux-simplyblack/g' /etc/sddm.conf.d/defaul
 
 fc-cache -fv
 
-echoyellow "Change bash -> fish..."
+echo "$gA Change bash -> fish..."
 chsh -s /usr/bin/fish antrax
 
 echo 'Finish...'
