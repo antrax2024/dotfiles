@@ -8,7 +8,7 @@ gA=$(echogreen "==>")
 
 PACKAGES=(
 	# Utils
-	firefox-developer-edition surfshark-client keepassxc qbittorrent
+	firefox surfshark-client keepassxc qbittorrent
 	onedrivegui zapzap 64gram-desktop mpv nvidia-settings okular yt-dlp
 	qmplay2-git btop
 	# System
