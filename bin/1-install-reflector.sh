@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ./rainbow.sh
+
 gA=$(echogreen "==>")
 
 echo "$gA Updating the System..."
