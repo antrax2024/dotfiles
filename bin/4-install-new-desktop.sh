@@ -8,17 +8,8 @@ gA=$(echogreen "==>")
 
 PACKAGES=(
 	# Utils
-	firefox-developer-edition
-	surfshark-client
-	starship
-	keepassxc
-	qbittorrent
-	onedrivegui
-	zapzap
-	64gram-desktop
-	mpv
-	nvidia-settings
-	okular
+	firefox-developer-edition surfshark-client keepassxc qbittorrent
+	onedrivegui zapzap 64gram-desktop mpv nvidia-settings okular yt-dlp
 	# System
 	cronie
 	cups
@@ -39,7 +30,7 @@ PACKAGES=(
 	wlogout swappy nwg-look sddm-git archlinux-themes-sddm sddm-kcm
 	alacritty-git neofetch-git copyq dunst fuzzel waybar-git
 	# Shell
-	eza duf gdu fish-git ttf-hack-nerd reflector
+	eza duf gdu fish-git ttf-hack-nerd reflector starship
 	# Nvidia
 	nvidia-dkms
 	#xfce
