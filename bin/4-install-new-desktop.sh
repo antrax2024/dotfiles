@@ -104,4 +104,7 @@ fc-cache -fv
 echo "$gA Change bash -> fish..."
 chsh -s /usr/bin/fish antrax
 
+echo "$gA Unblock Radio Devices..."
+rfkill unblock all
+
 echo 'Finish...'
