@@ -31,7 +31,7 @@ PACKAGES=(
 	# pipewire
 	pipewire pipewire-audio pipewire-pulse wireplumber pavucontrol
 	# bluetooth
-	bluez blueman
+	bluez blueman bluez-utils
 	# neovim-git
 	neovim-git python-virtualenv lazygit python-pynvim noto-fonts-emoji fd npm nodejs python-pip python-virtualenv ripgrep
 	# Hyprland
