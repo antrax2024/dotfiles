@@ -15,3 +15,4 @@ sleep 5
 #blueberry-tray &
 blueman-applet &
 onedrivegui &
+a2ln &
