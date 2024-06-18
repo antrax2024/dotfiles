@@ -15,4 +15,3 @@ sleep 5
 #blueberry-tray &
 blueman-applet &
 onedrivegui &
-rfkill unblock all &
