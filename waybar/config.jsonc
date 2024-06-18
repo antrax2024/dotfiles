@@ -48,9 +48,9 @@
     "tooltip": false
   },
   "hyprland/workspaces": {
-    "format": "{icon}",
+    "format": "[ {icon} ]",
     "format-icons": {
-      "1": " ",
+      "1": "",
       "2": "",
       "3": "",
       "4": "",
