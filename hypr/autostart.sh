@@ -8,6 +8,7 @@ function run {
 
 run hypridle
 run dunst
+run jamesdsp -t
 
 sleep 5
 /usr/bin/keepassxc &

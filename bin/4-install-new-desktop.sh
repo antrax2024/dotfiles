@@ -17,7 +17,7 @@ PACKAGES=(
 	thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman
 	plocate tumbler file-roller
 	# pipewire
-	pipewire pipewire-audio pipewire-pulse wireplumber pavucontrol
+	pipewire pipewire-audio pipewire-pulse wireplumber pavucontrol jamesdsp
 	# bluetooth
 	bluez blueman bluez-utils
 	# neovim-git
