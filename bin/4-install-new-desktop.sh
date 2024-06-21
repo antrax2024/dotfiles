@@ -5,7 +5,6 @@ source "./rainbow.sh"
 gA=$(echogreen "==>")
 
 #Install Packages
-
 PACKAGES=(
 	# Utils
 	firefox surfshark-client keepassxc qbittorrent
