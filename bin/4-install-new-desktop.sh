@@ -31,6 +31,8 @@ PACKAGES=(
 	nvidia-dkms
 	#xfce
 	xfce4 xfce4-goodies
+	# Themes
+	arc-gtk-theme papirus-icon-theme breeze
 )
 
 echo "$gA Install Packages..."
