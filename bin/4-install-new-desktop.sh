@@ -26,7 +26,7 @@ PACKAGES=(
 	wlogout swappy nwg-look sddm-git archlinux-themes-sddm sddm-kcm
 	alacritty-git neofetch-git copyq dunst fuzzel waybar-git
 	# Shell
-	eza duf gdu fish-git ttf-hack-nerd reflector starship
+	eza duf gdu bat fish-git ttf-hack-nerd reflector starship
 	# Nvidia
 	nvidia-dkms
 	#xfce
