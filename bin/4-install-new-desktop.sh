@@ -9,7 +9,7 @@ PACKAGES=(
 	# Utils
 	firefox surfshark-client keepassxc qbittorrent
 	onedrivegui zapzap 64gram-desktop mpv nvidia-settings okular yt-dlp
-	qmplay2-git btop lsb-release
+	qmplay2-git btop lsb-release qalculate-gtk
 	# System
 	cronie cups xorg-xhost ntfs-3g dmidecode system-config-printer hplip
 	# Thunar
