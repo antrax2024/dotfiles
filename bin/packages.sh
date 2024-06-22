@@ -3,7 +3,7 @@
 PACKAGES=(
 	# Utils
 	firefox surfshark-client keepassxc qbittorrent
-	onedrivegui zapzap 64gram-desktop mpv nvidia-settings okular yt-dlp
+	onedrivegui zapzap telegram-desktop mpv nvidia-settings okular yt-dlp
 	qmplay2-git btop lsb-release qalculate-gtk lximage-qt
 	# System
 	cronie cups xorg-xhost ntfs-3g dmidecode system-config-printer hplip
