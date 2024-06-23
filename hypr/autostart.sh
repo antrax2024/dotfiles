@@ -13,7 +13,6 @@ run jamesdsp -t
 sleep 5
 /usr/bin/keepassxc &
 /home/antrax/dotfiles/bin/nvidiafan.sh &
-#blueberry-tray &
-blueman-applet &
+blueberry-tray &
 onedrivegui &
 a2ln &
