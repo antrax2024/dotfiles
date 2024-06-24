@@ -17,4 +17,9 @@ sudo grub-mkconfig -o /boo/grub/grub.cfg
 
 rm -rfv darkmatter-grub-theme
 
+echo "$gA Install PPD for HP 107W..."
+
+cd "../hp107w/" || 1
+./install-printer.sh
+
 echo "$gA Finish..."

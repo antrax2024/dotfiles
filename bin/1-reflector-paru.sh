@@ -16,3 +16,10 @@ sudo sed -i 's/# --country France,Germany/--country "United States",Chile/g' /et
 
 echo "$gA Enable and Start reflector.service..."
 sudo systemctl enable --now reflector.service
+
+echo "$gA Install paru..."
+git clone https://aur.archlinux.org/paru.git
+cd paru || 1
+makepkg -si
+cd ..
+rm -rfv paru
