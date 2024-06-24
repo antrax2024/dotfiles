@@ -43,7 +43,7 @@ ruleLineSize = "windowrulev2 = size {} {},class:({}) title:({})".format(
 )
 
 
-file_path = "/home/antrax/dotfiles/hypr/hyprland.conf"
+file_path = "/home/antrax/dotfiles/hypr/window-rules.conf"
 lines_to_append = [comment, ruleLineFloat, ruleLineSize]
 append_lines_to_file(file_path, lines_to_append)
 
