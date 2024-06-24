@@ -7,6 +7,7 @@ PACKAGES=(
 	smplayer smplayer-themes btop lsb-release qalculate-gtk lximage-qt avahi
 	# System
 	cronie cups xorg-xhost ntfs-3g dmidecode system-config-printer
+	qt5-wayland qt6-wayland
 	# Thunar
 	thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman
 	plocate tumbler file-roller

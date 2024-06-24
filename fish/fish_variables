@@ -7,7 +7,7 @@ SETUVAR --export --path GOPATH:/home/antrax/\x2ego
 SETUVAR --export MANPAGER:nvim\x20\x2bMan\x21
 SETUVAR --export STARSHIP_CONFIG:/home/antrax/dotfiles/starship/starship\x2etoml
 SETUVAR --export VISUAL:nvim
-SETUVAR __fish_initialized:3800
+SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:blue
