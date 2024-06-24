@@ -40,6 +40,7 @@ SERVICES=(
 	cronie.service
 	bluetooth.service
 	sddm.service
+	avahi-daemon.service
 )
 
 echo "$gA Enable Services..."
