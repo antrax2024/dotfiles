@@ -6,7 +6,7 @@ PACKAGES=(
 	onedrivegui zapzap telegram-desktop mpv nvidia-settings okular yt-dlp
 	qmplay2-git btop lsb-release qalculate-gtk lximage-qt avahi
 	# System
-	cronie cups xorg-xhost ntfs-3g dmidecode system-config-printer hplip
+	cronie cups xorg-xhost ntfs-3g dmidecode system-config-printer
 	# Thunar
 	thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman
 	plocate tumbler file-roller
