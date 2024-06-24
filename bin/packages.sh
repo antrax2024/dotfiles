@@ -14,8 +14,8 @@ PACKAGES=(
 	pipewire pipewire-audio pipewire-pulse wireplumber pavucontrol jamesdsp
 	# bluetooth
 	bluez bluez-utils blueman-git
-	# neovim-git
-	neovim-git python-virtualenv lazygit python-pynvim noto-fonts-emoji fd npm nodejs python-pip python-virtualenv ripgrep
+	# neovim
+	neovim python-virtualenv lazygit python-pynvim noto-fonts-emoji fd npm nodejs python-pip python-virtualenv ripgrep
 	# Hyprland
 	hyprland hyprcursor hypridle hyprpaper hyprshot wl-clipboard xdg-desktop-portal-hyprland
 	wlogout swappy nwg-look sddm-git archlinux-themes-sddm sddm-kcm
