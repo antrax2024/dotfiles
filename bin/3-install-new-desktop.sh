@@ -17,7 +17,7 @@ mkdir ~/.config
 
 CONFIGS=(
 	alacritty
-	dunst
+	swaync
 	fish
 	fuzzel
 	hypr
