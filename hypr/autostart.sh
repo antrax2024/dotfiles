@@ -7,7 +7,7 @@ function run {
 }
 
 run hypridle
-run dunst
+#run dunst
 run jamesdsp -t
 
 sleep 5
@@ -16,3 +16,4 @@ sleep 5
 blueman-applet &
 onedrivegui &
 a2ln &
+swaync &

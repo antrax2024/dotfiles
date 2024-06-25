@@ -15,9 +15,9 @@
   "notification-icon-size": 64,
   "notification-body-image-height": 100,
   "notification-body-image-width": 200,
-  "timeout": 10,
-  "timeout-low": 5,
-  "timeout-critical": 0,
+  "timeout": 20,
+  "timeout-low": 20,
+  "timeout-critical": 20,
   "fit-to-screen": true,
   "relative-timestamps": true,
   "control-center-width": 500,
@@ -30,9 +30,17 @@
   "hide-on-action": true,
   "script-fail-notify": true,
   "scripts": {
-    "example-script": {
-      "exec": "echo 'Do something...'",
+    "playSoundLow": {
+      "exec": "paplay /home/antrax/dotfiles/swaync/low.wav",
+      "urgency": "Low"
+    },
+    "playSoundNormal": {
+      "exec": "paplay /home/antrax/dotfiles/swaync/normal.wav",
       "urgency": "Normal"
+    },
+    "playSoundCritical": {
+      "exec": "paplay /home/antrax/dotfiles/swaync/critical.wav",
+      "urgency": "Critical"
     },
     "example-action-script": {
       "exec": "echo 'Do something actionable!'",

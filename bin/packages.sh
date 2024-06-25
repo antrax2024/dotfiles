@@ -20,7 +20,7 @@ PACKAGES=(
 	# Hyprland
 	hyprland hyprcursor hypridle hyprpaper hyprshot wl-clipboard xdg-desktop-portal-hyprland
 	wlogout swappy nwg-look sddm-git archlinux-themes-sddm sddm-kcm
-	alacritty-git neofetch-git copyq dunst fuzzel waybar-git
+	alacritty-git neofetch-git copyq swaync fuzzel waybar-git
 	# Shell
 	eza duf gdu bat fish ttf-hack-nerd reflector starship
 	# Nvidia
