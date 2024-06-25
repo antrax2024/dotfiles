@@ -25,6 +25,7 @@ CONFIGS=(
 	waybar
 	swappy
 	fontconfig
+	wlogout
 )
 
 SRC="$HOME/dotfiles"
