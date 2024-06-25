@@ -4,7 +4,8 @@ PACKAGES=(
 	# Utils
 	firefox surfshark-client keepassxc qbittorrent
 	onedrivegui zapzap telegram-desktop mpv nvidia-settings okular yt-dlp
-	smplayer smplayer-themes btop lsb-release qalculate-gtk lximage-qt avahi
+	btop lsb-release qalculate-gtk lximage-qt avahi
+	vlc libva libva-nvidia-driver libvdpau mesa mesa-vdpau
 	# System
 	cronie cups xorg-xhost ntfs-3g dmidecode system-config-printer
 	qt5-wayland qt6-wayland
