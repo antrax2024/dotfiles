@@ -23,10 +23,15 @@ button {
 	background-size: 25%;
 }
 
-button:focus, button:active, button:hover {
+/*button:focus, button:active, button:hover {
 	background-color: #3700B3;
 	outline-style: none;
-}
+} */
+
+ button:focus {
+	background-color: #3700B3;
+	outline-style: none;
+} 
 
 #lock {
     background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
