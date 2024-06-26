@@ -21,7 +21,7 @@
     "disk",
     "custom/left-arrow-light",
     "custom/left-arrow-dark",
-    "pulseaudio",
+    "custom/pipewire",
     "custom/left-arrow-light",
     "custom/left-arrow-dark",
     "bluetooth",
@@ -134,14 +134,19 @@
     // "format-critical": "{temperatureC}°C ",
     "format": " {temperatureC}°C"
   },
-  "wireplumber": {
-    "format": "{volume}% {icon}",
-    "format-muted": "",
-    "on-click": "helvum",
-    "format-icons": [
-      "",
-      "",
-      ""
-    ]
+  "custom/pipewire": {
+    "exec": "pw-volume status",
+    "return-type": "json",
+    "interval": "once",
+    "signal": 8,
+    "format": "{icon} {percentage}",
+    "format-icons": {
+      "mute": "",
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ]
+    }
   }
 }
