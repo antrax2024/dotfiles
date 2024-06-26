@@ -136,6 +136,7 @@
   },
   "custom/pipewire": {
     "exec": "pw-volume status",
+    "on-click": "pavucontrol",
     "return-type": "json",
     "interval": "once",
     "signal": 8,

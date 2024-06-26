@@ -25,6 +25,7 @@ window#waybar {
 #bluetooth,
 #clock,
 #pulseaudio,
+#custom-pipewire,
 #memory,
 #cpu,
 #battery,
@@ -64,7 +65,7 @@ window#waybar {
   color: #7532a8;
 }
 
-#pulseaudio {
+#pulseaudio,#custom-pipewire {
 	color: #268bd2;
 }
 #memory {
@@ -88,6 +89,7 @@ window#waybar {
 #bluetooth,
 #clock,
 #pulseaudio,
+#custom-pipewire,
 #memory,
 #cpu,
 #battery,
