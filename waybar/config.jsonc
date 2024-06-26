@@ -133,5 +133,15 @@
     // "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C ",
     "format": " {temperatureC}°C"
+  },
+  "wireplumber": {
+    "format": "{volume}% {icon}",
+    "format-muted": "",
+    "on-click": "helvum",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
   }
 }
