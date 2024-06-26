@@ -26,6 +26,7 @@ CONFIGS=(
 	swappy
 	fontconfig
 	wlogout
+	wireplumber
 )
 
 SRC="$HOME/dotfiles"

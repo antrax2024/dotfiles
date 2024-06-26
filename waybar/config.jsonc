@@ -21,7 +21,7 @@
     "disk",
     "custom/left-arrow-light",
     "custom/left-arrow-dark",
-    "custom/pipewire",
+    "pulseaudio",
     "custom/left-arrow-light",
     "custom/left-arrow-dark",
     "bluetooth",
@@ -150,5 +150,12 @@
         "󰕾"
       ]
     }
+  },
+  "wireplumber": {
+    "format": "{volume}%",
+    "format-muted": "",
+    "on-click": "helvum",
+    "max-volume": 150,
+    "scroll-step": 0.2
   }
 }
