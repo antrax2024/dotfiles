@@ -137,12 +137,13 @@
   "custom/pipewire": {
     "exec": "pw-volume status",
     "on-click": "pavucontrol",
+    "on-scroll-up": "pw-volume change +5%",
+    "on-scroll-down": "pw-volume change -5%",
     "return-type": "json",
-    "interval": "once",
-    "signal": 8,
+    "interval": 1,
     "format": "{icon} {percentage}",
     "format-icons": {
-      "mute": "",
+      "mute": "mute",
       "default": [
         "󰕿",
         "󰖀",
