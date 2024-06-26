@@ -43,6 +43,7 @@ SERVICES=(
 	bluetooth.service
 	sddm.service
 	avahi-daemon.service
+	systemd-homed.service
 )
 
 echo "$gA Enable Services..."
