@@ -19,3 +19,9 @@ sudo pacman -S ntp
 echo "$gA Time Sync Start"
 echo "$gA Please, wait..."
 sudo systemctl enable --now ntpdate.service
+
+echo "$gA Create swapfile..."
+sudo mkswap -U clear --size 4G --file /swapfile
+sudo swapon /swapfile
+echo "#swapfile" | sudo tee -a /etc/fstab >/dev/null
+echo "/swapfile none swap defaults 0 0" | sudo tee -a /etc/fstab >/dev/null
