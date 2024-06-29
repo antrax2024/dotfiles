@@ -26,8 +26,6 @@ PACKAGES=(
 	eza duf gdu bat fish ttf-hack-nerd reflector starship
 	# Nvidia
 	nvidia-dkms
-	#xfce
-	xfce4 xfce4-goodies
 	# Themes
 	arc-gtk-theme papirus-icon-theme breeze
 )
